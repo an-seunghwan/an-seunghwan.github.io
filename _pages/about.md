@@ -4,8 +4,13 @@ permalink: /about/
 layout: single
 ---
 
-## an-seunghwan.github.io 블로그
+# About Blog?
+1. Topics
+  - NLP
+    + sentiment embedding
+    + seq-to-seq
 
+# About ME?
 1. 학력
   - 2015.03 ~: 서울시립대학교 통계학과 재학
 
@@ -13,3 +18,6 @@ layout: single
   - R
   - python
   - julia(not studied yet)
+
+3. Projects
+  - 
