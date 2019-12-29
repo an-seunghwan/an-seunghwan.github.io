@@ -2,5 +2,7 @@
 main:
   - title: "Home"
     url: https://an-seunghwan.github.io
+  - title: "Categories"
+    url: /categories/
   - title: "About"
     url: /about/
