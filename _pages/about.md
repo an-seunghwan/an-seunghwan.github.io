@@ -1,5 +1,5 @@
 ---
-title: "About this Blog!"
+title: "소개합니다!"
 permalink: /about/
 layout: single
 ---
