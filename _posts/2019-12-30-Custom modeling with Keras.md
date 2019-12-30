@@ -1,6 +1,6 @@
 ---
 title: "Custom modeling with Keras (2)"
-excerpt: Custom modeling with Keras 2편
+excerpt: loss, config and serialization
 
 date: 2019-12-30 16:30:00 -0400
 categories: 
@@ -193,5 +193,6 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTg0NTI3OSwtMTYxODYyNDQwNV19
+eyJoaXN0b3J5IjpbODY1NTg2NjY3LDEwMTE4NDUyNzksLTE2MT
+g2MjQ0MDVdfQ==
 -->
