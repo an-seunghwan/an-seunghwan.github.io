@@ -4,10 +4,9 @@ excerpt: Custom modeling with Keras 2편
 
 date: 2019-12-30 16:30:00 -0400
 categories: 
-	- tensorflow 2.0
+  - tensorflow 2.0
 tags:
-	- tensorflow 2.0
-
+  - tensorflow 2.0
 ---
 # Custom modeling with Keras (2)
 
@@ -194,5 +193,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0ODgxNTM3NSwtMTYxODYyNDQwNV19
+eyJoaXN0b3J5IjpbLTU3OTMwOTAyNSwtMTYxODYyNDQwNV19
 -->
