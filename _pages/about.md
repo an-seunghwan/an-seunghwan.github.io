@@ -9,6 +9,7 @@ layout: single
   - NLP
     + sentiment embedding
     + seq-to-seq
+    
   - Constrained LASSO path algorithm
   
   - MPI for R
