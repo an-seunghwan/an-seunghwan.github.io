@@ -13,6 +13,7 @@ tags:
 
 > 이 글은 다음 문서를 참조하고 있습니다!
 > [https://www.tensorflow.org/guide/keras/custom_layers_and_models](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
+> 
 > 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
 
 ```python
@@ -241,6 +242,6 @@ Out[51]: <tensorflow.python.keras.callbacks.History at 0x2a101fc7348>
 
 * Functional API 부분은 생략
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDY5NjYxNiwtNzcxODMwODcyLC0yMD
-I3OTAxODUwXX0=
+eyJoaXN0b3J5IjpbMzk1NzE4NTIsLTQ4NDY5NjYxNiwtNzcxOD
+MwODcyLC0yMDI3OTAxODUwXX0=
 -->
