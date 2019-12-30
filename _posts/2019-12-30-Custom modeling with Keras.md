@@ -6,13 +6,9 @@ excerpt: Custom modeling with Keras 2편
 
 date: 2019-12-30 16:30:00 -0400
 categories: 
-
-- tensorflow 2.0
-
+  - tensorflow 2.0
 tags:
-
-- tensorflow 2.0
-
+  - tensorflow 2.0
 ---
 
 > 이 글은 다음 문서를 참조하고 있습니다!
@@ -198,6 +194,6 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDcyOTYwMzUsLTE2MTg2MjQ0MDVdfQ
+eyJoaXN0b3J5IjpbLTExMjMwODk4OTEsLTE2MTg2MjQ0MDVdfQ
 ==
 -->
