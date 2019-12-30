@@ -1,4 +1,16 @@
 # Custom modeling with Keras (2)
+
+---
+title: "Custom modeling with Keras (2)"
+excerpt: Custom modeling with Keras 2번
+
+date: 2019-12-28 00:00:00 -0400
+categories: 
+  - update
+tags:
+  - update
+---
+
 > 이 글은 다음 문서를 참조하고 있습니다!
 [https://www.tensorflow.org/guide/keras/custom_layers_and_models](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
@@ -182,5 +194,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg2MjQ0MDVdfQ==
+eyJoaXN0b3J5IjpbMTYyMjAxNjI1NCwtMTYxODYyNDQwNV19
 -->
