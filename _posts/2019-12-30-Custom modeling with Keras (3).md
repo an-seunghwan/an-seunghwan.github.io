@@ -49,7 +49,7 @@ resnet.fit(dataset, epochs=10)
 resnet.save_weights(filepath)
 ```
 
-### end-to-end example
+## end-to-end example
 
 지금까지 배운 것들:
 - `Layer`는 상태(`__init__`이나 `build`에서 생성)나 계산(in `call`)을 요약
@@ -59,7 +59,106 @@ resnet.save_weights(filepath)
     
 An end-to-end example: MNIST digits데이터를 이용한 Variational AutoEncoder(VAE)
 여기서의 VAE는 `Model`의 subclass이며, `Layer`의 subclass layer들로 중첩되어 구성된다. 또한 정규화 손실 값을 가진다(KL divergence)
+
+### `Layer` class를 정의
+```python
+class Sampling(layers.Layer):
+    '''(z_mean, z_log_var)를 z를 추출하기 위해 사용한다(z는 digit을 encoding하기 위한 벡터)'''
+    
+    def call(self, inputs):
+        z_mean, z_log_var = inputs
+        batch = tf.shape(z_mean)[0]
+        dim = tf.shape(z_mean)[1]
+        epsilon = tf.keras.backend.random_normal(shape=(batch, dim))
+        return z_mean + tf.exp(0.5 * z_log_var) * epsilon
+
+class Encoder(layers.Layer):
+    '''MNIST digits를 triplet (z_mean, z_log_var, z)로 mapping'''
+    
+    def __init__(self,
+                 latent_dim=32,
+                 intermediate_dim=64,
+                 name='encoder',
+                 **kwargs):
+        super(Encoder, self).__init__(name=name, **kwargs)
+        self.dense_proj = layers.Dense(intermediate_dim, activation='relu')
+        self.dense_mean = layers.Dense(latent_dim)
+        self.dense_log_var = layers.Dense(latent_dim)
+        self.sampling = Sampling()
+    
+    # 함수형 API와 유사한 형태
+    def call(self, inputs):
+        x = self.dense_proj(inputs)
+        z_mean = self.dense_mean(x)
+        z_log_var = self.dense_log_var(x)
+        z = self.sampling((z_mean, z_log_var))
+        return z_mean, z_log_var, z
+
+class Decoder(layers.Layer):
+    '''encoding된 digit 벡터 z를 다시 읽을 수 있는 digit으로 변환'''
+    
+    def __init__(self,
+                 original_dim,
+                 intermediate_dim=64,
+                 name='decoder',
+                 **kwargs):
+        super(Decoder, self).__init__(name=name, **kwargs)
+        self.dense_proj = layers.Dense(intermediate_dim, activation='relu')
+        self.dense_output = layers.Dense(original_dim, activation='sigmoid')
+    
+    # 함수형 API와 유사한 형태
+    def call(self, inputs):
+        x = self.dense_proj(inputs)
+        return self.dense_output(x)
+```
+
+### `Model` class를 정의
+```python
+class VariationalAutoEncoder(tf.keras.Model):
+    ''''encoder와 decoder를 training을 위한 end-to-end 모형으로 합친다'''
+    
+    def __init__(self,
+                 original_dim,
+                 intermediate_dim=64,
+                 latent_dim=32,
+                 name='autoencoder',
+                 **kwargs):
+        super(VariationalAutoEncoder, self).__init__(name=name, **kwargs)
+        self.original_dim = original_dim
+        self.encoder = Encoder(latent_dim=latent_dim, 
+                               intermediate_dim=intermediate_dim)
+        self.decoder = Decoder(original_dim,
+                               intermediate_dim=intermediate_dim)
+    
+    def call(self, inputs):
+        z_mean, z_log_var, z = self.encoder(inputs)
+        reconstructed = self.decoder(z)
+        kl_loss = - 0.5 * tf.reduce_mean(z_log_var - tf.square(z_mean) - tf.exp(z_log_var) + 1)
+        self.add_loss(kl_loss)
+        return reconstructed
+```
+
+### training을 위한 setting
+```python
+original_dim = 784
+vae = VariationalAutoEncoder(original_dim, 64, 32)
+
+optimizer = tf.keras.optimizers.Adam(learning_rate=1e-3)
+mse_loss_fn = tf.keras.losses.MeanSquaredError()
+
+loss_metric = tf.keras.metrics.Mean()
+
+(x_train, _), _ = tf.keras.datasets.mnist.load_data()
+x_train = x_train.reshape(60000, 784).astype('float32') / 255
+
+train_dataset = tf.data.Dataset.from_tensor_slices(x_train)
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
+
+epochs = 3
+```
+
+###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzMDA4NDYwLC03NzE4MzA4NzIsLTIwMj
-c5MDE4NTBdfQ==
+eyJoaXN0b3J5IjpbLTIxMjk2NjA5NDIsLTc3MTgzMDg3MiwtMj
+AyNzkwMTg1MF19
 -->
