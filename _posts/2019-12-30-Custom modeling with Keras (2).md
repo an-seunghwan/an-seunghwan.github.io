@@ -82,7 +82,7 @@ print(tf.reduce_sum(layer.dense.kernel) ** 2)
 '''
 print(layer.losses)
 ```
-```python
+```
 <tf.Variable 'outer_layer_3/dense_1/kernel:0' shape=(1, 32) dtype=float32, numpy=
 array([[-0.17390427, -0.33782747,  0.00282753, -0.3532169 ,  0.34208316,
         -0.37428847, -0.05844164,  0.01640856,  0.32005012,  0.3649932 ,
@@ -134,7 +134,7 @@ print(config)
 new_layer = Linear.from_config(config)
 print(new_layer.get_config())
 ```
-```python
+```
 {'units': 64}
 {'units': 64}
 ```
@@ -169,7 +169,7 @@ print(config)
 new_layer = Linear.from_config(config)
 print(new_layer.get_config())
 ```
-```python
+```
 {'name': 'linear_7', 'trainable': True, 'dtype': 'float32', 'units': 64}
 {'name': 'linear_7', 'trainable': True, 'dtype': 'float32', 'units': 64}
 ```
@@ -195,5 +195,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDIxNjI1NTVdfQ==
+eyJoaXN0b3J5IjpbLTE4NDAwNzY4MzFdfQ==
 -->
