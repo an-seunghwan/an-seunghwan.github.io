@@ -8,7 +8,6 @@ categories:
 tags:
   - tensorflow 2.0
 ---
-# Custom modeling with Keras (2)
 
 > 이 글은 다음 문서를 참조하고 있습니다!
 > [https://www.tensorflow.org/guide/keras/custom_layers_and_models](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
@@ -194,5 +193,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxODAwNzY4OSwtMTYxODYyNDQwNV19
+eyJoaXN0b3J5IjpbMTAxMTg0NTI3OSwtMTYxODYyNDQwNV19
 -->
