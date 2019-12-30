@@ -157,8 +157,34 @@ train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
 epochs = 3
 ```
 
-###
+### training 1: 직접 gradient를 계산하여 적용하는 방식
+```python
+# Iterate over epochs.
+for epoch in range(epochs):
+    print('Start of epoch {}'.format(epoch))
+    
+    # Iterate over the batches of the dataset.
+    for step, x_batch_train in enumerate(train_dataset):
+        with tf.GradientTape() as tape:
+            reconstructed = vae(x_batch_train)
+            # Compute reconstruction loss
+            loss = mse_loss_fn(x_batch_train, reconstructed)
+            loss += sum(vae.losses) # Add KLD regularization loss
+        
+        grads = tape.gradient(loss, vae.trainable_weights)
+        optimizer.apply_gradients(zip(grads, vae.trainable_weights))
+        
+        loss_metric(loss)
+        
+        if step % 100 == 0:
+            print('step {}: mean loss = {}'.format(step, loss_metric.result()))
+```
+
+```
+
+### training 2: built-in training loops를 활용
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjk2NjA5NDIsLTc3MTgzMDg3MiwtMj
-AyNzkwMTg1MF19
+eyJoaXN0b3J5IjpbLTU4NTk4ODI5NywtNzcxODMwODcyLC0yMD
+I3OTAxODUwXX0=
 -->
