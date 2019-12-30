@@ -10,6 +10,7 @@ layout: single
     + sentiment embedding
     + seq-to-seq
   - Constrained LASSO path algorithm
+  
   - MPI for R
 
 # About ME?
