@@ -10,6 +10,11 @@ categories:
 tags:
   - tensorflow 2.0
 ---
+
+> 이 글은 다음 문서를 참조하고 있습니다!
+> [https://www.tensorflow.org/guide/keras/custom_layers_and_models](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
+> 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
+
 ```python
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
@@ -180,7 +185,7 @@ for epoch in range(epochs):
             print('step {}: mean loss = {}'.format(step, loss_metric.result()))
 ```
 
-```python
+```
 Start of epoch 0
 step 0: mean loss = 0.3582668900489807
 step 100: mean loss = 0.126471608877182
@@ -223,8 +228,19 @@ optimizer = tf.keras.optimizers.Adam(learning_rate=1e-3)
 vae.compile(optimizer, loss=tf.keras.losses.MeanSquaredError())
 vae.fit(x_train, x_train, epochs=3, batch_size=64)
 ```
-```pyt
+```
+Train on 60000 samples
+Epoch 1/3
+60000/60000 [==============================] - 9s 152us/sample - loss: 0.0746
+Epoch 2/3
+60000/60000 [==============================] - 5s 86us/sample - loss: 0.0676
+Epoch 3/3
+60000/60000 [==============================] - 4s 75us/sample - loss: 0.0675
+Out[51]: <tensorflow.python.keras.callbacks.History at 0x2a101fc7348>
+```
+
+* Functional API 부분은 생략
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQ1MDEyMjIsLTc3MTgzMDg3MiwtMj
-AyNzkwMTg1MF19
+eyJoaXN0b3J5IjpbLTQ4NDY5NjYxNiwtNzcxODMwODcyLC0yMD
+I3OTAxODUwXX0=
 -->
