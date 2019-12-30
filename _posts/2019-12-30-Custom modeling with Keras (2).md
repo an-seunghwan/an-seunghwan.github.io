@@ -2,6 +2,8 @@
 title: "Custom modeling with Keras (2)"
 excerpt: loss, config and serialization
 
+author_profile: false
+
 date: 2019-12-30 16:30:00 -0400
 categories: 
   - tensorflow 2.0
@@ -193,5 +195,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY1NTg2NjY3XX0=
+eyJoaXN0b3J5IjpbLTE4MDIxNjI1NTVdfQ==
 -->
