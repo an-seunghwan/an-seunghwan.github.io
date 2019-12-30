@@ -180,11 +180,51 @@ for epoch in range(epochs):
             print('step {}: mean loss = {}'.format(step, loss_metric.result()))
 ```
 
+```python
+Start of epoch 0
+step 0: mean loss = 0.3582668900489807
+step 100: mean loss = 0.126471608877182
+step 200: mean loss = 0.09953459352254868
+step 300: mean loss = 0.0894065797328949
+step 400: mean loss = 0.08442515879869461
+step 500: mean loss = 0.08106688410043716
+step 600: mean loss = 0.07886670529842377
+step 700: mean loss = 0.07723680883646011
+step 800: mean loss = 0.07605761289596558
+step 900: mean loss = 0.07502540946006775
+Start of epoch 1
+step 0: mean loss = 0.07473193109035492
+step 100: mean loss = 0.07405747473239899
+step 200: mean loss = 0.07356826961040497
+step 300: mean loss = 0.07308384776115417
+step 400: mean loss = 0.07274124771356583
+step 500: mean loss = 0.07234357297420502
+step 600: mean loss = 0.07204995304346085
+step 700: mean loss = 0.07174880802631378
+step 800: mean loss = 0.07151103764772415
+step 900: mean loss = 0.07124651968479156
+Start of epoch 2
+step 0: mean loss = 0.07117010653018951
+step 100: mean loss = 0.07099448889493942
+step 200: mean loss = 0.07085386663675308
+step 300: mean loss = 0.07070086896419525
+step 400: mean loss = 0.0706046000123024
+step 500: mean loss = 0.07044930756092072
+step 600: mean loss = 0.07033801823854446
+step 700: mean loss = 0.07021458446979523
+step 800: mean loss = 0.07011080533266068
+step 900: mean loss = 0.0699886828660965
 ```
 
 ### training 2: built-in training loops를 활용
-
+```python
+vae = VariationalAutoEncoder(784, 64, 32)
+optimizer = tf.keras.optimizers.Adam(learning_rate=1e-3)
+vae.compile(optimizer, loss=tf.keras.losses.MeanSquaredError())
+vae.fit(x_train, x_train, epochs=3, batch_size=64)
+```
+```pyt
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTk4ODI5NywtNzcxODMwODcyLC0yMD
-I3OTAxODUwXX0=
+eyJoaXN0b3J5IjpbLTE3MDQ1MDEyMjIsLTc3MTgzMDg3MiwtMj
+AyNzkwMTg1MF19
 -->
