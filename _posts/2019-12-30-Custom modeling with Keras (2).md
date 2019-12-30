@@ -13,6 +13,7 @@ tags:
 
 > 이 글은 다음 문서를 참조하고 있습니다!
 > [https://www.tensorflow.org/guide/keras/custom_layers_and_models](https://www.tensorflow.org/guide/keras/custom_layers_and_models)
+> 
 > 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
 
 ```python
@@ -195,5 +196,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDAwNzY4MzFdfQ==
+eyJoaXN0b3J5IjpbMTEwMDkwNTI2MV19
 -->
