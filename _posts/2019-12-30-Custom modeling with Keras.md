@@ -2,13 +2,15 @@
 
 ---
 title: "Custom modeling with Keras (2)"
-excerpt: Custom modeling with Keras 2번
+excerpt: Custom modeling with Keras 2편
 
-date: 2019-12-28 00:00:00 -0400
+date: 2019-12-30 16:30:00 -0400
 categories: 
-  - update
+	- tensorflow2
 tags:
-  - update
+	- tensorflow2
+	- NLP
+
 ---
 
 > 이 글은 다음 문서를 참조하고 있습니다!
@@ -194,5 +196,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMjAxNjI1NCwtMTYxODYyNDQwNV19
+eyJoaXN0b3J5IjpbLTY3NjI2MjE2NCwtMTYxODYyNDQwNV19
 -->
