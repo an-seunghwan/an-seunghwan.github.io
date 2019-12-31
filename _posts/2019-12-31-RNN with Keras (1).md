@@ -117,7 +117,20 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 아래의 간단한 예제로 위의 내용을 확인해보자.
-```pyh
+```python
+batch_size = 64
+timesteps = 100
+embedding_size = 64
+# 임의의 batch embedding input을 생성
+sample_embedding = np.random.normal(size=(batch_size, timesteps, embedding_size)).astype('float32')
+print(layers.SimpleRNN(128, return_sequences=False)(sample_embedding).shape)
+print(layers.SimpleRNN(128, return_sequences=True)(sample_embedding).shape)
+```
+```
+(64, 128)
+(64, 100, 128)
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk4NTY5ODczXX0=
+eyJoaXN0b3J5IjpbLTE4OTY2MDYxMjNdfQ==
 -->
