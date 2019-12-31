@@ -33,9 +33,66 @@ CuDNN은 특정한 가정 하에서 작동될 수 있는데, 이는 만약 built
 
 ### CuDNN kernel 사용해보기
 
-간단한 LSTM 모형을 통해 성능의 차이를 살펴보자.
-여기서 입력 순서열로써 MNIST digits의 순서열 데이터(각각의 pixel row들을 timestep으로써 간주)를 사용할 것이고,
-숫자의 label을 예측할 것이다.
+간단한 LSTM 모형을 통해 성능의 차이를 살펴보자. 여기서 입력 순서열로써 MNIST digits의 순서열 데이터(각각의 pixel row들을 timestep으로써 간주)를 사용할 것이고, 숫자의 label을 예측할 것이다.
+
+```python
+from __future__ import absolute_import, division, print_function, unicode_literals
+import tensorflow as tf
+print(tf.__version__)
+print('즉시 실행 모드:', tf.executing_eagerly())
+```
+```
+2.0.0
+즉시 실행 모드: True
+```
+```python
+batch_size = 64
+# 각각의 MNIST 이미지 batch는 (batch_size, 28, 28)의 shape을 갖는다.
+# 각각의 입력 순서열은 (28, 28)의 크기를 갖는다. (여기서 높이(height)은 시간의 의미를 가진다)
+input_dim = 28
+
+units = 64
+output_size = 10 # 0에서 9까지의 label
+
+# RNN model
+def build_model(allow_cudnn_kernel=True):
+    # CuDNN은 오직 layer 단계에서만 사용가능하며, cell 단계에서는 사용할 수 없다.
+    # 이는 LSTM(units)는 CuDNN을 사용하지만,
+    # RNN(LSTMCell(units))는 CuDNN 없이 실행됨을 의미한다.
+    if allow_cudnn_kernel:
+        # LSTM layer는 default option으로 CuDNN을 사용한다.
+        lstm_layer = tf.keras.layers.LSTM(units, 
+                                          input_shape=(None, input_dim))
+    else:
+        # CuDNN을 사용하지 않는 LSTMCell을 RNN layer로 wrapping한다.
+        lstm_layer = tf.keras.layers.RNN(tf.keras.layers.LSTMCell(units),
+                                         input_shape=(None, input_dim))
+    
+    model = tf.keras.models.Sequential([lstm_layer,
+                                        tf.keras.layers.BatchNormalization(),
+                                        tf.keras.layers.Dense(output_size,
+                                                              activation='softmax')])
+    return model
+```
+### MNIST 데이터
+```python
+mnist = tf.keras.datasets.mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0
+sample, sample_label = x_train[0], y_train[0]
+```
+### 모형 생성과 컴파일
+모형의 output은 `[batch_size, 10]`의 shape을 가진다.
+모형의 target은 정수 벡터이며, 각각의 정수는 0에서 9까지 이다.
+
+```python
+model = build_model(allow_cudnn_kernel=True)
+# 모형의 손실 함수: sparse_categorical_crossentropy
+model.compile(loss='sparse_categorical_crossentropy',
+              optimizer='sgd',
+              metrics=['accuracy'])
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0OTI1MDcwMl19
+eyJoaXN0b3J5IjpbLTMxMDYyMzMwOF19
 -->
