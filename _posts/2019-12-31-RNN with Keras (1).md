@@ -231,9 +231,13 @@ for s in sub_sequences:
 ```
 state를 초기화하고 싶다면, `layer.reset_states()`를 사용하면 된다.
 
-**주의**: 이러한 설정에서는, 반드시 다음에 이어지는 batch가 이전 batch의 연속이어야 하며, 그 크기(batch size)또한 동일해야 한다.
+> **주의**: 이러한 설정에서는, 반드시 다음에 이어지는 batch가 이전 batch의 연속이어야 하며, 그 크기(batch size)또한 동일해야 한다.
 E.g. 만약 batch가 다음과 같다면 [sequence_A_from_t0_to_t100, sequence_B_from_t0_to_t100], 다음의 batch는 [sequence_A_from_t101_to_t200, sequence_B_from_t101_to_t200] 이어야 한다.  
 
+예제롤 살펴보자
+
+```pytho
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU4ODM3MDZdfQ==
+eyJoaXN0b3J5IjpbMTk3Mjk0ODU0Ml19
 -->
