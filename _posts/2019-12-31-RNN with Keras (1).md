@@ -28,7 +28,7 @@ Keras RNN API는 다음과 같은 목적을 둔다.
 
 이는 최소한의 코드로 유연하게 다른 연구 아이디어의 원형을 만들 수 있도록 해준다.
 
-**setup**
+### setup
 ```python
 from __future__ import absolute_import, division, print_function, unicode_literals
 import collections
@@ -39,7 +39,21 @@ from tensorflow.keras import layers
 print(tf.__version__)
 print('즉시 실행 모드:', tf.executing_eagerly())
 ```
+```
+2.0.0
+즉시 실행 모드: True
+```
+
+### 간단한 모형
+
+Keras의 built-in RNN layer
+- `tf.keras.layers.SimpleRNN`: 이전 timestep에서 다음 timestep으로 정보를 넘겨주는(fed) fully-connected RNN  
+- `tf.keras.layers.GRU`
+- `tf.keras.layers.LSTM`
+
+다음의 예제는 정수 순서열이 입력으로 주어지면, 이를 64차원의 벡터로 임베딩하고, `LSTM` layer로 벡터 순서열을 처리하는 `Sequential` 모형이다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyNTIzNDU0XX0=
+eyJoaXN0b3J5IjpbLTgzNzczNDQ1NV19
 -->
