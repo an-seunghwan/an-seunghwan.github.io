@@ -92,7 +92,40 @@ model.compile(loss='sparse_categorical_crossentropy',
               optimizer='sgd',
               metrics=['accuracy'])
 ```
+```python
+from datetime import datetime
+start = datetime.now()
+model.fit(x_train, y_train,
+          validation_data=(x_test, y_test),
+          batch_size=batch_size,
+          epochs=1)
+print('걸린 시간:', (datetime.now() - start).seconds, '초')
+```
+```
+
+```
+### CuDNN이 없는 모형
+```python
+slow_model = build_model(allow_cudnn_kernel=False)
+slow_model.set_weights(model.get_weights())
+slow_model.compile(loss='sparse_categorical_crossentropy',
+                   optimizer='sgd',
+                   metrics=['accuracy'])
+start = datetime.now()
+slow_model.fit(x_train, y_train,
+               validation_data=(x_test, y_test),
+               batch_size=batch_size,
+               epochs=1)
+print('걸린 시간:', (datetime.now() - start).seconds, '초')
+```
+```
+
+```
+실제로는 CuDNN이 일반적인 Tensorflow kernel을 사용한 경우보다 빠르지만, 필자의 컴퓨터에는 GPU가 없어 비교를 할 수 없었다...
+
+동일한 CuDNN-enabled 모형은 CPU만 있는 환경에서도 추론(inference) 목적을 위해 사용될 수 있다. `tf.device`는 장치의 배치를 지정한다. 다음과 같은 코드를 구성한다면 모형은 만약 GPU를 사용할 수 없다면 default로써 CPU만을 사용할 것이다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMDYyMzMwOF19
+eyJoaXN0b3J5IjpbMjA1NDk3ODcwMF19
 -->
