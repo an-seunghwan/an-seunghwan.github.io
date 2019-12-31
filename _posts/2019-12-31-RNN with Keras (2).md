@@ -121,7 +121,9 @@ slow_model.fit(x_train, y_train,
 print('걸린 시간:', (datetime.now() - start).seconds, '초')
 ```
 ```
-
+Train on 60000 samples, validate on 10000 samples
+60000/60000 [==============================] - 57s 953us/sample - loss: 0.1201 - accuracy: 0.9627 - val_loss: 0.1297 - val_accuracy: 0.9583
+걸린 시간: 57 초
 ```
 실제로는 CuDNN이 일반적인 Tensorflow kernel을 사용한 경우보다 빠르지만, 필자의 컴퓨터에는 GPU가 없어 비교를 할 수 없었다...
 
@@ -137,8 +139,9 @@ with tf.device('CPU:0'):
     plt.imshow(sample, cmap=plt.get_cmap('gray'))
 ```
 ```
+Predicted result is: [5], target result is: 5
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2Mjc4OTI5OV19
+eyJoaXN0b3J5IjpbLTIwNTU0OTI0NjRdfQ==
 -->
