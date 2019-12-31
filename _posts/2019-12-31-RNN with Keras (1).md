@@ -86,6 +86,8 @@ default로써, RNN layer는 각각의 sample 별로 하나의 벡터를 갖는�
 
 RNN layer는 또한 각각의 sample의 모든 timestep 별로 RNN cell의 output을 반환할 수 있다. 이는 `return_sequences=True`으로 설정하면 가능하다. 이러한 경우의 RNN layer의 output 차원(shape)은 `(batch_size, timesteps, units)`이다.
 
+* RNN layer의 은닉 상태와 parameter들의 차원에 관해서는 RNN with Keras (0)을 참고해주세요! (coming soon!)
+
 ```python
 model = tf.keras.Sequential()
 model.add(layers.Embedding(input_dim=1000, output_dim=64))
@@ -114,7 +116,8 @@ Trainable params: 361,866
 Non-trainable params: 0
 _________________________________________________________________
 ```
-
+아래의 간단한 예제로 위의 내용을 확인해보자.
+```pyh
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTk3NDU1NzRdfQ==
+eyJoaXN0b3J5IjpbNDk4NTY5ODczXX0=
 -->
