@@ -131,6 +131,65 @@ print(layers.SimpleRNN(128, return_sequences=True)(sample_embedding).shape)
 (64, 100, 128)
 ```
 
+추가로, RNN layer는 최종 은닉 상태(state)를 반환할 수 있다. 반환된 은닉 상태는 후에 RNN layer 실행을 이어가거나, 다른 RNN을 초기화하는데 사용될 수 있다. 이러한 설정은 흔히 encoder-decoder sequence-to-sequence 모형에서 encoder의 최종 내부 은닉 상태를
+decoder의 초기 상태로 사용하기위해 활용된다.
+
+RNN layer가 내부 은닉 상태를 반환하기 위해서는, `return_state` parameter를 `True`으로 설정하면 된다. 특히 `LSTM`은 2개의 은닉 상태 tensor를 갖지만, `GRU`는 1개만 갖는다.
+
+layer의 초기 은닉 상태를 지정하기 위해서는, layer를 호출할 때 `initial_state` 인자를 추가하면 된다. 이때 은닉 상태의 차원(shape)은 반드시 layer의 unit size와 일치해야 한다(아래의 예제 참조).
+
+```python
+encoder_vocab = 1000
+decoder_vocab = 2000
+
+encoder_input = layers.Input(shape=(None, ))
+encoder_embedded = layers.Embedding(input_dim=encoder_vocab, output_dim=64)(encoder_input)
+
+# output과 함께 은닉 상태를 반환
+encoder_output, state_h, state_c = layers.LSTM(64,
+                                               return_sequences=False,
+                                               return_state=True,
+                                               name='encoder')(encoder_embedded)
+encoder_state = [state_h, state_c]
+
+decoder_input = layers.Input(shape=(None, ))
+decoder_embedded = layers.Embedding(input_dim=decoder_vocab, output_dim=64)(decoder_input)
+
+# 새로운 LSTM layer의 초기 은닉 상태에 앞의 2개의 상태 값을 지정
+decoder_output = layers.LSTM(64,
+                             name='decoder')(decoder_embedded, initial_state=encoder_state)
+output = layers.Dense(10, activation='softmax')(decoder_output)
+
+model = tf.keras.Model([encoder_input, decoder_input], output)
+model.summary()
+```
+```
+Model: "model_2"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_5 (InputLayer)            [(None, None)]       0                                            
+__________________________________________________________________________________________________
+input_6 (InputLayer)            [(None, None)]       0                                            
+__________________________________________________________________________________________________
+embedding_10 (Embedding)        (None, None, 64)     64000       input_5[0][0]                    
+__________________________________________________________________________________________________
+embedding_11 (Embedding)        (None, None, 64)     128000      input_6[0][0]                    
+__________________________________________________________________________________________________
+encoder (LSTM)                  [(None, 64), (None,  33024       embedding_10[0][0]               
+__________________________________________________________________________________________________
+decoder (LSTM)                  (None, 64)           33024       embedding_11[0][0]               
+                                                                 encoder[0][1]                    
+                                                                 encoder[0][2]                    
+__________________________________________________________________________________________________
+dense_9 (Dense)                 (None, 10)           650         decoder[0][0]                    
+==================================================================================================
+Total params: 258,698
+Trainable params: 258,698
+Non-trainable params: 0
+__________________________________________________________________________________________________
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTY2MDYxMjNdfQ==
+eyJoaXN0b3J5IjpbNTQxOTM1MjQ1XX0=
 -->
