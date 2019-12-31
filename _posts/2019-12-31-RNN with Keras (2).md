@@ -140,8 +140,8 @@ with tf.device('CPU:0'):
 ```
 ```
 Predicted result is: [5], target result is: 5
-!(https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/files/mnist1.png)
 ```
+![predicted result](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/files/mnist1.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU5MjI3Mjk5LC0yMDU1NDkyNDY0XX0=
+eyJoaXN0b3J5IjpbMTA5Mzc2NTQsLTIwNTU0OTI0NjRdfQ==
 -->
