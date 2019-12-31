@@ -189,7 +189,21 @@ Trainable params: 258,698
 Non-trainable params: 0
 __________________________________________________________________________________________________
 ```
+### RNN layers and RNN cells
+
+RNN API는 built-in RNN layer 뿐만 아니라 cell-level API 또한 제공한다. RNN layer가 입력된 batch 순서열을 모두 처리하는 것과 다르게, RNN cell은 오직 하나의 timestep만을 처리한다.
+
+RNN cell은 RNN layer의 `for` loop 내부라고 할 수 있다. cell을 `tf.keras.layers.RNN`으로 래핑(wrapping)하면 batch 순서열을 처리할 수 있도록 해준다. (즉, `RNN(LSTMCell(10))`)
+
+수학적으로, `RNN(LSTMCell(10))`는 `LSTM(10)`과 동일한 결과물을 제공한다. 사실, tensorflow 1.x에서는 해당하는 RNN cell을 만들고 이를 RNN layer으로 래핑(wrapping)했어야 한다. 하지만 built-in `GRU`나 `LSTM`은 CuDNN을 사용할 수 있도록 해주므로 더 나은 성능을 가질 수 있다.
+
+built-in RNN cell
+- tf.keras.layers.SimpleRNNCell: corresponds to the SimpleRNN layer.
+- tf.keras.layers.GRUCell: corresponds to the GRU layer.
+- tf.keras.layers.LSTMCell: corresponds to the LSTM layer.
+
+cell과 일반적인 `tf.keras.layers.RNN` class를 같이 사용한다면 자신만의 RNN 구조를 실행하기 매우 간편하다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQxOTM1MjQ1XX0=
+eyJoaXN0b3J5IjpbNDM3NTQ3ODIwXX0=
 -->
