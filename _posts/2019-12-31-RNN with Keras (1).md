@@ -53,7 +53,50 @@ Keras의 built-in RNN layer
 
 다음의 예제는 정수 순서열이 입력으로 주어지면, 이를 64차원의 벡터로 임베딩하고, `LSTM` layer로 벡터 순서열을 처리하는 `Sequential` 모형이다.
 
+```python
+model = tf.keras.Sequential()
+# 단어의 개수가 1000이고, 임베딩 차원의 크기가 64인 Embedding layer를 추가한다.
+model.add(layers.Embedding(input_dim=1000, output_dim=64))
+# 128개의 내부 unit을 가지는 LSTM layer를 추가한다.
+model.add(layers.LSTM(128))
+# 10개의 unit과 softmax 활성화 함수를 갖는 Dense layer를 추가한다.
+model.add(layers.Dense(10, activation='softmax'))
+model.summary()
+```
+```
+Model: "sequential_4"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_7 (Embedding)      (None, None, 64)          64000     
+_________________________________________________________________
+lstm_4 (LSTM)                (None, 128)               98816     
+_________________________________________________________________
+dense_6 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 164,106
+Trainable params: 164,106
+Non-trainable params: 0
+_________________________________________________________________
+```
 
+### Output과 은닉 상태
+
+default로써, RNN layer는 각각의 sample 별로 하나의 벡터를 갖는다. 이 벡터는 마지막 timestep에 해당하는 RNN cell의 output으로, 전체 입력 순서열의 정보를 갖고 있다. 이 경우 RNN layer의 output 차원(shape)은 `(batch_size, units)`이고, 이때 `units`는 layer를 구성하는 unit의 개수이다.
+
+RNN layer는 또한 각각의 sample의 모든 timestep 별로 RNN cell의 output을 반환할 수 있다. 이는 `return_sequences=True`으로 설정하면 가능하다. 이러한 경우의 RNN layer의 output 차원(shape)은 `(batch_size, timesteps, units)`이다.
+
+```python
+model = tf.keras.Sequential()
+model.add(layers.Embedding(input_dim=1000, output_dim=64))
+# GRU layer의 output의 shape은 (batch_size, timesteps(= input_dim), 256)이다.
+model.add(layers.GRU(256, return_sequences=True))
+# SimpleRNN layer의 output의 shape은 (batch_size, 128)이다.
+model.add(layers.SimpleRNN(128, return_sequences=True))
+model.add(layers.Dense(10, activation='softmax'))
+model.summary() 
+```
+`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNzczNDQ1NV19
+eyJoaXN0b3J5IjpbMjA4MTUzMjgyXX0=
 -->
