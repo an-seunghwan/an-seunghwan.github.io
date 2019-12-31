@@ -204,6 +204,32 @@ built-in RNN cell
 
 cell과 일반적인 `tf.keras.layers.RNN` class를 같이 사용한다면 자신만의 RNN 구조를 실행하기 매우 간편하다.
 
+### Cross-batch Statefulness
+
+만약 매우 긴(또는 무한한) 순서열을 처리한다면, **cross-batch statefulness**를 사용하고 싶을 수도 있다.
+
+일반적으로, RNN layer의 내부 은닉 상태는 새로운 새로운 batch가 입력될 때마다 초기화된다. (즉, 이는 모든 sample이 이전의 sample과 독립임을 가정한다). layer는 주어진 sample을 처리하는 동안에만 내부 은닉 상태를 유지할 것이다.
+
+만약 매우 긴 순서열을 처리해야 한다면, 이를 보다 짧은 순서열로 나누고 내부 은닉 상태를 초기화 하지 않고 짧게 나누어진 순서열을 순차적으로 입력한다면 매우 유용할 것이다. 이렇게 한다면, layer는 전체 순서열의 정보를 오직 한번에 순서열의 일부분만을 보고 얻을 수 있다.
+
+이는 layer를 구성할 때, `stateful=True`으로 설정하면 된다.
+
+만약 `s = [t0, t1, ..., t1546, t1547]과 같은 긴 순서열을 가지고, 다음과 같이 나누었다고 생각하자 
+
+```
+s1 = [t0, t1, ..., t100]
+s2 = [t101, ..., t200]
+...
+s16 = [t1501, ..., t1547]
+```
+
+이는 다음과 같이 처리 가능하다.
+```python
+lstm_layer = layers.LSTM(64, stateful=True)
+for s in sub_sequences:
+  output = lstm_layer(s)
+```
+  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3NTQ3ODIwXX0=
+eyJoaXN0b3J5IjpbLTExMTAwNTIxMjldfQ==
 -->
