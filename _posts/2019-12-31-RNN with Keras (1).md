@@ -281,6 +281,10 @@ Trainable params: 80,266
 Non-trainable params: 0
 _________________________________________________________________
 ```
+
+* 세부적인 Bidirectional wrapper: coming soon!
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNjg2NDk2MV19
+eyJoaXN0b3J5IjpbLTMxMTg2ODA2M119
 -->
