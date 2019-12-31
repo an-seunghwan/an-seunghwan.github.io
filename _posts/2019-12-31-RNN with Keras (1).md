@@ -24,9 +24,22 @@ RNN은 neural network의 일종으로 시계열 데이터나 언어와 같은 �
 Keras RNN API는 다음과 같은 목적을 둔다.
 - **쉬운 사용**: built-in `tf.keras.layers.RNN`, `tf.keras.layers.LSTM`, `tf.keras.layers.GRU` layer들을 
 어려운 configuration 설정이 없이 빠르게 recurrent 모형을 적합할 수 있도록 해준다.
-- **쉬운 customization**: 자신만의 RNN cell layer(`for` loop의 내부 부분)를 정의할 수 있고,
-이를 일반적인 `tf.keras.layers.RNN` layer(`for` loop itself)와 함께 사용할 수 있다.
+- **쉬운 customization**: 자신만의 RNN cell layer(`for` loop의 내부 부분)를 정의할 수 있고, 이를 일반적인 `tf.keras.layers.RNN` layer(`for` loop itself)와 함께 사용할 수 있다.
+
 이는 최소한의 코드로 유연하게 다른 연구 아이디어의 원형을 만들 수 있도록 해준다.
+
+**setup**
+```python
+from __future__ import absolute_import, division, print_function, unicode_literals
+import collections
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import layers
+print(tf.__version__)
+print('즉시 실행 모드:', tf.executing_eagerly())
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMxNTAyNjU5XX0=
+eyJoaXN0b3J5IjpbODUyNTIzNDU0XX0=
 -->
