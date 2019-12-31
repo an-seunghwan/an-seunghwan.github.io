@@ -102,7 +102,9 @@ model.fit(x_train, y_train,
 print('걸린 시간:', (datetime.now() - start).seconds, '초')
 ```
 ```
-
+Train on 60000 samples, validate on 10000 samples
+60000/60000 [==============================] - 55s 917us/sample - loss: 0.1324 - accuracy: 0.9587 - val_loss: 0.2054 - val_accuracy: 0.9306
+걸린 시간: 55 초
 ```
 ### CuDNN이 없는 모형
 ```python
@@ -125,7 +127,18 @@ print('걸린 시간:', (datetime.now() - start).seconds, '초')
 
 동일한 CuDNN-enabled 모형은 CPU만 있는 환경에서도 추론(inference) 목적을 위해 사용될 수 있다. `tf.device`는 장치의 배치를 지정한다. 다음과 같은 코드를 구성한다면 모형은 만약 GPU를 사용할 수 없다면 default로써 CPU만을 사용할 것이다.
 
+```python
+import matplotlib.pyplot as plt
+with tf.device('CPU:0'):
+    cpu_model = build_model(allow_cudnn_kernel=True)
+    cpu_model.set_weights(model.get_weights())
+    result = tf.argmax(cpu_model.predict_on_batch(tf.expand_dims(sample, 0)), axis=1)
+    print('Predicted result is: {}, target result is: {}'.format(result.numpy(), sample_label))
+    plt.imshow(sample, cmap=plt.get_cmap('gray'))
+```
+```
 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NDk3ODcwMF19
+eyJoaXN0b3J5IjpbLTc2Mjc4OTI5OV19
 -->
