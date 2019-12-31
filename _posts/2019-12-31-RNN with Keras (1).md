@@ -234,10 +234,53 @@ state를 초기화하고 싶다면, `layer.reset_states()`를 사용하면 된�
 > **주의**: 이러한 설정에서는, 반드시 다음에 이어지는 batch가 이전 batch의 연속이어야 하며, 그 크기(batch size)또한 동일해야 한다.
 E.g. 만약 batch가 다음과 같다면 [sequence_A_from_t0_to_t100, sequence_B_from_t0_to_t100], 다음의 batch는 [sequence_A_from_t101_to_t200, sequence_B_from_t101_to_t200] 이어야 한다.  
 
-예제롤 살펴보자
+예제를 살펴보자
 
-```pytho
+```python
+paragraph1 = np.random.random((20, 10, 50)).astype(np.float32)
+paragraph2 = np.random.random((20, 10, 50)).astype(np.float32)
+paragraph3 = np.random.random((20, 10, 50)).astype(np.float32)
 
+lstm_layer = layers.LSTM(64, stateful=True)
+output = lstm_layer(paragraph1)
+output = lstm_layer(paragraph2)
+output = lstm_layer(paragraph3)
+
+# reset_states()는 cached state를 원래의 initial_state로 초기화 한다.
+# 만약 initial_state가 주어지지 않았다면, zero_state가 default로 사용된다.
+lstm_layer.reset_states()
+```
+### Bidirectional RNNs
+
+시계열 순서열에 대해서(e.g. text), RNN model은 앞에서부터 뒤로 처리하는 것 뿐만 아니라, 반대 방향으로도 같이 처리를 한다면 더 성능이 좋아진다. 예를 들어, 문장에서 다음 단어를 예측하는데 있어서, 이전에 오는 단어만 보는 것이 아닌 단어 주변의 문맥을 사용하는 것이 더 효과적일 수도 있다.
+
+Keras는 이러한 양방향 RNN을 구현할 수 있도록 쉬운 API를 제공한다: `tf.keras.layers.Bidirectional`
+
+```python
+model = tf.keras.Sequential()
+model.add(layers.Bidirectional(layers.LSTM(64, 
+                                           return_sequences=True), 
+                               input_shape=(5, 10))) # timesteps = 5, input_dim = 10
+model.add(layers.Bidirectional(layers.LSTM(32)))
+model.add(layers.Dense(10, activation='softmax'))
+model.summary()
+```
+```
+Model: "sequential_7"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+bidirectional_2 (Bidirection (None, 5, 128)            38400     
+_________________________________________________________________
+bidirectional_3 (Bidirection (None, 64)                41216     
+_________________________________________________________________
+dense_10 (Dense)             (None, 10)                650       
+=================================================================
+Total params: 80,266
+Trainable params: 80,266
+Non-trainable params: 0
+_________________________________________________________________
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3Mjk0ODU0Ml19
+eyJoaXN0b3J5IjpbMjEyNjg2NDk2MV19
 -->
