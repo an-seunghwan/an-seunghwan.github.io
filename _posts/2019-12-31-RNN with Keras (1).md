@@ -92,11 +92,29 @@ model.add(layers.Embedding(input_dim=1000, output_dim=64))
 # GRU layer의 output의 shape은 (batch_size, timesteps(= input_dim), 256)이다.
 model.add(layers.GRU(256, return_sequences=True))
 # SimpleRNN layer의 output의 shape은 (batch_size, 128)이다.
-model.add(layers.SimpleRNN(128, return_sequences=True))
+model.add(layers.SimpleRNN(128, return_sequences=False))
 model.add(layers.Dense(10, activation='softmax'))
 model.summary() 
 ```
-`
+```
+Model: "sequential_6"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_9 (Embedding)      (None, None, 64)          64000     
+_________________________________________________________________
+gru_3 (GRU)                  (None, None, 256)         247296    
+_________________________________________________________________
+simple_rnn_11 (SimpleRNN)    (None, 128)               49280     
+_________________________________________________________________
+dense_8 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 361,866
+Trainable params: 361,866
+Non-trainable params: 0
+_________________________________________________________________
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTUzMjgyXX0=
+eyJoaXN0b3J5IjpbLTE1OTk3NDU1NzRdfQ==
 -->
