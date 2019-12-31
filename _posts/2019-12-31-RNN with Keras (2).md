@@ -141,12 +141,12 @@ with tf.device('CPU:0'):
 ```
 Predicted result is: [5], target result is: 5
 ```
-![img1](/assets/img/mnist1.jpg)
+![img1](an-seunghwan/an-seunghwan.github.io//blob/master/assets/img/mnist1.jpg).jpg)
 
 ### list/dict 입력 또는 중첩된 입력인 경우의 RNN
 * python class에 대한 자세한 공부 후에 추가하도록 하겠습니다 (coming soon!)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjI4NTAxMDgsMTUxNDU1NjU3OSwtMT
+eyJoaXN0b3J5IjpbLTE0NTg1NDg0OTIsMTUxNDU1NjU3OSwtMT
 gxMTI2NjEwLC01MDExMzc3MjQsLTUwMTEzNzcyNCwtMjA1NTQ5
 MjQ2NF19
 -->
