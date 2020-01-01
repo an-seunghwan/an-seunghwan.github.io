@@ -99,7 +99,41 @@ array([[-0.06456654,  0.05076444,  0.13045819, -0.01007326],
        [-0.04265825, -0.03968915,  0.02731422,  0.09683159]],
       dtype=float32)>, <tf.Variable 'Variable:0' shape=(4,) dtype=float32, numpy=array([0., 0., 0., 0.], dtype=float32)>]
 ```
+```python
+class Compute_Sum(layers.Layer):
+    def __init__(self, input_dim):
+        super(Compute_Sum, self).__init__()
+        self.total = tf.Variable(initial_value=tf.zeros((input_dim, )),
+                                 trainable=False)
+    def call(self, inputs):
+        self.total.assign_add(tf.reduce_sum(inputs, axis=0)) # column-wise
+        # 지금까지 입력된 값들을 total에 상수처럼 누적하여 저장
+        return self.total
+```
+```python
+x = tf.ones((2, 2))
+my_sum = Compute_Sum(2)
+y = my_sum(x)
+print(y.numpy())
+y = my_sum(x)
+print(y.numpy())
+```
+```
+[2. 2.]
+[4. 4.]
+```
+```python
+print('weights:', len(my_sum.weights))
+print('non-trainable weights:', len(my_sum.non_trainable_weights))
+# It's not included in the trainable weights:
+print('trainable_weights:', my_sum.trainable_weights)
+```
+```
+weights: 1
+non-trainable weights: 1
+trainable_weights: []
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYwNjc1NDJdfQ==
+eyJoaXN0b3J5IjpbLTU3Njg5MDQ2Ml19
 -->
