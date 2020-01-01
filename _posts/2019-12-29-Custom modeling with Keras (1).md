@@ -79,7 +79,7 @@ tf.Tensor(
  [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]], shape=(3, 5), dtype=float32)
  ```
 
-## `add_weight` method
+### `add_weight` method
 ```python
 class Linear(layers.Layer):
     def __init__(self, units=32, input_dim=32):
@@ -109,6 +109,17 @@ array([[-0.06456654,  0.05076444,  0.13045819, -0.01007326],
        [-0.04265825, -0.03968915,  0.02731422,  0.09683159]],
       dtype=float32)>, <tf.Variable 'Variable:0' shape=(4,) dtype=float32, numpy=array([0., 0., 0., 0.], dtype=float32)>]
 ```
+
+### Layer는 학습이 불가능한 weights를 가질 수 있다.
+
+학습 가능한 weights이외에, 학습 불가능한 weights를 layer에 추가할 수 있다. 이러한 weights는 역전파 과정 동안에 고려되지 
+
+#### Layers can have non-trainable weights
+
+Besides trainable weights, you can add non-trainable weights to a layer as well. Such weights are meant not to be taken into account during backpropagation, when you are training the layer.
+
+Here's how to add and use a non-trainable weight:
+
 ```python
 class Compute_Sum(layers.Layer):
     def __init__(self, input_dim):
@@ -213,5 +224,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc4OTAwMTM2LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbLTE3MjM5ODY1MTMsMTYzMzM3NDA1NF19
 -->
