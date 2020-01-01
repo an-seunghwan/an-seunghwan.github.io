@@ -2,7 +2,7 @@
 title: "Custom modeling with Keras (2)"
 excerpt: loss, config and serialization
 toc: true
-toc_sticky: false
+toc_sticky: true
 
 author_profile: false
 
@@ -26,7 +26,7 @@ tf.keras.backend.clear_session() # 간단한 초기화 방법(노트북 환경�
 ```
 * What is ```__future__```? (coming soon!)
 
-**layer는 재귀적으로 전진 방향 전파 학습을 하는 도중 손실함수 값을 수집한다!**
+## **layer는 재귀적으로 전진 방향 전파 학습을 하는 도중 손실함수 값을 수집한다!**
 
 layer에서 `call` method는 손실 값을 저장하는 tensor를 생성할 수 있도록 해주어, 후에 training loop을 작성할 때 사용가능하도록 해준다.
 → `self.add_loss(value)`를 사용!
@@ -100,7 +100,7 @@ tf.Tensor(0.7283453, shape=(), dtype=float32)
 
 training loop에 응용: [https://www.tensorflow.org/guide/keras/train_and_evaluate](https://www.tensorflow.org/guide/keras/train_and_evaluate) (coming soon!)
 
-**layers들에 대해 직렬화(serialization)(optional)**
+## **layers들에 대해 직렬화(serialization)(optional)**
 
 * What is serialization?(coming soon!)
 
@@ -180,7 +180,7 @@ print(new_layer.get_config())
 
 * serialization: [https://www.tensorflow.org/guide/keras/save_and_serialize](https://www.tensorflow.org/guide/keras/save_and_serialize) (coming soon!)
 
-**call method의 특별한 training argument**
+## **call method의 특별한 training argument**
 
 몇몇 특정한 layer(`BatchNormalization`, `Dropout`, ...)들은 training과 inference loop에서 다르게 작동해야하는 경우가 있다.
 → 이러한 경우에는 `call` method에서 training이라는 boolean 인자를 사용하면 된다! 이렇게 하면 built-in training or inference loops(e.g. `fit`)에서 특정한 layer를 목적에 맞게 사용할 수 있다.
@@ -198,5 +198,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NjM1MjcxNl19
+eyJoaXN0b3J5IjpbMjI4NzI1NTU1XX0=
 -->
