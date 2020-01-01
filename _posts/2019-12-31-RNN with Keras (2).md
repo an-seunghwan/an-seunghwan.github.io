@@ -19,7 +19,7 @@ tags:
 > 
 > 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
 
-### 성능 최적화와 CuDNN kernels
+## 성능 최적화와 CuDNN kernels
 
 Tensorflow 2.0에서는, built-in LSTM과 GRU layer는 GPU가 사용 가능할 경우 default로써 CuDNN kernel의 이점을 활용하도록
 업데이트 되었다. 기존의 `keras.layers.CuDNNLSTM/CuDNNGRU` layer는 삭제되었으며,  따라서 모형을 구성할 때 해당 하드웨어에서 작동할지 걱정할 필요가 없다.
@@ -33,7 +33,7 @@ CuDNN은 특정한 가정 하에서 작동될 수 있는데, 이는 만약 built
 - `use_bias`가 False인 경우
 - 입력 데이터가 strictly right padded 되지 않은 경우 masking을 사용하는 경우 (만약 mask가 strictly right padded data에 대응된다면, CuDNN을 여전히 사용할 수 있다. 이는 가장 흔한 경우이다.)
 
-### CuDNN kernel 사용해보기
+## CuDNN kernel 사용해보기
 
 간단한 LSTM 모형을 통해 성능의 차이를 살펴보자. 여기서 입력 순서열로써 MNIST digits의 순서열 데이터(각각의 pixel row들을 timestep으로써 간주)를 사용할 것이고, 숫자의 label을 예측할 것이다.
 
@@ -149,7 +149,7 @@ Predicted result is: [5], target result is: 5
 ### list/dict 입력 또는 중첩된 입력인 경우의 RNN
 * python class에 대한 자세한 공부 후에 추가하도록 하겠습니다 (coming soon!)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjcwMDY5NSwzNTk1MzAzNDcsMTUxND
+eyJoaXN0b3J5IjpbMTQ5MTE1OTA2MywzNTk1MzAzNDcsMTUxND
 U1NjU3OSwtMTgxMTI2NjEwLC01MDExMzc3MjQsLTUwMTEzNzcy
 NCwtMjA1NTQ5MjQ2NF19
 -->
