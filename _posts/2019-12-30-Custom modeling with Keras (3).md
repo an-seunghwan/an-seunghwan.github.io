@@ -11,6 +11,7 @@ categories:
   - tensorflow 2.0
 tags:
   - tensorflow 2.0
+  - keras
 ---
 
 > 이 글은 다음 문서를 참조하고 있습니다!
@@ -244,7 +245,7 @@ Out[51]: <tensorflow.python.keras.callbacks.History at 0x2a101fc7348>
 
 * Functional API 부분은 생략
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQ4ODgwMDAsLTIwNDIzNzkxMjMsMz
-k1NzE4NTIsLTQ4NDY5NjYxNiwtNzcxODMwODcyLC0yMDI3OTAx
-ODUwXX0=
+eyJoaXN0b3J5IjpbLTc0MTcwNjUwNSwtMTMxNDg4ODAwMCwtMj
+A0MjM3OTEyMywzOTU3MTg1MiwtNDg0Njk2NjE2LC03NzE4MzA4
+NzIsLTIwMjc5MDE4NTBdfQ==
 -->
