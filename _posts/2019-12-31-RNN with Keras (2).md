@@ -76,14 +76,14 @@ def build_model(allow_cudnn_kernel=True):
                                                               activation='softmax')])
     return model
 ```
-### MNIST 데이터
+## MNIST 데이터
 ```python
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
 sample, sample_label = x_train[0], y_train[0]
 ```
-### 모형 생성과 컴파일
+## 모형 생성과 컴파일
 모형의 output은 `[batch_size, 10]`의 shape을 가진다.
 모형의 target은 정수 벡터이며, 각각의 정수는 0에서 9까지 이다.
 
@@ -108,7 +108,7 @@ Train on 60000 samples, validate on 10000 samples
 60000/60000 [==============================] - 55s 917us/sample - loss: 0.1324 - accuracy: 0.9587 - val_loss: 0.2054 - val_accuracy: 0.9306
 걸린 시간: 55 초
 ```
-### CuDNN이 없는 모형
+## CuDNN이 없는 모형
 ```python
 slow_model = build_model(allow_cudnn_kernel=False)
 slow_model.set_weights(model.get_weights())
@@ -146,10 +146,10 @@ Predicted result is: [5], target result is: 5
 
 ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/mnist1.jpg?raw=true)
 
-### list/dict 입력 또는 중첩된 입력인 경우의 RNN
+## list/dict 입력 또는 중첩된 입력인 경우의 RNN
 * python class에 대한 자세한 공부 후에 추가하도록 하겠습니다 (coming soon!)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MTE1OTA2MywzNTk1MzAzNDcsMTUxND
+eyJoaXN0b3J5IjpbLTE2Nzc0OTAxOSwzNTk1MzAzNDcsMTUxND
 U1NjU3OSwtMTgxMTI2NjEwLC01MDExMzc3MjQsLTUwMTEzNzcy
 NCwtMjA1NTQ5MjQ2NF19
 -->
