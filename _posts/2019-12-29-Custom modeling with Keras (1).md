@@ -110,7 +110,7 @@ array([[-0.06456654,  0.05076444,  0.13045819, -0.01007326],
       dtype=float32)>, <tf.Variable 'Variable:0' shape=(4,) dtype=float32, numpy=array([0., 0., 0., 0.], dtype=float32)>]
 ```
 
-### Layer는 학습이 불가능한 weights를 가질 수 있다.
+## Layer는 학습이 불가능한 weights를 가질 수 있다.
 
 학습 가능한 weights이외에, 학습 불가능한 weights를 layer에 추가할 수 있다. 이러한 weights는 학습에서 역전파 과정 동안에 고려되지 않는다. 다음은 예제 코드이다.
 
@@ -152,7 +152,7 @@ non-trainable weights: 1
 trainable_weights: []
 ```
 
-### 최고의 연습: input의 shape이 알려지기 전에 weight를 생성하기
+## 최고의 연습: input의 shape이 알려지기 전에 weight를 생성하기
 
 앞의 logistic regression 예제는, `Linear` layer는 `input_dim` 인자를 받아 이를 `__init__`의 `w`와 `b` weights의 shape을 계산한다.
 
@@ -237,5 +237,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDY2NDYwMzQsMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbLTE2MDIwMjg3ODAsMTYzMzM3NDA1NF19
 -->
