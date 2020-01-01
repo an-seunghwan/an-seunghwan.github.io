@@ -198,7 +198,7 @@ tf.Tensor(
 
 만약 어떤 Layer instance를 다른 Layer의 attribute으로 설정하면, 바깥 layer가 내부 layer의 weights를 추적한다.
 
-
+이러한 sublayer는 `__init__` method 내부에 생성하면 된다(왜냐하면 sublayer는 일반적으로 `build` method를 가지므로, 바깥 layer가 생성될 때 같이 생성된다).
 
 ### Layers are recursively composable
 
@@ -242,5 +242,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyNjA0NjI0LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbMTMzMDAyMDA3NSwxNjMzMzc0MDU0XX0=
 -->
