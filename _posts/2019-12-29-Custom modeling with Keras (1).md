@@ -26,6 +26,10 @@ from tensorflow.keras import layers
 tf.keras.backend.clear_session()  # notebook의 초기화
 ```
 
+##  Layer class
+** Layer는 state(weights)와 몇몇 계산을 캡슐화한다.
+주로 다루게 될 주요 data structure는 `
+
 ## The Layer class
 
 ### Layers encapsulate a state (weights) and some computation
@@ -212,5 +216,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NDg4MTQzLDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbMzQyNjE0MTE2LDE2MzMzNzQwNTRdfQ==
 -->
