@@ -68,7 +68,38 @@ tf.Tensor(
  [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
  [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]], shape=(3, 5), dtype=float32)
  ```
- 
+
+## `add_weight` method
+```python
+class Linear(layers.Layer):
+    def __init__(self, units=32, input_dim=32):
+        super(Linear, self).__init__()
+        self.w = self.add_weight(shape=(input_dim, units),
+                                 initializer='random_normal',
+                                 trainable=True)
+        self.b = self.add_weight(shape=(units, ),
+                                 initializer='zeros',
+                                 trainable=True)
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+```
+```python
+x = tf.ones((2, 2))
+linear_layer = Linear(4, 2)
+y = linear_layer(x)
+print(y)
+print('trainable_weights:', linear_layer.trainable_weights)
+```
+```
+tf.Tensor(
+[[-0.10722479  0.01107529  0.1577724   0.08675833]
+ [-0.10722479  0.01107529  0.1577724   0.08675833]], shape=(2, 4), dtype=float32)
+trainable_weights: [<tf.Variable 'Variable:0' shape=(2, 4) dtype=float32, numpy=
+array([[-0.06456654,  0.05076444,  0.13045819, -0.01007326],
+       [-0.04265825, -0.03968915,  0.02731422,  0.09683159]],
+      dtype=float32)>, <tf.Variable 'Variable:0' shape=(4,) dtype=float32, numpy=array([0., 0., 0., 0.], dtype=float32)>]
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE1MjA1NzUxXX0=
+eyJoaXN0b3J5IjpbLTEyOTYwNjc1NDJdfQ==
 -->
