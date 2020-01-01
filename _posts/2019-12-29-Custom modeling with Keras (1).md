@@ -175,10 +175,8 @@ class Linear(layers.Layer):
     def call(self, inputs):
         return tf.matmul(inputs, self.w) + self.b
 ```
-`__call__` method는 첫 번째 호출이 되는 시점에 자동으로 `build`를 실행시킨다.
 
-#The __call__ method of your layer will automatically run build the first time it is called. 
-#You now have a layer that's lazy and easy to use:
+`__call__` method는 첫 번째 호출이 되는 시점에 자동으로 `build`를 실행시킨다.
 
 ```python
 x = tf.ones((3, 3))        
@@ -232,5 +230,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjI4NDE2NywxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbLTEzNjU5NTM4NSwxNjMzMzc0MDU0XX0=
 -->
