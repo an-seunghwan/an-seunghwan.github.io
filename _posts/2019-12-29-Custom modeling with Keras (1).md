@@ -175,10 +175,12 @@ class Linear(layers.Layer):
     def call(self, inputs):
         return tf.matmul(inputs, self.w) + self.b
 ```
-```python
+`__call__` method는 첫 번째 호출이 되는 시점에 자동으로 `build`를 실행시킨다.
+
 #The __call__ method of your layer will automatically run build the first time it is called. 
 #You now have a layer that's lazy and easy to use:
 
+```python
 x = tf.ones((3, 3))        
 linear_layer = Linear(units=12)  # At instantiation, we don't know on what inputs this is going to get called
 y = linear_layer(x)  # The layer's weights are created dynamically the first time the layer is called
@@ -230,5 +232,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc5MTg4MywxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbLTUzNjI4NDE2NywxNjMzMzc0MDU0XX0=
 -->
