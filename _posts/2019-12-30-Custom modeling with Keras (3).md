@@ -1,6 +1,8 @@
 ---
 title: "Custom modeling with Keras (3)"
 excerpt: 모형의 적합!
+toc: true
+toc_sticky: false
 
 author_profile: false
 
@@ -242,6 +244,6 @@ Out[51]: <tensorflow.python.keras.callbacks.History at 0x2a101fc7348>
 
 * Functional API 부분은 생략
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1NzE4NTIsLTQ4NDY5NjYxNiwtNzcxOD
-MwODcyLC0yMDI3OTAxODUwXX0=
+eyJoaXN0b3J5IjpbLTIwNDIzNzkxMjMsMzk1NzE4NTIsLTQ4ND
+Y5NjYxNiwtNzcxODMwODcyLC0yMDI3OTAxODUwXX0=
 -->
