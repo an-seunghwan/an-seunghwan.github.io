@@ -154,11 +154,7 @@ trainable_weights: []
 
 ### 최고의 연습: input의 shape이 알려지기 전에 weight를 생성하기
 
-앞의 logistic regression 예제는, `Linear` layer는 `input_dim` 인자를 받아 이를 `__init
-
-### Best practice: deferring weight creation until the shape of the inputs is known
-
-In the logistic regression example above, our  `Linear`  layer took an  `input_dim`  argument that was used to compute the shape of the weights  `w`  and  `b`  in  `__init__`:
+앞의 logistic regression 예제는, `Linear` layer는 `input_dim` 인자를 받아 이를 `__init__`의 `w`와 `b` weights의 shape을 계산한다.
 
 ```python
 class Linear(layers.Layer):
@@ -230,5 +226,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMDMzMzU4NiwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbLTUzMzg5MzY2MSwxNjMzMzc0MDU0XX0=
 -->
