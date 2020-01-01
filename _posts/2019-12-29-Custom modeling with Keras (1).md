@@ -193,6 +193,16 @@ tf.Tensor(
  [-0.02907148  0.11085058 -0.14688957  0.07985388  0.11514413  0.09643906
   -0.04974959  0.13078684 -0.12947026  0.22152902 -0.10075628  0.10019987]], shape=(3, 12), dtype=float32)
 ```
+
+## Layer는 재귀적으로 구성이 가능하다.
+
+만약 어떤 Layer instance를 다른 Layer의 attribute으로 
+
+### Layers are recursively composable
+
+If you assign a Layer instance as attribute of another Layer, the outer layer will start tracking the weights of the inner layer.
+
+We recommend creating such sublayers in the  `__init__`  method (since the sublayers will typically have a  `build`  method, they will be built when the outer layer gets built).
 ```python
 class MLPBlock(layers.Layer):
     def __init__(self):
@@ -230,5 +240,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMTA0NzE3OCwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbNDYzNDk4MTY2LDE2MzMzNzQwNTRdfQ==
 -->
