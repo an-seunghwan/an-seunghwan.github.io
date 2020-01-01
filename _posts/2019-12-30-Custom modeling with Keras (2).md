@@ -11,6 +11,7 @@ categories:
   - tensorflow 2.0
 tags:
   - tensorflow 2.0
+  - keras
 ---
 
 > 이 글은 다음 문서를 참조하고 있습니다!
@@ -198,5 +199,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI4NzI1NTU1XX0=
+eyJoaXN0b3J5IjpbLTc1OTE4NTQ0OCwyMjg3MjU1NTVdfQ==
 -->
