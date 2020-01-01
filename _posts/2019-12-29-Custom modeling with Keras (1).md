@@ -181,8 +181,7 @@ class Linear(layers.Layer):
 ```python
 x = tf.ones((3, 3))        
 linear_layer = Linear(units=12) # 객체를 할당하는 시점에, 어떠한 input이 사용될 지 모른다.
-y = linear_layer(x) # 
-# The layer's weights are created dynamically the first time the layer is called
+y = linear_layer(x) # layer의 weights는 동적으로 처음으로 호출되는 시점에 생성된다.
 print(y)
 ```
 ```
@@ -231,5 +230,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjg3MTUwNTgsMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbMjAwMTA0NzE3OCwxNjMzMzc0MDU0XX0=
 -->
