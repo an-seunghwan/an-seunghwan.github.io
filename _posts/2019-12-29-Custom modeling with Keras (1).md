@@ -23,8 +23,17 @@ tags:
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
 from tensorflow.keras import layers
-tf.keras.backend.clear_session()  # For easy reset of notebook state.
+tf.keras.backend.clear_session()  # notebook의 초기화
 ```
+
+## The Layer class
+
+### Layers encapsulate a state (weights) and some computation
+
+The main data structure you'll work with is the  `Layer`. A layer encapsulates both a state (the layer's "weights") and a transformation from inputs to outputs (a "call", the layer's forward pass).
+
+Here's a densely-connected layer. It has a state: the variables  `w`  and  `b`.
+
 ## Dense layer
 ```python
 class Linear(layers.Layer):
@@ -203,5 +212,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbLTY5NDg4MTQzLDE2MzMzNzQwNTRdfQ==
 -->
