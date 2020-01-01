@@ -30,15 +30,7 @@ tf.keras.backend.clear_session()  # notebook의 초기화
 ** Layer는 state(weights)와 몇몇 계산을 캡슐화한다.
 주로 다루게 될 주요 data structure는 `Layer`이다. Layer는 state (the layer's "weights")와 input을 output으로 변환("call", layer의 전진 학습) 과정을 캡슐화한다.
 
-다음의 코드는 densely-connected layer이고 `w`와 `b`라는 
-
-## The Layer class
-
-### Layers encapsulate a state (weights) and some computation
-
-The main data structure you'll work with is the  `Layer`. A layer encapsulates both a state (the layer's "weights") and a transformation from inputs to outputs (a "call", the layer's forward pass).
-
-Here's a densely-connected layer. It has a state: the variables  `w`  and  `b`.
+다음의 코드는 densely-connected layer이고 `w`와 `b` 변수라는 2개의 상태를 갖는다.
 
 ## Dense layer
 ```python
@@ -218,5 +210,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4ODgwMDc4MCwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbLTE3MDgxOTE1NjQsMTYzMzM3NDA1NF19
 -->
