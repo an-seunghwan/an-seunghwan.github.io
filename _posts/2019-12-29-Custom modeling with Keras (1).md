@@ -200,11 +200,6 @@ tf.Tensor(
 
 이러한 sublayer는 `__init__` method 내부에 생성하면 된다(왜냐하면 sublayer는 일반적으로 `build` method를 가지므로, 바깥 layer가 생성될 때 같이 생성된다).
 
-### Layers are recursively composable
-
-If you assign a Layer instance as attribute of another Layer, the outer layer will start tracking the weights of the inner layer.
-
-We recommend creating such sublayers in the  `__init__`  method (since the sublayers will typically have a  `build`  method, they will be built when the outer layer gets built).
 ```python
 class MLPBlock(layers.Layer):
     def __init__(self):
@@ -242,5 +237,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDAyMDA3NSwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbODA3MjI5ODc1LDE2MzMzNzQwNTRdfQ==
 -->
