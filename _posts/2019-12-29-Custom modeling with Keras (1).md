@@ -156,6 +156,12 @@ trainable_weights: []
 
 앞의 logistic regression 예제는, `Linear` layer는 `input_dim` 인자를 받아 이를 `__init__`의 `w`와 `b` weights의 shape을 계산한다.
 
+많은 경우에, input의 크기를 미리 알 수 없는 경우가 있고, 
+
+In many cases, you may not know in advance the size of your inputs, and you would like to lazily create weights when that value becomes known, some time after instantiating the layer.
+
+In the Keras API, we recommend creating layer weights in the  `build(inputs_shape)`  method of your layer. Like this:
+
 ```python
 class Linear(layers.Layer):
     def __init__(self, units=32):
@@ -226,5 +232,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMzg5MzY2MSwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbMTkxMzEyODY0MiwxNjMzMzc0MDU0XX0=
 -->
