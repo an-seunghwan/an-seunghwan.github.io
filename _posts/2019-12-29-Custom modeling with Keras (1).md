@@ -44,7 +44,31 @@ class Linear(layers.Layer):
         return tf.matmul(inputs, self.w) + self.b
 ```
 ```python
-
+x = tf.ones((3,3))
+linear_layer = Linear(5, 3)
+y = linear_layer(x)
+print(linear_layer.b)
+print(y)
+print(tf.matmul(x, linear_layer.w))
+print(tf.matmul(x, linear_layer.w) + linear_layer.b)
+assert linear_layer.weights == [linear_layer.w, linear_layer.b]
+```
+```
+<tf.Variable 'Variable:0' shape=(5,) dtype=float32, numpy=array([0., 0., 0., 0., 0.], dtype=float32)>
+tf.Tensor(
+[[-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]], shape=(3, 5), dtype=float32)
+tf.Tensor(
+[[-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]], shape=(3, 5), dtype=float32)
+tf.Tensor(
+[[-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]
+ [-0.19611591 -0.00809563  0.1501273   0.13595319 -0.16803369]], shape=(3, 5), dtype=float32)
+ ```
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzM0MjAyNjNdfQ==
+eyJoaXN0b3J5IjpbNDE1MjA1NzUxXX0=
 -->
