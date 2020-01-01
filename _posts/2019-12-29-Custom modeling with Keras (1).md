@@ -180,7 +180,28 @@ class MLPBlock(layers.Layer):
         x = tf.nn.relu(x)
         return self.linear_3(x)
 ```
+```python
+mlp = MLPBlock()
+y = mlp(tf.ones(shape=(3, 64)))  # The first call to the `mlp` will create the weights
+print('weights:', len(mlp.weights))
+print('trainable weights:', len(mlp.trainable_weights))
+print(y)
+print(mlp.linear_1.w.shape)
+print(mlp.linear_2.w.shape)
+print(mlp.linear_3.w.shape)
+```
+```
+weights: 6
+trainable weights: 6
+tf.Tensor(
+[[-0.01152304]
+ [-0.01152304]
+ [-0.01152304]], shape=(3, 1), dtype=float32)
+(64, 32)
+(32, 32)
+(32, 1)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzODEwOTE3MV19
+eyJoaXN0b3J5IjpbMTYzMzM3NDA1NF19
 -->
