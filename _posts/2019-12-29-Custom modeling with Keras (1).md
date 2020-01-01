@@ -196,7 +196,9 @@ tf.Tensor(
 
 ## Layer는 재귀적으로 구성이 가능하다.
 
-만약 어떤 Layer instance를 다른 Layer의 attribute으로 
+만약 어떤 Layer instance를 다른 Layer의 attribute으로 설정하면, 바깥 layer가 내부 layer의 weights를 추적한다.
+
+
 
 ### Layers are recursively composable
 
@@ -240,5 +242,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzNDk4MTY2LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbMzkyNjA0NjI0LDE2MzMzNzQwNTRdfQ==
 -->
