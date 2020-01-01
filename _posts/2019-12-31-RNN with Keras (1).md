@@ -30,7 +30,7 @@ Keras RNN API는 다음과 같은 목적을 둔다.
 
 이는 최소한의 코드로 유연하게 다른 연구 아이디어의 원형을 만들 수 있도록 해준다.
 
-### setup
+## setup
 ```python
 from __future__ import absolute_import, division, print_function, unicode_literals
 import collections
@@ -46,7 +46,7 @@ print('즉시 실행 모드:', tf.executing_eagerly())
 즉시 실행 모드: True
 ```
 
-### 간단한 모형
+## 간단한 모형
 
 Keras의 built-in RNN layer
 - `tf.keras.layers.SimpleRNN`: 이전 timestep에서 다음 timestep으로 정보를 넘겨주는(fed) fully-connected RNN  
@@ -82,7 +82,7 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
-### Output과 은닉 상태
+## Output과 은닉 상태
 
 default로써, RNN layer는 각각의 sample 별로 하나의 벡터를 갖는다. 이 벡터는 마지막 timestep에 해당하는 RNN cell의 output으로, 전체 입력 순서열의 정보를 갖고 있다. 이 경우 RNN layer의 output 차원(shape)은 `(batch_size, units)`이고, 이때 `units`는 layer를 구성하는 unit의 개수이다.
 
@@ -191,7 +191,7 @@ Trainable params: 258,698
 Non-trainable params: 0
 __________________________________________________________________________________________________
 ```
-### RNN layers and RNN cells
+## RNN layers and RNN cells
 
 RNN API는 built-in RNN layer 뿐만 아니라 cell-level API 또한 제공한다. RNN layer가 입력된 batch 순서열을 모두 처리하는 것과 다르게, RNN cell은 오직 하나의 timestep만을 처리한다.
 
@@ -252,7 +252,7 @@ output = lstm_layer(paragraph3)
 # 만약 initial_state가 주어지지 않았다면, zero_state가 default로 사용된다.
 lstm_layer.reset_states()
 ```
-### Bidirectional RNNs
+## Bidirectional RNNs
 
 시계열 순서열에 대해서(e.g. text), RNN model은 앞에서부터 뒤로 처리하는 것 뿐만 아니라, 반대 방향으로도 같이 처리를 한다면 더 성능이 좋아진다. 예를 들어, 문장에서 다음 단어를 예측하는데 있어서, 이전에 오는 단어만 보는 것이 아닌 단어 주변의 문맥을 사용하는 것이 더 효과적일 수도 있다.
 
@@ -288,5 +288,5 @@ _________________________________________________________________
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNzA3MTg1OSwtMzExODY4MDYzXX0=
+eyJoaXN0b3J5IjpbLTE3NjMzNjI1MCwtMzExODY4MDYzXX0=
 -->
