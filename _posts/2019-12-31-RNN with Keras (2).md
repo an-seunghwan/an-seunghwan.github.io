@@ -1,6 +1,8 @@
 ---
 title: "RNN with Keras (2)"
 excerpt: Keras RNN의 더 많은 특징
+toc: true
+toc_sticky: false
 
 author_profile: false
 
@@ -147,7 +149,7 @@ Predicted result is: [5], target result is: 5
 ### list/dict 입력 또는 중첩된 입력인 경우의 RNN
 * python class에 대한 자세한 공부 후에 추가하도록 하겠습니다 (coming soon!)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5NTMwMzQ3LDE1MTQ1NTY1NzksLTE4MT
-EyNjYxMCwtNTAxMTM3NzI0LC01MDExMzc3MjQsLTIwNTU0OTI0
-NjRdfQ==
+eyJoaXN0b3J5IjpbLTI5NjkxMzE3MiwzNTk1MzAzNDcsMTUxND
+U1NjU3OSwtMTgxMTI2NjEwLC01MDExMzc3MjQsLTUwMTEzNzcy
+NCwtMjA1NTQ5MjQ2NF19
 -->
