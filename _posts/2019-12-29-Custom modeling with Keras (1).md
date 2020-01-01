@@ -19,7 +19,32 @@ tags:
 > 
 > 아직 한글로 번역이 되어있지 않은 문서가 많아 공부를 하면서 번역을 진행하고 있습니다.
 
+```python
+from __future__ import absolute_import, division, print_function, unicode_literals
+import tensorflow as tf
+from tensorflow.keras import layers
+tf.keras.backend.clear_session()  # For easy reset of notebook state.
+```
+## Dense layer
+```python
+class Linear(layers.Layer):
+    def __init__(self, units=32, input_dim=32):
+        super(Linear, self).__init__()
+        w_init = tf.random_normal_initializer()
+        self.w = tf.Variable(initial_value=w_init(shape=(input_dim, units),
+                                                  dtype='float32'),
+                                                  trainable=True)
+        b_init = tf.zeros_initializer()
+        self.b = tf.Variable(initial_value=b_init(shape=(units,),
+                                                  # 위와 같이 shape을 적용하면 column에 더하기 아님
+                                                  # 각 units에 값이 더해진다고 생각!
+                                                  dtype='float32'),
+                                                  trainable=True)
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+```
+```python
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM4ODM4OTQ3XX0=
+eyJoaXN0b3J5IjpbLTE3MzM0MjAyNjNdfQ==
 -->
