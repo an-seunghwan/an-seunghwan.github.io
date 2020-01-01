@@ -143,11 +143,21 @@ print('non-trainable weights:', len(my_sum.non_trainable_weights))
 # It's not included in the trainable weights:
 print('trainable_weights:', my_sum.trainable_weights)
 ```
+
+이러한 학습 불가능한 weights는 layer의 weights attribute로써 인식된다.
+
 ```
 weights: 1
 non-trainable weights: 1
 trainable_weights: []
 ```
+
+### 최긔
+
+### Best practice: deferring weight creation until the shape of the inputs is known
+
+In the logistic regression example above, our  `Linear`  layer took an  `input_dim`  argument that was used to compute the shape of the weights  `w`  and  `b`  in  `__init__`:
+
 ```python
 class Linear(layers.Layer):
     def __init__(self, units=32):
@@ -218,5 +228,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NzIwMTE0NSwxNjMzMzc0MDU0XX0=
+eyJoaXN0b3J5IjpbMzE1NTA5MDI3LDE2MzMzNzQwNTRdfQ==
 -->
