@@ -206,7 +206,7 @@ built-in RNN cell
 
 cell과 일반적인 `tf.keras.layers.RNN` class를 같이 사용한다면 자신만의 RNN 구조를 실행하기 매우 간편하다.
 
-### Cross-batch Statefulness
+## Cross-batch Statefulness
 
 만약 매우 긴(또는 무한한) 순서열을 처리한다면, **cross-batch statefulness**를 사용하고 싶을 수도 있다.
 
@@ -288,5 +288,6 @@ _________________________________________________________________
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjMzNjI1MCwtMzExODY4MDYzXX0=
+eyJoaXN0b3J5IjpbNTUzNjE1NTExLC0xNzYzMzYyNTAsLTMxMT
+g2ODA2M119
 -->
