@@ -11,6 +11,7 @@ categories:
   - NLP
 tags:
   - tensorflow 2.0
+  - keras
   - NLP
   - RNN
 ---
@@ -288,6 +289,6 @@ _________________________________________________________________
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUzNjE1NTExLC0xNzYzMzYyNTAsLTMxMT
-g2ODA2M119
+eyJoaXN0b3J5IjpbLTE5MDE0OTE1MDYsLTE3NjMzNjI1MCwtMz
+ExODY4MDYzXX0=
 -->
