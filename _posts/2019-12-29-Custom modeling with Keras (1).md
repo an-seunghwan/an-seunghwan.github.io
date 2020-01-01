@@ -28,7 +28,9 @@ tf.keras.backend.clear_session()  # notebook의 초기화
 
 ##  Layer class
 ** Layer는 state(weights)와 몇몇 계산을 캡슐화한다.
-주로 다루게 될 주요 data structure는 `
+주로 다루게 될 주요 data structure는 `Layer`이다. Layer는 state (the layer's "weights")와 input을 output으로 변환("call", layer의 전진 학습) 과정을 캡슐화한다.
+
+다음의 코드는 densely-connected layer이고 `w`와 `b`라는 
 
 ## The Layer class
 
@@ -216,5 +218,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyNjE0MTE2LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbMTE4ODgwMDc4MCwxNjMzMzc0MDU0XX0=
 -->
