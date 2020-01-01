@@ -1,6 +1,8 @@
 ---
 title: "Custom modeling with Keras (2)"
 excerpt: loss, config and serialization
+toc: true
+toc_sticky: false
 
 author_profile: false
 
@@ -196,5 +198,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMDkwNTI2MV19
+eyJoaXN0b3J5IjpbMTU5NjM1MjcxNl19
 -->
