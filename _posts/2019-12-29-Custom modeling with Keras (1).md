@@ -216,7 +216,7 @@ class MLPBlock(layers.Layer):
 ```
 ```python
 mlp = MLPBlock()
-y = mlp(tf.ones(shape=(3, 64)))  # The first call to the `mlp` will create the weights
+y = mlp(tf.ones(shape=(3, 64))) # 'mlp'의 첫 번째 호출이고 이때 weights들이 생성된다.
 print('weights:', len(mlp.weights))
 print('trainable weights:', len(mlp.trainable_weights))
 print(y)
@@ -237,5 +237,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3MjI5ODc1LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbLTIxNDY2NDYwMzQsMTYzMzM3NDA1NF19
 -->
