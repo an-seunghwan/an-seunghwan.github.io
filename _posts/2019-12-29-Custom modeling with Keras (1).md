@@ -112,13 +112,7 @@ array([[-0.06456654,  0.05076444,  0.13045819, -0.01007326],
 
 ### Layer는 학습이 불가능한 weights를 가질 수 있다.
 
-학습 가능한 weights이외에, 학습 불가능한 weights를 layer에 추가할 수 있다. 이러한 weights는 역전파 과정 동안에 고려되지 
-
-#### Layers can have non-trainable weights
-
-Besides trainable weights, you can add non-trainable weights to a layer as well. Such weights are meant not to be taken into account during backpropagation, when you are training the layer.
-
-Here's how to add and use a non-trainable weight:
+학습 가능한 weights이외에, 학습 불가능한 weights를 layer에 추가할 수 있다. 이러한 weights는 학습에서 역전파 과정 동안에 고려되지 않는다. 다음은 예제 코드이다.
 
 ```python
 class Compute_Sum(layers.Layer):
@@ -127,7 +121,7 @@ class Compute_Sum(layers.Layer):
         self.total = tf.Variable(initial_value=tf.zeros((input_dim, )),
                                  trainable=False)
     def call(self, inputs):
-        self.total.assign_add(tf.reduce_sum(inputs, axis=0)) # column-wise
+        self.total.assign_add(tf.reduce_sum(inputs, axis=0)) # column-wise(axis=0)
         # 지금까지 입력된 값들을 total에 상수처럼 누적하여 저장
         return self.total
 ```
@@ -224,5 +218,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM5ODY1MTMsMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbLTc0NzIwMTE0NSwxNjMzMzc0MDU0XX0=
 -->
