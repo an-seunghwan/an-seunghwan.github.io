@@ -2,7 +2,7 @@
 title: "RNN with Keras (1)"
 excerpt: Keras RNN의 기초
 toc: true
-toc_sticky: false
+toc_sticky: true
 
 author_profile: false
 
@@ -288,5 +288,5 @@ _________________________________________________________________
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODM4NTg1NiwtMzExODY4MDYzXX0=
+eyJoaXN0b3J5IjpbLTgxNzA3MTg1OSwtMzExODY4MDYzXX0=
 -->
