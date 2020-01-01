@@ -50,6 +50,9 @@ class Linear(layers.Layer):
     def call(self, inputs):
         return tf.matmul(inputs, self.w) + self.b
 ```
+
+weights `w`와 `b`는 layer의 attribute로써 자동으로 추적이 가능하다.
+
 ```python
 x = tf.ones((3,3))
 linear_layer = Linear(5, 3)
@@ -210,5 +213,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDgxOTE1NjQsMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbNjc4OTAwMTM2LDE2MzMzNzQwNTRdfQ==
 -->
