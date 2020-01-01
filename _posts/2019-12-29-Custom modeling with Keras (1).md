@@ -152,7 +152,9 @@ non-trainable weights: 1
 trainable_weights: []
 ```
 
-### 최긔
+### 최고의 연습: input의 shape이 알려지기 전에 weight를 생성하기
+
+앞의 logistic regression 예제는, `Linear` layer는 `input_dim` 인자를 받아 이를 `__init
 
 ### Best practice: deferring weight creation until the shape of the inputs is known
 
@@ -228,5 +230,5 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1NTA5MDI3LDE2MzMzNzQwNTRdfQ==
+eyJoaXN0b3J5IjpbLTgwMDMzMzU4NiwxNjMzMzc0MDU0XX0=
 -->
