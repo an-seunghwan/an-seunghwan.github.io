@@ -133,7 +133,54 @@ weights: 1
 non-trainable weights: 1
 trainable_weights: []
 ```
+```python
+class Linear(layers.Layer):
+    def __init__(self, units=32):
+        super(Linear, self).__init__()
+        self.units = units
+    def build(self, input_shape): # 이게 핵심!!!!
+        self.w = self.add_weight(shape=(input_shape[-1], self.units),
+                                 initializer='random_normal',
+                                 trainable=True)
+        self.b = self.add_weight(shape=(self.units, ),
+                                 initializer='random_normal',
+                                 trainable=True)
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+```
+```python
+#The __call__ method of your layer will automatically run build the first time it is called. 
+#You now have a layer that's lazy and easy to use:
+
+x = tf.ones((3, 3))        
+linear_layer = Linear(units=12)  # At instantiation, we don't know on what inputs this is going to get called
+y = linear_layer(x)  # The layer's weights are created dynamically the first time the layer is called
+print(y)
+```
+```
+tf.Tensor(
+[[-0.02907148  0.11085058 -0.14688957  0.07985388  0.11514413  0.09643906
+  -0.04974959  0.13078684 -0.12947026  0.22152902 -0.10075628  0.10019987]
+ [-0.02907148  0.11085058 -0.14688957  0.07985388  0.11514413  0.09643906
+  -0.04974959  0.13078684 -0.12947026  0.22152902 -0.10075628  0.10019987]
+ [-0.02907148  0.11085058 -0.14688957  0.07985388  0.11514413  0.09643906
+  -0.04974959  0.13078684 -0.12947026  0.22152902 -0.10075628  0.10019987]], shape=(3, 12), dtype=float32)
+```
+```python
+class MLPBlock(layers.Layer):
+    def __init__(self):
+        super(MLPBlock, self).__init__()
+        self.linear_1 = Linear(32)
+        self.linear_2 = Linear(32)
+        self.linear_3 = Linear(1)
+    def call(self, inputs):
+        x = self.linear_1(inputs)
+        x = tf.nn.relu(x)
+        x = self.linear_2(x)
+        x = tf.nn.relu(x)
+        return self.linear_3(x)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Njg5MDQ2Ml19
+eyJoaXN0b3J5IjpbMTUzODEwOTE3MV19
 -->
