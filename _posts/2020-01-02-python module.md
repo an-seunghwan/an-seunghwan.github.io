@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2020-01-02 21:30:00 -0400
+date: 2020-01-02 21:30:00 
 categories: 
   - python basic
 tags:
@@ -78,5 +78,5 @@ if __name__ == '__main__':
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NTY4MTU2N119
+eyJoaXN0b3J5IjpbLTg4NjgwMzk2LDEyNTU2ODE1NjddfQ==
 -->
