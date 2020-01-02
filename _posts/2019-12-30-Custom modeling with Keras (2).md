@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2019-12-30 16:30:00 -0400
+date: 2019-12-30 16:30:00 -0000
 categories: 
   - tensorflow 2.0
 tags:
@@ -199,5 +199,5 @@ class CustomDropout(layers.Layer):
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTE4NTQ0OCwyMjg3MjU1NTVdfQ==
+eyJoaXN0b3J5IjpbMTY0MTQ5MjU3MiwyMjg3MjU1NTVdfQ==
 -->
