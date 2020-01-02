@@ -105,7 +105,13 @@ Functional 모형의 일반적인 저장방식은 `model.save()`을 이용하면
 - 모형의 학습 구성 요소(`complie`에서 사용된 요소)
 - optimizer와 이의 상태(이는 학습을 도중에 멈춘 지점부터 다시 시작할 수 있도록 해준다)
 
+```python
+model.save('{}/first_model.h5'.format(MODEL_PATH))
+del model
+model = keras.models.load_model('{}/first_model.h5'.format(MODEL_PATH))
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4ODkyNzk5NywtMTMyMDg0MTY5OV19
+eyJoaXN0b3J5IjpbNTExNTIyNDA5LC0xMzIwODQxNjk5XX0=
 -->
