@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2019-12-30 16:30:00 -0400
+date: 2019-12-30 16:30:00 -0000
 categories: 
   - tensorflow 2.0
 tags:
@@ -245,7 +245,7 @@ Out[51]: <tensorflow.python.keras.callbacks.History at 0x2a101fc7348>
 
 * Functional API 부분은 생략
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTcwNjUwNSwtMTMxNDg4ODAwMCwtMj
-A0MjM3OTEyMywzOTU3MTg1MiwtNDg0Njk2NjE2LC03NzE4MzA4
-NzIsLTIwMjc5MDE4NTBdfQ==
+eyJoaXN0b3J5IjpbMjAxMTE3Nzg1MSwtNzQxNzA2NTA1LC0xMz
+E0ODg4MDAwLC0yMDQyMzc5MTIzLDM5NTcxODUyLC00ODQ2OTY2
+MTYsLTc3MTgzMDg3MiwtMjAyNzkwMTg1MF19
 -->
