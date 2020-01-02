@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2019-12-29 16:30:00 -0400
+date: 2019-12-29 16:30:00 -0000
 categories: 
   - tensorflow 2.0
 tags:
@@ -237,5 +237,6 @@ tf.Tensor(
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDIwMjg3ODAsMTYzMzM3NDA1NF19
+eyJoaXN0b3J5IjpbLTU4NTk2ODQ4LC0xNjAyMDI4NzgwLDE2Mz
+MzNzQwNTRdfQ==
 -->
