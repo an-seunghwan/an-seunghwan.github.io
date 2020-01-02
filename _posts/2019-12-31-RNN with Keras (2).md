@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2019-12-31 19:40:00 -0400
+date: 2019-12-31 19:40:00 -0000
 categories: 
   - NLP
 tags:
@@ -150,7 +150,7 @@ Predicted result is: [5], target result is: 5
 ## list/dict 입력 또는 중첩된 입력인 경우의 RNN
 * python class에 대한 자세한 공부 후에 추가하도록 하겠습니다 (coming soon!)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU4NzYxOTQwLDM1OTUzMDM0NywxNTE0NT
-U2NTc5LC0xODExMjY2MTAsLTUwMTEzNzcyNCwtNTAxMTM3NzI0
-LC0yMDU1NDkyNDY0XX0=
+eyJoaXN0b3J5IjpbLTk3ODAwNjY5NiwzNTk1MzAzNDcsMTUxND
+U1NjU3OSwtMTgxMTI2NjEwLC01MDExMzc3MjQsLTUwMTEzNzcy
+NCwtMjA1NTQ5MjQ2NF19
 -->
