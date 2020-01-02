@@ -89,8 +89,23 @@ outputs = layers.Dense(10, activation='softmax')(x)
 
 model = keras.Model(inputs=inputs, outputs=outputs, name='mnist_model')
 ```
+## 훈련, 평가, 그리고 추론
+
+Functional API로 제작한 모형은 Sequential 모형과 동일한 방식으로 훈련, 평가, 그리고 추론이 가능하다.
+
+## 저장과 직렬화
+
+Functional API로 제작한 모형은 Sequential 모형과 동일한 방식으로 저장과 직렬화가 가능하다.
+
+Functional 모형의 일반적인 저장방식은 `model.save()`을 이용하면 하나의 파일로 모형의 모든 것을 저장할 수 있다. 나중에 모형을 만들때 사용한 코드에 직접 접근하지 않고서도 이 파일을 이용해 모형을 다시 제작할 수 있다.
+
+이 파일은 다음과 같은 내용을 저장한다:
+- 모형의 구조
+- 모형의 weight의 값(학습 과정 중 배우는 것)
+- 모형의 학습 구성 요소(`complie`에서 사용된 요소)
+- optimizer와 이의 상태(이는 학습을 도중에 멈춘 지점부터 다시 시작할 수 있도록 해준다)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTI2OTk3ODUsLTEzMjA4NDE2OTldfQ
-==
+eyJoaXN0b3J5IjpbMTM4ODkyNzk5NywtMTMyMDg0MTY5OV19
 -->
