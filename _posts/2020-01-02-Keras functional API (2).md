@@ -113,17 +113,51 @@ Out[39]: <tensorflow.python.keras.callbacks.History at 0x1e9c1d3a248>
 
 ## layer의 공유
 
-Functional API 또 다른 장점은 공유 layer가 가능하다는 것이다.
-공유 layer는 동일한 모형에서 여러번 사용되는 layer instance이다.
+Functional API 또 다른 장점은 공유 layer가 가능하다는 것이다. 공유 layer는 동일한 모형에서 여러번 사용되는 layer instance이다.
 
-공유 layer는 유사한 space(말하자면 유사한 단어 특징을 가지는 다른 텍스트)에서 온 input을 encode할 때 주로 사용된다.
-왜냐하면 다른 input들 사이에 정보를 공유하는 것이 가능하고, 이는 적은 데이터로부터 학습이 가능하도록 한다.
-만약 주어진 단어가 하나의 input에서 관측되었다면, 공유 layer를 지나는 모든 input의 처리에 도움을 줄 것이다.
+공유 layer는 유사한 space(말하자면 유사한 단어 특징을 가지는 다른 텍스트)에서 온 input을 encode할 때 주로 사용된다. 왜냐하면 다른 input들 사이에 정보를 공유하는 것이 가능하고, 이는 적은 데이터로부터 학습이 가능하도록 한다. 만약 주어진 단어가 하나의 input에서 관측되었다면, 공유 layer를 지나는 모든 input의 처리에 도움을 줄 것이다.
 
-Functional API에서 layer를 공유하기 위해서는,
-하나의 layer를 단순히 여러번 부르면 된다.
-예를 들어, 여기 `Embedding` layer는 2개의 다른 input에 걸쳐 공유된다.
+Functional API에서 layer를 공유하기 위해서는, 하나의 layer를 단순히 여러번 부르면 된다. 예를 들어, 여기 `Embedding` layer는 2개의 다른 input에 걸쳐 공유된다.
+
+```python
+# Embedding for 1000 unique words mapped to 128-dimensional vectors
+shared_embedding = layers.Embedding(1000, 128)
+
+# Variable-length sequence of integers
+text_input_a = keras.Input(shape=(None,), dtype='int32')
+
+# Variable-length sequence of integers
+text_input_b = keras.Input(shape=(None,), dtype='int32')
+
+# 2개의 input을 encode하기 위해 동일한 layer를 사용
+encoded_input_a = shared_embedding(text_input_a)
+encoded_input_b = shared_embedding(text_input_b)
+```
+## layer의 graph에서 node를 추출하여 재사용
+
+우리가 다루는 Functional API의 graph의 layer는 정적인(static) 구조이므로, 접근하여 보는 것이 가능하다. 이는 우리가 예를 들면 Functional 모형을 그래프화 할 수 있는 이유이다.
+
+이는 중간 layer(graph의 node) activations에 접근을 하여 이를 다른 곳에서 재사용이 가능함을 의미한다. 이는 feature extraction 등에서 매우 유용하다!
+
+예제를 통해 살펴보자.
+
+```python
+from tensorflow.keras.applications import VGG19
+vgg19 = VGG19()
+```
+다음과 같은 방법을 통해 모형의 중간의 activations를 얻을 수 있다.
+```python
+features_list = [layer.output for layer in vgg19.layers]
+```
+따라서 우리는 중간 layer의 activations를 얻는 새로운 feature-extraction model을 만들 수 있다.
+```python
+feat_extraction_model = keras.Model(inputs=vgg19.input, outputs=features_list)
+
+img = np.random.random((1, 224, 224, 3)).astype('float32')
+extracted_features = feat_extraction_model(img)
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMTgyNjY1Nl19
+eyJoaXN0b3J5IjpbNTI4OTM1NTg4XX0=
 -->
