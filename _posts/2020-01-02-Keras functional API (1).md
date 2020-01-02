@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2020-01-02 14:25:00 -0400
+date: 2020-01-02 14:25:00 -0000
 categories: 
   - tensorflow 2.0
 tags:
@@ -261,5 +261,5 @@ ensemble_model = keras.Model(inputs=inputs,
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyMTQyMTY5LC0xMzIwODQxNjk5XX0=
+eyJoaXN0b3J5IjpbLTkzMDUzMjI2NywtMTMyMDg0MTY5OV19
 -->
