@@ -110,8 +110,138 @@ model.save('{}/first_model.h5'.format(MODEL_PATH))
 del model
 model = keras.models.load_model('{}/first_model.h5'.format(MODEL_PATH))
 ```
+* 저장과 직렬화에 대해서는 추후 다른 게시글로 더 자세히 다루도록 하겠습니다! (coming soon!)
+
+## 다양한 모형을 정의하기 위해 동일한 layer의 graph를 사용
+
+Functional API에서는 layer의 graph의 input과 output을 명시하면서 모형을 만들 수 있다. 이는 하나의 layer의 graph가 여러개의 모형을 생성하는데 사용될 수 있음을 의미한다.
+
+아래의 예제에서는, 2개의 모형을 인스턴스화 하기 위해 동일한 layer의 층을 사용했다. 이미지를 16차원 벡터로 변환하는 `encoder` 모형과, 학습을 위한 end-to-end `autoencoder` 모형이다.
+
+```python
+encoder_input = keras.Input(shape=(28, 28, 1), name='img')
+x = layers.Conv2D(16, 3, activation='relu')(encoder_input)
+x = layers.Conv2D(32, 3, activation='relu')(x)
+x = layers.MaxPooling2D(3)(x)
+x = layers.Conv2D(32, 3, activation='relu')(x)
+x = layers.Conv2D(16, 3, activation='relu')(x)
+encoder_output = layers.GlobalMaxPooling2D()(x)
+
+encoder = keras.Model(encoder_input, encoder_output, name='encoder')
+encoder.summary()
+
+x = layers.Reshape((4, 4, 1))(encoder_output)
+x = layers.Conv2DTranspose(16, 3, activation='relu')(x)
+x = layers.Conv2DTranspose(32, 3, activation='relu')(x)
+x = layers.UpSampling2D(3)(x)
+x = layers.Conv2DTranspose(16, 3, activation='relu')(x)
+decoder_output = layers.Conv2DTranspose(1, 3, activation='relu')(x)
+
+autoencoder = keras.Model(encoder_input, decoder_output, name='autoencoder')
+autoencoder.summary()
+```
+```
+Model: "encoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+img (InputLayer)             [(None, 28, 28, 1)]       0         
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 26, 26, 16)        160       
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 24, 24, 32)        4640      
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 8, 8, 32)          0         
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 6, 6, 32)          9248      
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 4, 4, 16)          4624      
+_________________________________________________________________
+global_max_pooling2d_2 (Glob (None, 16)                0         
+=================================================================
+Total params: 18,672
+Trainable params: 18,672
+Non-trainable params: 0
+_________________________________________________________________
+Model: "autoencoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+img (InputLayer)             [(None, 28, 28, 1)]       0         
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 26, 26, 16)        160       
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 24, 24, 32)        4640      
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 8, 8, 32)          0         
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 6, 6, 32)          9248      
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 4, 4, 16)          4624      
+_________________________________________________________________
+global_max_pooling2d_2 (Glob (None, 16)                0         
+_________________________________________________________________
+reshape_2 (Reshape)          (None, 4, 4, 1)           0         
+_________________________________________________________________
+conv2d_transpose_8 (Conv2DTr (None, 6, 6, 16)          160       
+_________________________________________________________________
+conv2d_transpose_9 (Conv2DTr (None, 8, 8, 32)          4640      
+_________________________________________________________________
+up_sampling2d_2 (UpSampling2 (None, 24, 24, 32)        0         
+_________________________________________________________________
+conv2d_transpose_10 (Conv2DT (None, 26, 26, 16)        4624      
+_________________________________________________________________
+conv2d_transpose_11 (Conv2DT (None, 28, 28, 1)         145       
+=================================================================
+Total params: 28,241
+Trainable params: 28,241
+Non-trainable params: 0
+_________________________________________________________________
+```
+encoding layer와 decoding layer의 구조가 대칭이기 때문에,  output의 shape이 input의 shape과 동일하다. `Conv2D`의 역은 `Conv2DTranspose`이고, `MaxPooling2D` layer의 역은 `UpSamping2D` layer이다.
+
+## 모든 모형은 layer처럼 호출이 가능하다.
+
+`Input`이나 다른 layer의 output을 호출함으로써 어떤 모형이든지 layer처럼 취급이 가능하다. 모형을 호출하는 것은 단순히 모형의 구조만을 호출하는 것이 아닌, 이의 weights 또한 재사용하는 것이다.
+
+실제 예제를 통해 살펴보자. encoder와 decoder 모형을 생성하여 이를 연결(chain)하여 하나의 autoencoder 모형을 만드는 예제이다.
+
+```python
+encoder_input = keras.Input(shape=(28, 28, 1), name='original_img')
+x = layers.Conv2D(16, 3, activation='relu')(encoder_input)
+x = layers.Conv2D(32, 3, activation='relu')(x)
+x = layers.MaxPooling2D(3)(x)
+x = layers.Conv2D(32, 3, activation='relu')(x)
+x = layers.Conv2D(16, 3, activation='relu')(x)
+encoder_output = layers.GlobalMaxPooling2D()(x)
+
+encoder = keras.Model(encoder_input, encoder_output, name='encoder')
+#encoder.summary()
+
+decoder_input = keras.Input(shape=(16,), name='encoded_img')
+x = layers.Reshape((4, 4, 1))(decoder_input)
+x = layers.Conv2DTranspose(16, 3, activation='relu')(x)
+x = layers.Conv2DTranspose(32, 3, activation='relu')(x)
+x = layers.UpSampling2D(3)(x)
+x = layers.Conv2DTranspose(16, 3, activation='relu')(x)
+decoder_output = layers.Conv2DTranspose(1, 3, activation='relu')(x)
+
+decoder = keras.Model(decoder_input, decoder_output, name='decoder')
+#decoder.summary()
+
+autoencoder_input = keras.Input(shape=(28, 28, 1), name='img')
+encoded_img = encoder(autoencoder_input) # 모형 호출
+decoded_img = decoder(encoded_img) # 모형 호출
+# encoder의 output을 input으로 받음으로써 chain처럼 연결이 된다.
+autoencoder = keras.Model(autoencoder_input, decoded_img, name='autoencoder')
+autoencoder.summary()
+```
+위의 예제에서 볼 수 있는 것처럼, 모형은 중첩이 가능하다: 모형은 submodel을 가질 수 있다(왜냐하면 모형은 layer와 같기 때문)
+
+모형 중첩의 가장 흔한 사용 예시는 ensembling이다. 예를 들어, 다음의 예제는 여러 개의 모형 집합을 이들의 예측치의 평균을 이용해 ensemble하는 방법을 나타낸다.
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExNTIyNDA5LC0xMzIwODQxNjk5XX0=
+eyJoaXN0b3J5IjpbLTM3OTM5OTgxNywtMTMyMDg0MTY5OV19
 -->
