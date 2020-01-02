@@ -6,7 +6,7 @@ toc_sticky: true
 
 author_profile: false
 
-date: 2020-01-02 20:00:00 -0400
+date: 2020-01-02 20:00:00 -0000
 categories: 
   - tensorflow 2.0
 tags:
@@ -238,5 +238,5 @@ Functional API, Model subclassing, Sequential Model 등을 반드시 한가지�
 - `call(self, inputs, mask=None, **kwargs)`: `mask`가 boolean mask tensor인 경우(RNN에서 유용)
 - `call(self, inputs, training=None, mask=None, **kwargs)`: `training`과 `mask`를 동시 사용 가능
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3Njg0MjQ5MV19
+eyJoaXN0b3J5IjpbMTI4MDY3MDk3N119
 -->
