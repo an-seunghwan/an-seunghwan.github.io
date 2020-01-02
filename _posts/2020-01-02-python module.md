@@ -1,3 +1,17 @@
+---
+title: "python module"
+excerpt: python module에 관한 기초 내용
+toc: true
+toc_sticky: true
+
+author_profile: false
+
+date: 2020-01-02 21:30:00 -0400
+categories: 
+  - python basic
+tags:
+  - 
+---
 ## python module
 
 ### module: script vs import
@@ -64,5 +78,5 @@ if __name__ == '__main__':
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjEzNjkyMzJdfQ==
+eyJoaXN0b3J5IjpbMTI1NTY4MTU2N119
 -->
