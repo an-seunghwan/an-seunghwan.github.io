@@ -156,8 +156,97 @@ feat_extraction_model = keras.Model(inputs=vgg19.input, outputs=features_list)
 img = np.random.random((1, 224, 224, 3)).astype('float32')
 extracted_features = feat_extraction_model(img)
 ```
+neural style transfer 등에서 매우 유용하다!
 
+## 자신만의 layer를 작성하여 API 확장하기
 
+모든 layer는 `Layer`의 subclass이고 다음을 실행한다:
+- `call` method: 해당 layer에 의해 실행되는 계산을 명시한다.
+- `build` method: layer의 weights를 생성한다(코드 스타일에 따라 다르며 `__init__` 내부에도 생성 가능하다).
+
+자세한 내용은 블로그 게시글 [https://an-seunghwan.github.io/tensorflow%202.0/Custom-modeling-with-Keras-(1)/](https://an-seunghwan.github.io/tensorflow%202.0/Custom-modeling-with-Keras-(1)/)을 참조해주세요.
+
+## Functional API를 사용하는 경우
+
+새로운 모형을 제작할 때, Functional API를 써야할까 아니면 `Model`에서 subclass를 해야할까?
+
+일반적으로, Functional API는 higher-level, 쉽고 사용하는데 안전하고, Models의 subclass가 지원하지 않는
+많은 기능들이 있다.
+
+하지만, Modeling subclassing은 layer들의 DAG로 표현할 수 없는 모형을 제작하는데 더 많은 유연함을 준다.
+
+### Functional API의 강점
+
+**It is less verbose**
+```python
+# Functional API
+inputs = keras.Input(shape=(32,))
+x = layers.Dense(64, activation='relu')(inputs)
+outputs = layers.Dense(10)(x)
+mlp = keras.Model(inputs, outputs)
+
+# subclassed version
+class MLP(keras.Model):
+
+  def __init__(self, **kwargs):
+    super(MLP, self).__init__(**kwargs)
+    self.dense_1 = layers.Dense(64, activation='relu')
+    self.dense_2 = layers.Dense(10)
+
+  def call(self, inputs):
+    x = self.dense_1(inputs)
+    return self.dense_2(x)
+
+# Instantiate the model.
+mlp = MLP()
+# Necessary to create the model's state.
+# The model doesn't have a state until it's called at least once.
+_ = mlp(tf.zeros((1, 32)))
+```
+**모형을 정의할 때 명확하다**
+
+Functional API에서는 input의 명시사항(shape과 dtype)이 미리 생성되므로(via `Input`), layer를 호출할 때마다 layer가 주어진 명시사항이 가정과 일치하는지 확인하고, 일치하지 않는다면 도움이 되는 error 메세지를 보일 것이다.
+
+이러한 보장은 Functional API로 작성한 모든 모형이 작동함을 의미한다. 모든 디버깅(수렴과 관련한 디버깅 이외에도)은 모형 제작 도중에 정적으로 발생할 것이며, 실행 시점에 발생하지 않는다. 이는 compiler의 typechecking과 유사하다.
+
+**Functional 모형은 시각화와 세부 내용을 확인할 수 있다**
+
+graph로써 모형을 시각화할 수 있고, graph 중간의 node에 접근할 수 있다.
+
+** Functional 모형은 serialized 또는 복제될 수 있다. **
+
+Functional 모형은 하나의 코드보다는 데이터 구조이기 때문에, 
+쉽게 serialized되고 원래 모형의 코드에 대한 접근이 없이 모형을 동일하게 생성 가능하게 해주는 하나의 파일로 저장될 수 있다.
+저장과 serialization에 대해서는 추후 다른 게시글로 더 자세히 다루도록 하겠습니다! (coming soon!)
+
+### Functional API의 단점
+
+** 동적인 구조를 지원하지 않는다 **
+
+Functional API는 layer들의 DAG로 모형을 취급한다.
+이는 대부분의 딥 러닝 구조이지만, 전부는 아니다:
+예를 들어, 재귀적 네트워크나 Tree RNN은 이러한 가정을 따르지 않으므로 Functional API로 구현이 불가능하다.
+
+** 때때로, 처음부터 직접 작성할 필요가 있다 **
+
+더 많은 차이에 대해서는
+https://medium.com/tensorflow/what-are-symbolic-and-imperative-apis-in-tensorflow-2-0-dfccecb01021
+를 참조한 게시글을 확인해주세요(coming soon!)
+'''
+'''
+## 다른 API style들의 Mix-and-matching
+
+Functional API, Model subclassing, Sequential Model 등을 반드시 한가지만 선택해서 사용해야 하는 것은 아니다.
+tf.keras API는 서로 상호작용이 가능하고, subclassed Model/Layer의 일부분으로써
+Functional Model과 Sequential Model을 사용할 수 있다.
+
+반대로, 어떠한 subclassed Layer나 Model을 이것이 다음의 규칙을 따르는
+`call` method를 실행하기만 한다면 Functional API에 포함시킬 수 있다.
+- `call(self, inputs, **kwargs)`: `inputs`가 tensor나 중첩된 tensor의 구조이거나, 
+`**kwargs`가 non-tensor인자 일때(non-input)
+- `call(self, inputs, training=None, **kwargs)`: `training`이 학습 모드나 추론 모드을 가리키는 boolean 변수인 경우
+- `call(self, inputs, mask=None, **kwargs)`: `mask`가 boolean mask tensor인 경우(RNN에서 유용)
+- `call(self, inputs, training=None, mask=None, **kwargs)`: `training`과 `mask`를 동시 사용 가능
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI4OTM1NTg4XX0=
+eyJoaXN0b3J5IjpbMTE5Mjk4MjMxNF19
 -->
