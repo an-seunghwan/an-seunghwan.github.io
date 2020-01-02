@@ -226,21 +226,17 @@ Functional API는 layer들의 DAG로 모형을 취급한다. 이는 대부분의
 
 **때때로, 처음부터 직접 작성할 필요가 있다.**
 
-더 많은 차이에 대해서는 를 참조한 게시글을 확인해주세요(coming soon!)
+더 많은 차이에 대해서는 다른 게시글로 돌아오겠습니다!(coming soon!)
 
 ## 다른 API style들의 Mix-and-matching
 
-Functional API, Model subclassing, Sequential Model 등을 반드시 한가지만 선택해서 사용해야 하는 것은 아니다.
-tf.keras API는 서로 상호작용이 가능하고, subclassed Model/Layer의 일부분으로써
-Functional Model과 Sequential Model을 사용할 수 있다.
+Functional API, Model subclassing, Sequential Model 등을 반드시 한가지만 선택해서 사용해야 하는 것은 아니다. tf.keras API는 서로 상호작용이 가능하고, subclassed Model/Layer의 일부분으로써 Functional Model과 Sequential Model을 사용할 수 있다.
 
-반대로, 어떠한 subclassed Layer나 Model을 이것이 다음의 규칙을 따르는
-`call` method를 실행하기만 한다면 Functional API에 포함시킬 수 있다.
-- `call(self, inputs, **kwargs)`: `inputs`가 tensor나 중첩된 tensor의 구조이거나, 
-`**kwargs`가 non-tensor인자 일때(non-input)
+반대로, 어떠한 subclassed Layer나 Model을 이것이 다음의 규칙을 따르는 `call` method를 실행하기만 한다면 Functional API에 포함시킬 수 있다.
+- `call(self, inputs, **kwargs)`: `inputs`가 tensor나 중첩된 tensor의 구조이거나, `**kwargs`가 non-tensor인자 일때(non-input)
 - `call(self, inputs, training=None, **kwargs)`: `training`이 학습 모드나 추론 모드을 가리키는 boolean 변수인 경우
 - `call(self, inputs, mask=None, **kwargs)`: `mask`가 boolean mask tensor인 경우(RNN에서 유용)
 - `call(self, inputs, training=None, mask=None, **kwargs)`: `training`과 `mask`를 동시 사용 가능
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODA0MzcwMzRdfQ==
+eyJoaXN0b3J5IjpbLTU3Njg0MjQ5MV19
 -->
