@@ -240,8 +240,26 @@ autoencoder.summary()
 
 모형 중첩의 가장 흔한 사용 예시는 ensembling이다. 예를 들어, 다음의 예제는 여러 개의 모형 집합을 이들의 예측치의 평균을 이용해 ensemble하는 방법을 나타낸다.
 
+```python
+def get_model():
+    inputs = keras.Input(shape=(128, ))
+    outputs = keras.layers.Dense(1, activation='sigmoid')(inputs)
+    return keras.Model(inputs, outputs)
+
+model1 = get_model()
+model2 = get_model()
+model3 = get_model()
+
+inputs = keras.Input(shape=(128, ))
+y1 = model1(inputs)
+y2 = model1(inputs)
+y3 = model1(inputs)
+outputs = keras.layers.average([y1, y2, y3])
+ensemble_model = keras.Model(inputs=inputs,
+                             outputs=outputs)
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTM5OTgxNywtMTMyMDg0MTY5OV19
+eyJoaXN0b3J5IjpbMjQ3NjI3MDg0LC0xMzIwODQxNjk5XX0=
 -->
