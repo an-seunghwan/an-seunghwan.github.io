@@ -64,7 +64,33 @@ inputs = tf.keras.Input(shape=(784, ))
 # 만약 어떤 이미지 input의 shape이 (32, 32, 3)이라면, 다음과 같이 코드를 작성하면 된다.
 img_inputs = tf.keras.Input(shape=(32, 32, 3))
 ```
+```python
+print(inputs.shape)
+print(inputs.dtype)
+```
+```
+(None, 32)
+<dtype: 'float32'>
+```
+이 `inputs` object에 대해 호출을 하는 layer를 이용해 graph의 새로운 node를 만들 수 있다.
+```python
+dense = tf.keras.layers.Dense(64, activation='relu')
+x = dense(inputs) # 새로운 node
+```
+몇개의 layer를 더 추가하고 input과 output을 명시하므로써 `Model`을 만들어보자.
+```python
+from tensorflow import keras
+from tensorflow.keras import layers
+
+inputs = keras.Input(shape=(784,), name='img')
+x = layers.Dense(64, activation='relu')(inputs)
+x = layers.Dense(64, activation='relu')(x)
+outputs = layers.Dense(10, activation='softmax')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs, name='mnist_model')
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMjIyNDE3OCwtMTMyMDg0MTY5OV19
+eyJoaXN0b3J5IjpbLTIwOTI2OTk3ODUsLTEzMjA4NDE2OTldfQ
+==
 -->
