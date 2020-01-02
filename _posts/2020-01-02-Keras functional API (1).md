@@ -51,6 +51,20 @@ True
 이는 단순한 3개 layer의 그래프이다.
 
 이 모형을 Functional API를 이용해 만들기 위해서는, input node 부터 만드는 것이 필요하다.
+
+```python
+inputs = tf.keras.Input(shape=(784, )) 
+# 여기서는 단순히 data의 shape만을 지정했다: 784차원의 벡터
+# batch size는 항상 생략되며, 각 sample의 shape만을 지정했다.
+```
+구체적으로 `keras.Input`의 shape 인자에 대한 설명을 보자.
+`shape`: shape tuple (integers)는 batch size를 포함하지 않는다. 예를 들어, `shape=(32, )`는 32차원 벡터로 구성된 batch를 input으로 가짐을 의미한다. 이 tuple의 원소에는 None도 가능하다; 'None`원소는 벡터의 shape이 알려지지 않았음을 의미한다. 
+
+```python
+# 만약 어떤 이미지 input의 shape이 (32, 32, 3)이라면, 다음과 같이 코드를 작성하면 된다.
+img_inputs = tf.keras.Input(shape=(32, 32, 3))
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyMjg3NjIwLC0xMzIwODQxNjk5XX0=
+eyJoaXN0b3J5IjpbMTAwMjIyNDE3OCwtMTMyMDg0MTY5OV19
 -->
