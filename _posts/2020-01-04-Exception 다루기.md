@@ -20,7 +20,7 @@ def get_ascii(s):
     try:
         result = ord(s)
     except (ValueError, TypeError) as e: # exception의 정보를 얻기 위해 e로 저장
-        print('Error info: ', e, file=sys.stderr) # error의 정보를 출
+        print('Error info: ', e, file=sys.stderr) # error의 정보를 출력
         raise TypeError("길이 1의 문자가 입력되어야 합니다.") # 특정한 error를 발생
     else:
         print("예외가 발생하지 않았습니다.") # except 부분이 실행되지 않으면 실행
@@ -52,7 +52,8 @@ Traceback (most recent call last):
 
 TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
+이때 `Error info:  ord() expected string of length 1, but int found`부분이 `print('Error info: ', e, file=sys.stderr)`에 의해서 출력되는 부분이다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzODYxMDQzMF19
+eyJoaXN0b3J5IjpbODU3NjUyMzRdfQ==
 -->
