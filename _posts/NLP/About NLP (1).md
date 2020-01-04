@@ -20,7 +20,7 @@
 
 ### 3. 정제와 정규화
 tokenizing 전, 후에 이루어지는 과정
-* 정제(cleaning): 
+* 정제(cleaning): 갖고 있는 corpus로부터 n
 
 
 ## 한국어의 특징
@@ -31,9 +31,9 @@ tokenizing 전, 후에 이루어지는 과정
 * 띄어쓰기가 굳이 지켜지지 않아도 내용을 이해할 수 있다.
 * 뉴스 기사와 같이 데이터의 종류에 따라 띄어쓰기가 지켜지는 정도가 다르다.
 
-> [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)을 참고하였습니다.
+> 출처: [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyNTc2Nzk4XX0=
+eyJoaXN0b3J5IjpbMTY3NzY1NzM3NV19
 -->
