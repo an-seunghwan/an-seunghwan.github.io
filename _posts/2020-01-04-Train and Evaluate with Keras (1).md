@@ -161,7 +161,7 @@ def get_compiled_model():
               metrics=['sparse_categorical_accuracy'])
     return model
 ```
-#### 여러 built-in optimizer, losses, metrics
+**여러 built-in optimizer, losses, metrics**
 
 Optimizers:
 
@@ -473,6 +473,6 @@ Train on 40000 samples, validate on 10000 samples
    64/40000 [..............................] - ETA: 11:32 - loss: 2.3628 - sparse_categorical_accuracy: 0.1406 - val_loss: 0.0000e+00 - val_sparse_categorical_accuracy: 0.0000e+00Out[47]: <tensorflow.python.keras.callbacks.History at 0x255a8467748>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI5NjAwNzksMTExODQxNzExOCwtMT
-cxOTY1NTYyMV19
+eyJoaXN0b3J5IjpbNDk3NzAzNzM3LC0xNjcyOTYwMDc5LDExMT
+g0MTcxMTgsLTE3MTk2NTU2MjFdfQ==
 -->
