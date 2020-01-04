@@ -448,7 +448,26 @@ Train on 50000 samples
 50000/50000 [==============================] - 4s 81us/sample - loss: 2.4877 - std_of_activation: 0.0019
 Out[46]: <tensorflow.python.keras.callbacks.History at 0x255a7a12d88>
 ```
+#### 자동으로 validation set을 별도로 설정하기
+
+첫 번째 end-to-end 예제에서, 우리는 `validation_data`라는 인자를 `(x_val, y_val)`이라는 Numpy array tuple을 전달하기 위해 사용했다. 이는 각 epoch가 종료될 때 마다 validation loss와 metric을 평가하기 위한 목적이다.
+
+여기 다른 방법이 있다: `validation_split`인자는 자동으로 training data의 일부분을 validation을 위해 남겨둔다. 인자 값은 validation을 위해 남겨둘 데이터의 비율을 나타내며, 0과 1 사이의 값을 가져야 한다. 예를 들어, `validation_split=0.2`는 "20%의 데이터를 validation을 위해 남겨둔다"라는 의미이다.
+
+validation이 계산되는 방식은 `fit` 호출에서 입력된 array의 마지막 x%의 sample들을 이용해 어떠한 shuffling도 하지 않고 계산한다.
+
+Numpy data에 대해서만 `validation_split`을 사용할 수 있다.
+
+```python
+model = get_compiled_model()
+model.fit(x_train, y_train,
+          batch_size=64,
+          validation_split=0.2,
+          epochs=1,
+          steps_per_epoch=1) # 각 epoch당 몇 번의 step, 즉 몇개의 batch들을 사용할 것인지 정의
+                             # 따라서 batch-sized sample 묶음(chunk)들의 순서를 suffling 해주는 suffle이라는 인자는 steps_per_epoch가 None이 아닌 경우에만 의미가 있다.
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTk2NTU2MjFdfQ==
+eyJoaXN0b3J5IjpbNTM1NjE1ODkwLC0xNzE5NjU1NjIxXX0=
 -->
