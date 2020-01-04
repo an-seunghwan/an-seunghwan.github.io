@@ -329,7 +329,7 @@ Epoch 3/3
 50000/50000 [==============================] - 2s 46us/sample - loss: 0.0734 - categorical_true_positive: 48866.0000
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
 ```
-### 보편적인 특징에 맞지 않은 loss와 metric 다루기
+#### 보편적인 특징에 맞지 않은 loss와 metric 다루기
 
 아주 대다수의 loss와 metric은 `y_true`와 `y_pred`로부터 계산될 수 있다.
 그러나 전부가 그런 것은 아니다. 예를 들어, 정규화(regularization) loss는 아마 layer의 activation만을 필요로 한다(이 경우에는 target이 없다). 그리고 이 activation은 모형의 output은 아니다.
@@ -472,5 +472,6 @@ Train on 40000 samples, validate on 10000 samples
    64/40000 [..............................] - ETA: 11:32 - loss: 2.3628 - sparse_categorical_accuracy: 0.1406 - val_loss: 0.0000e+00 - val_sparse_categorical_accuracy: 0.0000e+00Out[47]: <tensorflow.python.keras.callbacks.History at 0x255a8467748>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODQxNzExOCwtMTcxOTY1NTYyMV19
+eyJoaXN0b3J5IjpbLTEwMDI3NDgzOSwxMTE4NDE3MTE4LC0xNz
+E5NjU1NjIxXX0=
 -->
