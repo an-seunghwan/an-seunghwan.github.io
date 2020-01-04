@@ -193,22 +193,78 @@ def basic_loss_function(y_true, y_pred):
     return tf.math.reduce_mean(y_true - y_pred)
 
 model.compile(optimizers=keras.optimizers.Adam(),
-              loss=basic_loss_function) # 단순히 custom loss function을 인자로 넘겨준
+              loss=basic_loss_function) # 단순히 custom loss function을 인자로 넘겨준다.
 
 model.fit(x_train, y_train,
           batch_size=64,
           epochs=3)
 ```
+```
+Train on 50000 samples
+Epoch 1/3
+50000/50000 [==============================] - 2s 35us/sample - loss: 4.3488
+Epoch 2/3
+50000/50000 [==============================] - 2s 30us/sample - loss: 4.3488
+Epoch 3/3
+50000/50000 [==============================] - 2s 30us/sample - loss: 4.3488
 
+<tensorflow.python.keras.callbacks.History at 0x7f425017b320>
+```
 만약 `y_true`와 `y_pred`이외에 parameters를 받는 loss function이 필요하다면,  `tf.keras.losses.Loss` class에 subclass를 하여 다음의 두 method를 실행하면 된다.
 - `__init__(self)`: loss function을 호출하는 동안에 전달해야할 parameter들을 받는다.
 - `call(self, y_true, y_pred)`: targets(`y_true`)와 모형의 predictions('y_pred`)를 사용하여 모형의 loss를 계산
 
 `__init__()`에 전달된 parameter들은 loss를 계산할 때 `call()`에서 사용될 수 있다.
 
-다음의 예제는 `BinaryCrossEntropy`를 계산하는 `WeightedCrossEntropy` loss function을 보여준다. 이때 특정한 분류학의 loss나 전체 함수는 scalar에 의해 조정될 수 있다.
+다음의 예제는 `BinaryCrossEntropy`를 계산하는 `WeightedCrossEntropy` loss function을 보여준다. 이때 특정한 분류 항목의 loss나 전체 함수는 scalar에 의해 조정될 수 있다.
 
+```python
+class WeightedBinaryCrossEntropy(keras.losses.Loss):
+    '''
+    Args:
+        pos_weight: loss function의 positive label에 영향을 주는 scalar
+        weight: loss function의 전체에 영향을 주는 scalar
+        from_logits: loss를 계산할 지 확률 값을 계산할 지 결정
+        reduction: loss에 적용할 tf.keras.losses.Reduction의 종류
+        name: loss function의 이
+    '''
+    def __init__(self, pos_weight, weight, from_logits=False,
+                 reduction=keras.losses.Reduction.AUTO,
+                 name='weighted_binary_crossentropy'):
+        super(WeightedBinaryCrossEntropy, self).__init__(reduction=reduction,
+                                                         name=name)
+        self.pos_weight = pos_weight
+        self.weight = weight
+        self.from_logits = from_logits
+        
+    def call(self, y_true, y_pred):
+        if not self.from_logits:
+            # 롹률 값을 계산
+            # Manually calculate the weighted cross entropy.
+            # Formula is qz * -log(sigmoid(x)) + (1 - z) * -log(1 - sigmoid(x))
+            # where z are labels, x is logits, and q is the weight.
+            # Since the values passed are from sigmoid (assuming in this case)
+            # sigmoid(x) will be replaced by y_pred
+            
+            # qz * -log(sigmoid(x)) 1e-6 is added as an epsilon to stop passing a zero into the log
+            x_1 = y_true * self.pos_weight * -tf.math.log(y_pred + 1e-6)
+            
+            # (1 - z) * -log(1 - sigmoid(x)). Epsilon is added to prevent passing a zero into the log
+            x_2 = (1 - y_true) * tf.math.log(1 - y_pred + 1e-6)
+            
+            return tf.add(x_1, x_2) * self.weight
+        
+        # Use built-in function
+        return tf.nn.weighted_cross_entropy_with_logits(y_true, y_pred, self.pos_weight) * self.weight
+    
+model.compile(optimizer=keras.optimizers.Adam(),
+              loss=WeightedBinaryCrossEntropy(0.5, 2))
+
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=3)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNjM3NjQyMF19
+eyJoaXN0b3J5IjpbMTA4MzA4MDQ2OF19
 -->
