@@ -467,7 +467,10 @@ model.fit(x_train, y_train,
           steps_per_epoch=1) # 각 epoch당 몇 번의 step, 즉 몇개의 batch들을 사용할 것인지 정의
                              # 따라서 batch-sized sample 묶음(chunk)들의 순서를 suffling 해주는 suffle이라는 인자는 steps_per_epoch가 None이 아닌 경우에만 의미가 있다.
 ```
-
+```
+Train on 40000 samples, validate on 10000 samples
+   64/40000 [..............................] - ETA: 11:32 - loss: 2.3628 - sparse_categorical_accuracy: 0.1406 - val_loss: 0.0000e+00 - val_sparse_categorical_accuracy: 0.0000e+00Out[47]: <tensorflow.python.keras.callbacks.History at 0x255a8467748>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM1NjE1ODkwLC0xNzE5NjU1NjIxXX0=
+eyJoaXN0b3J5IjpbMTExODQxNzExOCwtMTcxOTY1NTYyMV19
 -->
