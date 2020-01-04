@@ -45,6 +45,9 @@ name :  Adam
 learning_rate :  0.001
 split_ratio :  0.2
 ```
+
+> [https://wikidocs.net/16048](https://wikidocs.net/16048)를 참고하여 본 게시글을 작성하였음을 밝힙니다!
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDEzMjI0MV19
+eyJoaXN0b3J5IjpbNTgzMTg2Mzk1XX0=
 -->
