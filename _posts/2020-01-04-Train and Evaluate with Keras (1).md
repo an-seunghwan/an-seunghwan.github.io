@@ -264,7 +264,72 @@ model.fit(x_train, y_train,
           batch_size=64,
           epochs=3)
 ```
+```
+Train on 50000 samples
+Epoch 1/3
+50000/50000 [==============================] - 3s 64us/sample - loss: 11.7616
+Epoch 2/3
+50000/50000 [==============================] - 3s 53us/sample - loss: 10.9724
+Epoch 3/3
+50000/50000 [==============================] - 3s 55us/sample - loss: 10.9711
+Out[39]: <tensorflow.python.keras.callbacks.History at 0x255a217b248>
+```
+* `keras.losses.Reduction`에 대해서는 추후에 더 자세히 다루겠습니다! (coming soon!)
 
+#### custom metric
+
+필요한 metric이 API에 제공되지 않는다면, `Metric` class에 subclassing을 하여 만들 수 있다. 다음의 네가지 method를 실행해야 한다.
+
+- `__init__(self)`: metric에서 사용되는 state 변수를 생성한다.
+- `update_state(self, y_true, y_pred, sample_weight=None)`: target `y_true`와 모형의 predictions `y_pred`를
+state 변수를 update하기 위해 사용하는 것.
+- `result(self)`: 최종 결과를 계산하기 위해 state 변수를 사용하는 것.
+- `reset_states(self)`: metric의 state를 재초기화 하는 것.
+
+state update와 결과 계산은 별도로 유지된다(`update_state()`과 `result()`에서 각각). 왜냐하면 몇몇 경우에서, 결과 계산은 매우 어려울 수 있으므로, 주기적으로만 행해져야 하기 때문이다.
+
+다음의 예제는 `CategoricalTruePositives` metric을 어떻게 실행하는지에 대한 예제이다. 이 metric은 주어진 class에서 얼마나 많은 sample이 정확하게 분류되었는지 세어주는 metric이다.
+
+```python
+class CategoricalTruePositives(keras.metrics.Metric):
+    def __init__(self, name='categorical_true_positive', **kwargs):
+        super(CategoricalTruePositives, self).__init__(name=name, **kwargs)
+        self.true_positives = self.add_weight(name='tp', initializer='zeros')
+        
+    def update_state(self, y_true, y_pred, sample_weight=None):
+        y_pred = tf.reshape(tf.argmax(y_pred, axis=1), shape=(-1, 1))
+        values = tf.cast(y_true, 'int32') == tf.cast(y_pred, 'int32')
+        values = tf.cast(values, 'float32')
+        if sample_weight is not None:
+            sample_weight = tf.cast(sample_weight, 'float32')
+            values = tf.multiply(values, sample_weight)
+        self.true_positives.assign_add(tf.reduce_sum(values))
+        
+    def result(self):
+        return self.true_positives
+    
+    def reset_states(self):
+        # 각 epoch의 시작에서 metric의 state는 초기화 될 것이다.
+        self.true_positives.assign(0.)
+        
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss=keras.losses.SparseCategoricalCrossentropy(),
+              metrics=[CategoricalTruePositives()])
+
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=3)
+```
+```
+Train on 50000 samples
+Epoch 1/3
+50000/50000 [==============================] - 3s 60us/sample - loss: 0.1564 - categorical_true_positive: 47680.0000
+Epoch 2/3
+50000/50000 [==============================] - 2s 49us/sample - loss: 0.0863 - categorical_true_positive: 48708.0000
+Epoch 3/3
+50000/50000 [==============================] - 2s 46us/sample - loss: 0.0734 - categorical_true_positive: 48866.0000
+Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzA4MDQ2OF19
+eyJoaXN0b3J5IjpbMTMwMjEwNjI5Nl19
 -->
