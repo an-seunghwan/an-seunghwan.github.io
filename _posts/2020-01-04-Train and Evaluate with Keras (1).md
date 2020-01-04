@@ -389,6 +389,43 @@ Out[44]: <tensorflow.python.keras.callbacks.History at 0x255a581ac88>
 loss의 값이 0.3314로 더 작음을 볼 수 있다.
 
 metric 값에 대해서도 동일하게 할 수 있다.
+
+```python
+class MetricLoggingLayer(layers.Layer):
+    def call(self, inputs):
+        # 'aggregation' 인자는 batch당 metric 값을 전체 epoch에 대해서 어떻게 모을 것인지 정의한다.
+        # 여기서는 단순히 평균을 사용한다
+        self.add_metric(keras.backend.std(inputs), # 표준 편차 계
+                        name='std_of_activation',
+                        aggregation='mean')
+        return inputs # 그냥 통과하는 layer
+    
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+
+# Insert std logging as a layer.
+x = MetricLoggingLayer()(x)
+
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss='sparse_categorical_crossentropy')
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=1)
+```
+```
+Train on 50000 samples
+50000/50000 [==============================] - 3s 58us/sample - loss: 0.3374 - std_of_activation: 0.9307
+Out[45]: <tensorflow.python.keras.callbacks.History at 0x255a60c5d48>
+```
+Functional API에서도, `model.add_loss(loss_tensor)`, `model.add_metric(metric_tensor, name, aggregation)`을 이용할 수 있다.
+
+다음의 간단한 예제를 보자.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MDM4MTY5N119
+eyJoaXN0b3J5IjpbODA3OTE3NDA5XX0=
 -->
