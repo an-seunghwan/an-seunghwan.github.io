@@ -202,13 +202,12 @@ model.fit(x_train, y_train,
 ```
 Train on 50000 samples
 Epoch 1/3
-50000/50000 [==============================] - 2s 35us/sample - loss: 4.3488
+50000/50000 [==============================] - 3s 56us/sample - loss: 4.3488
 Epoch 2/3
-50000/50000 [==============================] - 2s 30us/sample - loss: 4.3488
+50000/50000 [==============================] - 2s 45us/sample - loss: 4.3488
 Epoch 3/3
-50000/50000 [==============================] - 2s 30us/sample - loss: 4.3488
-
-<tensorflow.python.keras.callbacks.History at 0x7f425017b320>
+50000/50000 [==============================] - 2s 45us/sample - loss: 4.3488
+Out[42]: <tensorflow.python.keras.callbacks.History at 0x255a3728e08>
 ```
 만약 `y_true`와 `y_pred`이외에 parameters를 받는 loss function이 필요하다면,  `tf.keras.losses.Loss` class에 subclass를 하여 다음의 두 method를 실행하면 된다.
 - `__init__(self)`: loss function을 호출하는 동안에 전달해야할 parameter들을 받는다.
@@ -331,5 +330,5 @@ Epoch 3/3
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjEwNjI5Nl19
+eyJoaXN0b3J5IjpbLTEyMDA0MDY4MDddfQ==
 -->
