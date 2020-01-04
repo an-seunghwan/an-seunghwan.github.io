@@ -188,7 +188,27 @@ Metrics:
 
 Keras를 이용해 custom losses를 만드는 2가지 방법이 있다. 첫 번째 예시는 input으로 `y_true`와 `y_pred`를 받는 함수를 만드는 방법이다. 다음의 예제는 실제 data와 predictions 사이에 평균 거리를 계산하는 loss 함수를 만드는 것을 보여준다.
 
+```python
+def basic_loss_function(y_true, y_pred):
+    return tf.math.reduce_mean(y_true - y_pred)
+
+model.compile(optimizers=keras.optimizers.Adam(),
+              loss=basic_loss_function) # 단순히 custom loss function을 인자로 넘겨준
+
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=3)
+```
+
+만약 `y_true`와 `y_pred`이외에 parameters를 받는 loss function이 필요하다면,  `tf.keras.losses.Loss` class에 subclass를 하여 다음의 두 method를 실행하면 된다.
+- `__init__(self)`: loss function을 호출하는 동안에 전달해야할 parameter들을 받는다.
+- `call(self, y_true, y_pred)`: targets(`y_true`)와 모형의 predictions('y_pred`)를 사용하여 모형의 loss를 계산
+
+`__init__()`에 전달된 parameter들은 loss를 계산할 때 `call()`에서 사용될 수 있다.
+
+다음의 예제는 `BinaryCrossEntropy`를 계산하는 `WeightedCrossEntropy` loss function을 보여준다. 이때 특정한 class의 loss나 전체 함수는 scalar에 의해 조정될 수 있다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Nzk2NDI3Ml19
+eyJoaXN0b3J5IjpbNDEwODg5NzUxXX0=
 -->
