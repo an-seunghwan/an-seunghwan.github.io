@@ -28,6 +28,7 @@ print(__name__)
 if __name__ == '__main__':
     words_to_ascii()
 ```
+
 1. REPL로 실행하는 경우
 ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ascii1.png?raw=true)
 
@@ -78,6 +79,6 @@ if __name__ == '__main__':
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDU5MTcyNzcsLTEzNDU5MTcyNzcsMT
-I1NTY4MTU2N119
+eyJoaXN0b3J5IjpbLTExMzgwNjU3MzksLTEzNDU5MTcyNzcsLT
+EzNDU5MTcyNzcsMTI1NTY4MTU2N119
 -->
