@@ -425,7 +425,30 @@ Functional API에서도, `model.add_loss(loss_tensor)`, `model.add_metric(metric
 
 다음의 간단한 예제를 보자.
 
+```python
+inputs = keras.Input(shape=(784,), name='digits')
+x1 = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+x2 = layers.Dense(64, activation='relu', name='dense_2')(x1)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x2)
+model = keras.Model(inputs=inputs, outputs=outputs)
+
+model.add_loss(tf.reduce_sum(x1) * 0.1)
+model.add_metric(keras.backend.std(x1),
+                 name='std_of_activation',
+                 aggregation='mean')
+
+model.compile(optimizer=keras.optimizers.RMSprop(1e-3),
+              loss='sparse_categorical_crossentropy')
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=1)
+```
+```
+Train on 50000 samples
+50000/50000 [==============================] - 4s 81us/sample - loss: 2.4877 - std_of_activation: 0.0019
+Out[46]: <tensorflow.python.keras.callbacks.History at 0x255a7a12d88>
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3OTE3NDA5XX0=
+eyJoaXN0b3J5IjpbLTE3MTk2NTU2MjFdfQ==
 -->
