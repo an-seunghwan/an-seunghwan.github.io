@@ -133,12 +133,60 @@ model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
 ```
 `metrics` 인자는 반드시 list이어야 한다 - 여러개의 metric을 가지는 것이 가능하다.
 
-만약 모형이 여러개의 output을 가지고 있다면,
-각각의 output에 대해서 서로다른 loss와 metric을 지정할 수 있고, 
-모형의 전체 loss에 대한 각각의 output의 기여도를 조절할 수 있다.
+만약 모형이 여러개의 output을 가지고 있다면, 각각의 output에 대해서 서로다른 loss와 metric을 지정할 수 있고, 모형의 전체 loss에 대한 각각의 output의 기여도를 조절할 수 있다.
 "**여러개의 input과 output 전달하기**" 파트에서 더 자세한 내용을 확인할 수 있다.
 
 많은 경우는 아니지만, string identifier를 이용해 loss와 metric을 지정할 수 있다.
+
+```python
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss='sparse_categorical_crossentropy',
+              metrics=['sparse_categorical_accuracy'])
+```
+나중에 재사용을 위해서, 모형의 정의 부분과 compile 부분을 함수에 넣자; 이 함수들을 해당 가이드에서 여러번 사용할 예정이다.
+
+```python
+def get_uncompiled_model():
+    inputs = keras.Input(shape=(784, ), name='digits')
+    x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+    x = layers.Dense(64, activation='relu', name='dense_2')(x)
+    outputs = layers.Dense(10, activation='softmax', name='prediction')(x)
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    return model
+
+def get_compiled_model():
+    model = get_uncompiled_model()
+    model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss='sparse_categorical_crossentropy',
+              metrics=['sparse_categorical_accuracy'])
+    return model
+```
+#### 여러 built-in optimizer, losses, metrics
+
+Optimizers:
+
+-   `SGD()`  (with or without momentum)
+-   `RMSprop()`
+-   `Adam()`
+-   etc.
+
+Losses:
+
+-   `MeanSquaredError()`
+-   `KLDivergence()`
+-   `CosineSimilarity()`
+-   etc.
+
+Metrics:
+
+-   `AUC()`
+-   `Precision()`
+-   `Recall()`
+-   etc.
+
+#### custom losses
+
+Keras를 이용해 custom losses를 만드는 2가지 방법이 있다. 첫 번째 예시는 input으로 `y_true`와 `y_pred`를 받는 함수를 만드는 방법이다. 다음의 예제는 실제 data와 predictions 사이에 평균 거리를 계산하는 loss 함수를 만드는 것을 보여준다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAzMjg2MzczXX0=
+eyJoaXN0b3J5IjpbMTk0MjQ5NDEwMF19
 -->
