@@ -22,7 +22,9 @@
 tokenizing 전, 후에 이루어지는 과정
 * 정제(cleaning): 갖고 있는 corpus로부터 noise 데이터를 제거
 * 정규화(normalization): 의미는 같지만 표현이 다른 단어들을 하나의 단어로 통합시킨다.
-	- 목적: 단어의 개수가 많아질수록, 처리해야 하는 단어 
+	- 목적: 단어의 개수가 많아질수록, 문서 전체에 대한 단어 사전의 크기가 매우 커진다. → 다뤄야 하는 데이터의 크기가 매우 커진다!(**단어의 개수를 최소로 하는 것은 매우 중요하다**)
+
+
 
 
 ## 한국어의 특징
@@ -37,5 +39,5 @@ tokenizing 전, 후에 이루어지는 과정
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTUxODc3MTVdfQ==
+eyJoaXN0b3J5IjpbLTIyMTczMzY1NV19
 -->
