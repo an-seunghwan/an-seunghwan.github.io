@@ -206,9 +206,9 @@ model.fit(x_train, y_train,
 
 `__init__()`에 전달된 parameter들은 loss를 계산할 때 `call()`에서 사용될 수 있다.
 
-다음의 예제는 `BinaryCrossEntropy`를 계산하는 `WeightedCrossEntropy` loss function을 보여준다. 이때 특정한 class의 loss나 전체 함수는 scalar에 의해 조정될 수 있다.
+다음의 예제는 `BinaryCrossEntropy`를 계산하는 `WeightedCrossEntropy` loss function을 보여준다. 이때 특정한 분류학의 loss나 전체 함수는 scalar에 의해 조정될 수 있다.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEwODg5NzUxXX0=
+eyJoaXN0b3J5IjpbMjAxNjM3NjQyMF19
 -->
