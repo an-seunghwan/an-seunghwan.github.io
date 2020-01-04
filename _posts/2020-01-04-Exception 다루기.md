@@ -34,7 +34,7 @@ print(get_ascii('가'))
 ```
 예외가 발생하지 않았습니다.
 반드시 실행되는 부분!
-Out[30]: 44032
+44032
 ```
 ```python
 print(get_ascii(1))   
@@ -71,6 +71,6 @@ TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
 > [https://wikidocs.net/16048](https://wikidocs.net/16048)를 참고하여 본 게시글을 작성하였음을 밝힙니다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODU2MDQ2NzQsMTgxMTQwMTYyNyw4NT
-c2NTIzNF19
+eyJoaXN0b3J5IjpbODgzMjY0ODQzLC0xNzg1NjA0Njc0LDE4MT
+E0MDE2MjcsODU3NjUyMzRdfQ==
 -->
