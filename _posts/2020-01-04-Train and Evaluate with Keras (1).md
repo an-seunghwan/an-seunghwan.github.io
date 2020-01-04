@@ -187,6 +187,8 @@ Metrics:
 #### custom losses
 
 Keras를 이용해 custom losses를 만드는 2가지 방법이 있다. 첫 번째 예시는 input으로 `y_true`와 `y_pred`를 받는 함수를 만드는 방법이다. 다음의 예제는 실제 data와 predictions 사이에 평균 거리를 계산하는 loss 함수를 만드는 것을 보여준다.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MjQ5NDEwMF19
+eyJoaXN0b3J5IjpbMTM2Nzk2NDI3Ml19
 -->
