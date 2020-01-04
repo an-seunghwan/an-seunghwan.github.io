@@ -32,11 +32,13 @@ tokenizing 전, 후에 이루어지는 과정
 ### 2. 불필요한 단어를 제거 
 1. 등장 빈도가 적은 단어
 2. 길이가 짧은 단어 
-한글에서는 tokenizing 과정을 적용하고 난 뒤 어떤 token의
+- 한글에서는 tokenizing 과정을 적용하고 난 뒤 어떤 token의 길이가 1이라면 해당 token은 의미가 없는 경우도 존재한다.
+ex) 의미가 있는 경우: `안, 못, 길, 해` vs 의미가 없는 경우: `걸, 둔, 싱` 
+- 따라서 길이가 1인 한글 단어를 처리하는 방법에 대해서는 깊이 생각해보는 것이 필요하다.
 
 > 출처: [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNzQ5NTczOF19
+eyJoaXN0b3J5IjpbLTg3NzM3NTEzXX0=
 -->
