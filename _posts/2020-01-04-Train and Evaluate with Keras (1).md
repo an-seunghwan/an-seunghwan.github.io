@@ -360,7 +360,35 @@ model.fit(x_train, y_train,
           batch_size=64,
           epochs=1)
 ```
+```
+Train on 50000 samples
+50000/50000 [==============================] - 3s 59us/sample - loss: 2.4772
+Out[43]: <tensorflow.python.keras.callbacks.History at 0x255a3f8e208>
+```
+activity regularization이 없는 모형과 loss를 실제로 비교해보자.
+```python
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
 
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss='sparse_categorical_crossentropy')
+
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=1)
+```
+```
+Train on 50000 samples
+50000/50000 [==============================] - 3s 53us/sample - loss: 0.3314
+Out[44]: <tensorflow.python.keras.callbacks.History at 0x255a581ac88>
+```
+loss의 값이 0.3314로 더 작음을 볼 수 있다.
+
+metric 값에 대해서도 동일하게 할 수 있다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3MjY5MTQwXX0=
+eyJoaXN0b3J5IjpbLTg5MDM4MTY5N119
 -->
