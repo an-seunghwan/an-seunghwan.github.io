@@ -329,8 +329,38 @@ Epoch 3/3
 50000/50000 [==============================] - 2s 46us/sample - loss: 0.0734 - categorical_true_positive: 48866.0000
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
 ```
+### 보편적인 특징에 맞지 않은 loss와 metric 다루기
 
+아주 대다수의 loss와 metric은 `y_true`와 `y_pred`로부터 계산될 수 있다.
+그러나 전부가 그런 것은 아니다. 예를 들어, 정규화(regularization) loss는 아마 layer의 activation만을 필요로 한다(이 경우에는 target이 없다). 그리고 이 activation은 모형의 output은 아니다.
+
+그러한 경우에, custom layer에서 `self.add_loss(loss_value)`을 `call` method 내부에서 호출할 수 있다. 여기 activity regularization을 더하는 간단한 예제가 있다(activity regularization은 모든 Keras layer에서 built-in 되어있다 -- 이 예제 layer는 단지 명확한 예제를 위한 것이다).
+
+```python
+class ActivityRegularizationLayer(layers.Layer):
+    def call(self, inputs):
+        self.add_loss(tf.reduce_sum(inputs) * 0.1)
+        return inputs # 그냥 통과하는 layer
+    
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+
+# Insert activity regularization as a layer
+x = ActivityRegularizationLayer()(x)
+
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss='sparse_categorical_crossentropy')
+
+# 다음의 fit에서 보여주는 loss는 regularization 요소 때문에 전보다 매우 높을 것이다.
+model.fit(x_train, y_train,
+          batch_size=64,
+          epochs=1)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDY2NDQ3MDNdfQ==
+eyJoaXN0b3J5IjpbODA3MjY5MTQwXX0=
 -->
