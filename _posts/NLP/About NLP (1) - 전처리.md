@@ -30,11 +30,13 @@ tokenizing 전, 후에 이루어지는 과정
 2. 표제어 추출(lemmatization)
 
 ### 2. 불필요한 단어를 제거 
-
+1. 등장 빈도가 적은 단어
+2. 길이가 지나치게 짧은 단어 
+→ 한글에서는 일반적으로 길이가 1인 단어
 
 > 출처: [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTcwMzA1NV19
+eyJoaXN0b3J5IjpbMzA2NTUzODZdfQ==
 -->
