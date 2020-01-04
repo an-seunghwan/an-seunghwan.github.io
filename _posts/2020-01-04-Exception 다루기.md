@@ -69,8 +69,8 @@ Traceback (most recent call last):
 
 TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
-> [https://wikidocs.net/16048](https://wikidocs.net/16048)를 참고하여 본 게시글을 작성하였음을 밝힙니다!
+> 출처: [https://wikidocs.net/16048](https://wikidocs.net/16048)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzMjY0ODQzLC0xNzg1NjA0Njc0LDE4MT
-E0MDE2MjcsODU3NjUyMzRdfQ==
+eyJoaXN0b3J5IjpbLTE0NjE5MzQ1NzAsODgzMjY0ODQzLC0xNz
+g1NjA0Njc0LDE4MTE0MDE2MjcsODU3NjUyMzRdfQ==
 -->
