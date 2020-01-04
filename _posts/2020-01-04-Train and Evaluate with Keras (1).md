@@ -51,7 +51,58 @@ outputs = layers.Dense(10, activation='softmax', name='prediction')(x)
 
 model = keras.Model(inputs=inputs, outputs=outputs)
 ```
+다음은 원래의 training data로부터 생성된 holdout set에 대한 training, validation, 그리고 test data에 대해 evaluation을 하는 전체적인 과정을 담은 전형적인 end-to-end workflow이다.
+
+```python
+# data load
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+
+# 데이터 전처리
+x_train = x_train.reshape(60000, 784).astype('float32') / 255
+x_test = x_test.reshape(10000, 784).astype('float32') / 255
+
+y_train = y_train.astype('float32')
+y_test = y_test.astype('float32')
+
+# validation을 위해 10000개의 sample을 별도로 남겨둔다
+x_val = x_train[-10000:]
+y_val = y_train[-10000:]
+x_train = x_train[:-10000]
+y_train = y_train[:-10000]
+
+# training의 세부 설정을 명시
+model.compile(optimizer=keras.optimizers.RMSprop(),
+              loss=keras.losses.SparseCategoricalCrossentropy(),
+              metrics=[keras.metrics.SparseCategoricalCrossentropy()]) # list
+
+# data를 "batch_size"를 가지는 "batches"로 잘게 나누어 모형을 훈련
+# 그리고 전체 데이터를 주어진 "epochs"만큼의 회수로 반복한다
+print("# training data에 모형을 적합")
+history = model.fit(x_train, y_train,
+                    batch_size=64,
+                    epochs=3,
+                    # 각 epoch이 끝날 때마다 몇개의 validation data를 전달하여
+                    # validation loss와 metrics을 monitoring한다
+                    validation_data=(x_val, y_val))
+
+# history.history 객체는 loss와 metric 값에 대한 학습 과정 동안의 기록을 가지고 있다.
+print("\nhistory dict:", history.history)
+
+# `evaluate`을 이용해 test data에 대해 모형을 평가
+print("\n# test data에 대한 평가")
+results = model.evaluate(x_test, y_test,
+                        batch_size=128)
+print('test loss, test acc: ', results)
+
+# prediction을 생성 (확률값들 -- 마지막 layer의 output)
+# 이때 새로운 데이터에 대하여 'predict'를 이용한다
+
+print('\n# 3개의 sample에 대하여 predictions 생성')
+predictions = model.predict(x_test[:3])
+print('predictions shape:', predictions.shape)
+```
+```python
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MTM5MDAzN119
+eyJoaXN0b3J5IjpbMTY0ODEzNjE5MF19
 -->
