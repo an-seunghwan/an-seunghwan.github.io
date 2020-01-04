@@ -1,12 +1,12 @@
 ---
-title: "Positional and Keyword 인자"
-excerpt: Positional and Keyword 인자에 관한 기초 내용
+title: "Exception 다루기"
+excerpt: Exception에 관한 기초 내용
 toc: true
 toc_sticky: true
 
 author_profile: false
 
-date: 2020-01-04 19:10:00 -0000
+date: 2020-01-04 19:40:00 -0000
 categories: 
   - python basic
 tags:
@@ -71,6 +71,6 @@ TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
 > [https://wikidocs.net/16048](https://wikidocs.net/16048)를 참고하여 본 게시글을 작성하였음을 밝힙니다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4ODQ3MDAxNywxODExNDAxNjI3LDg1Nz
-Y1MjM0XX0=
+eyJoaXN0b3J5IjpbLTE3ODU2MDQ2NzQsMTgxMTQwMTYyNyw4NT
+c2NTIzNF19
 -->
