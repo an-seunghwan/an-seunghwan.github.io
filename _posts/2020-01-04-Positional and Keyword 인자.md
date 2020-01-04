@@ -17,7 +17,34 @@ tags:
 - list나 tuple과 같이 index가 존재하는 객체를 `*`를 앞에 붙여 함수에 인자로 전달
 
 ```python
+def my_function(*args):
+    return args[1], args[2], args[0]
 
+print(my_function(*[1, 2, 3]))
+```
+```
+(2, 3, 1)
+```
+
+## keyword argument unpacking
+- 특정한 값으로 지정된 argument
+- dictionary type 변수에 `**`를 앞에 붙여 함수에 인자로 전달
+- positional argument보다 뒤에 등장해야한다
+
+```python
+def my_config(**kwargs):
+    print('name : ', kwargs['name'])
+    print('learning_rate : ', kwargs['learning_rate'])
+    print('split_ratio : ', kwargs['split_ratio'])
+
+config_dict = {'name': 'Adam', 'learning_rate': 1e-3, 'split_ratio': 0.2}
+my_config(**config_dict)
+```
+```
+name :  Adam
+learning_rate :  0.001
+split_ratio :  0.2
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDgzMDE2ODZdfQ==
+eyJoaXN0b3J5IjpbMTA0MDEzMjI0MV19
 -->
