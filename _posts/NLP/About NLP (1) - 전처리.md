@@ -31,12 +31,12 @@ tokenizing 전, 후에 이루어지는 과정
 
 ### 2. 불필요한 단어를 제거 
 1. 등장 빈도가 적은 단어
-2. 길이가 지나치게 짧은 단어 
-→ 한글에서는 일반적으로 길이가 1인 단어
+2. 길이가 짧은 단어 
+한글에서는 tokenizing 과정을 적용하고 난 뒤 어떤 token의
 
 > 출처: [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA2NTUzODZdfQ==
+eyJoaXN0b3J5IjpbLTcyNzQ5NTczOF19
 -->
