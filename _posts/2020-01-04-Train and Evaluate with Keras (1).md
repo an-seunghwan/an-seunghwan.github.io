@@ -238,7 +238,7 @@ class WeightedBinaryCrossEntropy(keras.losses.Loss):
         
     def call(self, y_true, y_pred):
         if not self.from_logits:
-            # 롹률 값을 계산
+            # 확률 값을 계산
             # Manually calculate the weighted cross entropy.
             # Formula is qz * -log(sigmoid(x)) + (1 - z) * -log(1 - sigmoid(x))
             # where z are labels, x is logits, and q is the weight.
@@ -329,6 +329,8 @@ Epoch 3/3
 50000/50000 [==============================] - 2s 46us/sample - loss: 0.0734 - categorical_true_positive: 48866.0000
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDA0MDY4MDddfQ==
+eyJoaXN0b3J5IjpbLTEyNDY2NDQ3MDNdfQ==
 -->
