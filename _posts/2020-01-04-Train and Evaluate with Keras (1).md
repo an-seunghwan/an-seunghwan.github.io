@@ -184,7 +184,7 @@ Metrics:
 -   `Recall()`
 -   etc.
 
-#### custom losses
+**custom losses**
 
 Keras를 이용해 custom losses를 만드는 2가지 방법이 있다. 첫 번째 예시는 input으로 `y_true`와 `y_pred`를 받는 함수를 만드는 방법이다. 다음의 예제는 실제 data와 predictions 사이에 평균 거리를 계산하는 loss 함수를 만드는 것을 보여준다.
 
@@ -275,7 +275,7 @@ Out[39]: <tensorflow.python.keras.callbacks.History at 0x255a217b248>
 ```
 * `keras.losses.Reduction`에 대해서는 추후에 더 자세히 다루겠습니다! (coming soon!)
 
-#### custom metric
+**custom metric**
 
 필요한 metric이 API에 제공되지 않는다면, `Metric` class에 subclassing을 하여 만들 수 있다. 다음의 네가지 method를 실행해야 한다.
 
@@ -329,7 +329,7 @@ Epoch 3/3
 50000/50000 [==============================] - 2s 46us/sample - loss: 0.0734 - categorical_true_positive: 48866.0000
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x255a212f688>
 ```
-#### 보편적인 특징에 맞지 않은 loss와 metric 다루기
+**보편적인 특징에 맞지 않은 loss와 metric 다루기**
 
 아주 대다수의 loss와 metric은 `y_true`와 `y_pred`로부터 계산될 수 있다.
 그러나 전부가 그런 것은 아니다. 예를 들어, 정규화(regularization) loss는 아마 layer의 activation만을 필요로 한다(이 경우에는 target이 없다). 그리고 이 activation은 모형의 output은 아니다.
@@ -448,7 +448,7 @@ Train on 50000 samples
 50000/50000 [==============================] - 4s 81us/sample - loss: 2.4877 - std_of_activation: 0.0019
 Out[46]: <tensorflow.python.keras.callbacks.History at 0x255a7a12d88>
 ```
-#### 자동으로 validation set을 별도로 설정하기
+**자동으로 validation set을 별도로 설정하기**
 
 첫 번째 end-to-end 예제에서, 우리는 `validation_data`라는 인자를 `(x_val, y_val)`이라는 Numpy array tuple을 전달하기 위해 사용했다. 이는 각 epoch가 종료될 때 마다 validation loss와 metric을 평가하기 위한 목적이다.
 
@@ -472,6 +472,6 @@ Train on 40000 samples, validate on 10000 samples
    64/40000 [..............................] - ETA: 11:32 - loss: 2.3628 - sparse_categorical_accuracy: 0.1406 - val_loss: 0.0000e+00 - val_sparse_categorical_accuracy: 0.0000e+00Out[47]: <tensorflow.python.keras.callbacks.History at 0x255a8467748>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDI3NDgzOSwxMTE4NDE3MTE4LC0xNz
+eyJoaXN0b3J5IjpbMTM1MjYwNDEyNywxMTE4NDE3MTE4LC0xNz
 E5NjU1NjIxXX0=
 -->
