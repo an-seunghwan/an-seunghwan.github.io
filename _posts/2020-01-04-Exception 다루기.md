@@ -29,7 +29,7 @@ def get_ascii(s):
     return result
 ```
 ```python
-get_ascii('가')
+print(get_ascii('가'))
 ```
 ```
 예외가 발생하지 않았습니다.
@@ -37,7 +37,7 @@ get_ascii('가')
 Out[30]: 44032
 ```
 ```python
-get_ascii(1)      
+print(get_ascii(1))   
 ```
 ```
 반드시 실행되는 부분!
@@ -53,7 +53,22 @@ Traceback (most recent call last):
 TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
 이때 `Error info:  ord() expected string of length 1, but int found`부분이 `print('Error info: ', e, file=sys.stderr)`에 의해서 출력되는 부분이다.
+```python
+print(get_ascii('가나'))
+```
+```
+반드시 실행되는 부분!
+Error info:  ord() expected a character, but string of length 2 found
+Traceback (most recent call last):
 
+  File "<ipython-input-41-46070fd5061f>", line 1, in <module>
+    print(get_ascii('가나'))
+
+  File "<ipython-input-40-4fa272f8b74b>", line 11, in get_ascii
+    raise TypeError("길이 1의 문자가 입력되어야 합니다.") # 특정한 error를 발생
+
+TypeError: 길이 1의 문자가 입력되어야 합니다.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU3NjUyMzRdfQ==
+eyJoaXN0b3J5IjpbMTgxMTQwMTYyNyw4NTc2NTIzNF19
 -->
