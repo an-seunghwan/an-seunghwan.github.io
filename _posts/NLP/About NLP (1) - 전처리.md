@@ -26,13 +26,15 @@ tokenizing 전, 후에 이루어지는 과정
 	- 목적: 단어의 개수가 많아질수록, 문서 전체에 대한 단어 사전의 크기가 매우 커진다. → 다뤄야 하는 데이터의 크기가 매우 커진다! (**단어의 개수를 최소로 하는 것은 매우 중요하다**)
 
 ### 1. 규칙에 기반한 표기가 다른 단어들의 통합
+1. 어간 추출(stemming)
+2. 표제어 추출(lemmatization)
 
-### 2. 
+### 2. 불필요한 단어를 제거 
 
 
 > 출처: [https://wikidocs.net/book/2155](https://wikidocs.net/book/2155)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyODEzODg5Ml19
+eyJoaXN0b3J5IjpbLTU3NTcwMzA1NV19
 -->
