@@ -101,8 +101,44 @@ print('\n# 3개의 sample에 대하여 predictions 생성')
 predictions = model.predict(x_test[:3])
 print('predictions shape:', predictions.shape)
 ```
-```python
+```
+# training data에 모형을 적합
+Train on 50000 samples, validate on 10000 samples
+Epoch 1/3
+50000/50000 [==============================] - 2s 50us/sample - loss: 0.0893 - sparse_categorical_crossentropy: 0.0893 - val_loss: 0.1016 - val_sparse_categorical_crossentropy: 0.1016
+Epoch 2/3
+50000/50000 [==============================] - 2s 49us/sample - loss: 0.0726 - sparse_categorical_crossentropy: 0.0726 - val_loss: 0.0973 - val_sparse_categorical_crossentropy: 0.0973
+Epoch 3/3
+50000/50000 [==============================] - 2s 49us/sample - loss: 0.0624 - sparse_categorical_crossentropy: 0.0624 - val_loss: 0.1052 - val_sparse_categorical_crossentropy: 0.1052
 
+history dict: {'loss': [0.0893212428727746, 0.07260821430876852, 0.06236755557090044], 'sparse_categorical_crossentropy': [0.08932127, 0.0726082, 0.062367544], 'val_loss': [0.10160406033322215, 0.09732244644667953, 0.10523151242621243], 'val_sparse_categorical_crossentropy': [0.101604074, 0.0973224, 0.105231516]}
+
+# test data에 대한 평가
+10000/1 [==============================================] - 0s 16us/sample - loss: 0.0498 - sparse_categorical_crossentropy: 0.0985
+test loss, test acc:  [0.09850201628860086, 0.09850202]
+
+# 3개의 sample에 대하여 predictions 생성
+predictions shape: (3, 10)
+```
+### loss, metric, optimizer 명시하기
+
+모형을 `fit`을 이용해 train하기 위해서는, loss 함수, optimizer, 그리고 monitor하기 위한 몇개의 metric을 설정해야 한다.
+
+이러한 것들을 `compile()` method에 인자로 전달해야 한다.
+
+```python
+model.compile(optimizer=keras.optimizers.RMSprop(learning_rate=1e-3),
+              loss=keras.losses.SparseCategoricalCrossentropy(),
+              metrics=[keras.metrics.SparseCategoricalCrossentropy()]) # list
+```
+`metrics` 인자는 반드시 list이어야 한다 - 여러개의 metric을 가지는 것이 가능하다.
+
+만약 모형이 여러개의 output을 가지고 있다면,
+각각의 output에 대해서 서로다른 loss와 metric을 지정할 수 있고, 
+모형의 전체 loss에 대한 각각의 output의 기여도를 조절할 수 있다.
+"**여러개의 input과 output 전달하기**" 파트에서 더 자세한 내용을 확인할 수 있다.
+
+많은 경우는 아니지만, string identifier를 이용해 loss와 metric을 지정할 수 있다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0ODEzNjE5MF19
+eyJoaXN0b3J5IjpbNTAzMjg2MzczXX0=
 -->
