@@ -52,7 +52,7 @@ Traceback (most recent call last):
 
 TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
-이때 `Error info:  ord() expected string of length 1, but int found`부분이 `print('Error info: ', e, file=sys.stderr)`에 의해서 출력되는 부분이다.
+이때 `Error info:  ord() expected string of length 1, but int found`부분이 `print('Error info: ', e, file=sys.stderr)`에 의해서 출력되는 부분이다. 그리고 `raise TypeError("길이 1의 문자가 입력되어야 합니다.")`부분에 의해 결과물의 `TypeError: 길이 1의 문자가 입력되어야 합니다.`이 출력된다.
 ```python
 print(get_ascii('가나'))
 ```
@@ -70,5 +70,6 @@ Traceback (most recent call last):
 TypeError: 길이 1의 문자가 입력되어야 합니다.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMTQwMTYyNyw4NTc2NTIzNF19
+eyJoaXN0b3J5IjpbLTEyMTI3Mzc3NzUsMTgxMTQwMTYyNyw4NT
+c2NTIzNF19
 -->
