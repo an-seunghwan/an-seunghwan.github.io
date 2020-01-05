@@ -421,6 +421,39 @@ class LossHistory(keras.callbacks.Callback):
 `ModelCheckpoint` callback을 이용하면 매우 간단하다.
 
 ```python
+model = get_compiled_model()
+
+callbacks = [keras.callbacks.ModelCheckpoint(filepath=r'C:\tmp\keras_model\mymodel_{epoch}.h5',
+                                             # 다음의 2개의 parameter는 다음을 의미한다:
+                                             # 'val_loss'가 더 나아질 경우에만 현재의 checkpoint를 덮어쓰기 한다.
+                                             save_best_only=True,
+                                             monitor='val_loss',
+                                             verbose=1)]
+model.fit(x_train, y_train,
+          epochs=3,
+          batch_size=64,
+          callbacks=callbacks,
+          validation_split=0.2)
+```
+```
+Train on 40000 samples, validate on 10000 samples
+Epoch 1/3
+39104/40000 [============================>.] - ETA: 0s - loss: 0.3813 - sparse_categorical_accuracy: 0.8924  
+Epoch 00001: val_loss improved from inf to 0.23339, saving model to C:\tmp\keras_model\mymodel_1.h5
+40000/40000 [==============================] - 3s 78us/sample - loss: 0.3766 - sparse_categorical_accuracy: 0.8938 - val_loss: 0.2334 - val_sparse_categorical_accuracy: 0.9317
+Epoch 2/3
+38784/40000 [============================>.] - ETA: 0s - loss: 0.1801 - sparse_categorical_accuracy: 0.9486
+Epoch 00002: val_loss improved from 0.23339 to 0.17968, saving model to C:\tmp\keras_model\mymodel_2.h5
+40000/40000 [==============================] - 2s 53us/sample - loss: 0.1786 - sparse_categorical_accuracy: 0.9489 - val_loss: 0.1797 - val_sparse_categorical_accuracy: 0.9439
+Epoch 3/3
+39104/40000 [============================>.] - ETA: 0s - loss: 0.1313 - sparse_categorical_accuracy: 0.9606
+Epoch 00003: val_loss improved from 0.17968 to 0.15433, saving model to C:\tmp\keras_model\mymodel_3.h5
+40000/40000 [==============================] - 2s 54us/sample - loss: 0.1316 - sparse_categorical_accuracy: 0.9605 - val_loss: 0.1543 - val_sparse_categorical_accuracy: 0.9518
+```
+
+또한 callback을 이용해 모형의 저장과 restoring이 가능하다.
+
+저장과 serialization은 다른 가이드에서 더 자세히 다루겠습니다(coming soon!).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNzM2MzcyNF19
+eyJoaXN0b3J5IjpbLTEwNDE5NTc2NDddfQ==
 -->
