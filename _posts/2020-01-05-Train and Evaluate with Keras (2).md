@@ -168,7 +168,80 @@ weights의 값으로 0과 1이 사용되는 경우에, 해당 array는 loss func
 
 다음은 MNIST dataset 예제에서 분류 항목 #5의 정확한 분류에 대해 더 많은 중요도를 부여하기 위해 class weights이나 sample weights을 사용하는 경우이다.
 
+```python
+import numpy as np
 
+# class weight 사용
+class_weight = {0: 1., 1: 1., 2: 1., 3: 1., 4: 1.,
+                # Set weight "2" for class "5",
+                # making this class 2x more important
+                5: 2.,
+                6: 1., 7: 1., 8: 1., 9: 1.}
+print('Fit with class weight')
+model.fit(x_train, y_train,
+          class_weight=class_weight,
+          batch_size=64,
+          epochs=4)
+
+# sample weight 사용
+sample_weight = np.ones(shape=len(y_train, ))
+sample_weight[y_train == 5] = 2.
+print('\nFit with sample weight')
+
+model = get_compiled_model()
+model.fit(x_train, y_train,
+          sample_weight=sample_weight,
+          batch_size=64,
+          epochs=4)
+
+# dataset 사용하는 경우
+sample_weight = np.ones(shape=len(y_train, ))
+sample_weight[y_train == 5] = 2.
+
+# sample_weight을 포함하는 Dataset을 생성한다
+# (tuple의 반환되는 3번째 원소를 sample weight로 지정)
+train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train, sample_weight))
+
+# Shuffle and slice the dataset.
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
+
+model = get_compiled_model()
+model.fit(train_dataset, epochs=3)
+```
+```
+Fit with class weight
+Train on 50000 samples
+Epoch 1/4
+50000/50000 [==============================] - 3s 60us/sample - loss: 0.1002 - sparse_categorical_accuracy: 0.9727
+Epoch 2/4
+50000/50000 [==============================] - 3s 57us/sample - loss: 0.0828 - sparse_categorical_accuracy: 0.9769
+Epoch 3/4
+50000/50000 [==============================] - 4s 73us/sample - loss: 0.0701 - sparse_categorical_accuracy: 0.9800
+Epoch 4/4
+50000/50000 [==============================] - 4s 76us/sample - loss: 0.0615 - sparse_categorical_accuracy: 0.9820
+
+Fit with sample weight
+Train on 50000 samples
+Epoch 1/4
+50000/50000 [==============================] - 5s 96us/sample - loss: 0.3671 - sparse_categorical_accuracy: 0.9021
+Epoch 2/4
+50000/50000 [==============================] - 2s 46us/sample - loss: 0.1639 - sparse_categorical_accuracy: 0.9548
+Epoch 3/4
+50000/50000 [==============================] - 2s 46us/sample - loss: 0.1181 - sparse_categorical_accuracy: 0.9675
+Epoch 4/4
+50000/50000 [==============================] - 2s 47us/sample - loss: 0.0949 - sparse_categorical_accuracy: 0.9734
+Epoch 1/3
+782/782 [==============================] - 5s 6ms/step - loss: 0.3671 - sparse_categorical_accuracy: 0.9027
+Epoch 2/3
+782/782 [==============================] - 3s 4ms/step - loss: 0.1703 - sparse_categorical_accuracy: 0.9521
+Epoch 3/3
+782/782 [==============================] - 3s 4ms/step - loss: 0.1241 - sparse_categorical_accuracy: 0.9657
+Out[41]: <tensorflow.python.keras.callbacks.History at 0x22e352eed08>
+```
+### 다중 input과 output을 갖는 모형
+
+다음의 모형은 `(32, 32, 3)`의 shape(`(height, width, channels)`)을 갖는 이미지 input과 `(None, 10)`의 shape(`(timesteps, features)`)을 갖는 timeseries input을 다중 input으로 입력받는 모형이다. 이 모형은 이러한 inputs로부터 2개의 output을 가진다:
+"score"(shape `(1,)`)과 5개의 분류 항목에 대한 확률 분포(shape `(5,)`)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgwMjE5MzU5XX0=
+eyJoaXN0b3J5IjpbLTE2NjYxMjkzMTNdfQ==
 -->
