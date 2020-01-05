@@ -43,8 +43,12 @@ text_data.head()
 4    3D만 아니었어도 별 다섯 개 줬을텐데.. 왜 3D로 나와서 제 심기를 불편하게 하죠??
 Name: document, dtype: object
 ```
-만약 텍스트 데이터가 html 형식으로 구성되어 있다면, `beautifulsoup`을 이용하여 
+만약 텍스트 데이터가 html 형식으로 구성되어 있다면, `BeautifulSoup`을 이용하여 html 문법에 해당하는 문자들을 모두 제거하고 본격적인 전처리에 돌입하는 것이 좋다.
+
+* `BeautifulSoup`에 대한 사용법은 다른 게시글에서 자세히 다루겠습니다!
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MjgyMzc2MiwxNjMzNjkzMjU1LDY5Mz
+eyJoaXN0b3J5IjpbMTczODExNTUzMCwxNjMzNjkzMjU1LDY5Mz
 kwMDg5OSwtMjAzODY3OTI4Ml19
 -->
