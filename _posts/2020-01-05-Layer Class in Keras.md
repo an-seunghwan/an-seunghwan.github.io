@@ -58,17 +58,38 @@ type(linear_layer)
 ```
 __main__.Linear
 ```
-### 3. method
+### 3. `self.`
+`__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
+
+### 4. Class Inheritance(클래스 상속)
+* 기본 사용 방식
+```
+class child_class(parent_class):
+    ...
+    ...
+```
+이때 parent_class는 `tf.keras.layers.Layer`이고, child_class는 `Linear`이다. 이 `Linear`는 `tf.keras.layers.Layer`의 모든 속성과 method를 상속받으므로 Linear class 내에서 따로 정의할 필요가 없다.
+
+* **Method overriding**
+
+만약 parent_class의 method를 child_class에서 method를 재정의 한다면, parent_class의 method는 무시되고 child_class의 method만 실행된다.
+
+* `super()`
+
+`super()`를 이용하면, child_class 내에서 parent_class를 호출할 수 있다.
+
+### 5. method
 class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다(TensorFlow 2.0에서 권장하는 method 3가지).
 
 * `__init__()`
 
 Save configuration in member variables = 객체 내부의 속성들을 저장(초기화)한다는 것을 의미
 ```python
-def __init__(self, units=32): # self(객체 자신이 호출시 전달) 내부의 속성들을 초기화
+def __init__(self, units=32): 
     super(Linear, self).__init__()
     self.units = units
 ```
+`Linear` 객체의 `units`라는 속성을 instantiation 할 때 인자로 입력받은 
 
 * `build()`
 
@@ -103,28 +124,8 @@ print(y)
 ```
 inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 적용되는 것을 볼 수 있다.
 
-### 4. `self.`
-`__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
-
-### 5. Class Inheritance(클래스 상속)
-* 기본 사용 방식
-```
-class child_class(parent_class):
-    ...
-    ...
-```
-이때 parent_class는 `tf.keras.layers.Layer`이고, child_class는 `Linear`이다. 이 `Linear`는 `tf.keras.layers.Layer`의 모든 속성과 method를 상속받으므로 Linear class 내에서 따로 정의할 필요가 없다.
-
-* **Method overriding**
-
-만약 parent_class의 method를 child_class에서 method를 재정의 한다면, parent_class의 method는 무시되고 child_class의 method만 실행된다.
-
-* `super()`
-
-`super()`를 이용하면, child_class 내에서 parent_class를 호출할 수 있다.
-
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MjUwMzg5LDEyNjA5NzcxNjEsMTEwNj
-Q2MjI4MSw4MzM3ODUxMDUsLTIxMDYyMjg4NDVdfQ==
+eyJoaXN0b3J5IjpbMTMwMjg5NjYzNywxMjYwOTc3MTYxLDExMD
+Y0NjIyODEsODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
 -->
