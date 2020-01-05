@@ -64,6 +64,11 @@ class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의
 * `__init__()`
 
 Save configuration in member variables = 객체 내부의 속성들을 저장(초기화)한다는 것을 의미
+```python
+def __init__(self, units=32): # self(객체 자신이 호출시 전달) 내부의 속성들을 초기화
+    super(Linear, self).__init__()
+    self.units = units
+```
 
 * `build()`
 
@@ -73,13 +78,19 @@ inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 �
 
 실제로 코드를 보면서 확인해보자.
 ```python
-    def build(self, input_shape): 
-        self.w = self.add_weight(shape=(input_shape[-1], self.units),
-                                 initializer='random_normal',
-                                 trainable=True)
-        self.b = self.add_weight(shape=(self.units, ),
-                                 initializer='random_normal',
-                                 trainable=True)
+def build(self, input_shape): 
+    self.w = self.add_weight(shape=(input_shape[-1], self.units),
+                             initializer='random_normal',
+                             trainable=True)
+    self.b = self.add_weight(shape=(self.units, ),
+                             initializer='random_normal',
+                             trainable=True)
+```
+```python
+x = tf.ones((3, 3))
+linear_layer = Linear(units=12)
+y = linear_layer(x) 
+print(y)
 ```
 
 
@@ -114,6 +125,6 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODMzNTQyODYsMTI2MDk3NzE2MSwxMT
-A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
+eyJoaXN0b3J5IjpbMTE2MjUwMzg5LDEyNjA5NzcxNjEsMTEwNj
+Q2MjI4MSw4MzM3ODUxMDUsLTIxMDYyMjg4NDVdfQ==
 -->
