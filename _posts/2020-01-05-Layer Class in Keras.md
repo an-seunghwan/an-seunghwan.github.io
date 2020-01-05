@@ -78,7 +78,11 @@ inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 �
 * `call()`
 
 `build()`가 확실히 실행되고 난 뒤에 `__call__`에서 호출이 된다. 실제로 input tensor에 대해 layer에 적용되는 logic을 수행한다.
-
+```python
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+```
+inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 적용되는 것을 볼 수 있다.
 
 ### 4. `self.`
 `__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
@@ -100,11 +104,8 @@ class child_class(parent_class):
 
 `super()`를 이용하면, child_class 내에서 parent_class를 호출할 수 있다.
 
-
-
-
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MDk3NzE2MSwxMTA2NDYyMjgxLDgzMz
-c4NTEwNSwtMjEwNjIyODg0NV19
+eyJoaXN0b3J5IjpbLTgwNjM1MzI4NCwxMjYwOTc3MTYxLDExMD
+Y0NjIyODEsODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
 -->
