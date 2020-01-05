@@ -62,8 +62,11 @@ __main__.Linear
 class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다.
 
 * `__init__()`
+
 * `build()`
-* `call`
+
+* `call()`
+
 
 ### 4. `self.`
 `__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
@@ -90,5 +93,5 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODc3MDI2N119
+eyJoaXN0b3J5IjpbMTc4MzAxMjI0NF19
 -->
