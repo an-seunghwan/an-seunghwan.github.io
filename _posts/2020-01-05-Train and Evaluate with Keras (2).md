@@ -95,7 +95,50 @@ Epoch 3/3
 157/157 [==============================] - 1s 4ms/step - loss: 0.1269 - sparse_categorical_accuracy: 0.9623
 Out[37]: [0.12690303274534145, 0.9623]
 ```
+Dataset이 각 epoch가 끝날 때 마다 초기화되므로, 다음 epoch에서 재사용이 가능하다.
+
+만약 이 Dataset으로부터 특정 개수의 batch만을 학습하고자 한다면, `steps_per_epoch` 인자를 이용하면 된다. 이는 모형이 이 Dataset을 이용해 다음 epoch로 넘어가기 전에 해당 epoch에서 몇번의 학습 step을 진행할 지를 명시한다.
+
+만약 이를 사용한다면, dataset은 각 epoch의 마지막에서 초기화되지 않고, 다음 batch들을 단순히 계속 이용한다. dataset은 결국 모든 데이터를 다 사용하게 될 것이다(무한 loop의 dataset을 제외한다면).
+
+```python
+model = get_compiled_model()
+
+# Prepare the training dataset
+train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
+
+# 각 epoch에서 100개의 batch만을 사용(즉, 64 * 100개의 sample을 이용)
+model.fit(train_dataset.take(100), epochs=3)
+```
+```
+Epoch 1/3
+100/100 [==============================] - 2s 16ms/step - loss: 0.7716 - sparse_categorical_accuracy: 0.7997
+Epoch 2/3
+100/100 [==============================] - 1s 8ms/step - loss: 0.3162 - sparse_categorical_accuracy: 0.9136
+Epoch 3/3
+100/100 [==============================] - 1s 8ms/step - loss: 0.2439 - sparse_categorical_accuracy: 0.9312
+Out[38]: <tensorflow.python.keras.callbacks.History at 0x22e30fdb3c8>
+```
+validation dataset에서도 유사하게 적용이 가능하다.
+```python
+model = get_compiled_model()
+
+# Prepare the training dataset
+train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
+
+# Prepare the validation dataset
+val_dataset = tf.data.Dataset.from_tensor_slices((x_val, y_val))
+val_dataset = val_dataset.batch(64)
+
+model.fit(train_dataset, epochs=3,
+          # `validation_steps=10` argument: 
+          # validation dataset의 첫 번째 10개의 batch만을 이용해 validation 과정을 진행
+          validation_data=val_dataset, validation_steps=10)
+```
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE1NDUyNzY5XX0=
+eyJoaXN0b3J5IjpbMTc5ODAyNjU2XX0=
 -->
