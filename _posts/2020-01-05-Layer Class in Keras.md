@@ -69,11 +69,19 @@ Save configuration in member variables = 객체 내부의 속성들을 저장(�
 
 inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 한번 호출이 된다. 우선 `add_weight()`를 호출을 하고, 그 다음 super의 `build()`를 호출한다(이 것은 `self.build = True`으로 설정하므로, 첫 번째 `__call__`이 호출되기 전에 수동으로 `build()`를 호출하고 싶은 경우에 매우 유용하다).
 
-특히, subclass implementer들을 위한 layer의 변수를 생성하는 method이다.
+특히, subclass implementer들을 위한 layer의 변수를 생성하는 method이다. **`Layer`나 `Model`에서 subclasses를 실행하는 사람들이 만약 layer instantiation과 layer call 사이에 state-creation(변수(가중치) 생성) 단계가 필요하다면 override할 수 있도록 만들어 주는 method이다.** 이 method는 일반적으로 `Layer` subclasses의 가중치를 생성하는데 쓰인다.
 
-**`Layer`나 `Model`에서 subclasses를 실행하는 사람들이 만약 layer instantiation과 layer call 사이에 state-creation(변수(가중치) 생성) 단계가 필요하다면 override할 수 있도록 만들어 주는 method이다.**
+실제로 코드를 보면서 확인해보자.
+```python
+    def build(self, input_shape): 
+        self.w = self.add_weight(shape=(input_shape[-1], self.units),
+                                 initializer='random_normal',
+                                 trainable=True)
+        self.b = self.add_weight(shape=(self.units, ),
+                                 initializer='random_normal',
+                                 trainable=True)
+```
 
-이 method는 일반적으로 `Layer` subclasses의 가중치를 생성하는데 쓰인다.
 
 * `call()`
 
@@ -106,6 +114,6 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNjM1MzI4NCwxMjYwOTc3MTYxLDExMD
-Y0NjIyODEsODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
+eyJoaXN0b3J5IjpbLTEwODMzNTQyODYsMTI2MDk3NzE2MSwxMT
+A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
 -->
