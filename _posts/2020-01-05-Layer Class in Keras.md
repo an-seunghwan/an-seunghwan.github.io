@@ -75,15 +75,16 @@ class child_class(parent_class):
 
 * Method overriding
 
-만약 parent_class의 method를 child_class에서 method를 재정의 한다면,
-parent_class의 method는 무시되고 child_class의 method만 실행된다.
+만약 parent_class의 method를 child_class에서 method를 재정의 한다면, parent_class의 method는 무시되고 child_class의 method만 실행된다.
 
-`super()`를 이용하면, child class 내에서 parent class를 호출할 수 있다.
+* `super()`
+
+`super()`를 이용하면, child_class 내에서 parent_class를 호출할 수 있다.
 
 
 
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NTM5NTYyMV19
+eyJoaXN0b3J5IjpbLTc3OTE1Nzc4M119
 -->
