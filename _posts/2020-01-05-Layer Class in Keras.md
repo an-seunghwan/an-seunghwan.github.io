@@ -71,7 +71,7 @@ inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 �
 
 특히, subclass implementer들을 위한 layer의 변수를 생성하는 method이다.
 
-`Layer`나 `Model`에서 subclasses를 실행하는 사람들이 만약 layer instantiation과 layer call 사이에 state-creation(변수(가중치) 생성) 단계가 필요하다면 override할 수 있도록 만들어 주는 method이다.
+**`Layer`나 `Model`에서 subclasses를 실행하는 사람들이 만약 layer instantiation과 layer call 사이에 state-creation(변수(가중치) 생성) 단계가 필요하다면 override할 수 있도록 만들어 주는 method이다.**
 
 이 method는 일반적으로 `Layer` subclasses의 가중치를 생성하는데 쓰인다.
 
@@ -92,7 +92,7 @@ class child_class(parent_class):
 ```
 이때 parent_class는 `tf.keras.layers.Layer`이고, child_class는 `Linear`이다. 이 `Linear`는 `tf.keras.layers.Layer`의 모든 속성과 method를 상속받으므로 Linear class 내에서 따로 정의할 필요가 없다.
 
-* Method overriding
+* **Method overriding**
 
 만약 parent_class의 method를 child_class에서 method를 재정의 한다면, parent_class의 method는 무시되고 child_class의 method만 실행된다.
 
@@ -105,6 +105,6 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjQ2MjI4MSw4MzM3ODUxMDUsLTIxMD
-YyMjg4NDVdfQ==
+eyJoaXN0b3J5IjpbMTI2MDk3NzE2MSwxMTA2NDYyMjgxLDgzMz
+c4NTEwNSwtMjEwNjIyODg0NV19
 -->
