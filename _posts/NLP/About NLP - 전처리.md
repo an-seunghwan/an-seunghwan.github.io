@@ -32,6 +32,8 @@ data = pd.read_csv(DATA_PATH + '/' + FILE_NAME,
                    delimiter='\t',
                    quoting=3)
 data.head()
+# 텍스트 데이터만을 따로 뽑아서 사용
+text_data = data['document']
 ```
 ```
         id                                           document  label
@@ -43,6 +45,6 @@ data.head()
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTI0ODMsMTYzMzY5MzI1NSw2OTM5MD
-A4OTksLTIwMzg2NzkyODJdfQ==
+eyJoaXN0b3J5IjpbLTE5MzUyMDk1MTUsMTYzMzY5MzI1NSw2OT
+M5MDA4OTksLTIwMzg2NzkyODJdfQ==
 -->
