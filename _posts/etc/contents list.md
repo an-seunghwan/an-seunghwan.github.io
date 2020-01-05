@@ -70,10 +70,13 @@
 ### 품사 태깅
 * 의미있는 품사 단어만을 사용 vs 전체 단어 사용 **(성능 비교)**
 
+### 형태소
+
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM4MDUyMCw0MjU2MjM1NV19
+eyJoaXN0b3J5IjpbLTIxMzA4NzY0OTQsNDI1NjIzNTVdfQ==
 -->
