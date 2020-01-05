@@ -450,10 +450,11 @@ Epoch 3/3
 Epoch 00003: val_loss improved from 0.17968 to 0.15433, saving model to C:\tmp\keras_model\mymodel_3.h5
 40000/40000 [==============================] - 2s 54us/sample - loss: 0.1316 - sparse_categorical_accuracy: 0.9605 - val_loss: 0.1543 - val_sparse_categorical_accuracy: 0.9518
 ```
-
+아래와 같이 지정된 경로에 모형 팡
+![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/callback1.png?raw=true)
 또한 callback을 이용해 모형의 저장과 restoring이 가능하다.
 
 저장과 serialization은 다른 가이드에서 더 자세히 다루겠습니다(coming soon!).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDE5NTc2NDddfQ==
+eyJoaXN0b3J5IjpbLTE1OTMyODkwMzNdfQ==
 -->
