@@ -83,14 +83,13 @@ class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의
 
 * `__init__()`
 
-Save configuration in member variables (= 객체 내부의 속성들을 저장(초기화)한다는 것을 의미)
+Save configuration in member variables (= 객체 내부의 속성(변수)들을 저장(초기화)한다는 것을 의미)
 ```python
 def __init__(self, units=32): 
     super(Linear, self).__init__()
     self.units = units
 ```
-우선 `super`를 이용해 
-`Linear` 객체의 `units`라는 속성을 layer가 instantiation될 때 인자로 입력받은 units으로 `self.units`를 이용해 configuration을 저장한다.
+우선 `super`를 이용해 parent_class의 `__init__()` method를 실행한다. 그리고 `Linear` 객체의 `units`라는 속성(변수)을 layer가 instantiation될 때 인자로 입력받은 units로 `self.units`를 이용해 변수의 값(configuration)을 저장한다(default는 32).
 
 * `build()`
 
@@ -127,6 +126,6 @@ inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 �
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1ODc1OTYyMSwxMjYwOTc3MTYxLDExMD
-Y0NjIyODEsODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
+eyJoaXN0b3J5IjpbLTE2MjUzMDQ2ODUsMTI2MDk3NzE2MSwxMT
+A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
 -->
