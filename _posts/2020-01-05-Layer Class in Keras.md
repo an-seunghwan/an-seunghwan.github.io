@@ -81,7 +81,7 @@ class child_class(parent_class):
 ### 5. method
 class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다(TensorFlow 2.0에서 권장하는 method 3가지).
 
-* `__init__()`
+* **`__init__()`**
 
 Save configuration in member variables (= 객체 내부의 속성(변수)들을 저장(초기화)한다는 것을 의미)
 ```python
@@ -91,7 +91,7 @@ def __init__(self, units=32):
 ```
 우선 `super`를 이용해 parent_class의 `__init__()` method를 실행한다. 그리고 `Linear` 객체의 `units`라는 속성(변수)을 layer가 instantiation될 때 인자로 입력받은 units로 `self.units`를 이용해 변수의 값(configuration)을 저장한다(default는 32).
 
-* `build()`
+* **`build()`**
 
 inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 한번 호출이 된다. 우선 `add_weight()`를 호출을 하고, 그 다음 super의 `build()`를 호출한다(이 것은 `self.build = True`으로 설정하므로, 첫 번째 `__call__`이 호출되기 전에 수동으로 `build()`를 호출하고 싶은 경우에 매우 유용하다).
 
@@ -113,9 +113,17 @@ linear_layer = Linear(units=12)
 y = linear_layer(x) 
 print(y)
 ```
+```
+tf.Tensor(
+[[-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
+  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]
+ [-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
+  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]
+ [-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
+  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]], shape=(3, 12), dtype=float32)
+```
 
-
-* `call()`
+* **`call()`**
 
 `build()`가 확실히 실행되고 난 뒤에 `__call__`에서 호출이 된다. 실제로 input tensor에 대해 layer에 적용되는 logic을 수행한다.
 ```python
@@ -126,6 +134,6 @@ inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 �
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjUzMDQ2ODUsMTI2MDk3NzE2MSwxMT
-A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
+eyJoaXN0b3J5IjpbNDg5NDU5MjI1LDEyNjA5NzcxNjEsMTEwNj
+Q2MjI4MSw4MzM3ODUxMDUsLTIxMDYyMjg4NDVdfQ==
 -->
