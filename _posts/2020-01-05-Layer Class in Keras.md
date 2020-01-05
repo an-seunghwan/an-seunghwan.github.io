@@ -27,7 +27,33 @@ from tensorflow.keras import layers
 ```
 가장 간단한 `Dense` layer를 예제로 사용해보자.
 
+## example) Dense layer
+```python
+class Linear(layers.Layer): 
+    
+    def __init__(self, units=32): # self(객체 자신이 호출시 전달) 내부의 속성들을 초기화
+        super(Linear, self).__init__()
+        self.units = units
+    
+    def build(self, input_shape): # 이게 핵심!!!!
+        self.w = self.add_weight(shape=(input_shape[-1], self.units),
+                                 initializer='random_normal',
+                                 trainable=True)
+        self.b = self.add_weight(shape=(self.units, ),
+                                 initializer='random_normal',
+                                 trainable=True)
+    
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+```
+### 1. naming convention
+naming convention은 CamelCase이다.
+CamelCase는 명칭
+
+
+
+
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjM1NDc5OF19
+eyJoaXN0b3J5IjpbLTE5MjE0OTUyMDldfQ==
 -->
