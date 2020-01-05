@@ -111,17 +111,12 @@ def build(self, input_shape):
 x = tf.ones((3, 3))
 linear_layer = Linear(units=12)
 y = linear_layer(x) 
-print(y)
+print(y.shape)
 ```
 ```
-tf.Tensor(
-[[-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
-  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]
- [-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
-  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]
- [-0.00394045  0.03091105  0.07924592  0.132976    0.04260184 -0.00206177
-  -0.05879515 -0.06992934  0.02293095  0.01205628 -0.01935373  0.1850467 ]], shape=(3, 12), dtype=float32)
+(3, 12)
 ```
+`linear_layer = Linear(units=12)`가 
 
 * **`call()`**
 
@@ -134,6 +129,6 @@ inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 �
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5NDU5MjI1LDEyNjA5NzcxNjEsMTEwNj
-Q2MjI4MSw4MzM3ODUxMDUsLTIxMDYyMjg4NDVdfQ==
+eyJoaXN0b3J5IjpbLTE4ODUyMTk0OTQsMTI2MDk3NzE2MSwxMT
+A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
 -->
