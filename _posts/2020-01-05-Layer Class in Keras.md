@@ -71,7 +71,7 @@ inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 �
 
 * `call()`
 
-`build()`가 확실히 실행되고 난 뒤에 
+`build()`가 확실히 실행되고 난 뒤에 `__call__`에서 호출이 된다. 실제로 input tensor에 대해 layer에 적용되는 logic을 수행한다.
 
 
 ### 4. `self.`
@@ -99,5 +99,5 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzE3OTcxNiwtMjEwNjIyODg0NV19
+eyJoaXN0b3J5IjpbODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
 -->
