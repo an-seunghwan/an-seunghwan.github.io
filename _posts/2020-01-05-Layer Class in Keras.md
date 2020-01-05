@@ -59,9 +59,9 @@ type(linear_layer)
 __main__.Linear
 ```
 ### 3. method
-class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다.
+class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다(TensorFlow 2.0에서 권장하는 method 3가지).
 
-* `__init__()`
+* `__init__()`: Save configuration in member variables = 객체 내부의 속성들을 저장(초기화) 
 
 * `build()`
 
@@ -93,5 +93,5 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MzAxMjI0NF19
+eyJoaXN0b3J5IjpbMTc3MjQwNzE1Nl19
 -->
