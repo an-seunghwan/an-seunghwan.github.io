@@ -62,7 +62,18 @@
 
 ### 분산형 학습 in Keras & MPI
 
+### tokenizing
+* `.`, `,`, `/`, `&` 등의 특수문자 등을 모두 제외하면 안된다.
+	- binary classifier를 이용해 `.`의 단어의 일부분(약어로 쓰이는 경우)인 경우와 문장의 구분자인 경우를 구분
+	- **binary classifier는 일정한 규칙 또는 머신러닝으로 학습한 모형일 수 있다.**
+
+### 품사 태깅
+* 의미있는 품사 단어만을 사용 vs 전체 단어 사용 **(성능 비교)**
+
+
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MzIxNjA3NCw0MjU2MjM1NV19
+eyJoaXN0b3J5IjpbLTE4MTM4MDUyMCw0MjU2MjM1NV19
 -->
