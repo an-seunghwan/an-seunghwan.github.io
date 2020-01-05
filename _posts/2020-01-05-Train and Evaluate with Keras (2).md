@@ -450,11 +450,47 @@ Epoch 3/3
 Epoch 00003: val_loss improved from 0.17968 to 0.15433, saving model to C:\tmp\keras_model\mymodel_3.h5
 40000/40000 [==============================] - 2s 54us/sample - loss: 0.1316 - sparse_categorical_accuracy: 0.9605 - val_loss: 0.1543 - val_sparse_categorical_accuracy: 0.9518
 ```
-아래와 같이 지정된 경로에 모형 팡
+아래와 같이 지정된 경로에 모형 파일이 저장되어 있는 것을 확인할 수 있다.
 ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/callback1.png?raw=true)
 또한 callback을 이용해 모형의 저장과 restoring이 가능하다.
 
 저장과 serialization은 다른 가이드에서 더 자세히 다루겠습니다(coming soon!).
+
+### learning rate 스케쥴 사용하기
+
+딥 러닝에서 training 과정 중에 learning rate을 서서히 감소시키는 것은 흔한 패턴이다. 이는 흔히 "learning rate decay"로 알려져 있다.
+
+learning rate decay 스케쥴은 static(현재의 epoch나 batch의 index의 함수로써 미리 정해져 있다)이거나 dynamic(모형의 현재 행동에 반응, 특히 validation loss)
+
+**optimizer에 schedule 입력하기**
+
+static learning rate decay는 쉽게 optimizer에 `learning_rate`인자에 스케쥴 인자를 넘기면 된다.
+
+```python
+initial_learning_rate = 0.1
+lr_schedule = keras.optimizers.schedules.ExponentialDecay(initial_learning_rate,
+                                                          decay_steps=100000,
+                                                          decay_rate=0.96,
+                                                          staircas=True)
+
+optimizer = keras.optimizers.RMSProp(learning_rate=lr_schedule)
+```
+이 외에도 여러 built-in 스케쥴이 있다 - ExponentialDecay, PiecewiseConstantDecay, PolynomialDecay, and InverseTimeDecay
+
+**callback을 이용해 dynamic learning rate 스케쥴 실행하기**
+
+dynamic learning rate 스케쥴(예를 들어, validation loss가 더 이상 나아지지 않으며 learning rate을 감소)은 optimizer가 validation metric에 접근할 수 없으므로 앞에서 사용한 방식처럼 사용할 수 없다.
+
+하지만, callback은 모든 metric에 접근이 가능하다! 따라서 callback을 이용해 optimizer의 learning rate을 수정할 수 있다. 사실, 이것도 `ReduceLROnPlateau` callback으로 built-in 되어있다.
+
+## loss와 metric을 training 과정 중에 시각화하기
+
+training 과정 중에 모형을 모니터할 수 있는 가장 좋은 방법은 browser-base 어플리케이션인 TensorBoard를 사용하는 것이다. local로 실행 가능하며 다음과 같은 기능을 제공한다.
+- 생생한 training과 validation의 loss와 metric의 plots
+- (옵션) layer activations의 histogram 시각화
+- (옵션) `Embedding` layer의 embedding space의 3차원 시각화
+
+* TensorBoard에 대한 자세한 내용은 다른 가이드에서 다루겠습니다(coming soon!).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTMyODkwMzNdfQ==
+eyJoaXN0b3J5IjpbLTE0NjQxODQxMDldfQ==
 -->
