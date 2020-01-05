@@ -108,15 +108,15 @@ def build(self, input_shape):
                              trainable=True)
 ```
 ```python
-x = tf.ones((3, 3))
+x = tf.ones((3, 3)) # input
 linear_layer = Linear(units=12)
-y = linear_layer(x) 
+y = linear_layer(x) # output
 print(y.shape)
 ```
 ```
 (3, 12)
 ```
-`linear_layer = Linear(units=12)`가 
+`linear_layer = Linear(units=12)`에서 `Linear` class의 `linear_layer`가 instantiation될 때, units 속성만 입력이 되므로 `linear_layer`의 weight 
 
 * **`call()`**
 
@@ -129,6 +129,6 @@ inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 �
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODUyMTk0OTQsMTI2MDk3NzE2MSwxMT
-A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
+eyJoaXN0b3J5IjpbODU1MzAzNzk2LDEyNjA5NzcxNjEsMTEwNj
+Q2MjI4MSw4MzM3ODUxMDUsLTIxMDYyMjg4NDVdfQ==
 -->
