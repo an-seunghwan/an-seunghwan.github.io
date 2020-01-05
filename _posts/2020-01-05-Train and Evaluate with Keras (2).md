@@ -483,7 +483,7 @@ dynamic learning rate 스케쥴(예를 들어, validation loss가 더 이상 나
 
 하지만, callback은 모든 metric에 접근이 가능하다! 따라서 callback을 이용해 optimizer의 learning rate을 수정할 수 있다. 사실, 이것도 `ReduceLROnPlateau` callback으로 built-in 되어있다.
 
-## loss와 metric을 training 과정 중에 시각화하기
+### loss와 metric을 training 과정 중에 시각화하기
 
 training 과정 중에 모형을 모니터할 수 있는 가장 좋은 방법은 browser-base 어플리케이션인 TensorBoard를 사용하는 것이다. local로 실행 가능하며 다음과 같은 기능을 제공한다.
 - 생생한 training과 validation의 loss와 metric의 plots
@@ -492,5 +492,5 @@ training 과정 중에 모형을 모니터할 수 있는 가장 좋은 방법은
 
 * TensorBoard에 대한 자세한 내용은 다른 가이드에서 다루겠습니다(coming soon!).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQxODQxMDldfQ==
+eyJoaXN0b3J5IjpbMTgzNDQ4Njg4NF19
 -->
