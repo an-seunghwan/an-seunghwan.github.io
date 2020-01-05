@@ -138,7 +138,15 @@ model.fit(train_dataset, epochs=3,
           validation_data=val_dataset, validation_steps=10)
 ```
 ```
+Epoch 1/3
+782/782 [==============================] - 5s 6ms/step - loss: 0.3416 - sparse_categorical_accuracy: 0.9031 - val_loss: 0.0000e+00 - val_sparse_categorical_accuracy: 0.0000e+00
+Epoch 2/3
+782/782 [==============================] - 3s 3ms/step - loss: 0.1576 - sparse_categorical_accuracy: 0.9522 - val_loss: 0.2568 - val_sparse_categorical_accuracy: 0.9375
+Epoch 3/3
+782/782 [==============================] - 3s 3ms/step - loss: 0.1144 - sparse_categorical_accuracy: 0.9656 - val_loss: 0.1659 - val_sparse_categorical_accuracy: 0.9516
+Out[40]: <tensorflow.python.keras.callbacks.History at 0x22e2f44a348>
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODAyNjU2XX0=
+eyJoaXN0b3J5IjpbLTEzMTU3NzcwNjBdfQ==
 -->
