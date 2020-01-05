@@ -119,7 +119,7 @@ print(y.shape)
 
 `linear_layer = Linear(units=12)`를 통해 `Linear` class의 `linear_layer`가 instantiation될 때, units 속성만 입력이 되고 아직 inputs의 shape은 알려지지 않았으므로 `linear_layer`의 weights의 shape은 `(None, units)`일 것이다.  
 
-그 다음 `y = linear_layer(x)`를 통해  `x`라는 inputs이 입력되
+그 다음 `y = linear_layer(x)`를 통해 linear_layer가 호출(call)이 되고, `x`라는 inputs이 입력되면 그 때 inputs의 shape이 `(3, 3)`으로 알려졌으므로, `linear_layer`의 weights가 `(3, 12)`의 shape을 가지는 
 
 * **`call()`**
 
@@ -132,6 +132,6 @@ inputs와 가중치 `w`를 행렬곱을 한 뒤, `b`를 더해주는 logic이 �
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDUyMjY2NTYsMTI2MDk3NzE2MSwxMT
+eyJoaXN0b3J5IjpbLTEyNTU3MTc1NzMsMTI2MDk3NzE2MSwxMT
 A2NDYyMjgxLDgzMzc4NTEwNSwtMjEwNjIyODg0NV19
 -->
