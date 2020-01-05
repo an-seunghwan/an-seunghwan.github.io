@@ -73,7 +73,7 @@ inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 �
 
 `Layer`나 `Model`에서 subclasses를 실행하는 사람들이 만약 layer instantiation과 layer call 사이에 state-creation(변수(가중치) 생성) 단계가 필요하다면 override할 수 있도록 만들어 주는 method이다.
 
-
+이 method는 일반적으로 `Layer` subclasses의 가중치를 생성하는데 쓰인다.
 
 * `call()`
 
@@ -105,6 +105,6 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjU0MTI1LDgzMzc4NTEwNSwtMjEwNj
-IyODg0NV19
+eyJoaXN0b3J5IjpbMTEwNjQ2MjI4MSw4MzM3ODUxMDUsLTIxMD
+YyMjg4NDVdfQ==
 -->
