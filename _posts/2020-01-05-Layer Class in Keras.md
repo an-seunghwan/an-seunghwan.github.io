@@ -63,7 +63,7 @@ class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의
 
 * `__init__()`: Save configuration in member variables = 객체 내부의 속성들을 저장(초기화)한다는 것을 의미
 
-* `build()`
+* `build()`: inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 한번 호출이 된다. 
 
 * `call()`
 
@@ -93,5 +93,5 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUwMjM3OTUxXX0=
+eyJoaXN0b3J5IjpbLTIxMDYyMjg4NDVdfQ==
 -->
