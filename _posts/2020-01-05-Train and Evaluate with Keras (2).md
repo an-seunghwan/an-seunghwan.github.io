@@ -240,8 +240,58 @@ Out[41]: <tensorflow.python.keras.callbacks.History at 0x22e352eed08>
 ```
 ### 다중 input과 output을 갖는 모형
 
-다음의 모형은 `(32, 32, 3)`의 shape(`(height, width, channels)`)을 갖는 이미지 input과 `(None, 10)`의 shape(`(timesteps, features)`)을 갖는 timeseries input을 다중 input으로 입력받는 모형이다. 이 모형은 이러한 inputs로부터 2개의 output을 가진다:
-"score"(shape `(1,)`)과 5개의 분류 항목에 대한 확률 분포(shape `(5,)`)
+다음의 모형은 `(32, 32, 3)`의 shape(`(height, width, channels)`)을 갖는 이미지 input과 `(None, 10)`의 shape(`(timesteps, features)`)을 갖는 timeseries input을 다중 input으로 입력받는 모형이다. 이 모형은 이러한 inputs로부터 2개의 output을 가진다: "score"(shape `(1,)`)과 5개의 분류 항목에 대한 확률 분포(shape `(5,)`)
+
+```python
+from tensorflow import keras
+from tensorflow.keras import layers
+
+image_input = keras.Input(shape=(32, 32, 3), name='img_input')
+timeseries_input = keras.Input(shape=(None, 10), name='ts_input')
+
+x1 = layers.Conv2D(3, 3)(image_input)
+x1 = layers.GlobalMaxPooling2D()(x1)
+
+x2 = layers.Conv1D(3, 3)(timeseries_input)
+x2 = layers.GlobalMaxPooling1D()(x2)
+
+x = layers.concatenate([x1, x2])
+
+score_output = layers.Dense(1, name='score_output')(x)
+class_output = layers.Dense(5, activation='softmax', name='class_output')(x)
+
+model = keras.Model(inputs=[image_input, timeseries_input],
+                    outputs=[score_output, class_output])
+```
+list 형식으로 loss function을 전달하여 각각의 output별로 별도의 loss function 지정이 가능하다.
+```python
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss=[keras.losses.MeanSquaredError(),
+          keras.losses.CategoricalCrossentropy()])
+```
+metric도 마찬가지 방법으로 적용 가능하다(metric은 항상 list 형식이므로 이중 list로 입력).
+```python
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss=[keras.losses.MeanSquaredError(),
+          keras.losses.CategoricalCrossentropy()],
+    metrics=[[keras.metrics.MeanAbsolutePercentageError(),
+              keras.metrics.MeanAbsoluteError()],
+             [keras.metrics.CategoricalAccuracy()]])
+```
+dict를 이용해 output별로 별도의 loss와 metric을 지정 가능하다(이때 dict의 key는 반드시 model 정의에서 지정된 각 output의 `name`을 이용). 이는 output이 2개 이상일 경우 TensorFlow 2.0에서 권장되는 방식이다.
+
+```python
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss={'score_output': keras.losses.MeanSquaredError(),
+          'class_output': keras.losses.CategoricalCrossentropy()},
+    metrics={'score_output': [keras.metrics.MeanAbsolutePercentageError(),
+                              keras.metrics.MeanAbsoluteError()],
+             'class_output': [keras.metrics.CategoricalAccuracy()]})
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjYxMjkzMTNdfQ==
+eyJoaXN0b3J5IjpbLTE4NzEyODc0OTRdfQ==
 -->
