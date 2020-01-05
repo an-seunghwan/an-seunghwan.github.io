@@ -350,8 +350,7 @@ model.fit(train_dataset, epoch=3)
 
 ### callbacks 사용하기
 
-Keras의 callback은 training 도중에 서로 다른 시점에서 호출될 수 있는 객체이고(epoch의 시작, 또는 끝, batch의 종료 등)
-다음과 같이 실행될 수 있는 특징이 있다.
+Keras의 callback은 training 도중에 서로 다른 시점에서 호출될 수 있는 객체이고(epoch의 시작, 또는 끝, batch의 종료 등) 다음과 같이 실행될 수 있는 특징이 있다.
 
 - training 중에 서로 다른 시점에서 validation이 가능하다(epoch당 실행하는 built-in validation 외에)
 - 규칙적인 주기 또는 특정한 정확도 기준치를 초과하는 경우에 checkpointing
@@ -361,7 +360,67 @@ Keras의 callback은 training 도중에 서로 다른 시점에서 호출될 수
 
 callback은 `fit`에 list 형식으로 전달하면 된다.
 
+```python
+model = get_compiled_model()
 
+callbacks = [keras.callbacks.EarlyStopping(# validation loss가 더 나아지지 않으면 training을 종료
+                                           monitor='val_loss',
+                                           # '더 나아지지 않는다'의 의미는 1e-2만큼 보다 좋아지지 않음을 의미
+                                           min_delta=1e-2,
+                                           # '더 나아지지 않는다'는 적어도 2번의 epoch를 확인함을 의미
+                                           patience=2,
+                                           verbose=1)]
+model.fit(x_train, y_train,
+          epochs=20,
+          batch_size=64,
+          callbacks=callbacks,
+          validation_split=0.2)
+```
+```
+Train on 40000 samples, validate on 10000 samples
+Epoch 1/20
+40000/40000 [==============================] - 4s 103us/sample - loss: 0.3666 - sparse_categorical_accuracy: 0.8972 - val_loss: 0.2325 - val_sparse_categorical_accuracy: 0.9303
+Epoch 2/20
+40000/40000 [==============================] - 3s 79us/sample - loss: 0.1709 - sparse_categorical_accuracy: 0.9498 - val_loss: 0.1757 - val_sparse_categorical_accuracy: 0.9475
+Epoch 3/20
+40000/40000 [==============================] - 3s 79us/sample - loss: 0.1237 - sparse_categorical_accuracy: 0.9634 - val_loss: 0.1524 - val_sparse_categorical_accuracy: 0.9550
+Epoch 4/20
+40000/40000 [==============================] - 3s 67us/sample - loss: 0.0984 - sparse_categorical_accuracy: 0.9702 - val_loss: 0.1502 - val_sparse_categorical_accuracy: 0.9582
+Epoch 5/20
+40000/40000 [==============================] - 2s 51us/sample - loss: 0.0799 - sparse_categorical_accuracy: 0.9749 - val_loss: 0.1417 - val_sparse_categorical_accuracy: 0.9600
+Epoch 6/20
+40000/40000 [==============================] - 2s 52us/sample - loss: 0.0670 - sparse_categorical_accuracy: 0.9793 - val_loss: 0.1424 - val_sparse_categorical_accuracy: 0.9596
+Epoch 7/20
+40000/40000 [==============================] - 2s 53us/sample - loss: 0.0572 - sparse_categorical_accuracy: 0.9824 - val_loss: 0.1385 - val_sparse_categorical_accuracy: 0.9619
+Epoch 00007: early stopping
+Out[42]: <tensorflow.python.keras.callbacks.History at 0x22e36edca88>
+```
+**많은 built-in callback**
+- `ModelCheckpoint`: 주기적으로 모형을 저장
+- `EarlyStopping`: validation metric이 더 나아지지 않으면 training을 종료
+- `TensorBoard`: 주기적으로 모형의 log를 기록해 TensorBoard에서 시각화될 수 있도록 함
+- `CSVLogger`: loss와 metric을 CSV 파일로 저장
+
+**자신만의 callback 작성하기**
+
+기본 class인 keras.callbacks.Callback을 이용해 custom callback을 작성 가능하다. callback은 class의 특성인 `self.model`을 이용해 모형에 접근 가능하다.
+
+다음의 예제는 하나의 batch마다의 loss 값의 list를 저장하는 예제이다.
+```python
+class LossHistory(keras.callbacks.Callback):
+    def on_train_begin(self, logs):
+        self.losses = []
+    
+    def on_batch_end(self, batch, logs):
+        self.losses.append(logs.get('loss'))
+```
+### 모형의 checkpointing
+
+상대적으로 매우 큰 데이터를 training하는 경우에, 많은 빈도로 모형의 checkpoint를 저장하는 것은 매우 중요하다.
+
+`ModelCheckpoint` callback을 이용하면 매우 간단하다.
+
+```python
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU3MTM5MTc4XX0=
+eyJoaXN0b3J5IjpbLTYyNzM2MzcyNF19
 -->
