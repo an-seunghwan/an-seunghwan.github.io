@@ -15,6 +15,7 @@
 * shape=(-1, 1)
 * tf.cast
 * https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable#dtypes_and_casting_2
+* [https://www.tensorflow.org/tensorboard/get_started](https://www.tensorflow.org/tensorboard/get_started)
 * 
 
 ### Keras visualization
@@ -63,5 +64,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1NjIzNTVdfQ==
+eyJoaXN0b3J5IjpbMTc5MzIxNjA3NCw0MjU2MjM1NV19
 -->
