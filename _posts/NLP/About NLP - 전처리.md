@@ -25,8 +25,14 @@ get_file_size(FILE_NAME)
 ```
 file size: 4.89 MB
 ```
-
+## 파일 읽기
+`ㅔ
+data = pd.read_csv(DATA_PATH + '/' + FILE_NAME, 
+                   header=0,
+                   delimiter='\t',
+                   quoting=3)
+data.head()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMzY5MzI1NSw2OTM5MDA4OTksLTIwMz
-g2NzkyODJdfQ==
+eyJoaXN0b3J5IjpbNzQwMTU4NjA0LDE2MzM2OTMyNTUsNjkzOT
+AwODk5LC0yMDM4Njc5MjgyXX0=
 -->
