@@ -64,12 +64,26 @@ class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의
 ### 4. `self.`
 `__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
 
+### 5. Class Inheritance(클래스 상속)
+* 기본 사용 방식
+```
+class child_class(parent_class):
+    ...
+    ...
+```
+이때 parent_class는 `tf.keras.layers.Layer`이고, child_class는 `Linear`이다. 이 `Linear`는 `tf.keras.layers.Layer`의 모든 속성과 method를 상속받으므로 Linear class 내에서 따로 정의할 필요가 없다.
 
+* Method overriding
+
+만약 parent_class의 method를 child_class에서 method를 재정의 한다면,
+parent_class의 method는 무시되고 child_class의 method만 실행된다.
+
+`super()`를 이용하면, child class 내에서 parent class를 호출할 수 있다.
 
 
 
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDI1Mzg2NDRdfQ==
+eyJoaXN0b3J5IjpbLTI1NTM5NTYyMV19
 -->
