@@ -146,7 +146,29 @@ Epoch 3/3
 782/782 [==============================] - 3s 3ms/step - loss: 0.1144 - sparse_categorical_accuracy: 0.9656 - val_loss: 0.1659 - val_sparse_categorical_accuracy: 0.9516
 Out[40]: <tensorflow.python.keras.callbacks.History at 0x22e2f44a348>
 ```
+이때 사용이 끝난 후에 validation dataset이 초기화 된다(따라서 모든 epoch마다 동일한 sample에 대하여 validation 과정이 진행된다.)
+
+`validation_split`인자는 Dataset 객체를 사용하는 경우에는 지원되지 않는다. 왜냐하면 이 특징은 datasets의 sample에 대한 index 기능이 필요한데, 이는 Dataset API에서는 가능하지 않다.
+
+### 다른 형식의 input
+
+Numpy나 Tensorflow Datasets 이외에도, Padas dataframe이나, Python generator를 이용해 
+batch 훈련이 가능하지만, 이는 권장하는 방법이 아니다.
+
+### sample과 분류 항목에 대한 가중치 부여
+
+`fit`을 사용할 때, sample이나 분류 항목에 대해 가중치를 부여하는 것이 가능하다.
+- Numpy data를 이용할 때: `sample_weight`과 `class_weight`인자를 이용
+- Datasets를 이용할 때: Dataset이 `(input_batch, target_batch, sample_weight_batch)`를 반환하게 함으로써 가능
+
+"sample weights" array는 batch에서 각 sample이 전체 loss를 계산할 때 얼마나 많은 가중치를 갖는지를 명시한 array이다. 이는 보통 불균형한 분류 문제(imbalanced classification)에서 보통 사용한다(관측되기 어려운 분류 항목에 대해 더 많은 가중치를 부여하는 아이디어).
+weights의 값으로 0과 1이 사용되는 경우에, 해당 array는 loss function에 대해 *mask*로써 사용될 수 있다(전체 loss에 대한 기여도를 없애는 것).
+
+"class weight" dict는 동일한 개념의 좀 더 구체적인 예시이다: 분류 항목의 번호와 해당 분류 항목에 속하는 sample들의 비율을 mapping하는 dict이다. 예를 들어, 분류 항목 '0'이 분류 항목 '1'보다 2배로 적게 나타난다면, `class_weight={0: 1., 1: 0.5}`와 같이 사용하면 된다.
+
+다음은 MNIST dataset 예제에서 분류 항목 #5의 정확한 분류에 대해 더 많은 중요도를 부여하기 위해 class weights이나 sample weights을 사용하는 경우이다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTU3NzcwNjBdfQ==
+eyJoaXN0b3J5IjpbNDgwMjE5MzU5XX0=
 -->
