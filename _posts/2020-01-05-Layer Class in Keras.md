@@ -48,12 +48,22 @@ class Linear(layers.Layer):
 ```
 ### 1. naming convention
 naming convention은 CamelCase이다.
-CamelCase는 명칭
+CamelCase는 합성어 명칭에서 단어들이 합쳐질 때 단어의 첫 글자를 대문자로 표기하는 방식이다.
+
+### 2. 변수 할당
+```python
+linear_layer = Linear(units=12) # 변수에 할당
+type(linear_layer)
+```
+```
+__main__.Linear
+```
+### 3. 
 
 
 
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjE0OTUyMDldfQ==
+eyJoaXN0b3J5IjpbLTE2NDgxMzg2NTRdfQ==
 -->
