@@ -69,6 +69,8 @@ Save configuration in member variables = 객체 내부의 속성들을 저장(�
 
 inputs의 shape과 `dtype`이 일단 알려지면, `__call__`으로부터 단 한번 호출이 된다. 우선 `add_weight()`를 호출을 하고, 그 다음 super의 `build()`를 호출한다(이 것은 `self.build = True`으로 설정하므로, 첫 번째 `__call__`이 호출되기 전에 수동으로 `build()`를 호출하고 싶은 경우에 매우 유용하다).
 
+
+
 * `call()`
 
 `build()`가 확실히 실행되고 난 뒤에 `__call__`에서 호출이 된다. 실제로 input tensor에 대해 layer에 적용되는 logic을 수행한다.
@@ -99,5 +101,6 @@ class child_class(parent_class):
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMzNzg1MTA1LC0yMTA2MjI4ODQ1XX0=
+eyJoaXN0b3J5IjpbMTUwMDcwMzQxMyw4MzM3ODUxMDUsLTIxMD
+YyMjg4NDVdfQ==
 -->
