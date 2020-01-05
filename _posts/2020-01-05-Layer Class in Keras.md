@@ -14,9 +14,9 @@ tags:
   - keras
 ---
 
-Custom Model을 작성하기 위해서는, 
+Custom Model을 작성하다 보면 자연스럽게 custom layer를 작성해야 하는 순간이 많이 발생한다. 이러한 경우에 Base layer class인 `tf.keras.layers.Layer`을 subclassing 
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA2MzQ1MzddfQ==
+eyJoaXN0b3J5IjpbLTExMjg0NDgyNjFdfQ==
 -->
