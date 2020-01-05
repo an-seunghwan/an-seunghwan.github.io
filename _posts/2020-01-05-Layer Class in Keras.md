@@ -35,7 +35,7 @@ class Linear(layers.Layer):
         super(Linear, self).__init__()
         self.units = units
     
-    def build(self, input_shape): # 이게 핵심!!!!
+    def build(self, input_shape): 
         self.w = self.add_weight(shape=(input_shape[-1], self.units),
                                  initializer='random_normal',
                                  trainable=True)
@@ -58,12 +58,18 @@ type(linear_layer)
 ```
 __main__.Linear
 ```
-### 3. 
+### 3. method
+class내에 정의된 함수를 method라고 한다. 따라서 'Linear' class의 method는 `__init__`, `build`, `call` 3가지 이다.
+
+### 4. `self.`
+`__init__`에서 `self.`으로 할당한 변수들은 모두 instance 속성! 따라서 units는 instance 속성이다.
+
+
 
 
 
 
 > 참고: https://www.tensorflow.org/api_docs/python/tf/keras/layers/Layer?version=stable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDgxMzg2NTRdfQ==
+eyJoaXN0b3J5IjpbLTE4MDI1Mzg2NDRdfQ==
 -->
