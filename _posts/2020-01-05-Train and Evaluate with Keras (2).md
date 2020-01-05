@@ -291,7 +291,77 @@ model.compile(
                               keras.metrics.MeanAbsoluteError()],
              'class_output': [keras.metrics.CategoricalAccuracy()]})
 ```
+각각의 loss에 대해서 서로 다른 가중치를 부여할 수 있다(`loss_weights` 인자를 이용).
+```python
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss={'score_output': keras.losses.MeanSquaredError(),
+          'class_output': keras.losses.CategoricalCrossentropy()},
+    metrics={'score_output': [keras.metrics.MeanAbsolutePercentageError(),
+                              keras.metrics.MeanAbsoluteError()],
+             'class_output': [keras.metrics.CategoricalAccuracy()]},
+    loss_weights={'score_output': 2., 'class_output': 1.})
+```
+특정한 output이 prediction을 위한 것이지 training을 위한 것이 아니라면, loss를 굳이 계산하지 않아도 된다.
+```python
+# List loss version
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss=[None, keras.losses.CategoricalCrossentropy()]) # 첫 번째 output의 loss function은 None
+
+# Or dict loss version
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss={'class_output': keras.losses.CategoricalCrossentropy()})
+```
+`compile`과 유사하게 `fit`에서도 다중 input과 output을 지정할 수 있다: Numpy array list 혹은 Numpy array와 각 input과 output의 이름을 mapping한 dict를 이용
+
+```python
+model.compile(
+    optimizer=keras.optimizers.RMSprop(1e-3),
+    loss=[keras.losses.MeanSquaredError(),
+          keras.losses.CategoricalCrossentropy()])
+
+# Generate dummy Numpy data
+img_data = np.random.random_sample(size=(100, 32, 32, 3))
+ts_data = np.random.random_sample(size=(100, 20, 10))
+score_targets = np.random.random_sample(size=(100, 1))
+class_targets = np.random.random_sample(size=(100, 5))
+
+# Fit on lists
+model.fit([img_data, ts_data], [score_targets, class_targets], # keras.Model의 inputs, outputs와 순서를 동일하게 맞춘다.
+          batch_size=32,
+          epochs=3)
+
+# Alternatively, fit on dicts
+model.fit({'img_input': img_data, 'ts_input': ts_data},
+          {'score_output': score_targets, 'class_output': class_targets},
+          batch_size=32,
+          epochs=3)
+```
+Dataset을 사용하는 경우: Numpy array로 이루어진 dict로 구성된 tuple을 사용한다.
+```python
+train_dataset = tf.data.Dataset.from_tensor_slices(({'img_input': img_data, 'ts_input': ts_data},
+                                                    {'score_output': score_targets, 'class_output': class_targets}))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(64)
+
+model.fit(train_dataset, epoch=3)
+```
+
+### callbacks 사용하기
+
+Keras의 callback은 training 도중에 서로 다른 시점에서 호출될 수 있는 객체이고(epoch의 시작, 또는 끝, batch의 종료 등)
+다음과 같이 실행될 수 있는 특징이 있다.
+
+- training 중에 서로 다른 시점에서 validation이 가능하다(epoch당 실행하는 built-in validation 외에)
+- 규칙적인 주기 또는 특정한 정확도 기준치를 초과하는 경우에 checkpointing
+- training이 안정 수준이 되어(plateauing) 보이면 learning rate을 수정한다
+- training이 종료되거나 특정한 성능 기준치를 초과하면 이메일을 보내거나 메세지 알림을 보낸다.
+- 기타 등등
+
+callback은 `fit`에 list 형식으로 전달하면 된다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzEyODc0OTRdfQ==
+eyJoaXN0b3J5IjpbNTU3MTM5MTc4XX0=
 -->
