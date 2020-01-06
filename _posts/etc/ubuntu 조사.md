@@ -2,6 +2,7 @@
 
 - ubuntu 18.04 LTS version
 - GTX 1080 Ti
+- 참고: [https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu)
 
 ## software requirements(for GPU)
 ### install flow
@@ -27,7 +28,7 @@
 
 * For Ubuntu LTS on x86-64, both the HWE kernel (e.g. 4.13.x for 16.04.4) and the server LTS kernel (e.g. 4.4.x for 16.04) are supported in CUDA 10.0.
 * GCC 7.3.0: [https://gcc.gnu.org/onlinedocs/7.3.0/](https://gcc.gnu.org/onlinedocs/7.3.0/)
-* CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음([https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu))
+* CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음
 
 ### [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
 
@@ -45,7 +46,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQyOTQ4ODYsLTMwMjQwNDg4LDIxMz
-YxMzIyNzYsMTQ2NzI4NDMwLC04NDE1OTgyMTAsLTM5MTcxMzY1
-XX0=
+eyJoaXN0b3J5IjpbMTk0ODkzMDYwNiwtMzAyNDA0ODgsMjEzNj
+EzMjI3NiwxNDY3Mjg0MzAsLTg0MTU5ODIxMCwtMzkxNzEzNjVd
+fQ==
 -->
