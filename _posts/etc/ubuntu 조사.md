@@ -11,7 +11,7 @@
 - CUDA®-enabled cards.
 	* Geforce RTX 1080: Compute Capability = 6.1
 - [NVIDIA® GPU drivers](https://www.nvidia.com/drivers)  —CUDA 10.0 requires 410.x or higher.
-	* 
+	* ubuntu 18.04에 맞는 드라이버 설치 가능 확인
 - [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
 	* 
 - [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
@@ -33,6 +33,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NzI4NDMwLC04NDE1OTgyMTAsLTM5MT
-cxMzY1XX0=
+eyJoaXN0b3J5IjpbMjEzNjEzMjI3NiwxNDY3Mjg0MzAsLTg0MT
+U5ODIxMCwtMzkxNzEzNjVdfQ==
 -->
