@@ -301,8 +301,34 @@ for epoch in range(epochs): # iterate over epochs
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
 ```
-
+Start of epoch 0
+Training loss (for one batch) at step 0: 2.296448230743408
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 2.184938669204712
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 2.1210806369781494
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 2.0428626537323
+seen so far: 38464 samples
+Start of epoch 1
+Training loss (for one batch) at step 0: 2.008221387863159
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.7805168628692627
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.7752149105072021
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.5893230438232422
+seen so far: 38464 samples
+Start of epoch 2
+Training loss (for one batch) at step 0: 1.6722396612167358
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.4144307374954224
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.3347327709197998
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.2013696432113647
+seen so far: 38464 samples
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYyMjMzNDcwXX0=
+eyJoaXN0b3J5IjpbLTEzNzYzODM5NzddfQ==
 -->
