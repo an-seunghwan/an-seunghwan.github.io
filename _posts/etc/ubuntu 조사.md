@@ -45,6 +45,9 @@ The following NVIDIA® software must be installed on your system:
 `
 ```
 
+![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MTcxMzY1XX0=
+eyJoaXN0b3J5IjpbMTMzNTc1MDc0MiwtMzkxNzEzNjVdfQ==
 -->
