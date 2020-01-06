@@ -3,16 +3,17 @@
 - ubuntu 18.04 LTS version
 - GTX 1080 Ti
 
-## requirements
+## requirements(for GPU)
 
 ### software
-- Ubuntu 16.04 or later (TensorFlow 2.0
+- Ubuntu 16.04 or later (TensorFlow 2.0 CPU version)
+- CUDA®-enabled cards.
+- 
+
+### hardware
+- 
 
 
-
-GPU support is available for Ubuntu and Windows with CUDA®-enabled cards.
-
-TensorFlow GPU support requires an assortment of drivers and libraries. To simplify installation and avoid library conflicts, we recommend using a [TensorFlow Docker image with GPU support](https://www.tensorflow.org/install/docker) (Linux only). This setup only requires the [NVIDIA® GPU drivers](https://www.nvidia.com/drivers).
 
 ## Hardware requirements
 
@@ -58,6 +59,6 @@ The following NVIDIA® software must be installed on your system:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODYzOTc5ODksLTg0MTU5ODIxMCwtMz
+eyJoaXN0b3J5IjpbLTE5ODg0ODg5MjQsLTg0MTU5ODIxMCwtMz
 kxNzEzNjVdfQ==
 -->
