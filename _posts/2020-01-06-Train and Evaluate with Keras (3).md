@@ -187,8 +187,11 @@ for epoch in range(epochs): # iterate over epochs
     val_acc_metric.reset_states()
     print('Validation acc: {}'.format(float(val_acc)))
 ```
+```
 
-**저수준의 추가적인 loss 다루기**
+```
+
+**저수준의 추가적인 loss**
 
 지난 section들에서 layer의 regularization loss를 `call` method의 `self.add_loss(value)`를 이용해 더할 수 있음을 보았다.
 
@@ -260,5 +263,5 @@ for epoch in range(epochs): # iterate over epochs
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTIyNjA2N119
+eyJoaXN0b3J5IjpbMTM4MzIwMjk5N119
 -->
