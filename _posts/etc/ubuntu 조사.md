@@ -15,6 +15,7 @@
 - [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
 	* ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
 	* For Ubuntu LTS on x86-64, both the HWE kernel (e.g. 4.13.x for 16.04.4) and the server LTS kernel (e.g. 4.4.x for 16.04) are supported in CUDA 10.0.
+	* CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음([https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu))
 - [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
 - [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
 -  (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
@@ -27,14 +28,9 @@
 
 
 
-#### Ubuntu 18.04 (CUDA 10)
-
-
-
-
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzNzkyOTMzLC0zMDI0MDQ4OCwyMTM2MT
-MyMjc2LDE0NjcyODQzMCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
-
+eyJoaXN0b3J5IjpbMjAyNzAzMjc0MSwtMzAyNDA0ODgsMjEzNj
+EzMjI3NiwxNDY3Mjg0MzAsLTg0MTU5ODIxMCwtMzkxNzEzNjVd
+fQ==
 -->
