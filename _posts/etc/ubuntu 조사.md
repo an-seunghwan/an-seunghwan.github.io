@@ -35,6 +35,7 @@
 * CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음
 
 ### [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
+* CUPTI 1.0: [https://developer.nvidia.com/CUPTI-1_0](https://developer.nvidia.com/CUPTI-1_0)
 
 ### [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
 
@@ -50,7 +51,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQ4MTk0OTMsNDk5MjIwNDY1LC0zMD
-I0MDQ4OCwyMTM2MTMyMjc2LDE0NjcyODQzMCwtODQxNTk4MjEw
-LC0zOTE3MTM2NV19
+eyJoaXN0b3J5IjpbLTE4MjcwMDkzNjAsLTIwODQ4MTk0OTMsND
+k5MjIwNDY1LC0zMDI0MDQ4OCwyMTM2MTMyMjc2LDE0NjcyODQz
+MCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
 -->
