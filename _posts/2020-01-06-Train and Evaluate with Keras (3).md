@@ -89,6 +89,35 @@ for epoch in range(epochs): # iterate over epochs
             print('Training loss (for one batch) at step {}: {}'.format(step, float(loss_value)))
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
+```
+Start of epoch 0
+Training loss (for one batch) at step 0: 2.316042423248291
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 2.2370457649230957
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 2.143077850341797
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 2.086883544921875
+seen so far: 38464 samples
+Start of epoch 1
+Training loss (for one batch) at step 0: 1.9219386577606201
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.9164278507232666
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.7983959913253784
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.6359037160873413
+seen so far: 38464 samples
+Start of epoch 2
+Training loss (for one batch) at step 0: 1.6075100898742676
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.5245256423950195
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.4214186668395996
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.106119155883789
+seen so far: 38464 samples
+```
 
 **저수준의 metric**
 
@@ -159,7 +188,7 @@ for epoch in range(epochs): # iterate over epochs
     print('Validation acc: {}'.format(float(val_acc)))
 ```
 
-### 저수준의 추가적인 loss 다루기
+**저수준의 추가적인 loss 다루기**
 
 지난 section들에서 layer의 regularization loss를 `call` method의 `self.add_loss(value)`를 이용해 더할 수 있음을 보았다.
 
@@ -182,6 +211,19 @@ outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
 
 model = keras.Model(inputs=inputs, outputs=outputs)
 ```
+다음과 같이 모형을 호출하게 되면, forward pass 동안에 생성된 loss들이 `model.losses` 속성에 더해진다.
+```python
+logits = model(x_train[:64])
+print(model.losses)
+```
+loss는 모형의 `__call__`의 시작에서 초기화되므로, 단 한번의 forward pass 동안에만 생성된 loss 만을 볼 수 있다. 예를 들어, 모형이 여러번 호출되었고, `losses`를 요청하면 가장 마지막 호출에서 생성된 loss만을 볼 수 있다.
+```python
+logits = model(x_train[:64])
+logits = model(x_train[64: 128])
+logits = model(x_train[128: 192])
+print(model.losses)
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODg4Mjc0NTFdfQ==
+eyJoaXN0b3J5IjpbLTEyNTI0MzkyNjFdfQ==
 -->
