@@ -90,6 +90,98 @@ for epoch in range(epochs): # iterate over epochs
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
 
+**저수준의 metric**
+
+built-in metrics이나 custom metrics 모두 custom training loop에서 사용하는 것은 매우 쉽다. 여기 사용 방법의 흐름이 있다:
+- loop의 시작에서 metric을 Instantiate
+- 각 batch가 종료되고 `metric.update_state()`을 호출
+- metric의 현재 값을 보여주기 위해서는 `metric.result()`를 호출
+- metric의 state를 초기화할 때 `metric.reset_states()`를 호출(일반적으로 epoch의 종료 시점)
+
+`SparseCategoricalAccuracy`를 이용한 예제를 살펴보자.
+
+```python
+# 모형을 정의
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+model = keras.Model(inputs=inputs, outputs=outputs)
+
+optimizer = keras.optimizers.SGD(learning_rate=1e-3)
+loss_fn = keras.losses.SparseCategoricalCrossentropy()
+
+# metric
+train_acc_metric = keras.metrics.SparseCategoricalCrossentropy()
+val_acc_metric = keras.metrics.SparseCategoricalCrossentropy()
+
+batch_size = 64
+train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(batch_size)
+
+val_dataset = tf.data.Dataset.from_tensor_slices((x_val, y_val))
+val_dataset = val_dataset.batch(64)
+
+epochs = 3
+for epoch in range(epochs): # iterate over epochs
+    print('Start of epoch {}'.format(epoch))
+    
+    for step, (x_batch_train, y_batch_train) in enumerate(train_dataset): # iterate over batches
+        
+        with tf.GradientTape() as tape:
+            
+            logits = model(x_batch_train) # mini-batch의 logits
+            loss_value = loss_fn(y_batch_train, logits)
+            
+        grads = tape.gradient(loss_value, model.trainable_weights)
+        optimizer.apply_gradients(zip(grads, model.trainable_weights))
+        
+        # update training metric
+        train_acc_metric(y_batch_train, logits)
+
+        if step % 200 == 0:
+            print('Training loss (for one batch) at step {}: {}'.format(step, float(loss_value)))
+            print('seen so far: {} samples'.format((step + 1) * 64))
+
+    # 각 epoch가 종료되고 metric을 출력
+    train_acc = train_acc_metric.result()
+    print('Training acc over epoch: {}'.format(float(train_acc)))
+    # training metric을 초기화
+    train_acc_metric.reset_states()
+    
+    # epoch 종료 후 validation loop를 실행
+    for x_batch_val, y_batch_val in val_dataset:
+        val_logtis = model(x_batch_val)
+        # update val metrics
+        val_acc_metric(y_batch_val, val_logtis)
+    val_acc = val_acc_metric.result()
+    val_acc_metric.reset_states()
+    print('Validation acc: {}'.format(float(val_acc)))
+```
+
+### 저수준의 추가적인 loss 다루기
+
+지난 section들에서 layer의 regularization loss를 `call` method의 `self.add_loss(value)`를 이용해 더할 수 있음을 보았다.
+
+일반적인 경우에, custom training loop에서 이러한 추가적인 loss들을 고려해야 하는 경우가 많다.
+
+regularization loss를 생성하는 layer에 대한 지난 번의 예제를 살펴보자.
+
+```python
+class ActivityRegularizationLayer(layers.Layer):
+    def call(self, inputs):
+        self.add_loss(1e-2 * tf.reduce_sum(inputs))
+        return inputs
+
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+# Insert activity regularization as a layer
+x = ActivityRegularizationLayer()(x)
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTIzMzcwNDhdfQ==
+eyJoaXN0b3J5IjpbLTIwODg4Mjc0NTFdfQ==
 -->
