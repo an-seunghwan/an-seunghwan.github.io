@@ -9,7 +9,8 @@
 ```
 aaabdaaabac
 ```
-연속적으로 가장 많이 등장한 글자의 쌍 = 'ㅁㅁ
+연속적으로 가장 많이 등장한 글자의 쌍 = 'aa' = byte pair
+따라서 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM3NzM3MTRdfQ==
+eyJoaXN0b3J5IjpbMTgwODMzMjYyXX0=
 -->
