@@ -42,16 +42,15 @@
 ### (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
 
 ## hardware requirements
+
 - NVIDIA® GPU card with CUDA® Compute Capability 3.5 or higher
 	* Geforce RTX 1080: Compute Capability = 6.1
-- 
-
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjcwMDkzNjAsLTIwODQ4MTk0OTMsND
-k5MjIwNDY1LC0zMDI0MDQ4OCwyMTM2MTMyMjc2LDE0NjcyODQz
-MCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
+eyJoaXN0b3J5IjpbLTEyMTM1ODc5MTUsLTE4MjcwMDkzNjAsLT
+IwODQ4MTk0OTMsNDk5MjIwNDY1LC0zMDI0MDQ4OCwyMTM2MTMy
+Mjc2LDE0NjcyODQzMCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
 -->
