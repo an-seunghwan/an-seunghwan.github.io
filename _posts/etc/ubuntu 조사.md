@@ -3,9 +3,12 @@
 - ubuntu 18.04 LTS version
 - GTX 1080 Ti
 
+## requirements
 
-TensorFlow is tested and supported on the following 64-bit systems:
--   Ubuntu 16.04 or later
+### software
+- Ubuntu 16.04 or later (TensorFlow 2.0
+
+
 
 GPU support is available for Ubuntu and Windows with CUDA®-enabled cards.
 
@@ -55,6 +58,6 @@ The following NVIDIA® software must be installed on your system:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDgxMTEyLC04NDE1OTgyMTAsLTM5MT
-cxMzY1XX0=
+eyJoaXN0b3J5IjpbLTExODYzOTc5ODksLTg0MTU5ODIxMCwtMz
+kxNzEzNjVdfQ==
 -->
