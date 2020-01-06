@@ -262,7 +262,7 @@ logits = model(x_train[128: 192])
 print(model.losses)
 ```
 ```
-
+[<tf.Tensor: id=1287180, shape=(), dtype=float32, numpy=8.30571>]
 ```
 이러한 추가적인 loss를 training 과정에서 고려하기 위해서는, 전체 loss에 `sum(model.losses)`를 더해주기만 하면 된다.
 ```python
@@ -300,6 +300,9 @@ for epoch in range(epochs): # iterate over epochs
             print('Training loss (for one batch) at step {}: {}'.format(step, float(loss_value)))
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNTEwMDI5N119
+eyJoaXN0b3J5IjpbNDYyMjMzNDcwXX0=
 -->
