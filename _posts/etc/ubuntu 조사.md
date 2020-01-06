@@ -13,7 +13,7 @@
 - [NVIDIA® GPU drivers](https://www.nvidia.com/drivers)  —CUDA 10.0 requires 410.x or higher.
 	* ubuntu 18.04에 맞는 드라이버 설치 가능 확인
 - [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
--   ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
+	* ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
 - [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
 - [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
 -  (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
@@ -33,6 +33,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDcxODEwOSwyMTM2MTMyMjc2LDE0Nj
-cyODQzMCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
+eyJoaXN0b3J5IjpbLTMwMjQwNDg4LDIxMzYxMzIyNzYsMTQ2Nz
+I4NDMwLC04NDE1OTgyMTAsLTM5MTcxMzY1XX0=
 -->
