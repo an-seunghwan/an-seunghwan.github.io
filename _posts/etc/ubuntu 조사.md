@@ -30,6 +30,7 @@
  ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
 
 * For Ubuntu LTS on x86-64, both the HWE kernel (e.g. 4.13.x for 16.04.4) and the server LTS kernel (e.g. 4.4.x for 16.04) are supported in CUDA 10.0.
+* kernel download: [https://kernel.ubuntu.com/~kernel-ppa/mainline/](https://kernel.ubuntu.com/~kernel-ppa/mainline/)
 * GCC 7.3.0: [https://gcc.gnu.org/onlinedocs/7.3.0/](https://gcc.gnu.org/onlinedocs/7.3.0/)
 * CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음
 
@@ -49,7 +50,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5MjIwNDY1LC0zMDI0MDQ4OCwyMTM2MT
-MyMjc2LDE0NjcyODQzMCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
-
+eyJoaXN0b3J5IjpbLTIwODQ4MTk0OTMsNDk5MjIwNDY1LC0zMD
+I0MDQ4OCwyMTM2MTMyMjc2LDE0NjcyODQzMCwtODQxNTk4MjEw
+LC0zOTE3MTM2NV19
 -->
