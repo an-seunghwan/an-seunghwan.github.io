@@ -11,7 +11,9 @@
 - CUDA®-enabled cards.
 	* Geforce RTX 1080: Compute Capability = 6.1
 - [NVIDIA® GPU drivers](https://www.nvidia.com/drivers)  —CUDA 10.0 requires 410.x or higher.
+	* 
 - [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
+	* 
 - [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
 - [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
 -  (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
@@ -31,6 +33,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDM0NDA5NzgsLTg0MTU5ODIxMCwtMz
-kxNzEzNjVdfQ==
+eyJoaXN0b3J5IjpbMTQ2NzI4NDMwLC04NDE1OTgyMTAsLTM5MT
+cxMzY1XX0=
 -->
