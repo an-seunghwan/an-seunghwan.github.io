@@ -119,7 +119,7 @@ Training loss (for one batch) at step 600: 1.106119155883789
 seen so far: 38464 samples
 ```
 
-**저수준의 metric**
+### 저수준의 metric
 
 built-in metrics이나 custom metrics 모두 custom training loop에서 사용하는 것은 매우 쉽다. 여기 사용 방법의 흐름이 있다:
 - loop의 시작에서 metric을 Instantiate
@@ -223,7 +223,7 @@ Training acc over epoch: 1.3730453252792358
 Validation acc: 1.1544311046600342
 ```
 
-**저수준의 추가적인 loss**
+### 저수준의 추가적인 loss
 
 지난 section들에서 layer의 regularization loss를 `call` method의 `self.add_loss(value)`를 이용해 더할 수 있음을 보았다.
 
@@ -330,5 +330,5 @@ Training loss (for one batch) at step 600: 1.2013696432113647
 seen so far: 38464 samples
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzYzODM5NzddfQ==
+eyJoaXN0b3J5IjpbLTYyODQ1NjI2NV19
 -->
