@@ -24,6 +24,9 @@
 * ubuntu 18.04에 맞는 드라이버 설치 가능
 
 ### [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
+
+* [https://docs.nvidia.com/cuda/archive/10.0/cuda-installation-guide-linux/index.html](https://docs.nvidia.com/cuda/archive/10.0/cuda-installation-guide-linux/index.html)
+
  ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
 
 * For Ubuntu LTS on x86-64, both the HWE kernel (e.g. 4.13.x for 16.04.4) and the server LTS kernel (e.g. 4.4.x for 16.04) are supported in CUDA 10.0.
@@ -46,7 +49,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODkzMDYwNiwtMzAyNDA0ODgsMjEzNj
-EzMjI3NiwxNDY3Mjg0MzAsLTg0MTU5ODIxMCwtMzkxNzEzNjVd
-fQ==
+eyJoaXN0b3J5IjpbNDk5MjIwNDY1LC0zMDI0MDQ4OCwyMTM2MT
+MyMjc2LDE0NjcyODQzMCwtODQxNTk4MjEwLC0zOTE3MTM2NV19
+
 -->
