@@ -28,11 +28,14 @@
 * For Ubuntu LTS on x86-64, both the HWE kernel (e.g. 4.13.x for 16.04.4) and the server LTS kernel (e.g. 4.4.x for 16.04) are supported in CUDA 10.0.
 * GCC 7.3.0: [https://gcc.gnu.org/onlinedocs/7.3.0/](https://gcc.gnu.org/onlinedocs/7.3.0/)
 * CUDA 10을 Ubuntu 18.04에 설치하는 방법이 TensorFlow 홈페이지에 소개되어 있음([https://www.tensorflow.org/install/gpu](https://www.tensorflow.org/install/gpu))
-- [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
-- [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
--  (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
 
-### hardware
+### [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
+
+### [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
+
+### (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
+
+## hardware requirements
 - NVIDIA® GPU card with CUDA® Compute Capability 3.5 or higher
 	* Geforce RTX 1080: Compute Capability = 6.1
 - 
@@ -42,7 +45,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDE4Nzg2NjEsLTMwMjQwNDg4LDIxMz
+eyJoaXN0b3J5IjpbLTE4MzQyOTQ4ODYsLTMwMjQwNDg4LDIxMz
 YxMzIyNzYsMTQ2NzI4NDMwLC04NDE1OTgyMTAsLTM5MTcxMzY1
 XX0=
 -->
