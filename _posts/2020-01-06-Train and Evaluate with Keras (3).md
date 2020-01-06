@@ -223,7 +223,42 @@ logits = model(x_train[64: 128])
 logits = model(x_train[128: 192])
 print(model.losses)
 ```
+이러한 추가적인 loss를 training 과정에서 고려하기 위해서는, 전체 loss에 `sum(model.losses)`를 더해주기만 하면 된다.
+```python
+inputs = keras.Input(shape=(784,), name='digits')
+x = layers.Dense(64, activation='relu', name='dense_1')(inputs)
+x = layers.Dense(64, activation='relu', name='dense_2')(x)
+outputs = layers.Dense(10, activation='softmax', name='predictions')(x)
+model = keras.Model(inputs=inputs, outputs=outputs)
 
+optimizer = keras.optimizers.SGD(learning_rate=1e-3)
+loss_fn = keras.losses.SparseCategoricalCrossentropy()
+
+batch_size = 64
+train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(batch_size)
+
+epochs = 3
+for epoch in range(epochs): # iterate over epochs
+    print('Start of epoch {}'.format(epoch))
+    
+    for step, (x_batch_train, y_batch_train) in enumerate(train_dataset): # iterate over batches
+
+        with tf.GradientTape() as tape:
+
+            logits = model(x_batch_train) # mini-batch의 logits
+            loss_value = loss_fn(y_batch_train, logits)
+            
+            # forward pass에서 생성된 추가적인 loss를 더해준다.
+            loss_value += sum(model.losses)
+            
+        grads = tape.gradient(loss_value, model.trainable_weights)
+        optimizer.apply_gradients(zip(grads, model.trainable_weights))
+
+        if step % 200 == 0:
+            print('Training loss (for one batch) at step {}: {}'.format(step, float(loss_value)))
+            print('seen so far: {} samples'.format((step + 1) * 64))
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI0MzkyNjFdfQ==
+eyJoaXN0b3J5IjpbMTg5MTIyNjA2N119
 -->
