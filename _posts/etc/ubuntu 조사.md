@@ -12,14 +12,10 @@
 
 ### hardware
 - NVIDIA® GPU card with CUDA® Compute Capability 3.5 or higher
+	* Geforce RTX 1080: Compute Capability = 6.1
+- 
 
 
-
-## Hardware requirements
-
-The following GPU-enabled devices are supported:
-
--   NVIDIA® GPU card with CUDA® Compute Capability 3.5 or higher. See the list of  [CUDA-enabled GPU cards](https://developer.nvidia.com/cuda-gpus).
 
 ## Software requirements
 
@@ -59,6 +55,6 @@ The following NVIDIA® software must be installed on your system:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NDU3NzEwNSwtODQxNTk4MjEwLC0zOT
-E3MTM2NV19
+eyJoaXN0b3J5IjpbNzk3OTI4OTE5LC04NDE1OTgyMTAsLTM5MT
+cxMzY1XX0=
 -->
