@@ -188,7 +188,39 @@ for epoch in range(epochs): # iterate over epochs
     print('Validation acc: {}'.format(float(val_acc)))
 ```
 ```
-
+Start of epoch 0
+Training loss (for one batch) at step 0: 2.3578922748565674
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 2.2744617462158203
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 2.1668717861175537
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 2.078711748123169
+seen so far: 38464 samples
+Training acc over epoch: 2.180353879928589
+Validation acc: 1.9919371604919434
+Start of epoch 1
+Training loss (for one batch) at step 0: 2.0067782402038574
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.8647865056991577
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.8116886615753174
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.75192391872406
+seen so far: 38464 samples
+Training acc over epoch: 1.7974212169647217
+Validation acc: 1.55857515335083
+Start of epoch 2
+Training loss (for one batch) at step 0: 1.597001314163208
+seen so far: 64 samples
+Training loss (for one batch) at step 200: 1.5410616397857666
+seen so far: 12864 samples
+Training loss (for one batch) at step 400: 1.3295663595199585
+seen so far: 25664 samples
+Training loss (for one batch) at step 600: 1.2740886211395264
+seen so far: 38464 samples
+Training acc over epoch: 1.3730453252792358
+Validation acc: 1.1544311046600342
 ```
 
 **저수준의 추가적인 loss**
@@ -219,12 +251,18 @@ model = keras.Model(inputs=inputs, outputs=outputs)
 logits = model(x_train[:64])
 print(model.losses)
 ```
+```
+[<tf.Tensor: id=1287120, shape=(), dtype=float32, numpy=8.15664>]
+```
 loss는 모형의 `__call__`의 시작에서 초기화되므로, 단 한번의 forward pass 동안에만 생성된 loss 만을 볼 수 있다. 예를 들어, 모형이 여러번 호출되었고, `losses`를 요청하면 가장 마지막 호출에서 생성된 loss만을 볼 수 있다.
 ```python
 logits = model(x_train[:64])
 logits = model(x_train[64: 128])
 logits = model(x_train[128: 192])
 print(model.losses)
+```
+```
+
 ```
 이러한 추가적인 loss를 training 과정에서 고려하기 위해서는, 전체 loss에 `sum(model.losses)`를 더해주기만 하면 된다.
 ```python
@@ -263,5 +301,5 @@ for epoch in range(epochs): # iterate over epochs
             print('seen so far: {} samples'.format((step + 1) * 64))
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MzIwMjk5N119
+eyJoaXN0b3J5IjpbMTIyNTEwMDI5N119
 -->
