@@ -11,9 +11,9 @@
 	* 명사, 동사, 형용사 등
 	* 의미있는 품사 단어만을 사용 vs 전체 단어 사용 **(성능 비교)**
 
-
+## 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjgzOTM2MiwtODc3Mzc1MTNdfQ==
+eyJoaXN0b3J5IjpbLTE5MTM0NjI0NTQsLTg3NzM3NTEzXX0=
 -->
