@@ -11,7 +11,7 @@
 - 
 
 ### hardware
-- 
+- NVIDIA® GPU card with CUDA® Compute Capability 3.5 or higher
 
 
 
@@ -59,6 +59,6 @@ The following NVIDIA® software must be installed on your system:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg0ODg5MjQsLTg0MTU5ODIxMCwtMz
-kxNzEzNjVdfQ==
+eyJoaXN0b3J5IjpbMTM1NDU3NzEwNSwtODQxNTk4MjEwLC0zOT
+E3MTM2NV19
 -->
