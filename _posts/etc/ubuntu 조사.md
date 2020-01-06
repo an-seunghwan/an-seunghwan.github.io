@@ -38,7 +38,7 @@
 * CUPTI 1.0: [https://developer.nvidia.com/CUPTI-1_0](https://developer.nvidia.com/CUPTI-1_0)
 
 ### [cuDNN SDK](https://developer.nvidia.com/cudnn)  (>= 7.4.1)
-* cuDNN 7.6.4 for CUDA [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
+* cuDNN 7.6.4 for CUDA 10.0: [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia.com/rdp/cudnn-archive)
 
 ### (Optional)_  [TensorRT 5.0](https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html)  to improve latency and throughput for inference on some models.
 
@@ -51,7 +51,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4OTc5MzAyOSwtMTIxMzU4NzkxNSwtMT
+eyJoaXN0b3J5IjpbMTY0MjE3MzY2MiwtMTIxMzU4NzkxNSwtMT
 gyNzAwOTM2MCwtMjA4NDgxOTQ5Myw0OTkyMjA0NjUsLTMwMjQw
 NDg4LDIxMzYxMzIyNzYsMTQ2NzI4NDMwLC04NDE1OTgyMTAsLT
 M5MTcxMzY1XX0=
