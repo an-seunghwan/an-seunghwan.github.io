@@ -7,7 +7,9 @@
 
 ### software
 - Ubuntu 16.04 or later (TensorFlow 2.0 CPU version)
+	* ubuntu 18.04 LTS version
 - CUDA®-enabled cards.
+	* Geforce RTX 1080: Compute Capability = 6.1
 - [NVIDIA® GPU drivers](https://www.nvidia.com/drivers)  —CUDA 10.0 requires 410.x or higher.
 - [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
 - [CUPTI](http://docs.nvidia.com/cuda/cupti/)  ships with the CUDA Toolkit.
@@ -29,6 +31,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTE3NjkyMCwtODQxNTk4MjEwLC0zOT
-E3MTM2NV19
+eyJoaXN0b3J5IjpbLTEwNDM0NDA5NzgsLTg0MTU5ODIxMCwtMz
+kxNzEzNjVdfQ==
 -->
