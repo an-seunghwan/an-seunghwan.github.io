@@ -43,12 +43,12 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 	- 가장 높은 빈도의 character n-gram(또는 전체 하나의 단어)은 결국 하나의 symbol로 합쳐지므로, BPE는 shortlist가 필요 없다.
 	- 최종 symbol 단어 사전의 크기는 초기 단어 사전의 크기에 merge 과정의 횟수만큼을 더한 것과 동일하다(merge 과정의 횟수는 조절할 수 있는 parameter).
 
-효율성을 위해, 단어 범위 바깥의 pair는 고려하지 않는다. 또한 알고리즘은 각 단어당 빈도수로 matching되어 있는 dict로부터 
+효율성을 위해, 단어 범위 바깥의 pair는 고려하지 않는다. 또한 알고리즘은 각 단어당 빈도수로 matching되어 있는 dict로부터 학습된다.
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjM2NDQxMzgsLTQzNjUyMTI5OCwtMT
-A5MzM5NDc2NV19
+eyJoaXN0b3J5IjpbNjU0Nzc1MTY0LC00MzY1MjEyOTgsLTEwOT
+MzOTQ3NjVdfQ==
 -->
