@@ -41,10 +41,11 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 1. 초기 단어 사전을 구성한다. 이때 각각의 단어를 character(음절 또는 symbol)의 sequence로 구성하고 마지막에 특수 문자 '·'를 넣어준다. 이 특수문자는 번역 후에 원래의 tokenization을 복원할 수 있도록 해준다.
 2. 반복적으로 모든 symbol pair의 빈도수를 세고 이를 하나의 symbol로 교체한다. 예를 들어, ('A', 'B')가 가장 높은 빈도의 pair라면 이를 'AB'로 교체한다. 즉, 이러한 merge 과정은 character n-gram으로 나타나지는 새로운 symbol을 생성한다.
 	- 가장 높은 빈도의 character n-gram(또는 전체 하나의 단어)은 결국 하나의 symbol로 합쳐지므로, BPE는 shortlist가 필요 없다.
+	- 최종 symbol 단어 사전의 크기는 초기 단어 사전의 크기에 merge 과정의 횟수만큼을 더한 것과 동일하다(merge 과정의 횟수는 ).
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyMzM2OTY1LC0xMDkzMzk0NzY1XX0=
+eyJoaXN0b3J5IjpbLTQzNjUyMTI5OCwtMTA5MzM5NDc2NV19
 -->
