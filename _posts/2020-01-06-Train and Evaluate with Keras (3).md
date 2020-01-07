@@ -1,5 +1,5 @@
 ---
-title: "Train and Evaluate with Keras (3)"
+title: "2020-01-06-Train and Evaluate with Keras (3)"
 excerpt: "Part 2(everything from scratch)"
 toc: true
 toc_sticky: true
@@ -330,5 +330,5 @@ Training loss (for one batch) at step 600: 1.2013696432113647
 seen so far: 38464 samples
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyODQ1NjI2NV19
+eyJoaXN0b3J5IjpbLTEzNjg2NDE0NDMsLTYyODQ1NjI2NV19
 -->
