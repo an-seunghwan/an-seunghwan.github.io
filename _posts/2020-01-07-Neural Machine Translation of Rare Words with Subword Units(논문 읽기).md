@@ -39,11 +39,12 @@ tags:
 BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사용되지 않은 byte로 교체하는 데이터 압축 기술이다. 여기서는 byte의 pair를 character sequence로 생각하여 word wegmentation에 적용한다.
 
 1. 초기 단어 사전을 구성한다. 이때 각각의 단어를 character(음절 또는 symbol)의 sequence로 구성하고 마지막에 특수 문자 '·'를 넣어준다. 이 특수문자는 번역 후에 원래의 tokenization을 복원할 수 있도록 해준다.
-2. 반복적으로 모든 symbol pair의 빈도수를 세고 이를 하나의 symbol로 교체한다. 예를 들어, ('A', 'B')가 가장 높은 빈도의 pair라면 이를 'AB'로 교체한다.
+2. 반복적으로 모든 symbol pair의 빈도수를 세고 이를 하나의 symbol로 교체한다. 예를 들어, ('A', 'B')가 가장 높은 빈도의 pair라면 이를 'AB'로 교체한다. 즉, 이러한 merge 과정은 character n-gram으로 나타나지는 새로운 symbol을 생성한다.
+	- 가장 높은 빈도의 character n-gram은 
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyODEzNjEwMSwtMTA5MzM5NDc2NV19
+eyJoaXN0b3J5IjpbNzk5ODMyMzcxLC0xMDkzMzk0NzY1XX0=
 -->
