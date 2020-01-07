@@ -22,10 +22,13 @@ tags:
 
 이 논문의 가장 주된 목적은 NMT network에서, 희귀 단어에 대한 back-off 모형을 필요로 하지 않는 open-vocabulary 번역 모형을 만드는 것이다.
 
+이 논문의 2가지 주된 기여
+* open-vocabulary NMT가 단어들을 subword units를 통해 encoding이 가능하다는 보였다. 
+* 
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0NTI5MzE2XX0=
+eyJoaXN0b3J5IjpbLTE0NTYwNzk0NDRdfQ==
 -->
