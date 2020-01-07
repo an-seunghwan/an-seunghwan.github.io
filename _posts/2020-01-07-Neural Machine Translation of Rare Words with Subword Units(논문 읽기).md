@@ -50,14 +50,15 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 1. 2개의 독립적인 encoding을 학습: source 언어의 단어 사전 + target 언어의 단어 사전
 	- 장점: text와 단어 사전의 크기가 compact하다.
 	- 장점: 각각의 subword unit이 각 언어의 training text에 존재한다는 강한 보장이 있다.
+	- 단점: 각각의 언어에서 동일한 단어가 다른 방식으로 segmented 될 수 있어 neural model이 subword units를 mapping하기 어려워진다.
 2. 2개 언어 단어 사전의 union을 이용해 encoding을 학습(**joint BPE**)
 	- 장점: source와 target segmentation 사이에 일관성이 있다.
-	- 실제로는 단순히 source와 target training st
+	- 실제로는 단순히 source와 target training set를 concatenate하여 학습을 진행한다.
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODQ2OTU3OSwtNDM2NTIxMjk4LC0xMD
-kzMzk0NzY1XX0=
+eyJoaXN0b3J5IjpbLTU0OTc3MTEsLTQzNjUyMTI5OCwtMTA5Mz
+M5NDc2NV19
 -->
