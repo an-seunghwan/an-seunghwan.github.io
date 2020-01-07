@@ -1,7 +1,7 @@
 # blog contents list!
 ### OOV
-Okt를 적용한 뒤에 BPE를 적용한다면?
-BPE의 tokenizer로써의 역할이 무색?
+* Okt를 적용한 뒤에 BPE를 적용한다면?
+* 그럼 BPE의 tokenizer로써의 역할이 무색?
 
 ### Keras 번역 시리즈
 * [https://www.tensorflow.org/guide](https://www.tensorflow.org/guide) 
@@ -82,6 +82,6 @@ BPE의 tokenizer로써의 역할이 무색?
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMjAzMzk0OCwtMjEzMDg3NjQ5NCw0Mj
+eyJoaXN0b3J5IjpbMTU1OTM4MTA4MiwtMjEzMDg3NjQ5NCw0Mj
 U2MjM1NV19
 -->
