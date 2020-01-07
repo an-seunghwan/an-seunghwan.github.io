@@ -45,10 +45,14 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 
 효율성을 위해, 단어 범위 바깥의 pair는 고려하지 않는다. 또한 알고리즘은 각 단어당 빈도수로 matching되어 있는 dict로부터 학습된다.
 
+2가지 방법의 BPE가 있다
+
+1. 2개의 독립적인 encoding을 학습: source 언어의 단어 사전 + target 언어의 단어 사전
+
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0Nzc1MTY0LC00MzY1MjEyOTgsLTEwOT
-MzOTQ3NjVdfQ==
+eyJoaXN0b3J5IjpbMTA1NTYwMDI5NywtNDM2NTIxMjk4LC0xMD
+kzMzk0NzY1XX0=
 -->
