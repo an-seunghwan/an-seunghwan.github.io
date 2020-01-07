@@ -28,11 +28,11 @@ tags:
 
 ## 3. Subword Translation
 
-
+이 논문의 가장 주된 motivation은 몇몇 단어의 번역이 그 단얻좋은 번역기
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA0MTc1NTkwXX0=
+eyJoaXN0b3J5IjpbNTUzMTg4NDA3XX0=
 -->
