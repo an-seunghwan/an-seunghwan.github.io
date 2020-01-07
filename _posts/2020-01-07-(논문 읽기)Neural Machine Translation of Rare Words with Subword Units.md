@@ -20,10 +20,12 @@ tags:
 
 빈도가 높지 않은(자주 출현하지 않는) 단어들에 대한 번역은 open problem이다. 특히 교착어나 합성어를 통해 단어가 생산될 수 있는 언어에 대해서, 번역 모형은 단어 수준보다 더 아래 수준의 메카니즘을 필요로 한다.
 
+이 논문의 가장 주된 목적은 NMT network에서, 희귀 단어에 대한 back-off 모형을 필요로 하지 않는 open-vocabulary 번역 모형을 만드는 것이다.
+
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg4NDM4MzJdfQ==
+eyJoaXN0b3J5IjpbMjU0NTI5MzE2XX0=
 -->
