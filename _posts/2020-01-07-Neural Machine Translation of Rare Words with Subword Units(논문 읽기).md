@@ -32,10 +32,13 @@ tags:
 * 이름 
 * 같은 기원을 가지는 단어
 * 형태학적으로 복잡한 단어
+	- 합성, 첨가 등의 방식을 통해 단어가 생성
+
+
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTMzOTQ3NjVdfQ==
+eyJoaXN0b3J5IjpbNDQ5NTkxNDg4LC0xMDkzMzk0NzY1XX0=
 -->
