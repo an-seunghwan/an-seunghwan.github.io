@@ -28,11 +28,14 @@ tags:
 
 ## 3. Subword Translation
 
-이 논문의 가장 주된 motivation은 몇몇 단어의 번역이 그 단어들이 처음 보는 단어라도, 형태소나 음소와 같은 subword units의 번역을 기반으로한 좋은 번역기를 통해서 명백하게 가능하다는 것이다. 이러한 명백한 번역이 가능한 단어
+이 논문의 가장 주된 motivation은 몇몇 단어의 번역이 그 단어들이 처음 보는 단어라도, 형태소나 음소와 같은 subword units의 번역을 기반으로한 좋은 번역기를 통해서 명백하게 가능하다는 것이다. 이러한 명백한 번역이 가능한 단어의 종류는 다음과 같다:
+* 이름 
+* 같은 기원을 가지는 단어
+* 형태학적으로 복잡한 단어
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODkxMDk4M119
+eyJoaXN0b3J5IjpbLTEwOTMzOTQ3NjVdfQ==
 -->
