@@ -36,11 +36,13 @@ tags:
 
 ### 3.2 Byte Pair Encoding(BPE)
 
-BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사용되지 않은 byte로 데이터 압축 기술이다.
+BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사용되지 않은 byte로 교체하는 데이터 압축 기술이다. 여기서는 byte의 pair를 character sequence로 생각하여 word wegmentation에 적용한다.
+
+* 1. 초기 단어 사전을 구성한다. 이때 각각의 단어를 
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5NzYwODk2LC0xMDkzMzk0NzY1XX0=
+eyJoaXN0b3J5IjpbMjkzOTc4NjgwLC0xMDkzMzk0NzY1XX0=
 -->
