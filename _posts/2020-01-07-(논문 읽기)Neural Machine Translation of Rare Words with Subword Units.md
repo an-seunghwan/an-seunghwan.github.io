@@ -26,9 +26,13 @@ tags:
 * open-vocabulary NMT가 단어들을 subword units를 통해 encoding이 가능하다는 보였다. 
 * 단어 segmentation를 위한 압축 알고리즘으로써 BPE를 사용하였다. BPE는 open vocabulary를 고정된 크기의 다양한 길이의 character sequence를 통해 표현할 수 있게 해주었다.
 
+## 3. Subword Translation
+
+
+
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjUzMDkyMF19
+eyJoaXN0b3J5IjpbNjA0MTc1NTkwXX0=
 -->
