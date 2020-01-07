@@ -18,12 +18,12 @@ tags:
 
 ## 1. Introduction
 
-빈도가 높지 않은(자주 출현하지 않는) 단어들에 대한 번역은 open problem이다. 특히 교착어나 합성어를 통해 단어가 생산될 수 있는 언어에 대해서, 번역 모형은 단어 수준보다 더 아래 수준의 
+빈도가 높지 않은(자주 출현하지 않는) 단어들에 대한 번역은 open problem이다. 특히 교착어나 합성어를 통해 단어가 생산될 수 있는 언어에 대해서, 번역 모형은 단어 수준보다 더 아래 수준의 메카니즘을 필요로 한다.
 
 
 
 ## 논문 출처
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MjU5MDgyXX0=
+eyJoaXN0b3J5IjpbLTE1Mzg4NDM4MzJdfQ==
 -->
