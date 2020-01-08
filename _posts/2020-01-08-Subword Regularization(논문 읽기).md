@@ -116,15 +116,18 @@ $$
 \mathcal{L} = \sum_{s=1}^{\left\vert D \right\vert} log(P(X^{(s)}) = \sum_{s=1}^{\left\vert D \right\vert} log \left( \sum_{\mathbf{x} \in S(X^{(s)})} P(\mathbf{x}) \right)
 $$
 
-하지만, 실제의 경우에는 단어 집합 $\mathcal{V}$의 크기를 알 수 없다. 왜냐하면 단어 집합과 그들의 발생 확률의 joint optimization이 다루기 힘들기 때문이다.
+하지만, 실제의 경우에는 단어 집합 $\mathcal{V}$의 크기를 알 수 없다. 
+단어 집합과 그들의 발생 확률의 joint optimization이 다루기 힘들기 때문에, 다음과 같은  반복적인 algorithm을 고려한다.
+
+1. Heuristically, 합리적인 big seed의 단어
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MTQ4MDg1NywxMjAxMzU0OTQ3LC01MT
-IyMDIyMzYsMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMzQ5MjYx
-OTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMT
-I5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4
-NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1ND
-hdfQ==
+eyJoaXN0b3J5IjpbLTIzMTY0ODY5OSwtNTkxNDgwODU3LDEyMD
+EzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1
+MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLT
+c4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgy
+NDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNT
+csMjA5NDI4NzU0OF19
 -->
