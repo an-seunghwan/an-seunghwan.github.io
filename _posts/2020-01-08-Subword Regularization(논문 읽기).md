@@ -92,14 +92,18 @@ BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교�
 
 ### 3.2 Unigram language model
 
-unigram language model은 다음과 같은 가정을 한다. 각각의 subword는 독립적이고 연속적으로 발생하고, subword sequence 
+unigram language model은 다음과 같은 가정을 한다. 각각의 subword는 독립적이고 연속적으로 발생하고, subword sequence $\mathbf{x} = (x_1, ..., x_M)$은 subword의 발생 확률 $p(x_i)$의 곱으로 형성된다.
+
+$$
+P(\mathbf{x}) = \prod_{i=1}^M p(x_i)
+$$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTAwNzM1MjYsMTgwMDU3NDk3MSwtMT
-gxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2
-MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLT
-E1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2
-NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbMTE5MDU3NzcsMTgwMDU3NDk3MSwtMTgxMj
+Y1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5
+LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NT
+E4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEw
+MzU3LDIwOTQyODc1NDhdfQ==
 -->
