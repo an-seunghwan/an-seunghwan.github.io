@@ -73,12 +73,14 @@ $$
 간단함을 위해, 본 연구에서는 $k=1$로 하였다. 
 NMT의 training을 위해 일반적으로 효율성을 위해 online training을 사용하는데, 이는 $D$의 작은 subset(mini-batch) 각각에 대해 parameter $\theta$를 반복적으로 최적화하는 방식이다. 만약 충분한 반복횟수를 사용한다면, online training의 data sampling을 통한 subword sampling은 $k=1$ 이더라도 좋은 근사 결과를 갖는다. 하지만, subword sequence는 각 parameter를 update하기 위해 on-the-fly 방식으로 sample 되었다는 것을 명심해야 한다.
 
+### 2.2 Decoding
+
 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA3OTExMDU3LDEyNDIyNTE1NTYsNDQwOD
+eyJoaXN0b3J5IjpbOTM4NDIxMTU5LDEyNDIyNTE1NTYsNDQwOD
 Q2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgs
 LTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
 c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
