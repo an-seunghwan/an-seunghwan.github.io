@@ -36,10 +36,11 @@ $$
 \lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
 $$
 ```
+ddd
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNDkzMDY1MiwtMjc2NjEwMzU3LDIwOT
+eyJoaXN0b3J5IjpbLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOT
 QyODc1NDhdfQ==
 -->
