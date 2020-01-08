@@ -37,12 +37,13 @@ P(\mathbf{y} \vert \mathbf{x}; \theta)=\prod_{n=1}^N P(y_n \vert \mathbf{x}, y_{
 $$
 이때 $\theta$는 모형의 모수 집합이다.
 
+subword $y_n$을 예측하기 위한 모형으로는 RNN 구조를 생각할 수 있지만, subword regularization은 이러한 구조 이외에도 적용이 가능하다.
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5OTEyOTcyLC03ODAzMDgwNTIsMTI5Nz
-k3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAz
-MjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ
-==
+eyJoaXN0b3J5IjpbMTY0OTA5NjQ2NSwtNzgwMzA4MDUyLDEyOT
+c5NzgzNjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUw
+MzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX
+0=
 -->
