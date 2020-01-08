@@ -13,7 +13,6 @@
 -   Download the NVIDIA CUDA Toolkit.
 -   Handle conflicting installation methods.
 
-
 ### Ubuntu 16.04 or later (TensorFlow 2.0 CPU version)
 * ubuntu 18.04 LTS version
 
@@ -24,7 +23,6 @@
 * ubuntu 18.04에 맞는 드라이버 설치 가능
 
 ### [CUDA® Toolkit](https://developer.nvidia.com/cuda-toolkit-archive)  —TensorFlow supports CUDA 10.0 (TensorFlow >= 1.13.0)
-
 * [https://docs.nvidia.com/cuda/archive/10.0/cuda-installation-guide-linux/index.html](https://docs.nvidia.com/cuda/archive/10.0/cuda-installation-guide-linux/index.html)
 
  ![](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/ubuntu1.PNG?raw=true)
@@ -51,8 +49,8 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MjE3MzY2MiwtMTIxMzU4NzkxNSwtMT
-gyNzAwOTM2MCwtMjA4NDgxOTQ5Myw0OTkyMjA0NjUsLTMwMjQw
-NDg4LDIxMzYxMzIyNzYsMTQ2NzI4NDMwLC04NDE1OTgyMTAsLT
-M5MTcxMzY1XX0=
+eyJoaXN0b3J5IjpbLTE3ODA4NzM5NTQsMTY0MjE3MzY2MiwtMT
+IxMzU4NzkxNSwtMTgyNzAwOTM2MCwtMjA4NDgxOTQ5Myw0OTky
+MjA0NjUsLTMwMjQwNDg4LDIxMzYxMzIyNzYsMTQ2NzI4NDMwLC
+04NDE1OTgyMTAsLTM5MTcxMzY1XX0=
 -->
