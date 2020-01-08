@@ -27,10 +27,12 @@ BPE는 문장을 unique한 subword 문장으로 encoding한다. 하지만, 하�
 
 ## 2. Neural Machine Translation with multiple subword segmentations
 
-### 2.1 NMT training wih
+### 2.1 NMT training with on-the-fly subword sampling
+
+
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTk2MzQ4MTMsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
