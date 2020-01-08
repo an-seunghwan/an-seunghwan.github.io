@@ -33,21 +33,15 @@ BPE는 문장을 unique한 subword 문장으로 encoding한다. 하지만, 하�
 source sentence $X$, target sentence $Y$가 주어졌을 때, $\mathbf{x} = (x_1, ..., x_M)$ 과 $\mathbf{y} = (y_1, ..., y_N)$ 을 각각에 해당하는 subword sequence라고 하자(이는 subword segmenter, BPE에 의해 segment됨). NMT는 번역 확률 $P(Y|X) = P(\mathbf{y}|\mathbf{x})$ 을 target language sequence 모형으로 모델링을 하는데, 이 모형은 target history $y_{<n}$ 과 source input sequence $\mathbf{x}$ 가 주어졌을 때 target subword $y_n$의 조건부 확률을 만든다:
 
 $$
-P(\mathbf{y}|\mathbf{x}; \theta) = 
+P(\mathbf{y}|\mathbf{x}; \theta) = \prod_{n=1}^N P(y_n | \mathbf{x}, y_{<n} ; \theta)
 $$
+이때 $\theta$는 모형의 모수 집합이다.
 
-$$
-\lim_{x\to 0}{\frac{e^x-1}{2x}}
-\overset{\left[\frac{0}{0}\right]}{\underset{\mathrm{H}}{=}}
-\lim_{x\to 0}{\frac{e^x}{2}}={\frac{1}{2}}
-$$
-
-ddd
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODcwMjI4ODAsNjY4OTIyMzA4LC0xNT
-UxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYx
-MDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NT
+E4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEw
+MzU3LDIwOTQyODc1NDhdfQ==
 -->
