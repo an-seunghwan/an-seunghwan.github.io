@@ -35,6 +35,7 @@ source sentence $X$, target sentence $Y$가 주어졌을 때, $\mathbf{x}=(x_1, 
 $$
 P(\mathbf{y} \vert \mathbf{x}; \theta)=\prod_{n=1}^N P(y_n \vert \mathbf{x}, y_{<n} ; \theta)
 $$
+
 이때 $\theta$는 모형의 모수 집합이다.
 
 subword $y_n$을 예측하기 위한 모형으로는 RNN 구조를 생각할 수 있지만, subword regularization은 이러한 구조 이외에도 적용이 가능하다.
@@ -86,14 +87,16 @@ $$
 
 ## 3. Subword segmentations with language model
 
-### 3.1 Byte-Pair-Encodin
+### 3.1 Byte-Pair-Encoding
+
+
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMz
-Q5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgw
-NTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLT
-IwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQy
-ODc1NDhdfQ==
+eyJoaXN0b3J5IjpbMTMwMDQ0ODk1NiwxODAwNTc0OTcxLC0xOD
+EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
+MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
+U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
+MTAzNTcsMjA5NDI4NzU0OF19
 -->
