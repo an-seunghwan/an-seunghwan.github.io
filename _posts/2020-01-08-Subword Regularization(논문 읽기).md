@@ -131,7 +131,7 @@ seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 
 
 ### 3.3 Subword sampling
 
-Subword regularization은 각 parameter update에서 $P(\mathbf{x} \vert X)$ 분포를 통해 하나의 subword segmentation을 sampling한다. 가장 직관적인 접근은 $l$-best segmentation을 $P(\mathbf{x} \vert X)$ 확률에 따라 얻는 것이다. $l$-best search는 Forward-DP Backward-A* 알고리즘을 통해 선형 시간 내에 수행될 수 있다. 하나의 segmentation $\mathbf{x}_{i}$는 multinomial distribution $P(\mathbf{x}_{i} \vert X) \approx P(\mathbf{x}_{i})^{\alpha} / \sum_{i=1}^l P(\mathbf{x}_{i})^{\alpha}$를 통해 sampling된다. 이때 $\alpha \in \mathbb{R}^{+}$는 분포의 smoothness를 결정하는 모수이다.  $\alpha$가 작을수록, uniform distribution에서 sampling하는 것과 비슷하고, $\alpha$가 클수록 Viterbi segmentation을 선택하는 경향이 높다.
+Subword regularization은 각 parameter update에서 $P(\mathbf{x} \vert X)$ 분포를 통해 하나의 subword segmentation을 sampling한다. 가장 직관적인 접근은 $l$-best segmentation을 $P(\mathbf{x} \vert X)$ 확률에 따라 얻는 것이다. $l$-best search는 Forward-DP Backward-A* 알고리즘을 통해 선형 시간 내에 수행될 수 있다. 하나의 segmentation $\mathbf{x}_i$는 multinomial distribution $P(\mathbf{x}_i \vert X) \approx P(\mathbf{x}_i)^{\alpha} / \sum_{i=1}^l P(\mathbf{x}_i)^{\alpha}$를 통해 sampling된다. 이때 $\alpha \in \mathbb{R}^{+}$는 분포의 smoothness를 결정하는 모수이다.  $\alpha$가 작을수록, uniform distribution에서 sampling하는 것과 비슷하고, $\alpha$가 클수록 Viterbi segmentation을 선택하는 경향이 높다.
 
 $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation을 고려하게 된다. 하지만 문장의 길이가 길어질수록 후보의 개수가 지수적으로 증가하므로 $l$을 증가시키기 어렵다. 모든 가능한 segmentation으로부터 sampling을 하기 위해, **Forward-Filtering and Backward-Sampling algorithm** (FFBS) (Scott, 2002)를 사용하였다.
 
@@ -151,11 +151,11 @@ $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzOTEwODg5OCw0NDUwMzkxOCw0NDUwMz
-kxOCwtMTQ3MDQ2MzE4OCwtNDU5NzQyNjEzLC00OTI0NDI2Niwt
-NTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNT
-c0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1
-Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2OD
-kyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4
-OTc2XX0=
+eyJoaXN0b3J5IjpbNDQ1MDM5MTgsNDQ1MDM5MTgsNDQ1MDM5MT
+gsLTE0NzA0NjMxODgsLTQ1OTc0MjYxMywtNDkyNDQyNjYsLTU5
+MTQ4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIyMzYsMTgwMDU3ND
+k3MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYs
+NDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5Mj
+IzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3
+Nl19
 -->
