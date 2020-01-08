@@ -30,7 +30,7 @@ BPE는 문장을 unique한 subword 문장으로 encoding한다. 하지만, 하�
 
 ### 2.1 NMT training with on-the-fly subword sampling
 
-source sentence $X$, target sentence $Y$가 주어졌을 때, $\mathbf{x} = (x_1, ..., x_M)$ 과 $\mathbf{y} = (y_1, ..., y_N)$ 을 각각에 해당하는 subword sequence라고 하자(이는 subword segmenter, BPE에 의해 segment
+source sentence $X$, target sentence $Y$가 주어졌을 때, $\mathbf{x} = (x_1, ..., x_M)$ 과 $\mathbf{y} = (y_1, ..., y_N)$ 을 각각에 해당하는 subword sequence라고 하자(이는 subword segmenter, BPE에 의해 segment됨). NMT는 번역 확률 $P(Y|X) = P(\mathbf{y}|\mathbf{x})$ 
 
 $$
 \lim_{x\to 0}{\frac{e^x-1}{2x}}
@@ -43,7 +43,7 @@ ddd
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDQ1ODg2OSwtMTU1MTgyNDA4NCwtMj
-A1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4
-NzU0OF19
+eyJoaXN0b3J5IjpbNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMD
+UwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3
+NTQ4XX0=
 -->
