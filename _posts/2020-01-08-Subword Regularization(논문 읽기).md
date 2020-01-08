@@ -137,6 +137,8 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 
 ### 3.4 BPE vs Unigram language model
 
+공통의 idea: 특정한 data 압축 원칙(dictionary vs entropy)를 이용해 더 적은 bits로 text를 encoding한다.
+
 1. BPE
 	* dictionary encoder의 변형
 	* 점진적으로 text를 encoding하기 위한 symbol의 전체 개수를 최소화하는 symbol의 집합을 찾는다.
@@ -144,14 +146,16 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 2. Unigram language model
 	* entropy encoder
 	* text에 대한 전체 code 길이를 최소화한다(**What is code?**).
+	* more flexible - 왜냐하면 probablistic language model에 기반하고 있고 각 seg
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3ODk3MzYxLC00NTk3NDI2MTMsLTQ5Mj
-Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
-LDE4MDA1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMj
-QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
-NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
-0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbLTE5NjAyMzAzMDAsLTQ1OTc0MjYxMywtND
+kyNDQyNjYsLTU5MTQ4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIy
+MzYsMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LD
+EyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3
+ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMj
+YsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+
 -->
