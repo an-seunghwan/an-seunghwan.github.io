@@ -59,12 +59,12 @@ $$
 \mathcal{L} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert Y^{(s)})} [log P(\mathbf{y} \vert \mathbf{x} ; \theta)]
 $$
 
-위 식의 exact 최적화가 실현가능하지 않으므로, 
+위 식의 exact 최적화가 문장의 길이에 따라 가능한 segmentation의 종류가 기하급수적으로 증가하므로 실현가능하지 않다. 따라서 위의 식을 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$  유한한 $k$개의 sequence로 근사한다.
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjE0MzcxOCw0NDA4NDYyMjksLTc4MD
+eyJoaXN0b3J5IjpbMTYwODY2NDY4Nyw0NDA4NDYyMjksLTc4MD
 MwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4
 NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMj
 A5NDI4NzU0OF19
