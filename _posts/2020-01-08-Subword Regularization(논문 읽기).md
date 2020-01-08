@@ -108,14 +108,14 @@ $$
 \mathbf{x}^{\ast} = \arg \max_{\mathbf{x} \in S(X)} P(\mathbf{x})
 $$
 
-이때 $S(X)$는 input 문장 $X$로부터 생성된 segmentation의 후보 집합이다. $\mathbf{x}^{\ast}$는 **Viterbi algorithm** (Viterbi, 1967 을 통해 얻어진다.
+이때 $S(X)$는 input 문장 $X$로부터 생성된 segmentation의 후보 집합이다. $\mathbf{x}^{\ast}$는 **Viterbi algorithm** (Viterbi, 1967) 을 통해 얻어진다.
 
-만약 
+만약 단어 사전 $\mathcal{V}$가 주어진다면, subword 발생 확률들인 $p(x_i)$가 EM algorithm을 통해 추정된다. 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODMwNzI3NywxODAwNTc0OTcxLC0xOD
+eyJoaXN0b3J5IjpbLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xOD
 EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
 MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
 U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
