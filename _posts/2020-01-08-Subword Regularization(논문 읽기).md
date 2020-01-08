@@ -139,12 +139,15 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 
 1. BPE
 * dictionary encoder의 변형
-* 점진적으로 text를 encoding하기 위한 symbol의 전체 개수를 최소화ㅎ
+* 점진적으로 text를 encoding하기 위한 symbol의 전체 개수를 최소화하는 symbol의 집합을 찾는다.
+
+2. Unigram language model
+* 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjE0MTM1NywtNDU5NzQyNjEzLC00OT
+eyJoaXN0b3J5IjpbLTcwNTM5OTIyNywtNDU5NzQyNjEzLC00OT
 I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
 NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
 I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
