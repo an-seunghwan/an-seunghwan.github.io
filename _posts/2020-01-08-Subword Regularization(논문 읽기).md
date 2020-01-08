@@ -67,14 +67,16 @@ $$
 
 이때,
 $$
-\mathbf{x}_i \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y}_j \sim P(\mathbf{y} \vert Y^{(s)}).
+\mathbf{x}_i \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y}_j \sim P(\mathbf{y} \vert Y^{(s)})
 $$
+
+rks
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTY0Mzk4NSwxMjQyMjUxNTU2LDQ0MD
-g0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4
-LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLT
-I3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbNzIzMDM0MTAxLDEyNDIyNTE1NTYsNDQwOD
+Q2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgs
+LTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
+c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
 -->
