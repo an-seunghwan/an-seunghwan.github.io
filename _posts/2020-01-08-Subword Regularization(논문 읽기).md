@@ -146,16 +146,15 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 2. Unigram language model
 	* entropy encoder
 	* text에 대한 전체 code 길이를 최소화한다(**What is code?**).
-	* more flexible - 왜냐하면 probablistic language model에 기반하고 있고 각 seg
+	* more flexible - 왜냐하면 probablistic language model에 기반하고 있고 확률과 함께 다양한 segmentation을 찾을 수 있다(subword regularization에 필수적 요소).
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjAyMzAzMDAsLTQ1OTc0MjYxMywtND
-kyNDQyNjYsLTU5MTQ4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIy
-MzYsMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LD
-EyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3
-ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMj
-YsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
-
+eyJoaXN0b3J5IjpbLTM5OTY5MjgyNiwtNDU5NzQyNjEzLC00OT
+I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
+NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
+I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
+MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNi
+wtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
