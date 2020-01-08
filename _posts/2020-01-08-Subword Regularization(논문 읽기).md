@@ -108,14 +108,16 @@ $$
 \mathbf{x}^{\ast} = \arg \max_{\mathbf{x} \in S(X)} P(\mathbf{x})
 $$
 
-이때 $S(X)$는 input 문장 $X$로부터 생성된 segmentation의 후보 집합이다.
+이때 $S(X)$는 input 문장 $X$로부터 생성된 segmentation의 후보 집합이다. $\mathbf{x}^{\ast}$는 **Viterbi algorithm** (Viterbi, 1967 을 통해 얻어진다.
+
+만약 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2NjA3MTA4LDE4MDA1NzQ5NzEsLTE4MT
-I2NTUyNDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIy
-OSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNT
-UxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYx
-MDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbMTMzODMwNzI3NywxODAwNTc0OTcxLC0xOD
+EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
+MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
+U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
+MTAzNTcsMjA5NDI4NzU0OF19
 -->
