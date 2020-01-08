@@ -127,15 +127,19 @@ $$
 
 seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 일반적인 방법은 corpus에 속하는 모든 character(음절)과 가장 빈도가 높은 substrings들로 단어 사전을 만드는 것이다(이는 BPE 알고리즘을 통해 만들 수 있다). 
 
-최종 단어 사전 $\mathcal{V}$가 corpus에 속하는 모든 character(음절)을 포함하므로, 모든 segmentation 후보 $S(X)$에 character-based segmentation 또한 포함된다. 다르게 말하면, ㅕㅜㅑㅎ
+최종 단어 사전 $\mathcal{V}$가 corpus에 속하는 모든 character(음절)을 포함하므로, 모든 segmentation 후보 $S(X)$에 character-based segmentation 또한 포함된다. 다르게 말하면, unigram language model을 통한 subword segmentation은 characters, subwords, 그리고 word segmentations들의 확률 조합이라고 생각할 수 있다.
+
+### 3.3 Subword sampling
+
+
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODA0MTY3OCwtNDU5NzQyNjEzLC00OT
-I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
-NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
-I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
-MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNi
-wtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbNTU2NDk2NjUxLC00NTk3NDI2MTMsLTQ5Mj
+Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
+LDE4MDA1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMj
+QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
+NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
+0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
