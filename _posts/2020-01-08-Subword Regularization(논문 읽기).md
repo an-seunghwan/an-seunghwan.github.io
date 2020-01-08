@@ -95,15 +95,20 @@ BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교�
 unigram language model은 다음과 같은 가정을 한다. 각각의 subword는 독립적이고 연속적으로 발생하고, subword sequence $\mathbf{x} = (x_1, ..., x_M)$은 subword의 발생 확률 $p(x_i)$의 곱으로 형성된다.
 
 $$
-P(\mathbf{x}) = \prod_{i=1}^M p(x_i)
+P(\mathbf{x}) = \prod_{i=1}^M p(x_i),
 $$
+
+$$
+\forall i, x_i \in \mathcal{V}, \sum_{x \in \mathcal{V}} p(x) = 1
+$$
+
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MDU3NzcsMTgwMDU3NDk3MSwtMTgxMj
-Y1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5
-LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NT
-E4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEw
-MzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbMTk3NTAzOTQwMSwxODAwNTc0OTcxLC0xOD
+EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
+MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
+U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
+MTAzNTcsMjA5NDI4NzU0OF19
 -->
