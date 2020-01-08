@@ -40,6 +40,7 @@ $$
 subword $y_n$을 예측하기 위한 모형으로는 RNN 구조를 생각할 수 있지만, subword regularization은 이러한 구조 이외에도 적용이 가능하다.
 
 NMT는 standard MLE를 통해 학습이 된다. 즉, parallel corpus $D$가 주어졌을 때의 log likelihood $\mathcal{L}(\theta)$를 최대화한다.
+
 $$
 D = \{ (X^{(s)}, Y^{(s)}) \}_{s=1}^{\left\vert D \right\vert}  = \{ (\mathbf{x}^{(s)}, \mathbf{y}^{(s)}) \}_{s=1}^{\left\vert D \right\vert} 
 $$
@@ -53,14 +54,18 @@ where,  \mathcal{L}(\theta) = \sum_{s=1}^{\left\vert D \right\vert} log P(\mathb
 $$
 
 source와 target 문장 $X$와 $Y$가 각각 segmentation 확률 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 를 통해 여러 subword sequences로 segment될 수 있다고 가정한다. subword regularization에서, parameter set $\theta$를 marginalized 가능도를 이용해 최적화 된다.
+
 $$
 \mathcal{L} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert Y^{(s)})} [log P(\mathbf{y} \vert \mathbf{x} ; \theta)]
 $$
 
+위 식의 exact 최적화가 
+
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkyMzkzMzYsLTc4MDMwODA1MiwxMjk3OT
-c4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMy
-NiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nz
+k3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAz
+MjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ
+==
 -->
