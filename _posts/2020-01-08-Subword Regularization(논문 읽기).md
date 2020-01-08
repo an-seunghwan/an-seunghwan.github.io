@@ -112,10 +112,14 @@ $$
 
 만약 단어 사전 $\mathcal{V}$가 주어진다면, subword 발생 확률들인 $p(x_i)$가 EM algorithm을 통해 추정된다. 이때 EM algorithm은 다음의 marginal 가능도 함수 $\mathcal{L}$을 $p(x_i)$가 hidden variable이라고 간주하고 최대화한다.
 
+$$
+\mathcal{L} = \sum_{s=1}^{\left\vert D \right\vert} log(P(X^{(s)}) = \sum_{s=1}^{\left\vert D \right\vert} log 
+$$
+
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNDA1OTc0NCwxMjAxMzU0OTQ3LC01MT
+eyJoaXN0b3J5IjpbLTYzNTkyMTM3NSwxMjAxMzU0OTQ3LC01MT
 IyMDIyMzYsMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMzQ5MjYx
 OTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMT
 I5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4
