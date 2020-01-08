@@ -54,14 +54,13 @@ $$
 
 source와 target 문장 $X$와 $Y$가 각각 segmentation 확률 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 를 통해 여러 subword sequences로 segment될 수 있다고 가정한다. subword regularization에서, parameter set $\theta$를 marginalized 가능도를 이용해 최적화 된다.
 $$
-\mathcal{L} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert }
+\mathcal{L} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert Y^{(s)})} [log P(\mathbf{y} \vert \mathbf{x} ; \theta)]
 $$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjY1NTQ2NDIsLTc4MDMwODA1MiwxMj
-k3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1
-MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF
-19
+eyJoaXN0b3J5IjpbNjkyMzkzMzYsLTc4MDMwODA1MiwxMjk3OT
+c4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMy
+NiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
