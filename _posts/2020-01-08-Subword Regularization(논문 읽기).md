@@ -56,19 +56,19 @@ $$
 source와 target 문장 $X$와 $Y$가 각각 segmentation 확률 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 를 통해 여러 subword sequences로 segment될 수 있다고 가정한다. subword regularization에서, parameter set $\theta$를 marginalized 가능도를 이용해 최적화 된다.
 
 $$
-\mathcal{L} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert Y^{(s)})} [log P(\mathbf{y} \vert \mathbf{x} ; \theta)]
+\mathcal{L}_{marginal} (\theta) = \sum_{s=1}^{\left\vert D \right\vert} \mathbb{E}_{\mathbf{x} \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y} \sim P(\mathbf{y} \vert Y^{(s)})} [log P(\mathbf{y} \vert \mathbf{x} ; \theta)]
 $$
 
 위 식의 exact 최적화가 문장의 길이에 따라 가능한 segmentation의 종류가 기하급수적으로 증가하므로 실현가능하지 않다. 따라서 위의 식을 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 의 각각을 통해 sample된 유한한 $k$개의 sequence로 근사한다. 근사 식은 아래와 같다.
 
 $$
-
+\mathcal{L}_{marginal} (\theta) \approx {1}\over {k^2} 
 $$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwMjg5OTk4LDEyNDIyNTE1NTYsNDQwOD
+eyJoaXN0b3J5IjpbMzc5MTA3ODE1LDEyNDIyNTE1NTYsNDQwOD
 Q2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgs
 LTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
 c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
