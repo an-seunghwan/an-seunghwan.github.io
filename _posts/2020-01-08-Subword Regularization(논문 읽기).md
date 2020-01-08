@@ -88,14 +88,14 @@ $$
 
 ### 3.1 Byte-Pair-Encoding
 
-
+BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교체에 기반을 두고 있으므로, 다양한 확률과 ㅎsegmentation을 제공하지 못한다.
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NTk1Nzk2NiwxODAwNTc0OTcxLC0xOD
-EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
-MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
-U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
-MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbMjIyMDYwMjU3LDE4MDA1NzQ5NzEsLTE4MT
+I2NTUyNDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIy
+OSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNT
+UxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYx
+MDM1NywyMDk0Mjg3NTQ4XX0=
 -->
