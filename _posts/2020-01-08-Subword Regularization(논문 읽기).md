@@ -71,12 +71,13 @@ $$
 $$
 
 간단함을 위해, 본 연구에서는 $k=1$로 하였다. 
+NMT의 training을 위해 일반적으로 효율성을 위해 online training을 사용하는데, 이는 $D$의 작은 subset(mini-batch) 각각에 대해 parameter $\
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg2MzIyNjAsMTI0MjI1MTU1Niw0ND
-A4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMw
-OCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC
-0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbLTY1MTczODgxOCwxMjQyMjUxNTU2LDQ0MD
+g0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4
+LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLT
+I3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
