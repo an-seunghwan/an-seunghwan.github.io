@@ -75,7 +75,7 @@ NMT의 training을 위해 일반적으로 효율성을 위해 online training을
 
 ### 2.2 Decoding
 
-NMT의 decoding에서는, raw source 문장 $X$만을 가진다. decoding의 똑바른 접근은 best segmentation $P(\mathbf{x} \vert X)$를 최대화하는 $\mathbf{x}^*$로부터 번역을 하는 것이다. 즉, $\mathbf{x}^* = \arg \max_{\mathbf{x}} P(\mathbf{x} \vert X)$이다. 추가적으로, 여러개의 subword segmentation을 고려하기 위해 $P(\mathbf{x} \vert X)$의 $n$-best segmentation을 사용할 수 있다. 더 구체적으로, $n$-best segmentation $(\mathbf{x}_1, ..., \mathbf{x}_n)$가 주어졌을 때 아래의 score를 최대화하는 best translation $\mathbf{y}^*$를 선택할 수 있다.
+NMT의 decoding에서는, raw source 문장 $X$만을 가진다. decoding의 똑바른 접근은 best segmentation $P(\mathbf{x} \vert X)$를 최대화하는 $\mathbf{x}^{*}$로부터 번역을 하는 것이다. 즉, $\mathbf{x}^{*} = \arg \max_{\mathbf{x}} P(\mathbf{x} \vert X)$이다. 추가적으로, 여러개의 subword segmentation을 고려하기 위해 $P(\mathbf{x} \vert X)$의 $n$-best segmentation을 사용할 수 있다. 더 구체적으로, $n$-best segmentation $(\mathbf{x}_1, ..., \mathbf{x}_n)$가 주어졌을 때 아래의 score를 최대화하는 best translation $\mathbf{y}^{*}$를 선택할 수 있다.
 
 $$
 score(\mathbf{x}, \mathbf{y}) = log P(\mathbf{y} \vert \mathbf{x}) / \left\vert \mathbf{y} \right\vert
@@ -85,8 +85,8 @@ $$
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MTU3MjM3MywxMzQ5MjYxOTc5LDEyND
-IyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2
-MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLT
-IyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbNTg3OTcyOTkxLDEzNDkyNjE5NzksMTI0Mj
+I1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYw
+LDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMj
+I3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
