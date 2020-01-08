@@ -13,7 +13,6 @@ categories:
 tags:
   - 
 ---
-
 ## 1. Introduction
 
 단어 사전의 크기를 제한하는 것은 Unknown words의 개수를 증가시키고, 이는 open-vocabulary 환경의 번역을 매우 정확하지 않게 만든다. 
@@ -94,7 +93,7 @@ $$
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMDQ0ODk1NiwxODAwNTc0OTcxLC0xOD
+eyJoaXN0b3J5IjpbMTY4NTk1Nzk2NiwxODAwNTc0OTcxLC0xOD
 EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
 MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
 U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
