@@ -75,13 +75,13 @@ NMT의 training을 위해 일반적으로 효율성을 위해 online training을
 
 ### 2.2 Decoding
 
-
+NMT의 decoding에서, 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM4NDIxMTU5LDEyNDIyNTE1NTYsNDQwOD
-Q2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgs
-LTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
-c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MD
+g0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4
+LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLT
+I3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
