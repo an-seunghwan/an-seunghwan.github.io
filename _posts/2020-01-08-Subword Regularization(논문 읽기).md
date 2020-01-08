@@ -102,12 +102,12 @@ $$
 \forall i, x_i \in \mathcal{V}, \sum_{x \in \mathcal{V}} p(x) = 1
 $$
 
-이때 $\mathcal{V}$는 미리 결정된 단어 사전이다. 가장 가능성 높은 
+이때 $\mathcal{V}$는 미리 결정된 단어 사전이다. 가장 가능성 높은 segmentation $\mathbf{x}^{\asy
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMjIyNTEzOSwxODAwNTc0OTcxLC0xOD
+eyJoaXN0b3J5IjpbMTkwNzUxNTg4NywxODAwNTc0OTcxLC0xOD
 EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
 MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
 U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
