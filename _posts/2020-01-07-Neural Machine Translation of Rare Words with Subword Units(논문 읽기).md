@@ -56,9 +56,9 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 	- 실제로는 단순히 source와 target training set를 concatenate하여 학습을 진행한다.
 
 
-## 논문 출처
+## 논문 
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjQzOTU0MiwtNTQ5NzcxMSwtNDM2NT
-IxMjk4LC0xMDkzMzk0NzY1XX0=
+eyJoaXN0b3J5IjpbLTIxMTI3Njc2MjIsLTU0OTc3MTEsLTQzNj
+UyMTI5OCwtMTA5MzM5NDc2NV19
 -->
