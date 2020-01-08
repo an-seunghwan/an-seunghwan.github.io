@@ -102,14 +102,18 @@ $$
 \forall i, x_i \in \mathcal{V}, \sum_{x \in \mathcal{V}} p(x) = 1
 $$
 
-이때 $\mathcal{V}$는 미리 결정된 단어 사전이다. 가장 가능성 높은 segmentation $\mathbf{x}^{\asy
+이때 $\mathcal{V}$는 미리 결정된 단어 사전이다. input 문장 $X$에 대해 가장 가능성 높은 segmentation $\mathbf{x}^{\ast}$은 다음과 같이 주어진다.
+
+$$
+\mathbf{x}^{\ast} = \arg \max_{\mathbf{x} \in S(X)} P(\mathbf{x})
+$$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzUxNTg4NywxODAwNTc0OTcxLC0xOD
-EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
-MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
-U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
-MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbOTc5OTk5MzI3LDE4MDA1NzQ5NzEsLTE4MT
+I2NTUyNDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIy
+OSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNT
+UxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYx
+MDM1NywyMDk0Mjg3NTQ4XX0=
 -->
