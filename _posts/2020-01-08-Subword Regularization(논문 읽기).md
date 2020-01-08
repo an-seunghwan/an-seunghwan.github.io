@@ -82,11 +82,13 @@ score(\mathbf{x}, \mathbf{y}) = log P(\mathbf{y} \vert \mathbf{x}) / \left\vert 
 ^{\lambda}
 $$
 
+이때, $\left\vert \mathbf{y} \right\vert$는 $\mathbf{y}$의 subword의 개수이고, $\lambda \in \mathbb{R}^{+}$는 짧은 ㅁ
+
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3OTcyOTkxLDEzNDkyNjE5NzksMTI0Mj
-I1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYw
-LDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMj
-I3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbLTg1NDE3MjIxNSwxMzQ5MjYxOTc5LDEyND
+IyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2
+MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLT
+IyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
 -->
