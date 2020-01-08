@@ -123,15 +123,15 @@ $$
 2. 다음의 과정을 $\left\vert \mathcal{V} \right\vert$가 목표로하는 단어 사전 크기가 될때까지 반복한다.
 	- (a) 단어 사전을 고정하고, $p(x)$를 EM algorithm을 이용해 최적화한다.
 	- (b) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
-	- (c ) 
+	- (c ) symbol들을  $loss_i$을 이용해 정렬하고, 상위 $\eta$ % 만큼의 subword만을 유지한다($\eta$는 예를 들어 80). subwords를 항상 out-of-vocabulary 문제를 피하기 위해 single character로 유지해야 한다는 것을 명심해라. 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNjMwNjg5MywtNTkxNDgwODU3LDEyMD
-EzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1
-MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLT
-c4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgy
-NDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNT
-csMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbLTQ5MjQ0MjY2LC01OTE0ODA4NTcsMTIwMT
+M1NDk0NywtNTEyMjAyMjM2LDE4MDA1NzQ5NzEsLTE4MTI2NTUy
+NDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIyOSwtNz
+gwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNTUxODI0
+MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1Ny
+wyMDk0Mjg3NTQ4XX0=
 -->
