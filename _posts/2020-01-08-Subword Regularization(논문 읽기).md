@@ -121,15 +121,16 @@ $$
 
 1. Heuristically, 합리적인 big seed의 단어 사전을 training corpus로부터 만든다. = make a reasonably big seed vocabulary from the training corpus.
 2. 다음의 과정을 $\left\vert \mathcal{V} \right\vert$가 목표로하는 단어 사전 크기가 될때까지 반복한다.
-	- (a) 단어 사전을 고정하고, $p(x)$를 EM la
+	- (a) 단어 사전을 고정하고, $p(x)$를 EM algorithm을 이용해 최적화한다.
+	- (b) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTY1MjAxMywtNTkxNDgwODU3LDEyMD
-EzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1
-MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLT
-c4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgy
-NDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNT
-csMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbLTE0NjkyMTkxOTQsLTU5MTQ4MDg1NywxMj
+AxMzU0OTQ3LC01MTIyMDIyMzYsMTgwMDU3NDk3MSwtMTgxMjY1
+NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5LC
+03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NTE4
+MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEwMz
+U3LDIwOTQyODc1NDhdfQ==
 -->
