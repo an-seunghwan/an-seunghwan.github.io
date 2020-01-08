@@ -119,7 +119,7 @@ $$
 하지만, 실제의 경우에는 단어 집합 $\mathcal{V}$의 크기를 알 수 없다. 
 단어 집합과 그들의 발생 확률의 joint optimization이 다루기 힘들기 때문에, 다음과 같은  반복적인 algorithm을 고려한다.
 
-1. Heuristically, 합리적인 big seed의 단어 사전을 training corpus로부터 만든다. = make a reasonably big seed vocabulary from the training corpus.
+1. Heuristically, 충분히 큰 seed의 단어 사전을 training corpus로부터 만든다. = make a reasonably big seed vocabulary from the training corpus.
 2. 다음의 과정을 $\left\vert \mathcal{V} \right\vert$가 목표로하는 단어 사전 크기가 될때까지 반복한다.
 	- (a) 단어 사전을 고정하고, $p(x)$를 EM algorithm을 이용해 최적화한다.
 	- (b) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
@@ -128,7 +128,7 @@ $$
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDM5OTMyNiwtNDkyNDQyNjYsLTU5MT
+eyJoaXN0b3J5IjpbLTQ1OTc0MjYxMywtNDkyNDQyNjYsLTU5MT
 Q4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIyMzYsMTgwMDU3NDk3
 MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsND
 QwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIz
