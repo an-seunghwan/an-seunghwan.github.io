@@ -62,14 +62,19 @@ $$
 위 식의 exact 최적화가 문장의 길이에 따라 가능한 segmentation의 종류가 기하급수적으로 증가하므로 실현가능하지 않다. 따라서 위의 식을 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 의 각각을 통해 sample된 유한한 $k$개의 sequence로 근사한다. 근사 식은 아래와 같다.
 
 $$
-\mathcal{L}_{marginal} (\theta) \approx \frac{1}{k^2} \sum_{s=1}^{\left\vert D \right\vert} \sum_{i=1}^k \sum_{j=1}^k log P(
+\mathcal{L}_{marginal} (\theta) \approx \frac{1}{k^2} \sum_{s=1}^{\left\vert D \right\vert} \sum_{i=1}^k \sum_{j=1}^k log P(\mathbf{y}_j \vert \mathbf{x}_i ; \theta)
+$$
+
+이때,
+$$
+\mathbf{x}_i \sim P(\mathbf{x} \vert X^{(s)}), \mathbf{y}_j \sim P(\mathbf{y} \vert Y^{(s)}).
 $$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODMwNTM1MjIsMTI0MjI1MTU1Niw0ND
-A4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMw
-OCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC
-0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbMTg5OTY0Mzk4NSwxMjQyMjUxNTU2LDQ0MD
+g0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4
+LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLT
+I3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
