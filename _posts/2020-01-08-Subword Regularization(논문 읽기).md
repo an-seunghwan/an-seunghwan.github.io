@@ -62,14 +62,14 @@ $$
 위 식의 exact 최적화가 문장의 길이에 따라 가능한 segmentation의 종류가 기하급수적으로 증가하므로 실현가능하지 않다. 따라서 위의 식을 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 의 각각을 통해 sample된 유한한 $k$개의 sequence로 근사한다. 근사 식은 아래와 같다.
 
 $$
-\mathcal{L}_{marginal} (\theta) \approx {1}\over {k^2} 
+\mathcal{L}_{marginal} (\theta) \approx \frac{1}{k^2} 
 $$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5MTA3ODE1LDEyNDIyNTE1NTYsNDQwOD
-Q2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgs
-LTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
-c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbLTE5NDk4NDkxMTcsMTI0MjI1MTU1Niw0ND
+A4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMw
+OCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC
+0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
