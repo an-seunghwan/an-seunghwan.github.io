@@ -41,15 +41,19 @@ subword $y_n$을 예측하기 위한 모형으로는 RNN 구조를 생각할 수
 
 NMT는 standard MLE를 통해 학습이 된다. 즉, parallel corpus $D$가 주어졌을 때의 log likelihood $\mathcal{L}(\theta)$를 최대화한다.
 $$
-D = \{ (X^{(s)}, Y^{(s)}) \}_{s=1}^{\left\vert D \right\vert}  = \{ (\mathbf{x}^{(s)}, \mathbf{y}^{(s)}) \}_{s=1}^{\left\vert D \right\vert} \\
-\theta_{MLE} = \arg \max_{\theta} \mathcal{L}(\theta) \\
+D = \{ (X^{(s)}, Y^{(s)}) \}_{s=1}^{\left\vert D \right\vert}  = \{ (\mathbf{x}^{(s)}, \mathbf{y}^{(s)}) \}_{s=1}^{\left\vert D \right\vert} 
+$$
+$$
+\theta_{MLE} = \arg \max_{\theta} \mathcal{L}(\theta)
+$$
+$$
 where,  \mathcal{L}(\theta) = \sum_{s=1}^{\left\vert D \right\vert} log P(\mathbf{y} \vert \mathbf{x} ; \theta)
 $$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM1NjYzMzIsLTc4MDMwODA1MiwxMj
+eyJoaXN0b3J5IjpbLTE2MDgxODM3NDgsLTc4MDMwODA1MiwxMj
 k3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1
 MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF
 19
