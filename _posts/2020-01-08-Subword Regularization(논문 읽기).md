@@ -5,6 +5,7 @@ toc: true
 toc_sticky: true
 
 author_profile: false
+use_math: true
 
 date: 2020-01-08 15:00:00 -0000
 categories: 
@@ -41,6 +42,6 @@ ddd
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOT
-QyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMj
+c2NjEwMzU3LDIwOTQyODc1NDhdfQ==
 -->
