@@ -39,11 +39,13 @@ $$
 
 subword $y_n$을 예측하기 위한 모형으로는 RNN 구조를 생각할 수 있지만, subword regularization은 이러한 구조 이외에도 적용이 가능하다.
 
+NMT는 standard MLE를 통해 학습이 된다. 즉, 
+
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0OTA5NjQ2NSwtNzgwMzA4MDUyLDEyOT
-c5NzgzNjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUw
-MzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX
-0=
+eyJoaXN0b3J5IjpbLTE5NTM2MjA0NzMsLTc4MDMwODA1MiwxMj
+k3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1
+MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF
+19
 -->
