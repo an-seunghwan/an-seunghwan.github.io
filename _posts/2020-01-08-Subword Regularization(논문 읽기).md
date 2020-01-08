@@ -75,13 +75,13 @@ NMT의 training을 위해 일반적으로 효율성을 위해 online training을
 
 ### 2.2 Decoding
 
-NMT의 decoding에서는, raw source 문장 $X$만을 가진다. decoding의 똑바른 접근은 best segmentation $P(\mathbf{x} \vert X)$를 최대화하는 $\mathbf{x}^*$로부터 번역을 하는 것이다. 즉, $\mathbf{x}^* = \arg \max_{\mathbf{x}} P(\mathbf{x} \vert X)$이다. 추가적으로, 여러개의 subword segme $P(\mathbf{x} \vert X)$의 $n$-best segmentation 을 사용할 수 있다.
+NMT의 decoding에서는, raw source 문장 $X$만을 가진다. decoding의 똑바른 접근은 best segmentation $P(\mathbf{x} \vert X)$를 최대화하는 $\mathbf{x}^*$로부터 번역을 하는 것이다. 즉, $\mathbf{x}^* = \arg \max_{\mathbf{x}} P(\mathbf{x} \vert X)$이다. 추가적으로, 여러개의 subword segmentation을 고려하기 위해 $P(\mathbf{x} \vert X)$의 $n$-best segmentation을 사용할 수 있다. 더 구체적으로, $n$-best segmentation $(\mathbf{x}_1, ..., \mathbf{x}_n)$가 주어졌을 때 best translation 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODkwMzU3NywxMzQ5MjYxOTc5LDEyND
-IyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2
-MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLT
-IyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbLTE3MTk0MjE5NjcsMTM0OTI2MTk3OSwxMj
+QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
+NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
+0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
