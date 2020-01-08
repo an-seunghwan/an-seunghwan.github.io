@@ -50,13 +50,13 @@ $$
 where,  \mathcal{L}(\theta) = \sum_{s=1}^{\left\vert D \right\vert} log P(\mathbf{y} \vert \mathbf{x} ; \theta)
 $$
 
-source와 target 문장 $X$와 $Y$가 segmentation 확률 $P(\mathbf{x} \vert X)$와 $P(\mathbf{ㅛ} \vert X)$ 여러 subword sequences로 segment될 수 있다고 가정한다.
+source와 target 문장 $X$와 $Y$가 segmentation 확률 $P(\mathbf{x} \vert X)$와 $P(\mathbf{y} \vert Y)$ 를 통해 여러 subword sequences로 segment될 수 있다고 가정한다.
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NzUxMjczMiwtNzgwMzA4MDUyLDEyOT
-c5NzgzNjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUw
-MzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX
-0=
+eyJoaXN0b3J5IjpbNTg2OTkzNzc0LC03ODAzMDgwNTIsMTI5Nz
+k3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAz
+MjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ
+==
 -->
