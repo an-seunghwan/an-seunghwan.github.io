@@ -131,16 +131,15 @@ seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 
 
 ### 3.3 Subword sampling
 
-Subword regularization은 각 parameter update에서 $P(\mathbf{x} \vert X)$ 분포를 통해 하나의 subword segmentation을 sampling한다. 가장 직관적인 접근은 $l$-best segmentation을 $P(\mathbf{x} \vert X)$ 확률에 따라 얻는 것이다. $l$-best search
+Subword regularization은 각 parameter update에서 $P(\mathbf{x} \vert X)$ 분포를 통해 하나의 subword segmentation을 sampling한다. 가장 직관적인 접근은 $l$-best segmentation을 $P(\mathbf{x} \vert X)$ 확률에 따라 얻는 것이다. $l$-best search는 Forward-DP Backward-A* 알고리즘을 통해 선형 시간 내에 수행될 수 있다. 하나의 segmentation $\mathbf{x}_i$는 multinomial distribution $P(\mathbf{x}_i \vert X) \approx$
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjM5MTUyNDksLTQ1OTc0MjYxMywtND
-kyNDQyNjYsLTU5MTQ4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIy
-MzYsMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LD
-EyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3
-ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMj
-YsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
-
+eyJoaXN0b3J5IjpbMTk0OTU0Mjg2NiwtNDU5NzQyNjEzLC00OT
+I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
+NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
+I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
+MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNi
+wtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
