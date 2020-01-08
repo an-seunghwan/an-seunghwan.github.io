@@ -88,14 +88,18 @@ $$
 
 ### 3.1 Byte-Pair-Encoding
 
-BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교체에 기반을 두고 있으므로, 다양한 확률과 ㅎsegmentation을 제공하지 못한다.
+BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교체에 기반을 두고 있으므로, 확률과 함께 다양한 segmentation을 제공하지 못한다.
+
+### 3.2 Unigram language model
+
+
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyMDYwMjU3LDE4MDA1NzQ5NzEsLTE4MT
-I2NTUyNDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIy
-OSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNT
-UxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYx
-MDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbLTE2NTU4MDExNDcsMTgwMDU3NDk3MSwtMT
+gxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2
+MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLT
+E1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2
+NjEwMzU3LDIwOTQyODc1NDhdfQ==
 -->
