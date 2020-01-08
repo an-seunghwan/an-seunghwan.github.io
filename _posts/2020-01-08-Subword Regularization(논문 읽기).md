@@ -86,14 +86,14 @@ $$
 
 ## 3. Subword segmentations with language model
 
-### 3.1 
+### 3.1 Byte-Pair-Encodin
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwOTk3NDQ1LC0xODEyNjU1MjQzLDEzND
-kyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1
-MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMj
-A1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4
-NzU0OF19
+eyJoaXN0b3J5IjpbMTgwMDU3NDk3MSwtMTgxMjY1NTI0MywxMz
+Q5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgw
+NTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLT
+IwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQy
+ODc1NDhdfQ==
 -->
