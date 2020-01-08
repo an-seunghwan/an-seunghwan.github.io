@@ -120,15 +120,16 @@ $$
 단어 집합과 그들의 발생 확률의 joint optimization이 다루기 힘들기 때문에, 다음과 같은  반복적인 algorithm을 고려한다.
 
 1. Heuristically, 합리적인 big seed의 단어 사전을 training corpus로부터 만든다. = make a reasonably big seed vocabulary from the training corpus.
-2. 
+2. 다음의 과정을 $\left\vert \mathcal{V} \right\vert$가 목표로하는 단어 사전 크기가 될때까지 반복한다.
+	- (a) 단어 사전을 고정하고, $p(x)$를 EM la
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5MDg3NDI1LC01OTE0ODA4NTcsMTIwMT
-M1NDk0NywtNTEyMjAyMjM2LDE4MDA1NzQ5NzEsLTE4MTI2NTUy
-NDMsMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MDg0NjIyOSwtNz
-gwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4LC0xNTUxODI0
-MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLTI3NjYxMDM1Ny
-wyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbMTgzMTY1MjAxMywtNTkxNDgwODU3LDEyMD
+EzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1
+MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLT
+c4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgy
+NDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNT
+csMjA5NDI4NzU0OF19
 -->
