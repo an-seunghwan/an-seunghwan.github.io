@@ -7,7 +7,7 @@ toc_sticky: true
 author_profile: false
 use_math: true
 
-date: 2020-01-08 15:00:00 -0000
+date: 2020-01-08 20:00:00 -0000
 categories: 
   - NLP
 tags:
@@ -151,7 +151,7 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTY5MjgyNiwtNDU5NzQyNjEzLC00OT
+eyJoaXN0b3J5IjpbLTg1ODc2MzEyNCwtNDU5NzQyNjEzLC00OT
 I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
 NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
 I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
