@@ -25,10 +25,12 @@ BPE는 문장을 unique한 subword 문장으로 encoding한다. 하지만, 하�
 * NMT 구조와 무관하게 on-the-fly data sampling을 통해 다양한 segmentation 후보들을 고려하는 방식이므로, NMT 모형의 구조 변화 없이 subword regularization을 적용할 수 있다.
 * segmentation의 확률을 제공하는 언어 모형에 기반하므로, 실제 데이터의 segmentation 과정 동안에 생성된 noise와 모형이 경쟁할 수 있도록 한다.
 
-## 2. Neural Machine Translation with 
+## 2. Neural Machine Translation with multiple subword segmentations
+
+### 2.1 NMT training wih
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4MjQ1NDU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbLTEwNTk2MzQ4MTMsMjA5NDI4NzU0OF19
 -->
