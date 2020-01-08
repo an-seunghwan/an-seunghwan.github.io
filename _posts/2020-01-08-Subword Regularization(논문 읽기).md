@@ -138,19 +138,20 @@ $l \rightarrow \infin$ 일 때, 이론적으로는 모든 가능한 segmentation
 ### 3.4 BPE vs Unigram language model
 
 1. BPE
-* dictionary encoder의 변형
-* 점진적으로 text를 encoding하기 위한 symbol의 전체 개수를 최소화하는 symbol의 집합을 찾는다.
+	* dictionary encoder의 변형
+	* 점진적으로 text를 encoding하기 위한 symbol의 전체 개수를 최소화하는 symbol의 집합을 찾는다.
 
 2. Unigram language model
-* 
+	* entropy encoder
+	* text에 대한 전체 code 길이를 최소화한다(**What is code?**).
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTM5OTIyNywtNDU5NzQyNjEzLC00OT
-I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
-NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
-I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
-MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNi
-wtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbMjE3ODk3MzYxLC00NTk3NDI2MTMsLTQ5Mj
+Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
+LDE4MDA1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMj
+QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
+NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
+0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
