@@ -92,12 +92,12 @@ BPE의 단점은 다음과 같다. BPE는 greedy와 deterministic한 symbol 교�
 
 ### 3.2 Unigram language model
 
-
+unigram language model은 다음과 같은 가정을 한다. 각각의 subword는 독립적이고 연속적으로 발생하고, subword sequence 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTU4MDExNDcsMTgwMDU3NDk3MSwtMT
+eyJoaXN0b3J5IjpbLTE2NTAwNzM1MjYsMTgwMDU3NDk3MSwtMT
 gxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsNDQwODQ2
 MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIzMDgsLT
 E1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2
