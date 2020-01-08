@@ -110,14 +110,14 @@ $$
 
 이때 $S(X)$는 input 문장 $X$로부터 생성된 segmentation의 후보 집합이다. $\mathbf{x}^{\ast}$는 **Viterbi algorithm** (Viterbi, 1967) 을 통해 얻어진다.
 
-만약 단어 사전 $\mathcal{V}$가 주어진다면, subword 발생 확률들인 $p(x_i)$가 EM algorithm을 통해 추정된다. 
+만약 단어 사전 $\mathcal{V}$가 주어진다면, subword 발생 확률들인 $p(x_i)$가 EM algorithm을 통해 추정된다. 이때 EM algorithm은 다음의 marginal 가능도 함수 $\mathcal{L}$을 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xOD
-EyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYy
-MjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMT
-U1MTgyNDA4NCwtMjA1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2
-MTAzNTcsMjA5NDI4NzU0OF19
+eyJoaXN0b3J5IjpbMTIwMTM1NDk0NywtNTEyMjAyMjM2LDE4MD
+A1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMjQyMjUx
+NTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNj
+Y4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3
+Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
