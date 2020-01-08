@@ -30,7 +30,7 @@ BPE는 문장을 unique한 subword 문장으로 encoding한다. 하지만, 하�
 
 ### 2.1 NMT training with on-the-fly subword sampling
 
-source sentence $X$, target sentence $Y$가 주어졌을 때, $\x = (x
+source sentence $X$, target sentence $Y$가 주어졌을 때, $\mathbf = (x$
 
 $$
 \lim_{x\to 0}{\frac{e^x-1}{2x}}
@@ -43,7 +43,7 @@ ddd
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTY0MzE5MiwtMTU1MTgyNDA4NCwtMj
-A1MDg1MDMyNiwtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4
-NzU0OF19
+eyJoaXN0b3J5IjpbLTE5NTE2NDEyNDIsLTE1NTE4MjQwODQsLT
+IwNTA4NTAzMjYsLTIyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQy
+ODc1NDhdfQ==
 -->
