@@ -121,9 +121,9 @@ $$
 
 1. Heuristically, 충분히 큰 seed의 단어 사전을 training corpus로부터 만든다. = make a reasonably big seed vocabulary from the training corpus.
 2. 다음의 과정을 $\left\vert \mathcal{V} \right\vert$가 목표로하는 단어 사전 크기가 될때까지 반복한다.
-	- (a) 단어 사전을 고정하고, $p(x)$를 EM algorithm을 이용해 최적화한다.
-	- (b) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
-	- (c ) symbol들을  $loss_i$을 이용해 정렬하고, 상위 $\eta$ % 만큼의 subword만을 유지한다($\eta$는 예를 들어 80). subwords를 항상 out-of-vocabulary 문제를 피하기 위해 single character로 유지해야 한다는 것을 명심해라. 
+	- (1) 단어 사전을 고정하고, $p(x)$를 EM algorithm을 이용해 최적화한다.
+	- (2) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
+	- (3) symbol들을  $loss_i$을 이용해 정렬하고, 상위 $\eta$ % 만큼의 subword만을 유지한다($\eta$는 예를 들어 80). subwords를 항상 out-of-vocabulary 문제를 피하기 위해 single character로 유지해야 한다는 것을 명심해라. 
 
 seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 일반적인 방법은 corpus에 속하는 모든 character(음절)과 가장 빈도가 높은 substrings들로 단어 사전을 만드는 것이다(이는 BPE 알고리즘을 통해 만들 수 있다). 
 
@@ -131,15 +131,15 @@ seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 
 
 ### 3.3 Subword sampling
 
-
+Subword regularization은 각 parameter update에서 $P(\mathbf{x} \vert X)$ 분포를 통해 하나의 subword segmentation을 sampling
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU2NDk2NjUxLC00NTk3NDI2MTMsLTQ5Mj
-Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
-LDE4MDA1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMj
-QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
-NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
-0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbMTU5MTAzNDgwMCwtNDU5NzQyNjEzLC00OT
+I0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIz
+NiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMT
+I0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4
+MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMyNi
+wtMjI3NzI4OTc2LC0yNzY2MTAzNTcsMjA5NDI4NzU0OF19
 -->
