@@ -75,13 +75,13 @@ NMT의 training을 위해 일반적으로 효율성을 위해 online training을
 
 ### 2.2 Decoding
 
-NMT의 decoding에서, 
+NMT의 decoding에서는, raw source 문장 $X$만을 가진다. decoding의 똑바른 접근은 
 
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0OTI2MTk3OSwxMjQyMjUxNTU2LDQ0MD
-g0NjIyOSwtNzgwMzA4MDUyLDEyOTc5NzgzNjAsNjY4OTIyMzA4
-LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC0yMjc3Mjg5NzYsLT
-I3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
+eyJoaXN0b3J5IjpbMTA5Nzc1MDM2NCwxMzQ5MjYxOTc5LDEyND
+IyNTE1NTYsNDQwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2
+MCw2Njg5MjIzMDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLT
+IyNzcyODk3NiwtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
 -->
