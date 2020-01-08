@@ -125,13 +125,17 @@ $$
 	- (b) 각각의 subword $x_i$에 대한 $loss_i$를 계산한다. 이때 $loss_i$는 현재 단어 사전에서 subword $x_i$가 제거 되었을 때, 가능도 $\mathcal{L}$이 얼마나 감소하는지를 나타낸다.
 	- (c ) symbol들을  $loss_i$을 이용해 정렬하고, 상위 $\eta$ % 만큼의 subword만을 유지한다($\eta$는 예를 들어 80). subwords를 항상 out-of-vocabulary 문제를 피하기 위해 single character로 유지해야 한다는 것을 명심해라. 
 
+seed 단어 사전을 준비하기 위한 다양한 방법들이 있다. 가장 일반적인 방법은 모든 character(음절)과 가장 빈도가 높은 substrings들로 단어 사전을 만드는 것이다(이는 BPE 알고리즘을 통해 만들 수 있다). 
+
+최종 단어 사전 $\mathcal{V}$의 
+
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1OTc0MjYxMywtNDkyNDQyNjYsLTU5MT
-Q4MDg1NywxMjAxMzU0OTQ3LC01MTIyMDIyMzYsMTgwMDU3NDk3
-MSwtMTgxMjY1NTI0MywxMzQ5MjYxOTc5LDEyNDIyNTE1NTYsND
-QwODQ2MjI5LC03ODAzMDgwNTIsMTI5Nzk3ODM2MCw2Njg5MjIz
-MDgsLTE1NTE4MjQwODQsLTIwNTA4NTAzMjYsLTIyNzcyODk3Ni
-wtMjc2NjEwMzU3LDIwOTQyODc1NDhdfQ==
+eyJoaXN0b3J5IjpbMzUwMzczMjc3LC00NTk3NDI2MTMsLTQ5Mj
+Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
+LDE4MDA1NzQ5NzEsLTE4MTI2NTUyNDMsMTM0OTI2MTk3OSwxMj
+QyMjUxNTU2LDQ0MDg0NjIyOSwtNzgwMzA4MDUyLDEyOTc5Nzgz
+NjAsNjY4OTIyMzA4LC0xNTUxODI0MDg0LC0yMDUwODUwMzI2LC
+0yMjc3Mjg5NzYsLTI3NjYxMDM1NywyMDk0Mjg3NTQ4XX0=
 -->
