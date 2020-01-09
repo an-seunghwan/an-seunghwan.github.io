@@ -11,7 +11,9 @@ date: 2020-01-08 20:00:00 -0000
 categories: 
   - NLP
 tags:
-  - 
+  - 논문 읽기
+  - 전처리
+  - tokenizer
 ---
 ## 1. Introduction
 
@@ -151,11 +153,11 @@ $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzM0ODkxNCw0NDUwMzkxOCw0NDUwMz
-kxOCw0NDUwMzkxOCwtMTQ3MDQ2MzE4OCwtNDU5NzQyNjEzLC00
-OTI0NDI2NiwtNTkxNDgwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMj
-IzNiwxODAwNTc0OTcxLC0xODEyNjU1MjQzLDEzNDkyNjE5Nzks
-MTI0MjI1MTU1Niw0NDA4NDYyMjksLTc4MDMwODA1MiwxMjk3OT
-c4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4NCwtMjA1MDg1MDMy
-Nl19
+eyJoaXN0b3J5IjpbLTExMTI2NDYwOTYsLTE5MzM0ODkxNCw0ND
+UwMzkxOCw0NDUwMzkxOCw0NDUwMzkxOCwtMTQ3MDQ2MzE4OCwt
+NDU5NzQyNjEzLC00OTI0NDI2NiwtNTkxNDgwODU3LDEyMDEzNT
+Q5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1MjQz
+LDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLTc4MD
+MwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4
+NF19
 -->
