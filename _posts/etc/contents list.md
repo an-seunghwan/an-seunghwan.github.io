@@ -7,6 +7,7 @@
 ### OOV
 * Okt를 적용한 뒤에 BPE를 적용한다면?
 * 그럼 BPE의 tokenizer로써의 역할이 무색?
+* Viterbi algorithm
 
 ### Keras 번역 시리즈
 * [https://www.tensorflow.org/guide](https://www.tensorflow.org/guide) 
@@ -87,6 +88,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMxNjI4NjIsLTY2MzkxNTg4MCwxNT
-U5MzgxMDgyLC0yMTMwODc2NDk0LDQyNTYyMzU1XX0=
+eyJoaXN0b3J5IjpbMTE5NjExNDI5MCwtMTY3MzE2Mjg2MiwtNj
+YzOTE1ODgwLDE1NTkzODEwODIsLTIxMzA4NzY0OTQsNDI1NjIz
+NTVdfQ==
 -->
