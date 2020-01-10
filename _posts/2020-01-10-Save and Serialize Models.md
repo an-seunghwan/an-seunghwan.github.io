@@ -86,6 +86,49 @@ Functional API를 이용한 모형을 하나의 파일로 저장할 수 있다. 
 - 모형의 training config(`compile`에 전달된 설정)
 - optimizer와 이의 state(이는 나중에 training을 멈춘 곳부터 다시 시작할 수 있도록 한다)
 
+```python
+# 모형 저장
+MODEL_PATH = r'C:\Users\dpelt\Desktop\Mayson\UOS_graduate\tensorflow2'
+model.save(MODEL_PATH + '/model.h5')
+
+# 위의 파일로부터 정확히 동일한 모형을 재생성
+new_model = keras.models.load_model(MODEL_PATH + '/model.h5')
+
+import numpy as np
+
+# state가 유지되었는 지 확인한다
+new_predictions = new_model.predict(x_test)
+np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
+```
+아무런 결과가 출력되지 않았으므로, opimizer의 state가 유지되었음을 알 수 있다: training을 멈춘 곳부터 다시 시작이 가능하다.
+
+### SavedModel로 내보내기
+
+전체 모형을 `SavedModel` 형식으로 저장할 수 있다. `SavedModel`은 TensroFlow 객체를 위한 독립적인 serialization format이고, TensorFlow serving과 TensorFlow implementation을 지원한다,
+
+```python
+# Export the model to a SavedModel
+model.save('path_to_saved_model', save_format='tf')
+
+# Recreate the exact same model
+new_model = keras.models.load_model('path_to_saved_model')
+
+# Check that the state is preserved
+new_predictions = new_model.predict(x_test)
+np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
+
+# Note that the optimizer state is preserved as well:
+# you can resume training where you left off.
+```
+`SavedModel`은 다음을 포함한다:
+- 모형의 가중치를 가지고 있는 TensorFlow checkpoint
+- A `SavedModel` proto containing the underlying TensorFlow graph.
+
+### 구조만 저장하기
+
+때때로, 모형의 구조만에 관심이 있고, 가중치의 값이나 opimizer의 저장에는 관심이 없는 경우가 있다. 이러한 경우에, 모형의 "config"를 `get_config()` method를 이용해 불러올 수 있다. config는 training 과정에서 학습한 어떠한 정보도 없이 동일한 모형을 재생성할 수 있도록 해주는 Python dict이다.
+```pytho
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE5MjYxMTI0XX0=
+eyJoaXN0b3J5IjpbMTczNjE2MzkwMF19
 -->
