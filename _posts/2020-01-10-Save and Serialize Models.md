@@ -230,8 +230,43 @@ np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
 ```
 disk에 저장하기 위해서는 `save_weights(fpath)`와 `load_weights(fpath)`를 사용하면 된다.
 다음은 disk에 저장하는 예시이다.
+```python
+# Save JSON config to disk
+json_config = model.to_json()
+with open('model_config.json', 'w') as json_file:
+    json_file.write(json_config)
+# Save weights to disk
+model.save_weights('path_to_my_weights.h5')
 
+# Reload the model from the 2 files we saved
+with open('model_config.json') as json_file:
+    json_config = json_file.read()
+new_model = keras.models.model_from_json(json_config)
+new_model.load_weights('path_to_my_weights.h5')
 
+# 모형의 state는 보존된다.
+new_predictions = new_model.predict(x_test)
+np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
+# 그러나 optimizer는 보존되지 않는다.
+```
+### TensorFlow checkpoints를 이용해 Weights만 저장하기
+
+`save_weights`는 Keras HDF5 format 또는 TensorFlow Checkpoint format으로 파일을 생성하여 저장한다. format은 파일의 확장자 명에 의해 결정된다: ".h5" or ".keras"이라면, framework은 Keras HDF5 format을 사용한다. 다른 이외의 것은 Checkpoint format으로 default로써 저장된다.
+
+```python
+model.save_weights('path_to_my_tf_checkpoint') # Checkpoint format
+
+model.save_weights('path_to_my_tf_checkpoint', save_format='tf') # 또는 save_format='h5'
+```
+## Subclassed Model 저장하기
+
+Sequential model과 Functional model은 layer들의 DAG로 표현되는 datastructure이므로 안전하게 저장되고 serialized된다.
+
+subclassed model은 datastructure가 아니고, 코드일 뿐이다. model의 구조는 `call` method의 내용을 통해 정의된다. 이는 모형의 구조가 안전하게 serialized될 수 없다는 것을 의미한다. 모형을 불러오기 위해서는, subclassed model을 생성하기 위해서는 코드에 접근을 해야한다. 대신, 이 코드를 bytecode(e.g. via pickling)로써 serialize할 수 있지만, 이는 안전하지 않고 휴대가 어렵다.
+
+이러한 차이에 대한 더 많은 정보를 얻으려면,  를 보면 된다.# _What are Symbolic and Imperative APIs in TensorFlow 2.0?_
+
+다음의 subclassed model을 고려하자.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjE3MDYwNF19
+eyJoaXN0b3J5IjpbOTg0ODk2ODEwXX0=
 -->
