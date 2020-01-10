@@ -264,9 +264,65 @@ Sequential model과 Functional model은 layer들의 DAG로 표현되는 datastru
 
 subclassed model은 datastructure가 아니고, 코드일 뿐이다. model의 구조는 `call` method의 내용을 통해 정의된다. 이는 모형의 구조가 안전하게 serialized될 수 없다는 것을 의미한다. 모형을 불러오기 위해서는, subclassed model을 생성하기 위해서는 코드에 접근을 해야한다. 대신, 이 코드를 bytecode(e.g. via pickling)로써 serialize할 수 있지만, 이는 안전하지 않고 휴대가 어렵다.
 
-이러한 차이에 대한 더 많은 정보를 얻으려면,  를 보면 된다.# _What are Symbolic and Imperative APIs in TensorFlow 2.0?_
+이러한 차이에 대한 더 많은 정보를 얻으려면, [What are Symbolic and Imperative APIs in TensorFlow 2.0?](https://medium.com/tensorflow/what-are-symbolic-and-imperative-apis-in-tensorflow-2-0-dfccecb01021) 를 보면 된다.
 
 다음의 subclassed model을 고려하자.
+```python
+class ThreeLayerMLP(keras.Model):
+
+  def __init__(self, name=None):
+    super(ThreeLayerMLP, self).__init__(name=name)
+    self.dense_1 = layers.Dense(64, activation='relu', name='dense_1')
+    self.dense_2 = layers.Dense(64, activation='relu', name='dense_2')
+    self.pred_layer = layers.Dense(10, activation='softmax', name='predictions')
+
+  def call(self, inputs):
+    x = self.dense_1(inputs)
+    x = self.dense_2(x)
+    return self.pred_layer(x)
+
+def get_model():
+  return ThreeLayerMLP(name='3_layer_mlp')
+
+model = get_model()
+```
+무엇보다도, *사용되지 않은 subclassed model은 저장될 수 없다.*
+
+이는 subclassed model은 가중치를 생성하기 위해 어떤 data에 대해 호출이 되어야하기 때문이다.
+
+모형이 호출되기 전까지는, 입력으로 받는 input data의 shape과 dtype을 알 수 없으므로 가중치의 값을 생성할 수 없다. Functional model에서는 shape과 dtype이 미리 설정이 된다(via `keras.Input(...)`)--이는 Functional model이 instantiated 되자마자 state을 갖는 이유이다.
+
+모형을 training해서, 이 모형에 state을 부여하자.
+
+```python
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+x_train = x_train.reshape(60000, 784).astype('float32') / 255
+x_test = x_test.reshape(10000, 784).astype('float32') / 255
+
+model.compile(loss='sparse_categorical_crossentropy',
+              optimizer=keras.optimizers.RMSprop())
+history = model.fit(x_train, y_train,
+                    batch_size=64,
+                    epochs=1)
+```
+```
+Train on 60000 samples
+60000/60000 [==============================] - 4s 69us/sample - loss: 0.1422
+```
+subclassed model을 저장하는 권장되는 방식은 `save_weights`를 사용하여 TensorFlow SavedModel checkpoint를 생성하는 방식이다. 이 것은 모형과 관련한 모든 변수의 값을 포함한다.
+- layer의 가중치
+- opimizer의 state
+- statful model metrics와 관련된 변수
+
+```python
+model.save_weights('path_to_my_weights', save_format='tf')
+
+# 확인을 위해 예측값을 저장
+predictions = model.predict(x_test)
+# 첫 번째 batch에 대한 loss를 저장한다 - 이는 opimizer의 state 보존 여부를 확인할 목적
+first_batch_loss = model.train_on_batch(x_train[:64], y_train[:64])
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0ODk2ODEwXX0=
+eyJoaXN0b3J5IjpbLTE2NDc0NTYxNTVdfQ==
 -->
