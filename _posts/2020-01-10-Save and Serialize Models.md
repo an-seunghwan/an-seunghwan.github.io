@@ -76,7 +76,16 @@ predictions = model.predict(x_test)
 Train on 60000 samples
 60000/60000 [==============================] - 4s 59us/sample - loss: 0.3110
 ```
+### 전체 모형을 저장
+
+Functional API를 이용한 모형을 하나의 파일로 저장할 수 있다. 모형을 적합할 때 사용한 코드에 전혀 접근하지 않고도 나중에 동일한 모형을 재생성 할 수 있다.
+
+파일은 다음과 같은 내용을 포함한다:
+- 모형의 구조
+- 모형의 가중치 값(training 동안에 학습)
+- 모형의 training config(`compile`에 전달된 설정)
+- optimizer와 이의 state(이는 나중에 training을 멈춘 곳부터 다시 시작할 수 있도록 한다)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2MTgzMDQxXX0=
+eyJoaXN0b3J5IjpbNTE5MjYxMTI0XX0=
 -->
