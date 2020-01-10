@@ -127,8 +127,108 @@ np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
 ### 구조만 저장하기
 
 때때로, 모형의 구조만에 관심이 있고, 가중치의 값이나 opimizer의 저장에는 관심이 없는 경우가 있다. 이러한 경우에, 모형의 "config"를 `get_config()` method를 이용해 불러올 수 있다. config는 training 과정에서 학습한 어떠한 정보도 없이 동일한 모형을 재생성할 수 있도록 해주는 Python dict이다.
-```pytho
+```python
+config = model.get_config()
+pprint(config)
+reinitialized_model = keras.Model.from_config(config)
+
+# 모형의 state는 보존되지 않았다.
+# 여기서는 구조만 저장되었음을 알 수 있다.
+new_predictions = reinitialized_model.predict(x_test)
+assert abs(np.sum(predictions - new_predictions)) > 0
+```
+```
+{'input_layers': [['digits', 0, 0]],
+ 'layers': [{'class_name': 'InputLayer',
+             'config': {'batch_input_shape': (None, 784),
+                        'dtype': 'float32',
+                        'name': 'digits',
+                        'sparse': False},
+             'inbound_nodes': [],
+             'name': 'digits'},
+            {'class_name': 'Dense',
+             'config': {'activation': 'relu',
+                        'activity_regularizer': None,
+                        'bias_constraint': None,
+                        'bias_initializer': {'class_name': 'Zeros',
+                                             'config': {}},
+                        'bias_regularizer': None,
+                        'dtype': 'float32',
+                        'kernel_constraint': None,
+                        'kernel_initializer': {'class_name': 'GlorotUniform',
+                                               'config': {'seed': None}},
+                        'kernel_regularizer': None,
+                        'name': 'dense_1',
+                        'trainable': True,
+                        'units': 64,
+                        'use_bias': True},
+             'inbound_nodes': [[['digits', 0, 0, {}]]],
+             'name': 'dense_1'},
+            {'class_name': 'Dense',
+             'config': {'activation': 'relu',
+                        'activity_regularizer': None,
+                        'bias_constraint': None,
+                        'bias_initializer': {'class_name': 'Zeros',
+                                             'config': {}},
+                        'bias_regularizer': None,
+                        'dtype': 'float32',
+                        'kernel_constraint': None,
+                        'kernel_initializer': {'class_name': 'GlorotUniform',
+                                               'config': {'seed': None}},
+                        'kernel_regularizer': None,
+                        'name': 'dense_2',
+                        'trainable': True,
+                        'units': 64,
+                        'use_bias': True},
+             'inbound_nodes': [[['dense_1', 0, 0, {}]]],
+             'name': 'dense_2'},
+            {'class_name': 'Dense',
+             'config': {'activation': 'softmax',
+                        'activity_regularizer': None,
+                        'bias_constraint': None,
+                        'bias_initializer': {'class_name': 'Zeros',
+                                             'config': {}},
+                        'bias_regularizer': None,
+                        'dtype': 'float32',
+                        'kernel_constraint': None,
+                        'kernel_initializer': {'class_name': 'GlorotUniform',
+                                               'config': {'seed': None}},
+                        'kernel_regularizer': None,
+                        'name': 'predictions',
+                        'trainable': True,
+                        'units': 10,
+                        'use_bias': True},
+             'inbound_nodes': [[['dense_2', 0, 0, {}]]],
+             'name': 'predictions'}],
+ 'name': '3_layer_mlp',
+ 'output_layers': [['predictions', 0, 0]]}
+```
+
+### weights(가중치)만 저장하기
+
+때때로, 모형의 state--가중치 값--에만 관심이 있고, 구조에는 관심이 없는 경우가 있다. 이러한 경우에, `get_weights()`를 통해 가중치 값을 Numpy arrays로 저장하고, `set_weights`로 가중치를 설정할 수 있다.
+```python
+weights = model.get_weights()  # Retrieves the state of the model.
+model.set_weights(weights)  # Sets the state of the model.
+```
+`get_config()`/`from_config()`와 `get_weights()`/`set_weights()`를 조합하여 동일한 상태의 모형을 다시 만들 수 있다. 하지만, `model.save()`와는 다르게, 이는 training config와 optimizer를 포함하지 않는다. 모형을 training하기 위해서는 `compile()`을 다시 호출해야한다.
+
+```python
+config = model.get_config()
+weights = model.get_weights()
+
+new_model = keras.Model.from_config(config)
+new_model.set_weights(weights)
+
+# Check that the state is preserved
+new_predictions = new_model.predict(x_test)
+np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
+
+# optimizer가 보존되지 않으므로,
+# 모형을 새로운 training 전에 compiled해야한다.
+# (그리고 optimizer는 blank state에서 시작한다.)
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjE2MzkwMF19
+eyJoaXN0b3J5IjpbLTU3MDA2MTQ4MF19
 -->
