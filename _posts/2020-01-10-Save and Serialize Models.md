@@ -322,7 +322,32 @@ predictions = model.predict(x_test)
 # 첫 번째 batch에 대한 loss를 저장한다 - 이는 opimizer의 state 보존 여부를 확인할 목적
 first_batch_loss = model.train_on_batch(x_train[:64], y_train[:64])
 ```
+모형을 다시 불러오기 위해, model object를 생성한 코드에 접근해야 한다.
 
+optimizer state와 stateful metric의 state를 다시 불러오기 위해서는, 모형을 compile하고(이전과 정확히 동일한 인자를 사용) `load_weights`를 호출하기 전에 어떤 데이터에 대해 이 모형을 호출해야 한다. 
+
+```python
+# Recreate the model
+new_model = get_model()
+new_model.compile(loss='sparse_categorical_crossentropy',
+                  optimizer=keras.optimizers.RMSprop())
+
+# 'call it on some data'에 해당하는 부분
+# 이는 optimizer와 stateful metric variables에 사용되는 변수를 initialize하기 위한 목적 
+new_model.train_on_batch(x_train[:1], y_train[:1])
+
+# 이전 모형의 states를 load
+new_model.load_weights('path_to_my_weights')
+
+# 모형의 state가 보존됨을 알 수 있음
+new_predictions = new_model.predict(x_test)
+np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
+
+# optimizer state 또한 보존되므로,
+# training을 종료한 시점부터 학습을 재개할 수 있다.
+new_first_batch_loss = new_model.train_on_batch(x_train[:64], y_train[:64])
+assert first_batch_loss == new_first_batch_loss
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDc0NTYxNTVdfQ==
+eyJoaXN0b3J5IjpbLTE2Njc2NDQ0OTBdfQ==
 -->
