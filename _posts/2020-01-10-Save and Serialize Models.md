@@ -228,7 +228,10 @@ np.testing.assert_allclose(predictions, new_predictions, rtol=1e-6, atol=1e-6)
 # 모형을 새로운 training 전에 compiled해야한다.
 # (그리고 optimizer는 blank state에서 시작한다.)
 ```
+disk에 저장하기 위해서는 `save_weights(fpath)`와 `load_weights(fpath)`를 사용하면 된다.
+다음은 disk에 저장하는 예시이다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MDA2MTQ4MF19
+eyJoaXN0b3J5IjpbLTY0MjE3MDYwNF19
 -->
