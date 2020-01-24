@@ -1,5 +1,5 @@
 ---
-title: "Subword Regularization"
+title: "Subword Regularization(논문 읽기)"
 excerpt: "Improving Neural Network Translation Models with Multiple Subword Candidates"
 toc: true
 toc_sticky: true
@@ -153,11 +153,11 @@ $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTI2NDYwOTYsLTE5MzM0ODkxNCw0ND
-UwMzkxOCw0NDUwMzkxOCw0NDUwMzkxOCwtMTQ3MDQ2MzE4OCwt
-NDU5NzQyNjEzLC00OTI0NDI2NiwtNTkxNDgwODU3LDEyMDEzNT
-Q5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcxLC0xODEyNjU1MjQz
-LDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0NDA4NDYyMjksLTc4MD
-MwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMwOCwtMTU1MTgyNDA4
-NF19
+eyJoaXN0b3J5IjpbLTEyMzI2OTkwNjQsLTExMTI2NDYwOTYsLT
+E5MzM0ODkxNCw0NDUwMzkxOCw0NDUwMzkxOCw0NDUwMzkxOCwt
+MTQ3MDQ2MzE4OCwtNDU5NzQyNjEzLC00OTI0NDI2NiwtNTkxND
+gwODU3LDEyMDEzNTQ5NDcsLTUxMjIwMjIzNiwxODAwNTc0OTcx
+LC0xODEyNjU1MjQzLDEzNDkyNjE5NzksMTI0MjI1MTU1Niw0ND
+A4NDYyMjksLTc4MDMwODA1MiwxMjk3OTc4MzYwLDY2ODkyMjMw
+OF19
 -->
