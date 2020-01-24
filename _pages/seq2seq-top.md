@@ -1,6 +1,6 @@
 ---
 title: "seq2seq 톺아보기 시리즈"
-permalink: /top-a-bogi/
+permalink: /seq2seq-top-a-bogi/
 author_profile: false
 layout: single
 ---
