@@ -17,7 +17,7 @@ tags:
 ---
 	톺아보기 시리즈 (톺아보다: 샅샅이 틈이 있는 곳마다 모조리 더듬어 뒤지면서 살피다)
 
-> 이 포스팅은 OOV(out-of-vocabulary) 문제의 해결과 관련한 내용들을 다루는 [OOV 톺아보기 시리즈](https://an-seunghwan.github.io/oov-top-a-bogi/)의 1편입니다.
+> 이 포스팅은 OOV(out-of-vocabulary) 문제의 해결과 관련한 내용들을 다루는 [OOV 톺아보기 시리즈](https://an-seunghwan.github.io/oov-top-a-bogi/)의 4편입니다.
 > 
 ## 1. Introduction
 
@@ -157,7 +157,7 @@ $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDI0NTcxNSwtMTIzMjY5OTA2NCwtMT
+eyJoaXN0b3J5IjpbLTY0MDYzNTc5MiwtMTIzMjY5OTA2NCwtMT
 ExMjY0NjA5NiwtMTkzMzQ4OTE0LDQ0NTAzOTE4LDQ0NTAzOTE4
 LDQ0NTAzOTE4LC0xNDcwNDYzMTg4LC00NTk3NDI2MTMsLTQ5Mj
 Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
