@@ -11,8 +11,9 @@ categories:
   - NLP
 tags:
   - 논문 읽기
-  - 전처리
+  - OOV
   - tokenizer
+  - 전처리
 ---
 	톺아보기 시리즈 (톺아보다: 샅샅이 틈이 있는 곳마다 모조리 더듬어 뒤지면서 살피다)
 
@@ -65,6 +66,6 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 ## 논문 
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwOTI1ODg0LDE5MjI2MTc4NDEsLTU0OT
-c3MTEsLTQzNjUyMTI5OCwtMTA5MzM5NDc2NV19
+eyJoaXN0b3J5IjpbLTMwNzQzMDM3NywxOTIyNjE3ODQxLC01ND
+k3NzExLC00MzY1MjEyOTgsLTEwOTMzOTQ3NjVdfQ==
 -->
