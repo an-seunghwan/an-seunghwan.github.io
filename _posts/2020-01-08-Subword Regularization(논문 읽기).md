@@ -12,8 +12,9 @@ categories:
   - NLP
 tags:
   - 논문 읽기
-  - 전처리
+  - OOV
   - tokenizer
+  - 전처리
 ---
 	톺아보기 시리즈 (톺아보다: 샅샅이 틈이 있는 곳마다 모조리 더듬어 뒤지면서 살피다)
 
@@ -157,7 +158,7 @@ $l \rightarrow \infty$ 일 때, 이론적으로는 모든 가능한 segmentation
 ## 논문 
 Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzYyMDQzNCwtMTIzMjY5OTA2NCwtMT
+eyJoaXN0b3J5IjpbLTc1NzUyNjA0NywtMTIzMjY5OTA2NCwtMT
 ExMjY0NjA5NiwtMTkzMzQ4OTE0LDQ0NTAzOTE4LDQ0NTAzOTE4
 LDQ0NTAzOTE4LC0xNDcwNDYzMTg4LC00NTk3NDI2MTMsLTQ5Mj
 Q0MjY2LC01OTE0ODA4NTcsMTIwMTM1NDk0NywtNTEyMjAyMjM2
