@@ -1,6 +1,6 @@
 ---
 title: "Neural Machine Translation of Rare Words with Subword Units(논문 읽기)"
-excerpt: "NLP 논문 읽기"
+excerpt: "Byte Pair Encoding를 활용한 OOV 해결"
 toc: true
 toc_sticky: true
 
@@ -66,7 +66,7 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 ## 논문 
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMDk5MjM5NywtMTc4NTYwOTgzMywxOT
-IyNjE3ODQxLC01NDk3NzExLC00MzY1MjEyOTgsLTEwOTMzOTQ3
-NjVdfQ==
+eyJoaXN0b3J5IjpbLTc3Njg2Mzk2MCwtNDMwOTkyMzk3LC0xNz
+g1NjA5ODMzLDE5MjI2MTc4NDEsLTU0OTc3MTEsLTQzNjUyMTI5
+OCwtMTA5MzM5NDc2NV19
 -->
