@@ -31,8 +31,12 @@ tags:
 2. gradient descent-based learning 기술은 text와 같은 이산적 data에 바로 적용되지 않는다.
 3. 현실적인 text data를 생성하기 어렵다.
 
+## 3. Method
+
+### 1. Basic Assumption
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMjEwNjY1OSwtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbNzMxNDI2OTkyLC02MTQzMDgyMTJdfQ==
 -->
