@@ -49,8 +49,10 @@ augmented data는 반드시 original data와 그 통계적 분포가 유사해�
 
 data augmentation은 반드시 의미 불변 transformation을 사용해야 한다.
 
+** Telephone Game Rule of Thumb**
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyOTI3NzMyMCwtNDExMzk1ODMzLC02MT
-QzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbLTEyNzY4NzkyNzEsLTQxMTM5NTgzMywtNj
+E0MzA4MjEyXX0=
 -->
