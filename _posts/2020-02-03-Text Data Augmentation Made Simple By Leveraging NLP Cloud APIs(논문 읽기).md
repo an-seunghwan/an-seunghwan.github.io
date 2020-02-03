@@ -35,8 +35,11 @@ tags:
 
 ### 1. Basic Assumption
 
+**분포에 대한 규칙**
+augmented data는 반드시 original data와 그 통계적 분포가 유사해야 한다.
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDA1MDIyODQsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbMTc2MzY2MjI4MCwtNjE0MzA4MjEyXX0=
 -->
