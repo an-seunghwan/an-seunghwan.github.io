@@ -36,11 +36,12 @@ tags:
 ### 2. data augmentation을 공식화하기 위한 시도
 
 **분포에 대한 규칙**
+
 augmented data는 반드시 original data와 그 통계적 분포가 유사해야 한다.
 
 **만족도에 대한 규칙**
-
+의미적인 data transformation은 data의 의미에 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODMyNzM2NjIsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbNzMxMzk1NTgwLC02MTQzMDgyMTJdfQ==
 -->
