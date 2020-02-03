@@ -47,8 +47,10 @@ augmented data는 반드시 original data와 그 통계적 분포가 유사해�
 
 **의미 불변의 규칙**
 
-data augmentation은 반드시 의미 불변 transo
+data augmentation은 반드시 의미 불변 transformation을 사용해야 한다.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU2NDM1MjM3LC00MTEzOTU4MzMsLTYxND
-MwODIxMl19
+eyJoaXN0b3J5IjpbLTIyOTI3NzMyMCwtNDExMzk1ODMzLC02MT
+QzMDgyMTJdfQ==
 -->
