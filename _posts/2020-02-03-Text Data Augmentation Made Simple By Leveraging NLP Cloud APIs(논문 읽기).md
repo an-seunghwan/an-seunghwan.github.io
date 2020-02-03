@@ -28,7 +28,8 @@ tags:
 1. 자연어 data는 처리하기 굉장히 까다롭다
 	- text data는 상징적(symbolic), 이산적(discrete), 합성적(compositional), 희소적(sparse)하다.
 	- 또한 계층적(hirerarchical), noisy, 예외가 많고 모호하다.
+2. gradient descent-based learning 기술은 text와 같은 이산적
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MTU3MDEyLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbLTU2Nzk5NzI5NywtNjE0MzA4MjEyXX0=
 -->
