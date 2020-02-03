@@ -23,7 +23,10 @@ tags:
 
 ## Related Works
 
+고전적인 text augmentation 기술은 thesaurus를 이용해 동의어를 이용한 어휘 교체였다. 현재까지도 NLP에서 사용되는 data augmentation 방법은 굉장히 제한적이다.
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNDM2NjMwNywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTUxMDIxMjg3NCwtNjE0MzA4MjEyXX0=
 -->
