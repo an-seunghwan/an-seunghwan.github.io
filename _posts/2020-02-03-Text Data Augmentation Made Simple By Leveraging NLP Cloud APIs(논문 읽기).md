@@ -51,8 +51,12 @@ data augmentation은 반드시 의미 불변 transformation을 사용해야 한�
 
 ** Telephone Game Rule of Thumb**
 
+의미론적 불변을 얻기 위해서는, 연속적 또는 결합된 transformation의 횟수가 반드시 제한되어야 한다(경험론적으로 2개).
+
+### 3. 기술 1 - "문맥적 잡음" 삽입(textual noise injection)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzY4NzkyNzEsLTQxMTM5NTgzMywtNj
-E0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbMTQzNzI3MzM5NSwtNDExMzk1ODMzLC02MT
+QzMDgyMTJdfQ==
 -->
