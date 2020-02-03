@@ -21,7 +21,7 @@ tags:
 
 > [Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs](https://arxiv.org/ftp/arxiv/papers/1812/1812.04718.pdf) 논문에서 text data augmentation에 관해 필요한 내용들만 간단히 요약하여 정리하였습니다. 자세한 내용은 원문을 꼭 참조해주세요.
 
-## 2. Related Works
+## <span style="color:#2E86C1;">2. Related Works</span>
 
 고전적인 text augmentation 기술은 thesaurus를 이용해 동의어를 이용한 어휘 교체였다. 현재까지도 NLP에서 사용되는 data augmentation 방법은 굉장히 제한적이다. 그 이유는 다음과 같다:
 
@@ -31,12 +31,12 @@ tags:
 2. gradient descent-based learning 기술은 text와 같은 이산적 data에 바로 적용되지 않는다.
 3. 현실적인 text data를 생성하기 어렵다.
 
-## 3. Method
+## <span style="color:#2E86C1;">3. Method</span>
 
 ### 1. Basic Assumption
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxNDI2OTkyLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbLTExMDA1MDIyODQsLTYxNDMwODIxMl19
 -->
