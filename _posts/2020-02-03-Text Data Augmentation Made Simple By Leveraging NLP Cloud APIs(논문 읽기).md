@@ -38,8 +38,9 @@ tags:
 **분포에 대한 규칙**
 augmented data는 반드시 original data와 그 통계적 분포가 유사해야 한다.
 
-****
+**만족도에 대한 규칙**
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMDc1ODgyMiwtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTIwODMyNzM2NjIsLTYxNDMwODIxMl19
 -->
