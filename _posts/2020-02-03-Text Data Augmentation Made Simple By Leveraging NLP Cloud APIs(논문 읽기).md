@@ -21,8 +21,9 @@ tags:
 
 > [Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs](https://arxiv.org/ftp/arxiv/papers/1812/1812.04718.pdf) 논문에서 text data augmentation에 관해 필요한 내용들만 간단히 요약하여 정리하였습니다. 자세한 내용은 원문을 꼭 참조해주세요.
 
+## Related Works
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg1MDc0OTIsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbLTcxNDM2NjMwNywtNjE0MzA4MjEyXX0=
 -->
