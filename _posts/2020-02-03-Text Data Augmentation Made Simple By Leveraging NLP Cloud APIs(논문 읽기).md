@@ -26,8 +26,9 @@ tags:
 고전적인 text augmentation 기술은 thesaurus를 이용해 동의어를 이용한 어휘 교체였다. 현재까지도 NLP에서 사용되는 data augmentation 방법은 굉장히 제한적이다. 그 이유는 다음과 같다:
 
 1. 자연어 data는 처리하기 굉장히 까다롭다
-	- text data는 상징적(symbolic), discrete)
+	- text data는 상징적(symbolic), 이산적(discrete), 합성적(compositional), 희소적(sparse)하다.
+	- 또한 계층적(hirerarchical), noisy, 예외가 많고 모호하다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc0NDA0MzUxLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbODQ2MTU3MDEyLC02MTQzMDgyMTJdfQ==
 -->
