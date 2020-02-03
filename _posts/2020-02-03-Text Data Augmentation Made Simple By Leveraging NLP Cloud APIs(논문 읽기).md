@@ -21,12 +21,13 @@ tags:
 
 > [Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs](https://arxiv.org/ftp/arxiv/papers/1812/1812.04718.pdf) 논문에서 text data augmentation에 관해 필요한 내용들만 간단히 요약하여 정리하였습니다. 자세한 내용은 원문을 꼭 참조해주세요.
 
-## Related Works
+## 2. Related Works
 
-고전적인 text augmentation 기술은 thesaurus를 이용해 동의어를 이용한 어휘 교체였다. 현재까지도 NLP에서 사용되는 data augmentation 방법은 굉장히 제한적이다.
+고전적인 text augmentation 기술은 thesaurus를 이용해 동의어를 이용한 어휘 교체였다. 현재까지도 NLP에서 사용되는 data augmentation 방법은 굉장히 제한적이다. 그 이유는 다음과 같다:
 
-
+1. 자연어 data는 처리하기 굉장히 까다롭다
+	- text data는 상징적(symbolic), discrete)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDIxMjg3NCwtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbNTc0NDA0MzUxLC02MTQzMDgyMTJdfQ==
 -->
