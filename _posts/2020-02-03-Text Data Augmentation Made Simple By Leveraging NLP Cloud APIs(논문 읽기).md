@@ -56,8 +56,8 @@ data augmentation은 반드시 의미 불변 transformation을 사용해야 한�
 ### 3. 기술 1 - "문맥적 잡음" 삽입(textual noise injection)
 
 ## 논문 
-Kudo, T. (2018). Subword regularization: Improving neural network translation models with multiple subword candidates. _arXiv preprint arXiv:1804.10959_.
+COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg5NDY3OTM2LDE0MzcyNzMzOTUsLTQxMT
-M5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTE1NTA2MzA3MjEsMTQzNzI3MzM5NSwtND
+ExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
