@@ -43,8 +43,8 @@ augmented data는 반드시 original data와 그 통계적 분포가 유사해�
 
 의미론적 단계에서 data transformation은 data의 의미에 영향을 주지 않고, pattern recognition의 관점에서 "새로운 형태"를 학습할 수 있도록 기여해야 한다. 하지만 이는 사람이 반드시 새롭게 추가된 데이터가 기존의 데이터와 구분하기 어려운 정도인 "만족도"를 평가해야한다는 점을 고려해보면 매우 복잡한 문제가 된다.
 
-하지만 만족할만한 transformation이 발견되더라도, transformed data의 의미를 
+하지만 만족할만한 transformation이 발견되더라도, transformed data의 의미를 찾는 inverse problem은 매우 어려운 문제이다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MzQ4MDI3OCwtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
 -->
