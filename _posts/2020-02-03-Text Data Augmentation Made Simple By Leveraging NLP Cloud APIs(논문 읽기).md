@@ -19,7 +19,8 @@ tags:
 
 > 이 포스팅은 Text Data Augmentation 등과 관련한 내용을 다루는 [TDA 톺아보기 시리즈](https://an-seunghwan.github.io/tda-top-a-bogi/)의 1편입니다.
 
+> 논문의 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbMTE2OTEzMTczMiwtNjE0MzA4MjEyXX0=
 -->
