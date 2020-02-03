@@ -45,6 +45,10 @@ augmented data는 반드시 original data와 그 통계적 분포가 유사해�
 
 하지만 만족할만한 transformation이 발견되더라도, transformed data의 의미를 찾는 inverse problem은 매우 어려운 문제이다.
 
+**의미 불변의 규칙**
+
+data augmentation은 반드시 의미 불변 transo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbNDU2NDM1MjM3LC00MTEzOTU4MzMsLTYxND
+MwODIxMl19
 -->
