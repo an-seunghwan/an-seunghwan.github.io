@@ -40,8 +40,9 @@ tags:
 augmented data는 반드시 original data와 그 통계적 분포가 유사해야 한다.
 
 **만족도에 대한 규칙**
-의미적인 data transformation은 data의 의미에 
+
+의미론적 단계에서 data transformation은 data의 의미에 영향을 주지 않고, pattern recognition의 관점에서 "새로운 형태"를 학습할 수 있도록 기여해야 한다. 하지만 이는 사람이 반드시 새롭게 추가된 데이터가 기존의 데이터와 구분하기 어려
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxMzk1NTgwLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbLTEwMTAxNzY1NTAsLTYxNDMwODIxMl19
 -->
