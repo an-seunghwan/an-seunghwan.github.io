@@ -76,15 +76,17 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 때때로, 몇몇 thesaurus는 동의어 중에 반의어를 반환하는 경우가 있다. 이러한 경우에는, 반의어 사전을 이용해 결과로 나온 동의어를 filtering하는 것이 요구된다.
 
-### 3.6 text augmentation by 의역(paraphrase)
+### 3.6 text augmentation by paraphrase(의역)
 
 단어나 구, 문장 수준에서의 paraphrase를 이용해 text augmentation을 진행할 수 있다. 예를 들면, "나는 나의 일을 끝냈다"는 "나는 나의 과제를 끝냈다"와 동일하다.
 
-**완벽한 parah**
+**완벽한 paraphrase의 정의**
+
+이상적인 paraphrase는 의미 보존을 하고, 자연스럽게 들리면서 
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODY4MjQwOTQsLTE1NTA2MzA3MjEsMT
-QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbNTAxOTU1NzQsLTE1NTA2MzA3MjEsMTQzNz
+I3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
