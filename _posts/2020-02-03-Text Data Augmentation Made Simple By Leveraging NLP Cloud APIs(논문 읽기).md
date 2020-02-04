@@ -96,11 +96,11 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 원래의 문장 → [번역기] → 번역된 문장 → [번역기] → 원래의 언어로 다시 번역된 문장
 
-이때, 원래의 문장과 원래의 언어로 다시 번역된 문장 사이의 유사도를 확인하여 지나치게 유사하거나 동일하면 사용하지 않고, 적절하다면 para
+이때, 원래의 문장과 원래의 언어로 다시 번역된 문장 사이의 유사도를 확인하여 지나치게 유사하거나 동일하면 사용하지 않고, 적절하다면 paraphrase로써 사용된다.
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMjU2Mjk4NywtMTU1MDYzMDcyMSwxND
-M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbODU5NjcyOTYzLC0xNTUwNjMwNzIxLDE0Mz
+cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
 -->
