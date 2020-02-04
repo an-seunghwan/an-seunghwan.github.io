@@ -67,7 +67,7 @@ text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 �
 
 어휘상의 교체는 주어진 단어의 동의어를 이용하게 된다. 일반적으로, 문법적 단어들에 대한 교체는 할 수 없다. 이러한 어려움 때문에, 다음과 같은 품사가 어휘 교체의 후보가 된다: adverbs, adjectives, nouns and verbs. Verb 교체는 특히 특정 verb들은 다른 인자(arguments)들을 동반하므로 어렵다. 많은 경우에, adverbs와 adjectives에 대해서만 어휘 교체를 제한한다.
 
-어휘 교체를 위해서는, 일반적으로 hyperonyms(더 일반적 용어, 튤립 -> 꽃)를 더 선호하고, hyponyms(더 구체적인 용어, 꽃 -> 튤립)를 사용하지는 않는다.
+어휘 교체를 위해서는, 일반적으로 hyperonyms(더 일반적 용어, 튤립 → 꽃)를 더 선호하고, hyponyms(더 구체적인 용어, 꽃 → 튤립)를 사용하지는 않는다.
 
 hyperonym을 이용한 어휘 교체는 의미 불변 변화이다.
 hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 아니다.
@@ -94,11 +94,13 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 ### 3.9 back-tranlation을 이용한 paraphrases generation
 
-→ 
+원래의 문장 → [번역기] → 번역된 문장 → [번역기] → 원래의 언어로 다시 번역된 문장
+
+이때, 원래의 문장과 원래의 언어로 다시 번역된 문장 사이의 유사도를 확인하여 지나치게 유사하거나 동일하면 사용하지 않고, 적절하다면 para
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc0NTcyNjQzLC0xNTUwNjMwNzIxLDE0Mz
-cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTUxMjU2Mjk4NywtMTU1MDYzMDcyMSwxND
+M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
 -->
