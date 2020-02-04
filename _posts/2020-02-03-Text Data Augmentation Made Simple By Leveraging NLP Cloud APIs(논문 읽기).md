@@ -94,11 +94,11 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 ### 3.9 back-tranlation을 이용한 paraphrases generation
 
- 
+→ 
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzIyNTE1ODEsLTE1NTA2MzA3MjEsMT
-QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbOTc0NTcyNjQzLC0xNTUwNjMwNzIxLDE0Mz
+cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
 -->
