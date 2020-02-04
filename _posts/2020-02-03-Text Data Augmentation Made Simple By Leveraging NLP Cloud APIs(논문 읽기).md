@@ -61,11 +61,15 @@ text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 �
 
 ### 3.4 잘못된 철자 삽입
 
-잘못된 철자가 삽입된 text를 이용한 학습은 특정 형태의 textual 잡음에 대한 모형의 robustn
+잘못된 철자가 삽입된 text를 이용한 학습은 특정 형태의 textual 잡음에 대해 모형이 robust하도록 한다. 또한 잘못된 철자 삽입은 의미 불변 변화이다.
+
+### 3.5 thesaurus를 이용한 단어 교체
+
+어휘상의 교체는 주어진 단어의 동의어를 이용하게 된다. 일반적으로, 문법적 단어들에 대한 교체는 할 수 없다. 이러한 어려움 때문에, 다음과 같은 품사가 어휘 교체의 후보가 된다: adverbs, adjectives,
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2OTI1NDQ1MiwtMTU1MDYzMDcyMSwxND
-M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbLTEzNTk3MDQ5NzYsLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
