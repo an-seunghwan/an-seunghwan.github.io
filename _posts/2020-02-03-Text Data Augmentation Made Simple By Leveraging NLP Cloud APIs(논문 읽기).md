@@ -90,11 +90,15 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 예를 들면, 축약어, acronym, 기호, orthographic의 변화 등이 있다. 하지만 축약어의 사용 등이 문맥상의 정보를 바탕으로 했을 때 잘못된 해석을 하도록 하면 안된다.
 
+### 3.8 syntax trees transformation을 이용한 paraphrases generation
+
+### 3.9 back-tranlation을 이용한 paraphrases generation
+
  
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNjUxNDQ4MywtMTU1MDYzMDcyMSwxND
-M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbLTIwMzIyNTE1ODEsLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
