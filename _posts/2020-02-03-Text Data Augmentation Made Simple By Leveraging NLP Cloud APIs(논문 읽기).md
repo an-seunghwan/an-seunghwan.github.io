@@ -72,11 +72,11 @@ text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 �
 hyperonym을 이용한 어휘 교체는 의미 불변 변화이다.
 hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 아니다.
 
-어휘 교체의 가장 주된 어려움은 자연어의 모호성에서 온다. 단어가 여러 의미를 가지게 되면, 여러개의 다른 동의어를 갖게 된다.
+어휘 교체의 가장 주된 어려움은 자연어의 모호성에서 온다. 단어가 여러 의미를 가지게 되면, 여러개의 다른 동의어를 갖게 된다. 따라서 적절한 동의어 집합을 선택하는 것은 중요한 문제이다. 예를 들어, 주어진 corpus에서의 가장 높은 빈도로 출현한 
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjQzMTg4MzYsLTE1NTA2MzA3MjEsMT
+eyJoaXN0b3J5IjpbLTIxMTYyODQ5ODAsLTE1NTA2MzA3MjEsMT
 QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
