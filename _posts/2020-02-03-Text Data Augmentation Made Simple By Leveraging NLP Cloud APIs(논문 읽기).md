@@ -88,11 +88,13 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 표면적 변화(surface transformation) = 통사론을 무시하고 간단한 pattern matching 규칙들을 이용한 변화
 
-예를 들면, 축약어, acronym, 기호, orthographic의 변화 등이 있다. 
+예를 들면, 축약어, acronym, 기호, orthographic의 변화 등이 있다. 하지만 축약어의 사용 등이 문맥상의 정보를 바탕으로 했을 때 잘못된 해석을 하도록 하면 안된다.
+
+ 
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NjgzNzk0LC0xNTUwNjMwNzIxLDE0Mz
-cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTgwNjUxNDQ4MywtMTU1MDYzMDcyMSwxND
+M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
 -->
