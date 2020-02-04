@@ -49,7 +49,7 @@ augmented data는 반드시 original data와 그 통계적 분포가 유사해�
 
 data augmentation은 반드시 의미 불변 transformation을 사용해야 한다.
 
-** Telephone Game Rule of Thumb**
+**Telephone Game Rule of Thumb**
 
 의미론적 불변을 얻기 위해서는, 연속적 또는 결합된 transformation의 횟수가 반드시 제한되어야 한다(경험론적으로 2개).
 
@@ -82,11 +82,15 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 **완벽한 paraphrase의 정의**
 
-이상적인 paraphrase는 의미 보존을 하고, 자연스럽게 들리면서 
+이상적인 paraphrase는 의미 보존을 하고, 자연스럽게 들리면서 원문으로부터 변화해야한다.
+
+### 3.7 정규표현식을 이용한 paraphrase 생성
+
+
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAxOTU1NzQsLTE1NTA2MzA3MjEsMTQzNz
-I3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbMjA1MTA4NTQ3MSwtMTU1MDYzMDcyMSwxND
+M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
 -->
