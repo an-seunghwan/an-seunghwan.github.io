@@ -61,11 +61,11 @@ text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 �
 
 ### 3.4 잘못된 철자 삽입
 
-잘못된 철자가 사
+잘못된 철자가 삽입된 text를 이용한 학습은 특정 형태의 textual 잡음에 대한 모형의 robustn
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzAxOTYwMywtMTU1MDYzMDcyMSwxND
+eyJoaXN0b3J5IjpbMTQ2OTI1NDQ1MiwtMTU1MDYzMDcyMSwxND
 M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
 -->
