@@ -70,11 +70,13 @@ text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 �
 어휘 교체를 위해서는, 일반적으로 hyperonyms(더 일반적 용어, 튤립 -> 꽃)를 더 선호하고, hyponyms(더 구체적인 용어, 꽃 -> 튤립)를 사용하지는 않는다.
 
 hyperonym을 이용한 어휘 교체는 의미 불변 변화이다.
-hyponym을 이용한 어휘 교체는 의미 변화가 이루어진다.
+hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 아니다.
+
+
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxODgxODA0LC0xNTUwNjMwNzIxLDE0Mz
-cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTEyODc0NDM1NjEsLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
