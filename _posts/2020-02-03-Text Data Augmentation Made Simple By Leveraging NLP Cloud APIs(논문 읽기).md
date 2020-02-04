@@ -76,11 +76,13 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 때때로, 몇몇 thesaurus는 동의어 중에 반의어를 반환하는 경우가 있다. 이러한 경우에는, 반의어 사전을 이용해 결과로 나온 동의어를 filtering하는 것이 요구된다.
 
+### 3.6 text augmentation by 의역(paraphrase)
 
+단어나 구 수주
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMzE0ODMxMiwtMTU1MDYzMDcyMSwxND
-M3MjczMzk1LC00MTEzOTU4MzMsLTYxNDMwODIxMl19
+eyJoaXN0b3J5IjpbMTI2NDQ0ODc1LC0xNTUwNjMwNzIxLDE0Mz
+cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
 -->
