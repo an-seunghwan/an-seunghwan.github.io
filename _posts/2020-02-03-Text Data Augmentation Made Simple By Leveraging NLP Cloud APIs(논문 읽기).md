@@ -86,13 +86,13 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 ### 3.7 정규표현식을 이용한 paraphrase 생성
 
-표면적 변화(surface transformation) = 통사론을 무시하고 간단한 pattern matching 규칙들을 이요한 변화
+표면적 변화(surface transformation) = 통사론을 무시하고 간단한 pattern matching 규칙들을 이용한 변화
 
-추
+예를 들면, 축약어, acronym, 기호, orthographic의 변화 등이 있다. 
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU5MTI3MDMsLTE1NTA2MzA3MjEsMT
-QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbMTA1NjgzNzk0LC0xNTUwNjMwNzIxLDE0Mz
+cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
 -->
