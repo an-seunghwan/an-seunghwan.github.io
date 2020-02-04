@@ -98,9 +98,11 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 이때, 원래의 문장과 원래의 언어로 다시 번역된 문장 사이의 유사도를 확인하여 지나치게 유사하거나 동일하면 사용하지 않고, 적절하다면 paraphrase로써 사용된다.
 
+빠른 실행과 계산적 성능의 이유로, 이 논문에서는 유사도를 확인하는 방법으로 원래의 문장과 원래의 언어로 다시 번역된 문장 사이의 길이를 비교한다.
+
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU5NjcyOTYzLC0xNTUwNjMwNzIxLDE0Mz
-cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTE0MTUyNjYwODUsLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
