@@ -78,11 +78,13 @@ hyponym을 이용한 어휘 교체는 일반적으로 의미 불변 변화가 �
 
 ### 3.6 text augmentation by 의역(paraphrase)
 
-단어나 구 수주
+단어나 구, 문장 수준에서의 paraphrase를 이용해 text augmentation을 진행할 수 있다. 예를 들면, "나는 나의 일을 끝냈다"는 "나는 나의 과제를 끝냈다"와 동일하다.
+
+**완벽한 parah**
 
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDQ0ODc1LC0xNTUwNjMwNzIxLDE0Mz
-cyNzMzOTUsLTQxMTM5NTgzMywtNjE0MzA4MjEyXX0=
+eyJoaXN0b3J5IjpbLTE5ODY4MjQwOTQsLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
