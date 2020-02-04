@@ -55,9 +55,11 @@ data augmentation은 반드시 의미 불변 transformation을 사용해야 한�
 
 ### 3. 기술 1 - "문맥적 잡음" 삽입(textual noise injection)
 
+text에서의 연속적인 변화에 가장 가까운 것은 약한 문맥적 잡음을 삽입하는 것이다: 변화, 추가, 단어의 일부 철자 제거, 
+
 ## 논문 
 COULOMBE, Claude. Text Data Augmentation Made Simple By Leveraging NLP Cloud APIs. _arXiv preprint arXiv:1812.04718_, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTA2MzA3MjEsMTQzNzI3MzM5NSwtND
-ExMzk1ODMzLC02MTQzMDgyMTJdfQ==
+eyJoaXN0b3J5IjpbLTIwNDA4Njk3NzksLTE1NTA2MzA3MjEsMT
+QzNzI3MzM5NSwtNDExMzk1ODMzLC02MTQzMDgyMTJdfQ==
 -->
