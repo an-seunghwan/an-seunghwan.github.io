@@ -1,20 +1,20 @@
 ---
-title: "TensorFlow"
-excerpt: "Text Data Augmentation"
+title: "TensorFlow 2.0 GPU 설치하기"
+excerpt: "TensorFlow GPU 환경 구축하기"
 toc: true
 toc_sticky: true
 
 author_profile: false
 use_math: true
 
-date: 2020-02-03 21:00:00 -0000
+date: 2020-02-18 21:00:00 -0000
 categories: 
-  - NLP
+  - tensorflow 2.0
 tags:
-  - text data augmentation
-  - 톺아보기
+  - tensorflow 2.0
 ---
 
+## 1. 설치 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTI4NjkwNzMsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIxNDUyNzI3MTQsNzMwOTk4MTE2XX0=
 -->
