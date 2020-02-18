@@ -14,7 +14,13 @@ tags:
   - tensorflow 2.0
 ---
 
-## 1. 설치 
+## 1. 설치할 컴퓨터의 환경
+
+1. 그래픽 카드: NVIDIA GTX 1050
+2. windows 10 64bit
+
+## 2. NVIDIA driver 설치
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDUyNzI3MTQsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyODMwOTc3OSw3MzA5OTgxMTZdfQ==
 -->
