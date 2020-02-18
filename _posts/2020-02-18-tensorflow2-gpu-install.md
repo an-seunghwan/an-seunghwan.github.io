@@ -14,6 +14,8 @@ tags:
   - tensorflow 2.0
 ---
 
+	2020.02.18 기준 가장 최신의 tensorflow gpu 환경을 구축하겠다는 욕심으로 tensorflow 2.1을 설치하려고 하였으나... 생각대로 되지 않았다. 
+
 ## 1. 설치할 컴퓨터의 환경
 
 1. 그래픽 카드: NVIDIA GTX 1050
@@ -21,8 +23,8 @@ tags:
 
 ## 2. NVIDIA driver 설치
 
-## 3. ㅊ
+## 3. CUDA 10.0 설치
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTM0NTMwMDQsLTEyODMwOTc3OSw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTUyMzg5NDI2LC0xMjgzMDk3NzksNzMwOT
+k4MTE2XX0=
 -->
