@@ -21,6 +21,8 @@ tags:
 
 ## 2. NVIDIA driver 설치
 
+## 3. ㅊ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODMwOTc3OSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE1MTM0NTMwMDQsLTEyODMwOTc3OSw3Mz
+A5OTgxMTZdfQ==
 -->
