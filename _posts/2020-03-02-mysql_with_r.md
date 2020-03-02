@@ -102,7 +102,28 @@ sudo nano mysqld.cnf
 `port=3306`을 확인할 수 있다(일반적으로 3306).
 
 - 방화벽 해제
+```
+sudo ufw allow 3306/tcp
+sudo ufw status
+```
+```
+상태: 활성
 
+목적                         동작          출발
+--                         --          --
+Apache                     ALLOW       Anywhere
+22/tcp                     ALLOW       Anywhere
+3306/tcp                   ALLOW       Anywhere
+Apache (v6)                ALLOW       Anywhere (v6)
+22/tcp (v6)                ALLOW       Anywhere (v6)
+3306/tcp (v6)              ALLOW       Anywhere (v6)
+```
+- bind-address 설정
+```
+cd etc/mysql/mysql.conf.d  
+sudo nano mysqld.cnf  
+bind-address 주석 처리
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjEyMTc0NjJdfQ==
+eyJoaXN0b3J5IjpbLTgyMDUxNzk3MV19
 -->
