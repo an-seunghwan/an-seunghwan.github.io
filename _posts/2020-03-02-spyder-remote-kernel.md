@@ -19,8 +19,14 @@ tags:
 - ubuntu 18.04
 - spyder 4
 
-## 1. 
+## 1. spyder kernel 설치
+(server와 client 둘다)
+```
+conda install spyder-kernels
+```
+
+## 2. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzc2NTc3OTVdfQ==
+eyJoaXN0b3J5IjpbLTIxMDAxNzkxNTZdfQ==
 -->
