@@ -50,8 +50,10 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 " width="600"  height="450"></center>
 
 - `connection file`: client 컴퓨터로 복사한 `kernel-27911.json`의 경로를 입력
-- `hostname`: server 컴퓨터의 ip 주소
-- `Username`
+- `Hostname`: server 컴퓨터의 ip 주소
+- `Username`: server 컴퓨터로 접속할 때 사용하는 putty id
+- `Password`: server 컴퓨터로 접속할 때 사용하는 putty id의 비밀번호
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NzY4MDc5LC0yNTQ3Nzg3NzJdfQ==
+eyJoaXN0b3J5IjpbNTc3NzU1NDExLC0yNTQ3Nzg3NzJdfQ==
 -->
