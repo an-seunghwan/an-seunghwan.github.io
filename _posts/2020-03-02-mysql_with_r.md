@@ -30,15 +30,51 @@ sudo mysql
 ```
 `sudo`로 접근해야 localhost connection에 관한 error가 발생하지 않음.
 
-## 2. database 생성 및 table 생성
+## 2. 한글을 위한 utf-8 encoding 설정
+(너무 복잡함...)
+
+## 3. database 생성 및 table 생성
 - database 생성
 ```
 create database (dbname);
 show databases;
 ```
 - csv file import
-- 
+```
+CREATE TABLE sample(
+	id INT NOT NULL AUTO_INCREMENT,
+	a VARCHAR(255) NOT NULL,
+	b INT NOT NULL,
+	c INT NOT NULL,
+	d INT NOT NULL,
+	e INT NOT NULL,
+	f INT NOT NULL,
+	g INT NOT NULL,
+	h INT NOT NULL,
+	i INT NOT NULL,
+	j INT NOT NULL,
+	k INT NOT NULL,
+	l INT NOT NULL,
+	m INT NOT NULL,
+	n INT NOT NULL,
+	o INT NOT NULL,
+	p INT NOT NULL,
+	q INT NOT NULL,
+	r INT NOT NULL,
+	s INT NOT NULL,
+	PRIMARY KEY (id)
+	)
+	default character set utf8 collate utf8_general_ci;
+```
+```
+LOAD DATA LOCAL INFILE '/home/jeon/Desktop/sql_data/report1.csv'
+INTO TABLE sample
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s);
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjc5NTI5MjZdfQ==
+eyJoaXN0b3J5IjpbLTEwNTM2NTU2MjFdfQ==
 -->
