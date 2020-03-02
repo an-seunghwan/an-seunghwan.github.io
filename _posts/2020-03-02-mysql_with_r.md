@@ -87,6 +87,9 @@ select * from sample;
 ```
 grant select on test.* 'user'@'%' by 'userpassword';
 ```
+-  select 권한만을 부여
+- `test.*`: test database에 속해있는 모든 파일에 대해 권한 부여
+- `'user'@'%'`: 사용자 계정의 id는 user이고 특정 ip
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2NDM5NjIxXX0=
+eyJoaXN0b3J5IjpbMTU4MzU4OTUwMV19
 -->
