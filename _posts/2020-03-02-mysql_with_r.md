@@ -144,7 +144,16 @@ con = dbConnect(MySQL(),
 - `dbname`에는 사용하려는 database 이름
 - `user`와 `userpassword`는 5번에서 설정한 것
 - `port`는 6번에서 확인한 번호
+```r
+myStatement = paste0("select * from sample")
 
+# SQL statememt
+dat = dbGetQuery(conn = con,
+                 statement = myStatement)
+Encoding(dat[,2]) <-'UTF-8'
+head(dat)
+```
+- `myStatement`: mysql의 문법에 맞는 명령어
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjQ5MTc0OF19
+eyJoaXN0b3J5IjpbNDk5Mzg3NjY3XX0=
 -->
