@@ -44,8 +44,9 @@ jupyter --runtime-dir
 
 ## 3. remote connection
 이제 client 컴퓨터의 spyder를 구동한다.
-spyder kernel 우측 상단의 메뉴를 클릭하면 `채ㅜ
+spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing kernel`이라는 항목이 있다. 이 항목을 클릭하면 다음과 같은 창이 뜬다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDA0OTY1MSwtMjU0Nzc4NzcyXX0=
+eyJoaXN0b3J5IjpbMTg1MjI4MzM5NiwtMjU0Nzc4NzcyXX0=
 -->
