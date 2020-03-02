@@ -9,11 +9,15 @@ use_math: true
 
 date: 2020-03-02 21:00:00 -0000
 categories: 
-  - deep-learning
+  - advanced
 tags:
-  - 논문 읽기
+  - database
+  - mysql
 ---
+## 0. 환경
+- server: 
 
+## 1. MySQL 설치
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyMDU0NTU0XX0=
+eyJoaXN0b3J5IjpbLTE3NTc1OTY2NjhdfQ==
 -->
