@@ -122,8 +122,19 @@ Apache (v6)                ALLOW       Anywhere (v6)
 ```
 cd etc/mysql/mysql.conf.d  
 sudo nano mysqld.cnf  
-bind-address 주석 처리
+```
+`bind-address`로 시작하는 부분을 주석 처리
+
+- 재시작
+```
+sudo service mysql restart
+```
+
+## 7. R에서 접속하기
+```r
+library(RMySQL)
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDUxNzk3MV19
+eyJoaXN0b3J5IjpbLTE3MzE3MDg3NzZdfQ==
 -->
