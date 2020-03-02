@@ -69,7 +69,7 @@ CREATE TABLE sample(
 	default character set utf8 collate utf8_general_ci;
 ```
 - sample table format에 맞는 데이터 입력
-	- 이때 csv 파일을 utf
+	- 이때 csv 파일을 '쉼표로 구분된 utf-8 인코딩' 형식으로 저장
 ```
 LOAD DATA LOCAL INFILE '/home/jeon/Desktop/sql_data/report1.csv'
 INTO TABLE sample
@@ -80,5 +80,5 @@ IGNORE 1 ROWS
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMDIxNTg0M119
+eyJoaXN0b3J5IjpbLTkyODc1MzkxMl19
 -->
