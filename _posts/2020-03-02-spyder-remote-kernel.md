@@ -29,6 +29,13 @@ conda install spyder-kernels
 ```
 python -m spyder_kernels.console — matplotlib=’inline’ — ip=x.x.x.x -f=./remotemachine.json
 ```
+위와 같은 명령어를 실행하면 마지막 줄에
+```
+To connect another client to this kernel, use:
+    --existing kernel-27911.json
+```
+라고 뜬다.
+이는 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMDEyODk1XX0=
+eyJoaXN0b3J5IjpbMjUyMjA0MzY5XX0=
 -->
