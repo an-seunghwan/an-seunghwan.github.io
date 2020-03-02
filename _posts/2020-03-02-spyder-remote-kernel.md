@@ -56,7 +56,7 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 
 연결이 성공적으로 이루어 졌다면 kernel tab의 이름이 `Username@Hostname`으로 뜨는 것을 확인할 수 있다.
 
-## 4. 사용하기
+## 4. 확인하기
 1. server 컴퓨터의 gpu 사용 확인(tensorflow 구동 전)
 	- Processes에 python이 잡히지 않는 것을 확인할 수 있다.
 
@@ -197,7 +197,24 @@ pciBusID: 0000:03:00.0
 +-----------------------------------------------------------------------------+
 ```
 
+이전에 없던 python이 processes에 등록되어 있음을 볼 수 있다.
+
+## 5. 활용하기
+```python
+tf.debugging.set_log_device_placement(True)
+
+# 텐서를 GPU에 할당
+with tf.device('/device:GPU:0'):
+  a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+  b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+
+c = tf.matmul(a, b)
+print(c)
+```
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg2MTQxNDA0LDY5MTE4MTU0LDEzMzczMD
+eyJoaXN0b3J5IjpbNDQ3ODc0NjcyLDY5MTE4MTU0LDEzMzczMD
 U4NzYsLTI1NDc3ODc3Ml19
 -->
