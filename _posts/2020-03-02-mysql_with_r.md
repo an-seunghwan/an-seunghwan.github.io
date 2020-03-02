@@ -89,7 +89,15 @@ grant select on test.* 'user'@'%' by 'userpassword';
 ```
 -  select 권한만을 부여
 - `test.*`: test database에 속해있는 모든 파일에 대해 권한 부여
-- `'user'@'%'`: 사용자 계정의 id는 user이고 특정 ip
+- `'user'@'%'`: 사용자 계정의 id는 user이고 특정 ip 주소를 특정하게 지정하지 않음(모두 가능)
+- `'userpassword'`: mysql 비밀번호 규칙에 따른 비밀번호(일반적으로 8자리 이상, 대소문자 1회, 숫자 및 특수문자 1회 이상)
+- 따옴표는 반드시 적어줄 것
+
+## 6. 방화벽 설정
+- port 확인
+```
+cd /etc.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MzU4OTUwMV19
+eyJoaXN0b3J5IjpbMTUyMTI0ODUwNl19
 -->
