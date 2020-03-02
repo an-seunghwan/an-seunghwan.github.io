@@ -59,6 +59,7 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 ## 4. 사용하기
 1. server 컴퓨터의 gpu 사용 확인(tensorflow 구동 전)
 	- Processes에 python이 잡히지 않는 것을 확인할 수 있다.
+
 ```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
@@ -83,6 +84,6 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 
 2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNDYzMDcyOCwxMzM3MzA1ODc2LC0yNT
-Q3Nzg3NzJdfQ==
+eyJoaXN0b3J5IjpbNjkxMTgxNTQsMTMzNzMwNTg3NiwtMjU0Nz
+c4NzcyXX0=
 -->
