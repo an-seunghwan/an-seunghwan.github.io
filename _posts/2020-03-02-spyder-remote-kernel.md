@@ -54,11 +54,35 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 - `Username`: server 컴퓨터로 접속할 때 사용하는 putty id
 - `Password`: server 컴퓨터로 접속할 때 사용하는 putty id의 비밀번호
 
-연결이 성공적으로 이루어 졌다면 kernel
+연결이 성공적으로 이루어 졌다면 kernel tab의 이름이 `Username@Hostname`으로 뜨는 것을 확인할 수 있다.
 
 ## 4. 사용하기
+1. server 컴퓨터의 gpu 사용 확인(tensorflow 구동 전)
+	- Processes에 
+2. 
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 108...  On   | 00000000:03:00.0 Off |                  N/A |
+|  0%   33C    P8    13W / 250W |    280MiB / 11177MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1693      G   /usr/lib/xorg/Xorg                            18MiB |
+|    0      1825      G   /usr/bin/gnome-shell                          49MiB |
+|    0      2112      G   /usr/lib/xorg/Xorg                            95MiB |
+|    0      2237      G   /usr/bin/gnome-shell                         112MiB |
++-----------------------------------------------------------------------------+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzODg5Nzc2MCwxMzM3MzA1ODc2LC0yNT
-Q3Nzg3NzJdfQ==
+eyJoaXN0b3J5IjpbLTIwOTQ0OTEwMDEsMTMzNzMwNTg3NiwtMj
+U0Nzc4NzcyXX0=
 -->
