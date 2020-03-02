@@ -27,6 +27,7 @@ sudo mysql_secure_installation
 ```
 
 - MySQL 접속
+
 ```
 sudo mysql
 ```
@@ -37,13 +38,16 @@ sudo mysql
 
 ## 3. database 생성 
 - database(이름은 test) 생성
+
 ```
 create database test;
 show databases;
 ```
+
 ## 4. table 생성(csv file import)
 
 - sample이라는 table format 지정
+
 ```
 CREATE TABLE sample(
 	id INT NOT NULL AUTO_INCREMENT,
@@ -70,8 +74,10 @@ CREATE TABLE sample(
 	)
 	default character set utf8 collate utf8_general_ci;
 ```
+
 - sample table format에 맞는 데이터 입력
 	- 이때 csv 파일을 '쉼표로 구분된 utf-8 인코딩' 형식으로 저장
+
 ```
 LOAD DATA LOCAL INFILE '/home/jeon/Desktop/sql_data/report1.csv'
 INTO TABLE sample
@@ -81,11 +87,13 @@ IGNORE 1 ROWS
 (a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s);
 ```
 - table 확인
+
 ```
 select * from sample;
 ```
 
 ## 5. 사용자 계정 설정
+
 ```
 grant select on test.* 'user'@'%' by 'userpassword';
 ```
@@ -97,6 +105,7 @@ grant select on test.* 'user'@'%' by 'userpassword';
 
 ## 6. 방화벽 설정
 - port 확인
+
 ```
 cd /etc/mysql/mysql.conf.d
 sudo nano mysqld.cnf
@@ -104,6 +113,7 @@ sudo nano mysqld.cnf
 `port=3306`을 확인할 수 있다(일반적으로 3306).
 
 - 방화벽 해제(3306 port의 allow를 확인)
+
 ```
 sudo ufw allow 3306/tcp
 sudo ufw status
@@ -121,7 +131,9 @@ Apache (v6)                ALLOW       Anywhere (v6)
 22/tcp (v6)                ALLOW       Anywhere (v6)
 3306/tcp (v6)              ALLOW       Anywhere (v6)
 ```
+
 - bind-address 설정
+
 ```
 cd etc/mysql/mysql.conf.d  
 sudo nano mysqld.cnf  
@@ -129,6 +141,7 @@ sudo nano mysqld.cnf
 `bind-address`로 시작하는 부분을 주석 처리
 
 - 재시작 (앞에서도 중간중간에 restart 필요)
+
 ```
 sudo service mysql restart
 ```
@@ -147,6 +160,7 @@ con = dbConnect(MySQL(),
 - `dbname`에는 사용하려는 database 이름
 - `user`와 `userpassword`는 5번에서 설정한 것
 - `port`는 6번에서 확인한 번호
+
 ```r
 myStatement = paste0("select * from sample")
 
@@ -156,7 +170,9 @@ dat = dbGetQuery(conn = con,
 Encoding(dat[,2]) <-'UTF-8'
 head(dat)
 ```
+
 - `myStatement`: mysql의 문법에 맞는 명령어
+
 ```
 > head(dat)
   id      a    b   c     d      e      f      g     h    i     j    k    l    m     n     o     p    q    r     s
@@ -168,5 +184,5 @@ head(dat)
 6  6 광진구 2015  22   663  15760   8045   7715  1049  141   908  125   62   63  2759  2758  2606  247  203   933
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjEyNTIyNywxNTA5OTg1MzQxXX0=
+eyJoaXN0b3J5IjpbLTU2ODYwOTk0MSwxNTA5OTg1MzQxXX0=
 -->
