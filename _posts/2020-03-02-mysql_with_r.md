@@ -174,7 +174,6 @@ head(dat)
 - `myStatement`: mysql의 문법에 맞는 명령어
 
 ```
-> head(dat)
   id      a    b   c     d      e      f      g     h    i     j    k    l    m     n     o     p    q    r     s
 1  1 서울시 2015 599 18780 450675 232428 218247 29627 4050 25577 3232 1500 1732 78066 78039 75258 7236 5755 24934
 2  2 종로구 2015  14   288   6084   3200   2884   475   61   414   69   33   36  1150  1149   979  122  106   391
@@ -184,5 +183,5 @@ head(dat)
 6  6 광진구 2015  22   663  15760   8045   7715  1049  141   908  125   62   63  2759  2758  2606  247  203   933
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODYwOTk0MSwxNTA5OTg1MzQxXX0=
+eyJoaXN0b3J5IjpbLTEyODg4ODk3NzMsMTUwOTk4NTM0MV19
 -->
