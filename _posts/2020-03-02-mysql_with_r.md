@@ -33,13 +33,15 @@ sudo mysql
 ## 2. 한글을 위한 utf-8 encoding 설정
 (너무 복잡함...)
 
-## 3. database 생성 및 table 생성
+## 3. database 생성 
 - database 생성
 ```
 create database (dbname);
 show databases;
 ```
-- csv file import
+## 4. table 생성(csv file import)
+
+- sample이라는 table format 지정
 ```
 CREATE TABLE sample(
 	id INT NOT NULL AUTO_INCREMENT,
@@ -66,6 +68,8 @@ CREATE TABLE sample(
 	)
 	default character set utf8 collate utf8_general_ci;
 ```
+- sample table format에 맞는 데이터 입력
+	- 이때 csv 파일을 utf
 ```
 LOAD DATA LOCAL INFILE '/home/jeon/Desktop/sql_data/report1.csv'
 INTO TABLE sample
@@ -76,5 +80,5 @@ IGNORE 1 ROWS
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTM2NTU2MjFdfQ==
+eyJoaXN0b3J5IjpbMjEzMDIxNTg0M119
 -->
