@@ -108,6 +108,7 @@ sudo nano mysqld.cnf
 sudo ufw allow 3306/tcp
 sudo ufw status
 ```
+
 ```
 상태: 활성
 
@@ -167,5 +168,5 @@ head(dat)
 6  6 광진구 2015  22   663  15760   8045   7715  1049  141   908  125   62   63  2759  2758  2606  247  203   933
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTk4NTM0MV19
+eyJoaXN0b3J5IjpbMTEwNjEyNTIyNywxNTA5OTg1MzQxXX0=
 -->
