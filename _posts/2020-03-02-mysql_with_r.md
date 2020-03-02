@@ -24,7 +24,16 @@ sudo apt-get install mysql-server
 sudo mysql_secure_installation
 ```
 
-## 2. CSV
+MySQL 접속
+```
+sudo mysql
+```
+`sudo`로 접근해야 localhost connection에 관한 error가 발생하지 않음.
+
+## 2. database 생성 및 table 생성
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc2MTUyOTUwXX0=
+eyJoaXN0b3J5IjpbNTI0OTQwMDM3XX0=
 -->
