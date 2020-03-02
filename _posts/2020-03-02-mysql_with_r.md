@@ -133,8 +133,18 @@ sudo service mysql restart
 ## 7. R에서 접속하기
 ```r
 library(RMySQL)
-
+con = dbConnect(MySQL(),
+                host = 'host-ip',
+                dbname = 'test',
+                user='user',
+                password = 'userpassword',
+                port = 3306)
 ```
+- `host`에는 server의 ip 주소
+- `dbname`에는 사용하려는 database 이름
+- `user`와 `userpassword`는 5번에서 설정한 것
+- `port`는 6번에서 확인한 번호
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzE3MDg3NzZdfQ==
+eyJoaXN0b3J5IjpbLTMwMjQ5MTc0OF19
 -->
