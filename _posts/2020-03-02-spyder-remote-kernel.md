@@ -40,7 +40,12 @@ jupyter --runtime-dir
 ```
 를 이용해 server 컴퓨터의 해당 경로를 확인하면 `kernel-27911.json`이름의 json 파일이 있다. 이를 filezilla 등을 이용해 client 컴퓨터로 복사한다(파일 내용 수정 절대 금지.
 
+해당 json 파일을 확인해보면 `shell_port`등의 정보가 담긴 파일임을 확인할 수 있다.
+
+## 3. remote connection
+이제 client 컴퓨터의 spyder를 구동한다.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5Nzg1NTg1XX0=
+eyJoaXN0b3J5IjpbLTI1NDc3ODc3Ml19
 -->
