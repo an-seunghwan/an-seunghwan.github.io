@@ -31,9 +31,14 @@ sudo mysql
 `sudo`로 접근해야 localhost connection에 관한 error가 발생하지 않음.
 
 ## 2. database 생성 및 table 생성
+- database 생성
 ```
+create database (dbname);
+show databases;
+```
+- csv file import
+- 
 
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0OTQwMDM3XX0=
+eyJoaXN0b3J5IjpbLTE3Mjc5NTI5MjZdfQ==
 -->
