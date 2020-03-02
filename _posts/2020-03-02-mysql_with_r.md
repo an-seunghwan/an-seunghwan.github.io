@@ -15,9 +15,16 @@ tags:
   - mysql
 ---
 ## 0. 환경
-- server: 
+- server: ubuntu 18.04
 
 ## 1. MySQL 설치
+```
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo mysql_secure_installation
+```
+
+## 2. CSV
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTc1OTY2NjhdfQ==
+eyJoaXN0b3J5IjpbNTc2MTUyOTUwXX0=
 -->
