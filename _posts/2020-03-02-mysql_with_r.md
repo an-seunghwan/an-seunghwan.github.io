@@ -26,7 +26,7 @@ sudo apt-get install mysql-server
 sudo mysql_secure_installation
 ```
 
-MySQL 접속
+- MySQL 접속
 ```
 sudo mysql
 ```
@@ -103,7 +103,7 @@ sudo nano mysqld.cnf
 ```
 `port=3306`을 확인할 수 있다(일반적으로 3306).
 
-- 방화벽 해제
+- 방화벽 해제(3306 port의 allow를 확인)
 ```
 sudo ufw allow 3306/tcp
 sudo ufw status
@@ -167,5 +167,5 @@ head(dat)
 6  6 광진구 2015  22   663  15760   8045   7715  1049  141   908  125   62   63  2759  2758  2606  247  203   933
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MDI4MDk1Nl19
+eyJoaXN0b3J5IjpbMTUwOTk4NTM0MV19
 -->
