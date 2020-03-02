@@ -54,6 +54,8 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 - `Username`: server 컴퓨터로 접속할 때 사용하는 putty id
 - `Password`: server 컴퓨터로 접속할 때 사용하는 putty id의 비밀번호
 
+## 4. 사용하기
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc3NzU1NDExLC0yNTQ3Nzg3NzJdfQ==
+eyJoaXN0b3J5IjpbMTMzNzMwNTg3NiwtMjU0Nzc4NzcyXX0=
 -->
