@@ -82,8 +82,93 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 +-----------------------------------------------------------------------------+
 ```
 
-2. 
+2. tensorflow 확인
+```python
+import tensorflow as tf
+print(tf.__version__)
+print(tf.test.is_gpu_available(
+      cuda_only=False,
+      min_cuda_compute_capability=None
+))
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+```
+```
+2.0.0
+2020-03-02 21:00:36.868012: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593720000 Hz
+2020-03-02 21:00:36.869945: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558618b03590 executing computations on platform Host. Devices:
+2020-03-02 21:00:36.869980: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-03-02 21:00:36.873378: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+True
+2020-03-02 21:00:37.106238: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558618b7a3e0 executing computations on platform CUDA. Devices:
+2020-03-02 21:00:37.106281: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-03-02 21:00:37.107096: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:03:00.0
+2020-03-02 21:00:37.107414: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-03-02 21:00:37.109061: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-03-02 21:00:37.110305: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-03-02 21:00:37.110645: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-03-02 21:00:37.112646: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-03-02 21:00:37.114507: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-03-02 21:00:37.120095: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-03-02 21:00:37.121323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-03-02 21:00:37.121380: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-03-02 21:00:37.122328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-03-02 21:00:37.122363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-03-02 21:00:37.122375: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-03-02 21:00:37.123644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 10213 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+```
+
+```
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 13908055485246881972
+, name: "/device:XLA_CPU:0"
+device_type: "XLA_CPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 9526915761610223816
+physical_device_desc: "device: XLA_CPU device"
+, name: "/device:XLA_GPU:0"
+device_type: "XLA_GPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 6844963740812801904
+physical_device_desc: "device: XLA_GPU device"
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 10710076621
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 9885594885116113
+physical_device_desc: "device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1"
+]
+2020-03-02 21:00:47.161841: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:03:00.0
+2020-03-02 21:00:47.161906: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-03-02 21:00:47.161934: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-03-02 21:00:47.161957: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-03-02 21:00:47.161979: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-03-02 21:00:47.162000: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-03-02 21:00:47.162022: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-03-02 21:00:47.162045: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-03-02 21:00:47.163465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-03-02 21:00:47.163514: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-03-02 21:00:47.163528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-03-02 21:00:47.163539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-03-02 21:00:47.165033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 10213 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMTgxNTQsMTMzNzMwNTg3NiwtMjU0Nz
-c4NzcyXX0=
+eyJoaXN0b3J5IjpbMTI0MzU5NDE5OSw2OTExODE1NCwxMzM3Mz
+A1ODc2LC0yNTQ3Nzg3NzJdfQ==
 -->
