@@ -25,8 +25,10 @@ tags:
 conda install spyder-kernels
 ```
 
-## 2. 
-
+## 2. remote kernel 구동
+```
+python -m spyder_kernels.console — matplotlib=’inline’ — ip=x.x.x.x -f=./remotemachine.json
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDAxNzkxNTZdfQ==
+eyJoaXN0b3J5IjpbOTUyMDEyODk1XX0=
 -->
