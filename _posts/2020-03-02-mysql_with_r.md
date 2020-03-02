@@ -14,6 +14,8 @@ tags:
   - database
   - mysql
 ---
+> 까먹지 않기 위해 하는 개인적인 목적의 정리 포스팅입니다.
+
 ## 0. 환경
 - server: ubuntu 18.04
 
@@ -125,7 +127,7 @@ sudo nano mysqld.cnf
 ```
 `bind-address`로 시작하는 부분을 주석 처리
 
-- 재시작
+- 재시작 (앞에서도 중간중간에 restart 필요)
 ```
 sudo service mysql restart
 ```
@@ -165,5 +167,5 @@ head(dat)
 6  6 광진구 2015  22   663  15760   8045   7715  1049  141   908  125   62   63  2759  2758  2606  247  203   933
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNDUxNjQ4NV19
+eyJoaXN0b3J5IjpbLTQ4MDI4MDk1Nl19
 -->
