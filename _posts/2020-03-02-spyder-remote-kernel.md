@@ -42,6 +42,8 @@ jupyter --runtime-dir
 
 해당 json 파일을 확인해보면 `shell_port`등의 정보가 담긴 파일임을 확인할 수 있다.
 
+참고로 이 과정은 매번 연결시에 반복해야 한다...
+
 ## 3. remote connection
 이제 client 컴퓨터의 spyder를 구동한다.
 spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing kernel`이라는 항목이 있다. 이 항목을 클릭하면 다음과 같은 창이 뜬다.
@@ -281,7 +283,9 @@ name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
 |    0     29715      C   python                                     10485MiB |
 +-----------------------------------------------------------------------------+
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjc0MjA2NTksNjkxMTgxNTQsMTMzNz
-MwNTg3NiwtMjU0Nzc4NzcyXX0=
+eyJoaXN0b3J5IjpbNTgxMjA5NjU3LC0xNjI3NDIwNjU5LDY5MT
+E4MTU0LDEzMzczMDU4NzYsLTI1NDc3ODc3Ml19
 -->
