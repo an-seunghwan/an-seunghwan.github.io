@@ -251,7 +251,31 @@ Executing op MatMul in device /job:localhost/replica:0/task:0/device:GPU:0
 2020-03-02 21:05:27.333477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
 name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
 ```
+
+또한 server 컴퓨터의 nvidia를 확인해보면 python의 메모리 사용량이 증가했음을 알 수 있다.
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 108...  On   | 00000000:03:00.0 Off |                  N/A |
+|  0%   35C    P8    12W / 250W |  10767MiB / 11177MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1693      G   /usr/lib/xorg/Xorg                            18MiB |
+|    0      1825      G   /usr/bin/gnome-shell                          49MiB |
+|    0      2112      G   /usr/lib/xorg/Xorg                            95MiB |
+|    0      2237      G   /usr/bin/gnome-shell                         112MiB |
+|    0     29715      C   python                                     10485MiB |
++-----------------------------------------------------------------------------+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMzMDM0MjI0LDY5MTE4MTU0LDEzMzczMD
+eyJoaXN0b3J5IjpbODc2MDE2NzUzLDY5MTE4MTU0LDEzMzczMD
 U4NzYsLTI1NDc3ODc3Ml19
 -->
