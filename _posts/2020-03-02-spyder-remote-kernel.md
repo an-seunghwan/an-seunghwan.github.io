@@ -82,7 +82,7 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 +-----------------------------------------------------------------------------+
 ```
 
-2. tensorflow 확인
+2. tensorflow gpu 확인
 ```python
 import tensorflow as tf
 print(tf.__version__)
@@ -168,7 +168,36 @@ pciBusID: 0000:03:00.0
 2020-03-02 21:00:47.163539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
 2020-03-02 21:00:47.165033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 10213 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
 ```
+
+ GeForce GTX 1080 Ti가 device로 확인됨을 알 수 있다.
+
+3. nvidia 확인
+다시 server 컴퓨터의 nvidia를 확인하면 다음과 같다.
+
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 108...  On   | 00000000:03:00.0 Off |                  N/A |
+|  0%   34C    P8    12W / 250W |    427MiB / 11177MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0      1693      G   /usr/lib/xorg/Xorg                            18MiB |
+|    0      1825      G   /usr/bin/gnome-shell                          49MiB |
+|    0      2112      G   /usr/lib/xorg/Xorg                            95MiB |
+|    0      2237      G   /usr/bin/gnome-shell                         112MiB |
+|    0     29715      C   python                                       137MiB |
++-----------------------------------------------------------------------------+
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MzU5NDE5OSw2OTExODE1NCwxMzM3Mz
-A1ODc2LC0yNTQ3Nzg3NzJdfQ==
+eyJoaXN0b3J5IjpbNzg2MTQxNDA0LDY5MTE4MTU0LDEzMzczMD
+U4NzYsLTI1NDc3ODc3Ml19
 -->
