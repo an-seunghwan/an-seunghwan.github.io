@@ -96,8 +96,13 @@ grant select on test.* 'user'@'%' by 'userpassword';
 ## 6. 방화벽 설정
 - port 확인
 ```
-cd /etc.
+cd /etc/mysql/mysql.conf.d
+sudo nano mysqld.cnf
 ```
+`port=3306`을 확인할 수 있다(일반적으로 3306).
+
+- 방화벽 해제
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMTI0ODUwNl19
+eyJoaXN0b3J5IjpbLTExNjEyMTc0NjJdfQ==
 -->
