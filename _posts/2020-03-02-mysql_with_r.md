@@ -34,9 +34,9 @@ sudo mysql
 (너무 복잡함...)
 
 ## 3. database 생성 
-- database 생성
+- database(이름은 test) 생성
 ```
-create database (dbname);
+create database test;
 show databases;
 ```
 ## 4. table 생성(csv file import)
@@ -80,8 +80,13 @@ IGNORE 1 ROWS
 ```
 - table 확인
 ```
-select * from sample
+select * from sample;
+```
+
+## 5. 사용자 계정 설정
+```
+grant select on test.* 'user'@'%' by 'userpassword';
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MjAwNTQzMl19
+eyJoaXN0b3J5IjpbODg2NDM5NjIxXX0=
 -->
