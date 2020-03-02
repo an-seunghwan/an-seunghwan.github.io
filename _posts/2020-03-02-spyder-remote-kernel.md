@@ -83,6 +83,7 @@ spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing ke
 ```
 
 2. tensorflow gpu 확인
+
 ```python
 import tensorflow as tf
 print(tf.__version__)
@@ -93,6 +94,7 @@ print(tf.test.is_gpu_available(
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
 ```
+
 ```
 2.0.0
 2020-03-02 21:00:36.868012: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593720000 Hz
@@ -200,6 +202,7 @@ pciBusID: 0000:03:00.0
 이전에 없던 python이 processes에 등록되어 있음을 볼 수 있다.
 
 ## 5. 활용하기
+
 ```python
 tf.debugging.set_log_device_placement(True)
 
@@ -211,6 +214,7 @@ with tf.device('/device:GPU:0'):
 c = tf.matmul(a, b)
 print(c)
 ```
+
 ```
 Executing op MatMul in device /job:localhost/replica:0/task:0/device:GPU:0
 2020-03-02 21:05:27.333477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
@@ -246,6 +250,7 @@ tf.Tensor(
 ```
 
 가장 위의 줄들의 내용을 통해 tensor 연산이 gpu에서 이루어짐을 알 수 있다.
+
 ```
 Executing op MatMul in device /job:localhost/replica:0/task:0/device:GPU:0
 2020-03-02 21:05:27.333477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
@@ -253,6 +258,7 @@ name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
 ```
 
 또한 server 컴퓨터의 nvidia를 확인해보면 python의 메모리 사용량이 증가했음을 알 수 있다.
+
 ```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
@@ -276,6 +282,6 @@ name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
 +-----------------------------------------------------------------------------+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MDE2NzUzLDY5MTE4MTU0LDEzMzczMD
-U4NzYsLTI1NDc3ODc3Ml19
+eyJoaXN0b3J5IjpbLTE2Mjc0MjA2NTksNjkxMTgxNTQsMTMzNz
+MwNTg3NiwtMjU0Nzc4NzcyXX0=
 -->
