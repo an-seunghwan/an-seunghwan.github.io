@@ -13,6 +13,14 @@ categories:
 tags:
   - spyder
 ---
+> 까먹지 않기 위해 하는 개인적인 목적의 정리 포스팅입니다.
+
+## 0. 환경
+- ubuntu 18.04
+- spyder 4
+
+## 1. 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5ODg4MTUxXX0=
+eyJoaXN0b3J5IjpbLTEyNzc2NTc3OTVdfQ==
 -->
