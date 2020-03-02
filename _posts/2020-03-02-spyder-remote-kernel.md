@@ -35,7 +35,12 @@ To connect another client to this kernel, use:
     --existing kernel-27911.json
 ```
 라고 뜬다.
-이는 ``
+```
+jupyter --runtime-dir
+```
+를 이용해 server 컴퓨터의 해당 경로를 확인하면 `kernel-27911.json`이름의 json 파일이 있다. 이를 filezilla 등을 이용해 client 컴퓨터로 복사한다(파일 내용 수정 절대 금지.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUyMjA0MzY5XX0=
+eyJoaXN0b3J5IjpbNTM5Nzg1NTg1XX0=
 -->
