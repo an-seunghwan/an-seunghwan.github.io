@@ -1,13 +1,13 @@
 ---
-title: "Deep Residual Learning Networks(논문 읽기)"
-excerpt: "ResNet 알아보기"
+title: "Layer Normalization(논문 읽기)"
+excerpt: "Layer Normalization과 Batch Normalization을 비교해보자!"
 toc: true
 toc_sticky: true
 
 author_profile: false
 use_math: true
 
-date: 2020-02-25 21:00:00 -0000
+date: 2020-03-04 21:00:00 -0000
 categories: 
   - deep-learning
 tags:
@@ -22,5 +22,5 @@ tags:
 - BA, Jimmy Lei; KIROS, Jamie Ryan; HINTON, Geoffrey E. Layer normalization. _arXiv preprint arXiv:1607.06450_, 2016.
 - XU, Jingjing, et al. Understanding and Improving Layer Normalization. In: _Advances in Neural Information Processing Systems_. 2019. p. 4383-4393.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDYxMTY4M119
+eyJoaXN0b3J5IjpbODc0MDEwNjE2XX0=
 -->
