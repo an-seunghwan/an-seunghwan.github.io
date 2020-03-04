@@ -14,11 +14,11 @@ tags:
   - 논문 읽기
 ---
 
-> 과 논문에서 필요한 내용들만 간단히 요약하여 정리하였습니다. 자세한 내용은 원문을 꼭 참조해주세요.
+> [Layer Normalization](https://arxiv.org/pdf/1607.06450.pdf)과 [Understanding and Improving Layer Normalization](https://papers.nips.cc/paper/8689-understanding-and-improving-layer-normalization.pdf)논문에서 필요한 내용들만 간단히 요약하여 정리하였습니다. 자세한 내용은 원문을 꼭 참조해주세요.
 
 ## 논문
-- HE, Kaiming, et al. Deep residual learning for image recognition. In: _Proceedings of the IEEE conference on computer vision and pattern recognition_. 2016. p. 770-778.
-- HE, Kaiming, et al. Identity mappings in deep residual networks. In: _European conference on computer vision_. Springer, Cham, 2016. p. 630-645.
+- BA, Jimmy Lei; KIROS, Jamie Ryan; HINTON, Geoffrey E. Layer normalization. _arXiv preprint arXiv:1607.06450_, 2016.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ2OTE3MTldfQ==
+eyJoaXN0b3J5IjpbMTQyOTU4NTY0MV19
 -->
