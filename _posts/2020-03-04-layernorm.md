@@ -18,9 +18,25 @@ tags:
 
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_1.png?raw=true" width="700"  height="600"></center>
 
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_2.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_3.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_4.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_5.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_6.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_7.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_8.png?raw=true" width="700"  height="600"></center>
+
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_9.png?raw=true" width="700"  height="600"></center>
+
 ## 논문
 - BA, Jimmy Lei; KIROS, Jamie Ryan; HINTON, Geoffrey E. Layer normalization. _arXiv preprint arXiv:1607.06450_, 2016.
 - XU, Jingjing, et al. Understanding and Improving Layer Normalization. In: _Advances in Neural Information Processing Systems_. 2019. p. 4383-4393.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc0MDEwNjE2XX0=
+eyJoaXN0b3J5IjpbLTk1NzI3MTE3Ml19
 -->
