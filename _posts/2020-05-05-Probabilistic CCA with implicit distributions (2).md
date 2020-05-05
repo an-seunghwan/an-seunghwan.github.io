@@ -363,8 +363,8 @@ for epoch in range(EPOCHS):
     d_loss_real = discriminator.train_on_batch(latent_real, valid)
     d_loss_fake = np.zeros(())
     for i in range(3):
-        d_loss_fake = d_loss_fake + discriminator.train_on_batch(latent_fake[i], fake) / 3
-    d_loss = np.add(d_loss_real, d_loss_fake)
+        d_loss_fake = d_loss_fake + discriminator.train_on_batch(latent_fake[i], fake)
+    d_loss = np.add(d_loss_real, d_loss_fake) / 4
     
     #=====train generator=====
     g_loss = acca.train_on_batch([imgs_x, imgs_y, imgs_xy], [imgs_xy, imgs_xy, imgs_xy] + [valid for _ in range(3)])
@@ -377,8 +377,9 @@ for epoch in range(EPOCHS):
         sample_images(latent_dim, decoder, epoch)
 ```
 ```
-
+0 [D loss: 0.938511, acc: 50.00%] [G loss: 0.972918]
 ```
+위와같은 결과가 EPOCHS
 ## 4. inference
 5개의 test sample에 대해 결과를 확인한다.
 ```python
@@ -420,6 +421,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3OTIyMjMxNCwxMDMzMzE3MzY2LDEzMj
+eyJoaXN0b3J5IjpbLTUwNjU3MTkyNSwxMDMzMzE3MzY2LDEzMj
 M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
