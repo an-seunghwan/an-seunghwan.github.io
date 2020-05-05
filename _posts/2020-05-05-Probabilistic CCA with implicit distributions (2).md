@@ -392,12 +392,14 @@ for i in range(r):
 # fig.savefig("./acca_img/acca_result.png")
 # plt.close()
 ```
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/acca_result.png?raw=true
+" width="600"  height="450"></center>
 
 ## 논문
 SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprint arXiv:1907.02345_, 2019.
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDY0OTQ5ODUsMTMyMzgzNjMyMiwtMT
-k3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
+eyJoaXN0b3J5IjpbMTgxNzM5MjAwNSwxMzIzODM2MzIyLC0xOT
+c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
 -->
