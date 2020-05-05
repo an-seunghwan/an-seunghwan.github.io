@@ -395,12 +395,13 @@ for i in range(r):
 ```
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/acca_result.png?raw=true
 " width="600"  height="450"></center>
+가장 왼쪽이 주어진 x view, 가운데가 x view만을 이용해 만든 전체 이미지, 가장 오른쪽이 맞추려는 대상이 되는 실제 이미지이다.
 
 ## 논문
 SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprint arXiv:1907.02345_, 2019.
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjIxNjYyMywxMzIzODM2MzIyLC0xOT
+eyJoaXN0b3J5IjpbMTkzODE5MjkwOSwxMzIzODM2MzIyLC0xOT
 c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
 -->
