@@ -365,6 +365,7 @@ for epoch in range(EPOCHS):
         sample_images(latent_dim, decoder, epoch)
 ```
 ## 4. inference
+5개의 test sample에 대해 결과를 확인한다.
 ```python
 '''inference'''
 j = 100
@@ -400,6 +401,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNzM5MjAwNSwxMzIzODM2MzIyLC0xOT
+eyJoaXN0b3J5IjpbMTI1NjIxNjYyMywxMzIzODM2MzIyLC0xOT
 c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
 -->
