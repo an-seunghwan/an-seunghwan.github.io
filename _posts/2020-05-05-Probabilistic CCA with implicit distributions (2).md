@@ -43,7 +43,70 @@ print(device_lib.list_local_devices())
 tf.debugging.set_log_device_placement(False)
 ```
 ```
-
+TensorFlow version: 2.0.0
+즉시 실행 모드: True
+True
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 16133062203861420028
+, name: "/device:XLA_CPU:0"
+device_type: "XLA_CPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 13116411031905517496
+physical_device_desc: "device: XLA_CPU device"
+, name: "/device:XLA_GPU:0"
+device_type: "XLA_GPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 11981642561625068716
+physical_device_desc: "device: XLA_GPU device"
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 10747743437
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 2742631385821467278
+physical_device_desc: "device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1"
+]
+2020-05-05 22:27:08.949248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:03:00.0
+2020-05-05 22:27:08.949351: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-05-05 22:27:08.949389: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-05-05 22:27:08.949427: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-05-05 22:27:08.949464: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-05-05 22:27:08.949497: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-05-05 22:27:08.949535: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-05-05 22:27:08.949573: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-05-05 22:27:08.950662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-05-05 22:27:08.950743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-05 22:27:08.950760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-05-05 22:27:08.950771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-05-05 22:27:08.951934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 10249 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2020-05-05 22:27:08.953243: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:03:00.0
+2020-05-05 22:27:08.953285: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-05-05 22:27:08.953315: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-05-05 22:27:08.953343: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-05-05 22:27:08.953370: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-05-05 22:27:08.953397: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-05-05 22:27:08.953425: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-05-05 22:27:08.953452: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-05-05 22:27:08.954524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-05-05 22:27:08.954555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-05 22:27:08.954568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-05-05 22:27:08.954579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-05-05 22:27:08.955729: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/device:GPU:0 with 10249 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
 ```
 ```python
 import numpy as np
@@ -53,7 +116,7 @@ os.chdir('/home/jeon/Desktop/an/cca')
 print('current directory:', os.getcwd())
 ```
 ```
-
+current directory: /home/jeon/Desktop/an/cca
 ```
 
 ## 1. 데이터
@@ -161,7 +224,6 @@ reconstructed_img_x = decoder(encoded_x)
 reconstructed_img_y = decoder(encoded_y)
 reconstructed_img_xy = decoder(encoded_xy)
 
-'''what?'''
 # For the adversarial_autoencoder model we will only train the generator
 # We only set trainable to false for the discriminator when it is part of the autoencoder...
 discriminator.trainable = False
@@ -172,12 +234,62 @@ validity_xy = discriminator(encoded_xy)
 
 acca = K.models.Model([x_input, y_input, xy_input], 
                       [reconstructed_img_x, reconstructed_img_y, reconstructed_img_xy, validity_x, validity_y, validity_xy])
-'''what?'''
+
 # almost no weights on discriminator...
 acca.compile('adam', ['mse', 'mse', 'mse', 'binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy'], 
              loss_weights=[0.3333, 0.3332, 0.3332, 0.0001, 0.0001, 0.0001])
 acca.summary()
 discriminator.summary()
+```
+```
+Model: "model_5"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_8 (InputLayer)            [(None, 28, 14)]     0                                            
+__________________________________________________________________________________________________
+input_9 (InputLayer)            [(None, 28, 14)]     0                                            
+__________________________________________________________________________________________________
+input_10 (InputLayer)           [(None, 28, 28)]     0                                            
+__________________________________________________________________________________________________
+model_3 (Model)                 [(None, 100), (None, 676652      input_8[0][0]                    
+                                                                 input_9[0][0]                    
+                                                                 input_10[0][0]                   
+__________________________________________________________________________________________________
+model_4 (Model)                 (None, 28, 28)       384784      model_3[1][0]                    
+                                                                 model_3[1][1]                    
+                                                                 model_3[1][2]                    
+__________________________________________________________________________________________________
+model_2 (Model)                 (None, 1)            183297      model_3[1][0]                    
+                                                                 model_3[1][1]                    
+                                                                 model_3[1][2]                    
+==================================================================================================
+Total params: 1,244,733
+Trainable params: 1,061,436
+Non-trainable params: 183,297
+__________________________________________________________________________________________________
+```
+```
+Model: "model_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_3 (InputLayer)         [(None, 100)]             0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 512)               51712     
+_________________________________________________________________
+leaky_re_lu (LeakyReLU)      (None, 512)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+leaky_re_lu_1 (LeakyReLU)    (None, 256)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 257       
+=================================================================
+Total params: 366,594
+Trainable params: 183,297
+Non-trainable params: 183,297
+_________________________________________________________________
 ```
 ## 3. training
 ```python
@@ -282,6 +394,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzgzNjMyMiwtMTk3Njc2NDI2OCwtMT
-c4OTUzNjY3Ml19
+eyJoaXN0b3J5IjpbLTQ5NDE2MjAwNCwxMzIzODM2MzIyLC0xOT
+c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
 -->
