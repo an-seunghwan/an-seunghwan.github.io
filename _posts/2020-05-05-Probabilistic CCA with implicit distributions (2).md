@@ -30,8 +30,6 @@ tags:
 import tensorflow as tf
 import tensorflow.keras as K
 from tensorflow.keras import layers
-from tensorflow.keras import preprocessing
-# from tensorflow.keras.models import model_from_json
 print('TensorFlow version:', tf.__version__)
 print('즉시 실행 모드:', tf.executing_eagerly())
 print(tf.test.is_gpu_available(
@@ -423,6 +421,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNzY4MDM2MiwxMDMzMzE3MzY2LDEzMj
+eyJoaXN0b3J5IjpbMjA2MTUzNjc4OCwxMDMzMzE3MzY2LDEzMj
 M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
