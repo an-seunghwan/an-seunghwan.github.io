@@ -124,14 +124,20 @@ tensorflow의 MNIST 데이터를 이용합니다.
 ```python
 (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.mnist.load_data() 
 print(train_images.shape)
-# train_images = train_images[:, :, :, np.newaxis]
 img_shape = train_images.shape[1:]
 x_shape = (img_shape[0], int(img_shape[1]/2))
 y_shape = (img_shape[0], int(img_shape[1]/2))
 xy_shape = img_shape
 ```
+```
+(60000, 28, 28)
+(28, 14)
+(28, 14)
+```
+각각의 이미지를 세로 방향으로 반으로 잘라 각각 x view, y view로 정의합니다.
 
 ## 2. 모형
+
 잠재변수(latent variable)의 차원을 지정하는 부분입니다.
 ```python
 latent_dim = 100
@@ -405,6 +411,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzMxNzM2NiwxMzIzODM2MzIyLC0xOT
-c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
+eyJoaXN0b3J5IjpbNTYzMDg4MzI3LDEwMzMzMTczNjYsMTMyMz
+gzNjMyMiwtMTk3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
 -->
