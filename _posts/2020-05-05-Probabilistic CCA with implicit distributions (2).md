@@ -379,9 +379,11 @@ for epoch in range(EPOCHS):
 ```
 0 [D loss: 0.938511, acc: 50.00%] [G loss: 0.972918]
 ```
-위와같은 결과가 EPOCHS
+위와같은 결과가 반복적으로 출력되게 된다.
+
 ## 4. inference
-5개의 test sample에 대해 결과를 확인한다.
+
+5개의 test sample에 대해 결과를 확인한다. 이 때, x view는 test 데이터로부터 가져오고, 나머지 y
 ```python
 '''inference'''
 j = 100
@@ -421,6 +423,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjU3MTkyNSwxMDMzMzE3MzY2LDEzMj
-M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
+eyJoaXN0b3J5IjpbODE0OTIzNDUyLDEwMzMzMTczNjYsMTMyMz
+gzNjMyMiwtMTk3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
 -->
