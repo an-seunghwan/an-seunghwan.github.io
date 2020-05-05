@@ -383,7 +383,7 @@ for epoch in range(EPOCHS):
 
 ## 4. inference
 
-5개의 test sample에 대해 결과를 확인한다. 이 때, x view는 test 데이터로부터 가져와서 encoder를 이용해 latent variable을 생성하고, 나머지 view에 대해서는 Gaussian 분포로부터 생성한다.
+5개의 test sample에 대해 결과를 확인한다. 이 때, x view는 test 데이터로부터 가져와서 encoder를 이용해 latent variable을 생성하여 이를 이용해 이미지를 복원한다.
 ```python
 '''inference'''
 j = 100
@@ -423,6 +423,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMDY3MzQsMTAzMzMxNzM2NiwxMzIzOD
-M2MzIyLC0xOTc2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
+eyJoaXN0b3J5IjpbMTgxNzY4MDM2MiwxMDMzMzE3MzY2LDEzMj
+M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
