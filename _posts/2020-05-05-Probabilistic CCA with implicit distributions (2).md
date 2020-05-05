@@ -175,6 +175,8 @@ def build_encoder():
     
     return K.models.Model([x, y, xy], [zx, zy, zxy])
 ```
+우선 행렬 이미지를 `Flatten`을 이용해 벡터로 변환한 후, `Dense` layer와 `LeakyReLU`를 이용해 functional API를 활용하여 encoder를 정의합니다. 이 때, 
+
 ### 2. decoder
 ```python
 def build_decoder():
@@ -411,6 +413,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYzMDg4MzI3LDEwMzMzMTczNjYsMTMyMz
-gzNjMyMiwtMTk3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
+eyJoaXN0b3J5IjpbMjA2NTQ1ODA3NSwxMDMzMzE3MzY2LDEzMj
+M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
