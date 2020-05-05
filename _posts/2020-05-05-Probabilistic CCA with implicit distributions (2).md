@@ -7,7 +7,7 @@ toc_sticky: true
 author_profile: false
 use_math: true
 
-date: 2020-05-05 21:00:00 -0000
+date: 2020-05-05 20:00:00 -0000
 categories: 
   - CCA
 tags:
@@ -280,5 +280,5 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMjgzNjU0M119
+eyJoaXN0b3J5IjpbLTE3ODk1MzY2NzJdfQ==
 -->
