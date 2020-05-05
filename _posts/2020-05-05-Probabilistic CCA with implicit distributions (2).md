@@ -371,10 +371,9 @@ for epoch in range(EPOCHS):
 j = 100
 r = 5
 given_x = test_images[j:j+r][:, :, :14]
-# given_x = given_x[np.newaxis, :, :]
-given_x.shape
+print(given_x.shape)
 latent_x, _, _ = encoder.predict([given_x, given_x, np.concatenate([given_x, given_x], axis=-1)])
-latent_x.shape
+print(latent_x.shape)
 recon_img = decoder.predict(latent_x)
 
 img_result = [given_x, recon_img, test_images[j:j+5]]
@@ -393,6 +392,10 @@ for i in range(r):
 # fig.savefig("./acca_img/acca_result.png")
 # plt.close()
 ```
+```
+(5, 28, 14)
+(5, 100)
+```
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/acca_result.png?raw=true
 " width="600"  height="450"></center>
 가장 왼쪽이 주어진 x view, 가운데가 x view만을 이용해 만든 전체 이미지, 가장 오른쪽이 맞추려는 대상이 되는 실제 이미지이다.
@@ -402,6 +405,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzODE5MjkwOSwxMzIzODM2MzIyLC0xOT
+eyJoaXN0b3J5IjpbMTAzMzMxNzM2NiwxMzIzODM2MzIyLC0xOT
 c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
 -->
