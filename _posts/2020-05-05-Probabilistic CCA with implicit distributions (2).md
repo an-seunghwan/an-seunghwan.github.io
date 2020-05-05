@@ -308,7 +308,11 @@ y_train.shape
 valid = np.ones((BATCH_SIZE, 1))
 fake = np.zeros((BATCH_SIZE, 1))
 ```
-
+```
+(60000, 28, 28)
+(60000, 28, 14)
+(60000, 28, 14)
+```
 ```python
 def sample_prior(latent_dim, batch_size):
     return np.random.normal(size=(batch_size, latent_dim))
@@ -385,7 +389,7 @@ for i in range(r):
     axs[i,1].axis('off')
     axs[i,2].axis('off')
     cnt += 1
-# fig.savefig("./acca_img/acca_mnist_%d.png" % epoch)
+# fig.savefig("./acca_img/acca_result.png")
 # plt.close()
 ```
 
@@ -394,6 +398,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDE2MjAwNCwxMzIzODM2MzIyLC0xOT
-c2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
+eyJoaXN0b3J5IjpbLTIxMDY0OTQ5ODUsMTMyMzgzNjMyMiwtMT
+k3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
 -->
