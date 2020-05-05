@@ -178,7 +178,7 @@ def build_encoder():
 우선 행렬 이미지를 `Flatten`을 이용해 벡터로 변환한 후, `Dense` layer와 `LeakyReLU`를 이용해 functional API를 활용하여 encoder를 정의합니다. 이 때, 각각의 x, y, xy view에 대해서 별도의 layer를 지정하여 encoder를 생성합니다.
 
 ### 2. decoder
-latent variable z가 주어졌을 때, 이를 이용해 원래의 이미지로 복원하는 decoder를 정의합니다. 이 때, 
+latent variable z가 주어졌을 때, 이를 이용해 원래의 이미지로 복원하는 decoder를 정의합니다. 이 때, 입력된 latent variable을 이용해 x, y 각각의 view를 생성하고, 이를 합하여 원래의 이미지로 복원합니다.
 ```python
 def build_decoder():
     z_input = layers.Input(shape=latent_dim)
@@ -414,6 +414,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1NTUyMjIxLDEwMzMzMTczNjYsMTMyMz
-gzNjMyMiwtMTk3Njc2NDI2OCwtMTc4OTUzNjY3Ml19
+eyJoaXN0b3J5IjpbLTIxODUzMDAyMywxMDMzMzE3MzY2LDEzMj
+M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
