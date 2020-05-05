@@ -20,6 +20,7 @@ tags:
 >  본 포스팅은 [Probabilistic CCA with implicit distributions](https://arxiv.org/pdf/1907.02345.pdf)에 대한 간단한 리뷰와 python 코드를 작성한 글입니다. 정확한 내용은 반드시 원문을 참조해 주시기 바랍니다.
 >  
 >  1편: 논문 리뷰
+>  
 >  2편: python 코드
 
 > 추가적으로 아래의 python 코드는 **mrquincle**님의 AAE(Adversarial AutoEncoder) python 코드를 참고하여 만들었습니다.  해당 github: [https://github.com/mrquincle/keras-adversarial-autoencoders/blob/master/Keras%20Adversarial%20Autoencoder%20MNIST.ipynb](https://github.com/mrquincle/keras-adversarial-autoencoders/blob/master/Keras%20Adversarial%20Autoencoder%20MNIST.ipynb) 
@@ -281,6 +282,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ
-==
+eyJoaXN0b3J5IjpbMTMyMzgzNjMyMiwtMTk3Njc2NDI2OCwtMT
+c4OTUzNjY3Ml19
 -->
