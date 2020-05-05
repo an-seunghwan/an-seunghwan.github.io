@@ -203,7 +203,7 @@ def build_decoder():
 ```
 
 ### 3. discriminator
-encoder로부터 생성된 latent variable과 실제 분포(Gaussian normal)에서 생성된 latent variable을 구별해내는 구별기를 정의합니다.
+encoder로부터 생성된 latent variable과 실제 prior 분포(Gaussian)에서 생성된 latent variable을 구별해내는 구별기를 정의합니다.
 ```python
 def build_discriminator():
     z_input = layers.Input(shape=latent_dim)
@@ -324,7 +324,7 @@ fake = np.zeros((BATCH_SIZE, 1))
 (60000, 28, 14)
 (60000, 28, 14)
 ```
-Gaussian 분포로부터 생성ㄷ
+Gaussian 분포로부터 생성된 latent variable을 이용해 이미지를 생성해내는 함수입니다.
 ```python
 def sample_prior(latent_dim, batch_size):
     return np.random.normal(size=(batch_size, latent_dim))
@@ -376,6 +376,9 @@ for epoch in range(EPOCHS):
     if epoch % sample_interval == 0:
         sample_images(latent_dim, decoder, epoch)
 ```
+```
+
+```
 ## 4. inference
 5개의 test sample에 대해 결과를 확인한다.
 ```python
@@ -417,6 +420,6 @@ SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprin
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjc1NTk1ODgsMTAzMzMxNzM2NiwxMz
-IzODM2MzIyLC0xOTc2NzY0MjY4LC0xNzg5NTM2NjcyXX0=
+eyJoaXN0b3J5IjpbMTA3OTIyMjMxNCwxMDMzMzE3MzY2LDEzMj
+M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
