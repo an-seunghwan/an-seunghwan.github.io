@@ -416,11 +416,15 @@ for i in range(r):
 " width="600"  height="450"></center>
 가장 왼쪽이 주어진 x view, 가운데가 x view만을 이용해 만든 전체 이미지, 가장 오른쪽이 맞추려는 대상이 되는 실제 이미지이다.
 
+## 5. 의문점과 향후 수정 방향
+- encoder, decoder, discriminator의 내부 layer ac
+- 왜 복원된 이미지의 숫자는 두께가 훨씬 두껍게 나오는 것일까...?
+
 ## 논문
 SHI, Yaxin, et al. Probabilistic CCA with Implicit Distributions. _arXiv preprint arXiv:1907.02345_, 2019.
 
 > 코딩이나 내용에 대한 수정사항이나 더 좋은 의견은 언제든지 환영입니다! 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTUzNjc4OCwxMDMzMzE3MzY2LDEzMj
+eyJoaXN0b3J5IjpbMjA4MzMzNTQ0MywxMDMzMzE3MzY2LDEzMj
 M4MzYzMjIsLTE5NzY3NjQyNjgsLTE3ODk1MzY2NzJdfQ==
 -->
