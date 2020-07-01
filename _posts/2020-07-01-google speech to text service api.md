@@ -19,12 +19,12 @@ tags:
 본 포스팅에서는 Google s2t의 service api의 가입 방법은 소개하지 않고, 가입 이후에 활용하는 방법에 대해 중점적으로 소개하고자 한다.
 
 ## 1. api 준비
-정식 api가 아니라, google에서 제공하는 service api를 사용하였다. 
+정식 api가 아니라, google에서 제공하는 service api를 사용하였다.  
 
-<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/layernormalization_12.png?raw=true" width="700"  height="600"></center>
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/s2tapi.jpeg?raw=true" width="400"  height="100"></center>
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODAxMTczMiwtNzQzMzAyODMxLDIwMz
-k5OTI5OCwxOTUzMzEyNjczLC0xNzQ5MTAzMTgzXX0=
+eyJoaXN0b3J5IjpbMTEzODgzMjA2LC03NDMzMDI4MzEsMjAzOT
+k5Mjk4LDE5NTMzMTI2NzMsLTE3NDkxMDMxODNdfQ==
 -->
