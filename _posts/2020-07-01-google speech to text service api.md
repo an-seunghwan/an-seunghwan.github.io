@@ -24,10 +24,10 @@ tags:
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/s2tapi.jpeg?raw=true" width="400"  height="100"></center>
 
 ## 2. 음성파일 준비
-
+.wav 형식의 음성파일을 준비해야한다. 이 때, 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTQzNzMzOSwtNzQzMzAyODMxLDIwMz
+eyJoaXN0b3J5IjpbLTI0ODE5MTYwMCwtNzQzMzAyODMxLDIwMz
 k5OTI5OCwxOTUzMzEyNjczLC0xNzQ5MTAzMTgzXX0=
 -->
