@@ -19,12 +19,15 @@ tags:
 본 포스팅에서는 Google s2t의 service api의 가입 방법은 소개하지 않고, 가입 이후에 활용하는 방법에 대해 중점적으로 소개하고자 한다. api와 관련된 내용이나 확인은 [https://console.cloud.google.com/](https://console.cloud.google.com/)에서 하면 된다.
 
 ## 1. api 준비
-정식 api가 아니라, google에서 제공하는 service api를 사용하였다. 성공적으로 service api를 받았다면, 다음과 같이 Google Cloud Platform > API 및 서비스 > 사용자 인증 정봉
+정식 api가 아니라, google에서 제공하는 service api를 사용하였다. 성공적으로 service api를 받았다면, 다음과 같이 Google Cloud Platform > API 및 서비스 > 사용자 인증 정보 에서 다음과 같은 이메일 계정을 확인할 수 있다. ...@...와 같은 형식으로 써져있다.
 
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/s2tapi.jpeg?raw=true" width="400"  height="100"></center>
 
+## 2. 음성파일 준비
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ3ODAzNDM3LC03NDMzMDI4MzEsMjAzOT
-k5Mjk4LDE5NTMzMTI2NzMsLTE3NDkxMDMxODNdfQ==
+eyJoaXN0b3J5IjpbMTQ1NTQzNzMzOSwtNzQzMzAyODMxLDIwMz
+k5OTI5OCwxOTUzMzEyNjczLC0xNzQ5MTAzMTgzXX0=
 -->
