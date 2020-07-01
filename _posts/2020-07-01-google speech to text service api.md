@@ -7,12 +7,15 @@ toc_sticky: true
 author_profile: false
 use_math: true
 
-date: 2020-07-04 21:00:00 -0000
+date: 2020-07-01 21:00:00 -0000
 categories: 
-  - deep-learning
+  - etc
 tags:
-  - 논문 읽기
+  - 
 ---
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MjM1NTc4MF19
+eyJoaXN0b3J5IjpbLTE3NDkxMDMxODNdfQ==
 -->
