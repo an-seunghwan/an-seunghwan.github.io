@@ -19,10 +19,10 @@ tags:
 본 포스팅에서는 Google s2t의 service api의 가입 방법은 소개하지 않고, 가입 이후에 활용하는 방법에 대해 중점적으로 소개하고자 한다.
 
 ## 1. api 준비
-
+정식 api가 아니라, google에서 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzOTk5Mjk4LDE5NTMzMTI2NzMsLTE3ND
-kxMDMxODNdfQ==
+eyJoaXN0b3J5IjpbLTc0MzMwMjgzMSwyMDM5OTkyOTgsMTk1Mz
+MxMjY3MywtMTc0OTEwMzE4M119
 -->
