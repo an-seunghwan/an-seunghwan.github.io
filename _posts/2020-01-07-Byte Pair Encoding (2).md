@@ -90,6 +90,19 @@ pprint(clean_text[:6])
 
 ### 함수 정의
 ```python
+def init_vocab(corpus):
+    '''
+    초기 단어 사전을 구축(단어 : 빈도수)
+    corpus: 문장별 list
+    '''
+    subwords = []
+    for sent in corpus:
+        temp = [' '.join(word) + ' </w>' for word in sent.split()]
+        subwords.extend(temp)
+    
+    vocab = collections.Counter(subwords)
+    return vocab
+    
 def vocab_segmentation(vocab):
     '''
     전체 단어에 대해 segment하여 subwords로 구성된 단어 사전을 구축
@@ -312,5 +325,5 @@ subwords 사전의 개수: 4427
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMDg3MjEwOF19
+eyJoaXN0b3J5IjpbMjAwMDg0NTAzMywyMDEwODcyMTA4XX0=
 -->
