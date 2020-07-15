@@ -19,7 +19,7 @@ tags:
 
 > 이 포스팅은 OOV(out-of-vocabulary) 문제의 해결과 관련한 내용, 논문, tokenizer 등을 다루는 [OOV 톺아보기 시리즈](https://an-seunghwan.github.io/oov-top-a-bogi/)의 2편입니다.
 
-지난 포스팅 [Byte Pair Encoding (1)](https://an-seunghwan.github.io/nlp/OOV-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-(1)/)에서 Byte Pair Encoding에 대해 간략히 소개하였습니다. 이번 글에서는 이 알고리즘이 제시된 논문을 읽고 간략히 요약하여 Byte Pair Encoding에 기반한 Neural Machine Translation에 대해 알아보도록 하겠습니다.
+지난 포스팅 [Byte Pair Encoding (1)](https://an-seunghwan.github.io/nlp/Byte-Pair-Encoding-(1))에서 Byte Pair Encoding에 대해 간략히 소개하였습니다. 이번 글에서는 이 알고리즘이 제시된 논문을 읽고 간략히 요약하여 Byte Pair Encoding에 기반한 Neural Machine Translation에 대해 알아보도록 하겠습니다.
 
 논문의 내용을 전부 요약하는 것이 아닌 핵심만을 다루도록 하겠습니다.
 
@@ -66,7 +66,7 @@ BPE는 반복적으로 가장 높은 빈도수의 byte의 pair를 하나의 사�
 ## 논문 
 Sennrich, R., Haddow, B., & Birch, A. (2015). Neural machine translation of rare words with subword units. _arXiv preprint arXiv:1508.07909_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1OTEwNTAwOCwtNDMwOTkyMzk3LC0xNz
-g1NjA5ODMzLDE5MjI2MTc4NDEsLTU0OTc3MTEsLTQzNjUyMTI5
-OCwtMTA5MzM5NDc2NV19
+eyJoaXN0b3J5IjpbNTIwNDg5NzAsMTQ1OTEwNTAwOCwtNDMwOT
+kyMzk3LC0xNzg1NjA5ODMzLDE5MjI2MTc4NDEsLTU0OTc3MTEs
+LTQzNjUyMTI5OCwtMTA5MzM5NDc2NV19
 -->
