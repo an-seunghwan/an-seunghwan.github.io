@@ -17,13 +17,22 @@ latent space learning
 ### . variational approximation
 ancestral sampling
 
-### . o
+### . tug-of-war objective
+
+### . practical coding issues with continuous output data
 
 
 ## . Posterior Collapse
 
+### . Probabilistic PCA
+1. distributions
+2. posterior collapse
+3. 
+
+### . 
+
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY0OTYxODMwXX0=
+eyJoaXN0b3J5IjpbNjQ2NzEzNjI1XX0=
 -->
