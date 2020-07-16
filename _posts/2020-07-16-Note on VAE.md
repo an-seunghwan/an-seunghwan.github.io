@@ -132,7 +132,11 @@ MNIST
 
 ### . objective interpretation
 
-VAE의 objective function은 closed-form으로 적을 수 있다.
+VAE의 objective function, 그 중에서도 KL-divergence term은 closed-form으로 적을 수 있다.
+
+$$
+
+$$
 
 ### . 상충되는 objective
 
@@ -165,6 +169,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTcwOTc5OCwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
