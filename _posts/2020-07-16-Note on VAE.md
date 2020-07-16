@@ -89,7 +89,7 @@ $$
 
 일 때 KL-divergence가 0이 되고 supremum을 얻을 수 있다. 따라서, ELBO를 최대화하는 학습 목표는 결국 data log-likelihood를 __achieve__ 하는 parameter $\phi$를 찾는 것이다.
 
-### . variational approximation
+### 4. variational approximation
 
 1.
 $q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated prior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 ELBO는 tight bound를 가진다.
@@ -139,6 +139,6 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NTQ4NTEyMSwtMTQyNzY5MzEzOCwtMT
+eyJoaXN0b3J5IjpbLTE0MzY3MjUyOSwtMTQyNzY5MzEzOCwtMT
 E2MDkzNTczMl19
 -->
