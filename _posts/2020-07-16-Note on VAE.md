@@ -44,7 +44,9 @@ $$
 latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 __disentangled__ 되어 독립적인 factor(feature)를 학습하는 것이 목표이다.
 
 ### . ELBO
-
+$$
+\log{p_{\theta}(x)} = KL[q_{\phi}(z|x)]
+$$
 
 ### . variational approximation
 ancestral sampling
@@ -69,5 +71,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjIyODgzMDRdfQ==
+eyJoaXN0b3J5IjpbLTE3NjA1NzYwMDBdfQ==
 -->
