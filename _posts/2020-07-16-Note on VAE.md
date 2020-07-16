@@ -142,6 +142,10 @@ embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, embedding var
 
 2. to get small KL-divergence
 
+embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\phi}(x)$가 1에 가까울수록 true prior인 정규분포의 형태에 가까워지므로 KL-divergence가 감소한다. 
+
+하지만, 주어진 $x$들 사이에 구분되는 정보를 잃어버리므로 이러한 경우에 reconstruction error가 크다.
+
 ### . Probabilistic PCA
 1. distributions
 2. posterior collapse
@@ -155,6 +159,6 @@ embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, embedding var
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTU4MDAzNSwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbNjA2OTAzNjEzLC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
