@@ -6,12 +6,18 @@
 
 ## 1.  VAE
 
-### 1. purpose
+### . purpose
 maximize data log-likelihood
 
-### 2. latent variable model
+### . latent variable model
+latent space learning
 
-###
+### . ELBO
+
+### . variational approximation
+ancestral sampling
+
+### . o
 
 
 ## . Posterior Collapse
@@ -19,5 +25,5 @@ maximize data log-likelihood
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2ODAyMjQyNV19
+eyJoaXN0b3J5IjpbMjY0OTYxODMwXX0=
 -->
