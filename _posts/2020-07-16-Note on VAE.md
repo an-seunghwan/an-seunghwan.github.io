@@ -97,7 +97,7 @@ $q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기
 $q_{\phi}(z)$를 추정하기 위해 사용하는 방법이 variational approximation 인데, $q_{\phi}(z)$ 대신 $q_{\phi}(z \vert x)$를 사용한다. 즉, $z$에 대한 approximated prior 분포가 $x$에 의존하도록 만드는 것이다. 이를 수식으로 쓰면 다음과 같다.
 
 $$
-q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d)
+q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)_i)_{i=1}^d)
 $$
 
 $\mu_{\phi}(x)$와 $diag(\sigma^2_{\phi}(x)_i)_{i=1}^d$는 neural network로 구성된 non-linear 함수의 결과로 $x$에 의존하는 분포가 되도록 만들어준다($diag$는 대각행렬).
@@ -115,7 +115,7 @@ $\mu_{\phi}(x)$와 $diag(\sigma^2_{\phi}(x)_i)_{i=1}^d$는 neural network로 구
 	2.) forward pass network:  $\mu_{\phi}(x)$, $\sigma^2_{\phi}(x)$
 	3.) sampling $z = \mu_{\phi}(x) + \sigma^2_{\phi}(x) \epsilon$
 
- reparametrization trick은 $N_x(\mu_{\phi}(x), diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d)$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
+ reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)_i)_{i=1}^d)$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 
 ### . practical coding issues with continuous output data
 
@@ -139,6 +139,6 @@ $\mu_{\phi}(x)$와 $diag(\sigma^2_{\phi}(x)_i)_{i=1}^d$는 neural network로 구
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzMTQ1ODM3LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbLTU1NDU5NTUwNywtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
