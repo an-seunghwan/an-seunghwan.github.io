@@ -91,7 +91,7 @@ $$
 
 ### . variational approximation
 
-$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated prior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 
+$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated prior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 ELBO는 tight bound를 가진다.
 
 ancestral sampling
 
@@ -117,6 +117,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjk3ODUzNjksLTExNjA5MzU3MzJdfQ
-==
+eyJoaXN0b3J5IjpbNDgyNjY1OTI5LC0xMTYwOTM1NzMyXX0=
 -->
