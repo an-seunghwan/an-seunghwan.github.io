@@ -119,7 +119,9 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)_i)_{i=1}^d)$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 
-### . practical coding issues with continuous output data
+### 5. practical coding issues with continuous output data
+
+
 
 
 ## . Posterior Collapse
@@ -141,6 +143,6 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODU4MDg4NzksLTE0Mjc2OTMxMzgsLT
-ExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbLTU3NzI5MDU2NiwtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
