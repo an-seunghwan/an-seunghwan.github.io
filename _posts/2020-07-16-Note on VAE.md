@@ -115,9 +115,7 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 	2.) forward pass network:  $\mu_{\phi}(x)$, $\sigma^2_{\phi}(x)$
 	3.) sampling $z = \mu_{\phi}(x) + \sigma^2_{\phi}(x) \epsilon$
 
- 
-
-
+ reparametrization trick은 $N_x(\mu_{\phi}(x), diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d)$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 
 ### . practical coding issues with continuous output data
 
@@ -141,6 +139,6 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjc2OTMxMzgsLTExNjA5MzU3MzJdfQ
-==
+eyJoaXN0b3J5IjpbLTQ1NTQ4NTEyMSwtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
