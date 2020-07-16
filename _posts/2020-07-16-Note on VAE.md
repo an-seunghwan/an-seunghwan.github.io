@@ -1,5 +1,5 @@
 ---
-title: "Note on VAE(작성중)"
+title: "Note on VAE and Posterior Collapse(작성중)"
 excerpt: "VAE에 대한 여러가지 사실들"
 toc: true
 toc_sticky: true
@@ -169,6 +169,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mj
+c2OTMxMzgsLTExNjA5MzU3MzJdfQ==
 -->
