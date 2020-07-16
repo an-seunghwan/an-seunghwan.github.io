@@ -122,12 +122,21 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 ### 5. practical coding issues with continuous output data
 
+MNIST
 
 
 
 ## 2. Posterior Collapse
 
-### . tug-of-war objective
+### 1. 상충되는 objective
+
+앞에서 잠깐 언급
+
+1. to get better reconstructions
+
+
+
+2. to get small KL-divergence
 
 ### . objective interpretation
 
@@ -144,6 +153,6 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzEwODczODAsLTE0Mjc2OTMxMzgsLT
-ExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbMTMyMTAzMTgzOSwtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
