@@ -100,11 +100,11 @@ $$
 q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d)
 $$
 
-$\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 구성된 non-linear 함수의 결과로 $x$에 의존하는 분포가 되도록 만들어준다($diag$는 대각행렬).
+$\mu_{\phi}(x)$와 $diag(\sigma^2_{\phi}(x)_i)_{i=1}^d$는 neural network로 구성된 non-linear 함수의 결과로 $x$에 의존하는 분포가 되도록 만들어준다($diag$는 대각행렬).
 
 2. 
 
-하지만, $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태상 limited expression이라는 단점을 갖게 된다.
+하지만, $\mu_{\phi}(x)$와 $diag(\sigma^2_{\phi}(x)_i)_{i=1}^d$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태상 limited expression이라는 단점을 갖게 된다.
 
 또한, approximated prior로 uni-modal Gaussian을 사용했으므로, 만약 true prior가 multi modal인 경우에는 그 성능이 저하될 수 있다.
 
@@ -139,6 +139,6 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzY3MjUyOSwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbNzEzMTQ1ODM3LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
