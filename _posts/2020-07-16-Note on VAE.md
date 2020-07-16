@@ -110,8 +110,10 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 ((그림 첨부))
 
-3. ancestral sampling(reparametrization trick)
-	1.) $\epsilon \sim p(\epsilon) = N(0, I)$  
+3. reparametrization trick
+	1.) $\epsilon \sim p(\epsilon) = N(0, I)$ 
+	2.) forward pass network:  $\mu_{\phi}(x)$, $\sigma^2_{\phi}(x)$
+	3.) sampling $z = \mu_{\phi}(x)$
 
  
 
@@ -139,5 +141,6 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MzEyMzE3MywtMTE2MDkzNTczMl19
+eyJoaXN0b3J5IjpbLTE5OTI5OTIwNjcsLTExNjA5MzU3MzJdfQ
+==
 -->
