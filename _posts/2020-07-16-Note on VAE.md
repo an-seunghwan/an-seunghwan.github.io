@@ -131,7 +131,7 @@ MNIST
 
 ### . objective interpretation
 
-
+VAE의 objective function은 closed-form으로 적을 수 있다.
 
 ### . 상충되는 objective
 
@@ -164,6 +164,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjUyMTY5OSwtMTQyNzY5MzEzOCwtMT
+eyJoaXN0b3J5IjpbMjEzMDQ5NTUwMiwtMTQyNzY5MzEzOCwtMT
 E2MDkzNTczMl19
 -->
