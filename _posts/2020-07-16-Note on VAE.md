@@ -29,6 +29,7 @@ tags:
 여기서 제일 중요한 것은 3번의 data log-likelihood를 최대화하는 것이 결국 VAE의 가장 중요한 목적이라는 것이다.
 
 ### 2. latent variable model
+* model
 $$
 p(x) = N_z(0, I)
 $$
@@ -39,9 +40,13 @@ $$
 이때, $f(x;\phi)$는 neural network로 구성되는 non-linear 함수이고, 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
 
 * latent space learning
-latent space에서 정의되는 latent variable $z$ 가각
+
+latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 __disentangled__ 되어 독립적인 factor(feature)를 학습하는 것이 목표이다.
 
 ### . ELBO
+\begin{array}
+
+\end{arrat}
 
 ### . variational approximation
 ancestral sampling
@@ -66,5 +71,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4OTUzNTMzXX0=
+eyJoaXN0b3J5IjpbLTEyOTgxNDQ2MjFdfQ==
 -->
