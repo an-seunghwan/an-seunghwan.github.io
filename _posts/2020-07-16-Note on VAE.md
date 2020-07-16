@@ -48,10 +48,8 @@ latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 _
 ### 3. ELBO
 
 $$
-\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\theta}(z)]
+\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]
 $$
-
-RHS: $\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\theta}(z)]$ 
 
 RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생긴 형태 때문에 ELBO를 objective로 사용하는 경우에 학습 목표가 reconstruction error와 KL-divergence를 최소화하는 것이라고 오해하는 경우가 많다.
 
@@ -74,8 +72,10 @@ $$
 $$
 
 $$
-= 
+= \sup_{\phi}{\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]}
 $$
+
+즉, $q_{\phi}(z|x)$ 의 모형 공간이 충분히 크다면, 
 
 ### . variational approximation
 ancestral sampling
@@ -100,5 +100,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzE0MDI4MV19
+eyJoaXN0b3J5IjpbLTQ5NjQ5ODE4OF19
 -->
