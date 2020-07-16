@@ -99,7 +99,7 @@ $$
 q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d)
 $$
 
-
+$\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 구성된 non-linear 함수의 결과로 $x$에 의존하는 분포가 되도록 만들어준다. 
 
 ancestral sampling
 
@@ -125,5 +125,6 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MTM1ODAzNywtMTE2MDkzNTczMl19
+eyJoaXN0b3J5IjpbLTExMzQ2NDUxNzMsLTExNjA5MzU3MzJdfQ
+==
 -->
