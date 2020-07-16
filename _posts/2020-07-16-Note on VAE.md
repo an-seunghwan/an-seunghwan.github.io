@@ -91,6 +91,7 @@ $$
 
 ### . variational approximation
 
+$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussianㄱ
 
 ancestral sampling
 
@@ -116,5 +117,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbMTY5MDg2MDg4MSwtMTE2MDkzNTczMl19
 -->
