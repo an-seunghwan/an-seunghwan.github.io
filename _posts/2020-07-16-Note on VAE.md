@@ -104,7 +104,9 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 2. 
 
-하지만, $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태상 limited expressioness라는 단점을 갖게 된다.
+하지만, $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태상 limited expression이라는 단점을 갖게 된다.
+
+또한, approximated prior는 uni-mod
  
 
 ancestral sampling
@@ -131,6 +133,6 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Njk3MTM5NzUsLTExNjA5MzU3MzJdfQ
+eyJoaXN0b3J5IjpbLTEzMTgyNzg2MjEsLTExNjA5MzU3MzJdfQ
 ==
 -->
