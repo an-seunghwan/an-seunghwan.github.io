@@ -86,12 +86,14 @@ $$
 ### . variational approximation
 ancestral sampling
 
-### . tug-of-war objective
-
 ### . practical coding issues with continuous output data
 
 
 ## . Posterior Collapse
+
+### . tug-of-war objective
+
+### . objective interpretation
 
 ### . Probabilistic PCA
 1. distributions
@@ -106,5 +108,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg1ODQ4MTc4XX0=
+eyJoaXN0b3J5IjpbMTY3OTg2OTUyMF19
 -->
