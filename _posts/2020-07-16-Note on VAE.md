@@ -134,7 +134,9 @@ MNIST
 
 1. to get better reconstructions
 
-embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, 
+embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, embedding variance $\sigma_{\phi}(x)$가 0에 가까울수록, 주어진 $x$들 사이에 구분되는 정보를 가진다. 이러한 경우에 reconstruction error가 작다.
+
+하지만,  
 
 2. to get small KL-divergence
 
@@ -153,6 +155,6 @@ embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고,
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTk0Mzk5OCwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbLTE4NTQ1ODkyNzAsLTE0Mjc2OTMxMzgsLT
+ExNjA5MzU3MzJdfQ==
 -->
