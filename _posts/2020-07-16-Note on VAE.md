@@ -19,7 +19,9 @@ tags:
 ## 0. 참고 논문 및 블로그
 
 * Auto-Encoding Variational Bayes: [https://arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114)
-* 
+* [http://paulrubenstein.co.uk/variational-autoencoders-are-not-autoencoders/](http://paulrubenstein.co.uk/variational-autoencoders-are-not-autoencoders/)
+* [https://www.borealisai.com/en/blog/tutorial-5-variational-auto-encoders/](https://www.borealisai.com/en/blog/tutorial-5-variational-auto-encoders/)
+* [http://ruishu.io/2018/03/14/vae/](http://ruishu.io/2018/03/14/vae/)
 
 
 ## 1.  VAE
@@ -113,5 +115,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ2ODgzODQ2XX0=
+eyJoaXN0b3J5IjpbLTE5MDI2ODgxNzldfQ==
 -->
