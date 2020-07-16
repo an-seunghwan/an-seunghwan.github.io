@@ -134,7 +134,7 @@ MNIST
 
 1. to get better reconstructions
 
-
+embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, 
 
 2. to get small KL-divergence
 
@@ -153,6 +153,6 @@ MNIST
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyNzg3MjU4LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbMTEyOTk0Mzk5OCwtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
