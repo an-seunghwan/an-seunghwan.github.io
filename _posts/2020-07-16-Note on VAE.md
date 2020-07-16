@@ -124,7 +124,7 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 
 
-## . Posterior Collapse
+## 2. Posterior Collapse
 
 ### . tug-of-war objective
 
@@ -143,6 +143,6 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NzI5MDU2NiwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbMTM0MjU5MjkwLC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
