@@ -55,6 +55,12 @@ RHS( $\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\the
 
 앞에서도 언급했지만, VAE의 학습 목표는 data log-likelihood를 최대화하는 것임을 다시 밝힌다.
 
+이때, true model에 대한 parameter $\theta$ 가 주어졌다고 생각해보자. 그리고 $q_{\phi}$의 모형 공간이 충분히 크다고 하면, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+
+$$
+
+$$
+
 ### . variational approximation
 ancestral sampling
 
@@ -78,5 +84,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUxOTk5MTddfQ==
+eyJoaXN0b3J5IjpbLTE0MDMwNjQ5MzhdfQ==
 -->
