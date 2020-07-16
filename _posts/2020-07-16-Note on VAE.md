@@ -108,10 +108,13 @@ $\mu_{\phi}(x)$와 $diag\{\sigma^2_{\phi}(x)_i\}_{i=1}^d$는 neural network로 �
 
 또한, approximated prior로 uni-modal Gaussian을 사용했으므로, 만약 true prior가 multi modal인 경우에는 그 성능이 저하될 수 있다.
 
+((그림 첨부))
+
+3. ancestral sampling
 
  
 
-ancestral sampling
+
 
 ### . practical coding issues with continuous output data
 
@@ -135,6 +138,6 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI4NzQ5NjAsLTExNjA5MzU3MzJdfQ
+eyJoaXN0b3J5IjpbLTIwNDk0ODI1ODksLTExNjA5MzU3MzJdfQ
 ==
 -->
