@@ -14,7 +14,8 @@ tags:
   - 
 ---
 > Variational Inference, VAE 관련 여러 논문들과 블로그들을 보고 중요하다고 생각되는 수식이 아닌 아이디어 위주의 정리 포스팅입니다.
-> 개인적인 정리 목적의 글임을 밝힙니다.
+>
+> 논문에 대한 리뷰가 아닌 개인적인 정리 목적의 글임을 밝힙니다.
 
 ## 0. 참고 논문 및 블로그
 
@@ -130,6 +131,8 @@ MNIST
 
 ### . objective interpretation
 
+
+
 ### . 상충되는 objective
 
 앞에서 잠깐 언급한 것처럼, ELBO의 식은 reconstruction error와 KL-divergence의 합으로 구성되어 있는 것으로 볼 수 있다. 하지만 이 2개의 합을 최대화하는 과정에서, 각각의 term의 목적이 서로 상충되는 경우가 발생한다.
@@ -146,6 +149,8 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 하지만, 주어진 $x$들 사이에 구분되는 정보를 잃어버리므로 이러한 경우에 reconstruction error가 크다.
 
+((그림 첨부))
+
 ### . Probabilistic PCA
 1. distributions
 2. posterior collapse
@@ -159,6 +164,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzQyMTk2NTMsLTE0Mjc2OTMxMzgsLT
-ExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbLTM5NjUyMTY5OSwtMTQyNzY5MzEzOCwtMT
+E2MDkzNTczMl19
 -->
