@@ -45,11 +45,13 @@ $$
 
 latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 __disentangled__ 되어 독립적인 factor(feature)를 학습하는 것이 목표이다.
 
-### . ELBO
+### 3. ELBO
 
 $$
 \log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\theta}(z)]
 $$
+
+RHS($\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\theta}(z)]$)를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생긴 형태 때문에 ELBO를 objective로 사용하는 경우에 학습 목표가 reconstruction error와 
 
 ### . variational approximation
 ancestral sampling
@@ -74,5 +76,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTAxMTk5MTRdfQ==
+eyJoaXN0b3J5IjpbLTExOTU5MDMwMDhdfQ==
 -->
