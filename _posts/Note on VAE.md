@@ -6,10 +6,18 @@
 
 ## 1.  VAE
 
-* purpose: maximize data-
+### 1. purpose
+maximize data log-likelihood
+
+### 2. latent variable model
+
+###
+
+
+## . Posterior Collapse
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTY5ODk3NDZdfQ==
+eyJoaXN0b3J5IjpbLTI2ODAyMjQyNV19
 -->
