@@ -30,8 +30,13 @@ tags:
 
 ### . latent variable model
 $$
-p(x) = N_
+p(x) = N_z(0, I)
 $$
+$$
+p(x|z) = N_x(f(x;\phi), \sigma^2I)
+$$
+
+이때, $f(x;\phi)$는 neural network로 구성되는 non-linear 함수이고, 이는 결국 ㅣㅁ
 * latent space learning
 
 ### . ELBO
@@ -59,5 +64,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3Mzg2MzIzMF19
+eyJoaXN0b3J5IjpbLTE2NTcyOTQ0Nl19
 -->
