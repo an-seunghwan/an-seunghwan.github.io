@@ -19,12 +19,11 @@ tags:
 ## 0. 참고 논문 및 블로그
 
 * Auto-Encoding Variational Bayes: [https://arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114)
+* Don’t Blame the ELBO! A Linear VAE Perspective on Posterior Collapse: [https://arxiv.org/pdf/1911.02469.pdf](https://arxiv.org/pdf/1911.02469.pdf)
+* β-VAE: LEARNING BASIC VISUAL CONCEPTS WITH A CONSTRAINED VARIATIONAL FRAMEWORK: [https://openreview.net/pdf?id=Sy2fzU9gl](https://openreview.net/pdf?id=Sy2fzU9gl)
 * [http://paulrubenstein.co.uk/variational-autoencoders-are-not-autoencoders/](http://paulrubenstein.co.uk/variational-autoencoders-are-not-autoencoders/)
 * [https://www.borealisai.com/en/blog/tutorial-5-variational-auto-encoders/](https://www.borealisai.com/en/blog/tutorial-5-variational-auto-encoders/)
 * [http://ruishu.io/2018/03/14/vae/](http://ruishu.io/2018/03/14/vae/)
-* Don’t Blame the ELBO! A Linear VAE Perspective on Posterior Collapse: [https://arxiv.org/pdf/1911.02469.pdf](https://arxiv.org/pdf/1911.02469.pdf)
-* β-VAE: LEARNING BASIC VISUAL CONCEPTS WITH A CONSTRAINED VARIATIONAL FRAMEWORK: [https://openreview.net/pdf?id=Sy2fzU9gl](https://openreview.net/pdf?id=Sy2fzU9gl)
-
 
 ## 1.  VAE
 
@@ -117,5 +116,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0MDAwNzA2XX0=
+eyJoaXN0b3J5IjpbLTEyNDM5NDUzODhdfQ==
 -->
