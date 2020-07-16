@@ -87,7 +87,7 @@ $$
 q_{\phi}(z|x) = p_{\theta}(z|x)
 $$
 
-일 때 KL-divergence가 0이 되고 supremum을 얻을 수 있다. 따라서, ELBO를 최대화하는 학습 목표는 결국 data log-likelihood를 __achieve__하는 parameter $\phi$를 찾는 것이다.
+일 때 KL-divergence가 0이 되고 supremum을 얻을 수 있다. 따라서, ELBO를 최대화하는 학습 목표는 결국 data log-likelihood를 __achieve__ 하는 parameter $\phi$를 찾는 것이다.
 
 ### . variational approximation
 
@@ -116,5 +116,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDM5NDUzODhdfQ==
+eyJoaXN0b3J5IjpbLTExNjA5MzU3MzJdfQ==
 -->
