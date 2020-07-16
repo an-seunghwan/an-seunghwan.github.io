@@ -4,10 +4,12 @@
 ## 0. 참고 논문 및 블로그
 
 
-## 1. 
+## 1.  VAE
+
+* purpose: maximize data-
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMDM2NzYxOV19
+eyJoaXN0b3J5IjpbLTE1NTY5ODk3NDZdfQ==
 -->
