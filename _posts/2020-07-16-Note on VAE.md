@@ -59,7 +59,7 @@ RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생
 
 이때, true model에 대한 parameter $\theta$ 가 주어졌다고 생각해보자. 그리고 $q_{\phi}$의 모형 공간이 충분히 크다고 하면, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
-(양변에 suprem)
+(양변에 supremum을 취한다.)
 
 $$
 \sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
@@ -71,6 +71,10 @@ $$
 
 $$
 = \log{p_{\theta}(x)} 
+$$
+
+$$
+= 
 $$
 
 ### . variational approximation
@@ -96,5 +100,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNTUyNzIwMF19
+eyJoaXN0b3J5IjpbMjEzNzE0MDI4MV19
 -->
