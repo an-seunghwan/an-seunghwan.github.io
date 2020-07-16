@@ -24,7 +24,9 @@ tags:
 ### . purpose
 1. sampling new data $x^*$
 2. measure likelihood of new $x^*$
-3. maximize data log-likelihood $
+3. maximize data log-likelihood: $\log{p_{\theta}(x)}$
+
+여기서 제일 중요한 것은 3번의 data log-likelihood를 최대화하는 것이 결국 VAE의 가장 중요한 목적이라는 것이다.
 
 ### . latent variable model
 latent space learning
@@ -54,5 +56,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MjE5OTM2NF19
+eyJoaXN0b3J5IjpbNTMwNjgxMjY3XX0=
 -->
