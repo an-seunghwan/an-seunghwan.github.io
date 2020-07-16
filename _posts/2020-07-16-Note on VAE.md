@@ -33,6 +33,7 @@ tags:
 $$
 p(x) = N_z(0, I)
 $$
+
 $$
 p(x|z) = N_x(f(x;\phi), \sigma^2I)
 $$
@@ -45,7 +46,7 @@ latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 _
 
 ### . ELBO
 $$
-\log{p_{\theta}(x)} = KL[q_{\phi}(z|x)]
+\log{p_{\theta}(x)} = KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi} \| p_{\theta}]
 $$
 
 ### . variational approximation
@@ -71,5 +72,5 @@ ancestral sampling
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjA1NzYwMDBdfQ==
+eyJoaXN0b3J5IjpbMTkzNzM3NzM4NV19
 -->
