@@ -27,12 +27,15 @@ ancestral sampling
 ### . Probabilistic PCA
 1. distributions
 2. posterior collapse
-3. 
+3. stability of stationary points
 
-### . 
+### . Linear VAE vs pPCA
+1. model 
+2. objective
+3. Deep VAE
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2NzEzNjI1XX0=
+eyJoaXN0b3J5IjpbMTU0NDg5ODg4MF19
 -->
