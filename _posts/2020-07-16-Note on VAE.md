@@ -130,7 +130,7 @@ MNIST
 
 ### 1. 상충되는 objective
 
-앞에서 잠깐 언급
+앞에서 잠깐 언급한 것처럼, ELBO의 식은 reconstruction error와 KL-divergence의 합으로 구성되어 있는 것으로 볼 수 있다. 하지만 이 2개의 합을 최대화하는 과정에서, 각각의 term의 목적이 서로 상충되는 경우가 발생한다.
 
 1. to get better reconstructions
 
@@ -153,6 +153,6 @@ MNIST
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMTAzMTgzOSwtMTQyNzY5MzEzOCwtMT
-E2MDkzNTczMl19
+eyJoaXN0b3J5IjpbOTAyNzg3MjU4LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
