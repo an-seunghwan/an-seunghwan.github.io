@@ -130,7 +130,9 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 따라서, MNIST의 데이터 분포를 평균이 0인 정규분포를 따른다고 가정할 때, [-1, 1] 범위의 값에 대해 분산이 1인 정규분포를 사용한다면 아주 많은 양의 noise가 $p_{\theta}(x \vert x)$의 분포로 부터 sampling할 때 더해질 것이다.
 
-* 
+* 또한, training을 하는 과정에서 $p_{\theta}(x \vert x)$로부터 실제로 sampling을 하지 않는다. 
+
+
 
 
 ## 2. Posterior Collapse
@@ -186,7 +188,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MD
-g0MzIsMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgs
-LTExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbMTM3ODM4MTk0NCwxNTgwNzEyMSwtNDc2NT
+Y1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYwNDE4Njg0NSwt
+MTQyNzY5MzEzOCwtMTE2MDkzNTczMl19
 -->
