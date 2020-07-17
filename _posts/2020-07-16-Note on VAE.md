@@ -124,9 +124,11 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 ### 5. practical coding issues with continuous output data
 
-* Decoder(generator)는 오직 embedding means $\mu_{\phi}(x)$만을 결과값으로 반환한다. 이때 embedding variance는 결과값으로 반환하지 않고, 
+* Decoder(generator)는 오직 embedding means $\mu_{\phi}(x)$만을 결과값으로 반환한다. 이때 embedding variance는 결과값으로 반환하지 않고, 대신 global variance로 1을 설정한다.
 
+이는 우리가 학습에 사용하는 데이터에 그 이유가 있다. 일반적으로 
 
+* 
 
 MNIST
 
@@ -185,7 +187,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg4MTM2Mjg4LDkyMDgwODQzMiwyMDkxMz
+eyJoaXN0b3J5IjpbNTIzODU2NjA4LDkyMDgwODQzMiwyMDkxMz
 E4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MDkzNTcz
 Ml19
 -->
