@@ -228,15 +228,17 @@ MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈
 
 * model 
 
-다음의 모형을 linear VAE라고 하고, 이는 global optimum의 경우에 pPCA를 정확하게 복원할 수 있다.
+다음의 모형을 linear VAE라고 하고, approximated posterior는 global optimum의 경우에 pPCA의 true posterior를 정확하게 복원할 수 있다.
 
+$$
+p(x|z) = N(Wz+\mu. \sigma^2I)
 $$
 
 $$
-
+q(z|x) = N(V(x-\mu), D)
 $$
 
-$$
+이때, $D$는 diagonal covariance matrix로, 
 
 * objective
 
@@ -246,8 +248,8 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MzcwMzM5MiwtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbMzEzNDYzNDI0LC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
