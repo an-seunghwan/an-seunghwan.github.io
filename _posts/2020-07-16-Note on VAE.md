@@ -243,17 +243,22 @@ $$
 * objective
 
 $$
-\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|]
+\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|x) \| p(z)] + KL[q(z|x) \| p(z|x)]
 $$
 
+$$
+\log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]
+$$
+
+global optimum인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood
 
 * Deep VAE
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTk3NDIxOSwtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbODUzMzQ1MDE5LC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
