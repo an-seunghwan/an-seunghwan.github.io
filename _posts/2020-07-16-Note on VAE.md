@@ -265,12 +265,12 @@ $$
 
 따라서 $\sigma^2$가 작으면, beta-VAE에서의 $\beta$가 작은 경우로 생각할 수 있고, 이러한 경우에 실험적으로 decoder latent variable을 잘 활용하는 강력한 decoder가 됨을 볼 수 있다. 하지만, 해당 beta-VAE의 ELBO는 좋지 않았는데, 여기서 $- \frac{1}{2} \log{2\pi \sigma^2}$가 beta-VAE의 objective가 ELBO로부터 많이 벗어나지 않게 해주는 역할을 한다고 할 수 있다.
 
-결론적으로, $\sigma^2$의 역할을 다시 해석해보면 the role of local maxima(zeroing out $W_{MLE}$)와 observation noise($\sigma^2$)들은 그동안의 $\beta$ weight을 통한 KL-divergence term의 
+결론적으로, $\sigma^2$의 역할을 다시 해석해보면 the role of local maxima(zeroing out $W_{MLE}$)와 observation noise($\sigma^2$)들은 그동안의 $\beta$ weight을 통한 KL-divergence term의 영향을 줄이는 시도와 연결지어 생각해 볼 수 있다.
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQ3Njg4NDcsLTEzNDMwNDIxMzEsOD
-cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
-LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbNjkyMzQ4MTI3LC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
