@@ -154,13 +154,13 @@ $$
 
 앞에서 잠깐 언급한 것처럼, ELBO의 식은 reconstruction error와 KL-divergence의 합으로 구성되어 있는 것으로 볼 수 있다. 하지만 이 2개의 합을 최대화하는 과정에서, 각각의 term의 목적이 서로 상충되는 경우가 발생한다.
 
-1. to get better reconstructions
+* to get better reconstructions
 
 embedding means $\mu_{\phi}(x)$가 서로 멀리 떨어져 있고, embedding variance $\sigma_{\phi}(x)$가 0에 가까울수록, 주어진 $x$들 사이에 구분되는 정보를 가진다. 이러한 경우에 reconstruction error가 작다.
 
 하지만,  이러한 경우에는 KL-divergence가 커지는 문제가 발생한다.
 
-2. to get small KL-divergence
+* to get small KL-divergence
 
 embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\phi}(x)$가 1에 가까울수록 true prior인 정규분포의 형태에 가까워지므로 KL-divergence가 감소한다. 
 
@@ -181,7 +181,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjg5NDYxMiw5MjA4MDg0MzIsMjA5MT
-MxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNjA5MzU3
-MzJdfQ==
+eyJoaXN0b3J5IjpbNTU0Nzg3MDMsOTIwODA4NDMyLDIwOTEzMT
+g4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMy
+XX0=
 -->
