@@ -218,9 +218,11 @@ where $M = W^\top W + \sigma^2I$
 
 * posterior collapse
 
-MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈으로써 얻을 수 있다. 극단적으로, $W_{MLE}$의 모든 columns들을 0으로 바꾼다면, posterior 분포는 $$
+MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈으로써 얻을 수 있다. 극단적으로, $W_{MLE}$의 모든 columns들을 0으로 바꾼다면, posterior 분포는 $p(z \vert x) = N(0, \sigma^2I)$가 되고, 이러한 경우를 posterior collapse라고 한다.
 
 * stability of stationary points
+
+((아직 어려워서 내용 추가를 못했))
 
 ### 4. Linear VAE vs pPCA
 1. model 
@@ -230,8 +232,8 @@ MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MDE2NzA2OSwtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbNDM5MTIxMTU1LC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
