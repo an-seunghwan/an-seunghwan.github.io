@@ -188,6 +188,8 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 ((그림 첨부))
 
+> 특히 3, 4번에 대한 내용은 많이 부족합니다. 논문에 대한 자세한 리뷰가 아니고 간단한 아이디어 정리이니 자세한 수식은 본문을 참조해주세요.
+
 ### 3. Probabilistic PCA
 
 * distributions
@@ -205,7 +207,11 @@ $$
 probabilistic PCA는 다음의 data 분포와 posterior 분포를 찾게된다.
 
 $$
-p(x)
+p(x) = N(\mu, MM^\top + \sigma^2I)
+$$
+
+$$
+p(z|x) = N(M^{-1}W^\t
 $$
 
 * posterior collapse
@@ -221,7 +227,7 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2OTg1MTU3OCwtMTM0MzA0MjEzMSw4Nz
+eyJoaXN0b3J5IjpbLTkzMTUxNjQ2NywtMTM0MzA0MjEzMSw4Nz
 AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
 MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
 A5MzU3MzJdfQ==
