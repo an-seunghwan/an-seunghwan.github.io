@@ -144,6 +144,7 @@ $$
 
 (단, $x$의 분산에 대해 모든 원소가 동일한 대각행렬을 가정)
 
+만약, decoder의 결과인
 
 ## 2. Posterior Collapse
 
@@ -198,7 +199,8 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDMwNDIxMzEsODcwMjE4Mzc5LDE1OD
-A3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMyLDIwOTEzMTg4Mjgs
-NjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbMTgwOTA3MDMyNiwtMTM0MzA0MjEzMSw4Nz
+AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
+MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
+A5MzU3MzJdfQ==
 -->
