@@ -122,13 +122,13 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 
-### 5. practical coding issues with continuous output data
+### 5. Practical coding issues with continuous output data
 
 * Decoder(generator)는 오직 embedding means $\mu_{\phi}(x)$만을 결과값으로 반환한다. 이때 embedding variance는 결과값으로 반환하지 않고, 학습하지 않는 parameter로써 global variance를 1로 설정한다.
 
 예를 들어 생각해보면, 일반적으로 VAE를 실험할 때 MNIST 데이터를 주로 사용하게 된다. MNIST 데이터를 사용할 때는 보통 [-1, 1]로 pixel 값을 scaling한 뒤 사용하게 된다.
 
-따라서, MNIST의 데이터 분포를 평균이 0인 정규분포를 따른다고 가정할 때, [-1, 1] 범위의 값에 대해 분산이 1인 정규분포를 사용한다면 많은 noise가 
+따라서, MNIST의 데이터 분포를 평균이 0인 정규분포를 따른다고 가정할 때, [-1, 1] 범위의 값에 대해 분산이 1인 정규분포를 사용한다면 아주 많은 양의 noise가 $p_{\theta}(x \vert x)$의 분포로 부터 sampling할 때 더해질 것이다.
 
 * 
 
@@ -186,7 +186,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODIxOTM2ODcsLTQ3NjU2NTAwNyw5Mj
-A4MDg0MzIsMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMx
-MzgsLTExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MD
+g0MzIsMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgs
+LTExNjA5MzU3MzJdfQ==
 -->
