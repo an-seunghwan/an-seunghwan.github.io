@@ -138,6 +138,10 @@ $$
 KL[q_{\phi}(z|x) \| p_{\theta}(z)]
 $$
 
+$$
+= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2 \right)
+$$
+
 ### . 상충되는 objective
 
 앞에서 잠깐 언급한 것처럼, ELBO의 식은 reconstruction error와 KL-divergence의 합으로 구성되어 있는 것으로 볼 수 있다. 하지만 이 2개의 합을 최대화하는 과정에서, 각각의 term의 목적이 서로 상충되는 경우가 발생한다.
@@ -169,6 +173,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEwMjU0MDE5LDIwOTEzMTg4MjgsNjA0MT
+eyJoaXN0b3J5IjpbODE4OTE3MzgyLDIwOTEzMTg4MjgsNjA0MT
 g2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
 -->
