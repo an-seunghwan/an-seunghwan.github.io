@@ -144,7 +144,7 @@ $$
 
 (단, $x$의 분산에 대해 모든 원소가 동일한 대각행렬을 가정)
 
-만약, decoder의 결과인 $(\mu_{\theta}(z)$가 $x$에 대해 충분한 표현력을 가지고 있어 복원을 잘 한다는 이상적인 상황을 가정하면, L2-regularization term은 거의 0에 가까울 것이다. 따라서 이러한 이상적인 경우에 reconstruction term을 최소화하기 위해서는 뒤의 $\frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}$의 
+만약, decoder의 결과인 $(\mu_{\theta}(z)$가 $x$에 대해 충분한 표현력을 가지고 있어 복원을 잘 한다는 이상적인 상황을 가정하면, L2-regularization term은 거의 0에 가까울 것이다. 따라서 이러한 이상적인 경우에 log 확률값을 최소화하기 위해서는 뒤의 $\frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}$를 최소화해야하므로, decoder
 
 ## 2. Posterior Collapse
 
@@ -199,8 +199,8 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NzIyNDYzNiwtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbLTE5Nzc4Nzk1MDcsLTEzNDMwNDIxMzEsOD
+cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
+LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
