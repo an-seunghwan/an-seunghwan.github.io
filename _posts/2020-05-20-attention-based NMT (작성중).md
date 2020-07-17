@@ -1,5 +1,5 @@
 ---
-title: "seq2seq 톺아보기 (2)"
+title: "seq2seq 톺아보기 (2)(작성중)"
 excerpt: "Attention based NMT"
 toc: true
 toc_sticky: true
@@ -36,5 +36,5 @@ NMT system은 원문 문장($$)
 LUONG, Minh-Thang; PHAM, Hieu; MANNING, Christopher D. Effective approaches to attention-based neural machine translation. _arXiv preprint arXiv:1508.04025_, 2015.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjEyMjI1XX0=
+eyJoaXN0b3J5IjpbLTEyNjQ1MzcwNjMsMTQ2NjEyMjI1XX0=
 -->
