@@ -258,15 +258,15 @@ __posterior collapse의 원인: ELBO can be increased by applying rotation when 
 * Deep VAE
 
 $$
-ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{}
+ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}
 $$
 
-
+여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 par
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDEwOTg3NjIsLTEzNDMwNDIxMzEsOD
-cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
-LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbLTM5Mjk3NTAyMywtMTM0MzA0MjEzMSw4Nz
+AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
+MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
+A5MzU3MzJdfQ==
 -->
