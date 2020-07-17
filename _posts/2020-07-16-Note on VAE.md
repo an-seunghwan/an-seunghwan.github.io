@@ -211,8 +211,10 @@ p(x) = N(\mu, MM^\top + \sigma^2I)
 $$
 
 $$
-p(z|x) = N(M^{-1}W^\t
+p(z|x) = N(M^{-1}W^\top(x-\mu), \sigma^2I)
 $$
+
+where $M = W^\top W + \sigma^2I$
 
 * posterior collapse
 
@@ -227,7 +229,7 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTUxNjQ2NywtMTM0MzA0MjEzMSw4Nz
+eyJoaXN0b3J5IjpbLTYwMDY3NzY0MiwtMTM0MzA0MjEzMSw4Nz
 AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
 MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
 A5MzU3MzJdfQ==
