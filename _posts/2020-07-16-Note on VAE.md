@@ -257,12 +257,15 @@ __posterior collapse의 원인: ELBO can be increased by applying rotation when 
 
 * Deep VAE
 
+$$
+ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{}
+$$
 
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTU4MTQ2NjEsLTEzNDMwNDIxMzEsOD
+eyJoaXN0b3J5IjpbLTE1MDEwOTg3NjIsLTEzNDMwNDIxMzEsOD
 cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
 LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
 YwOTM1NzMyXX0=
