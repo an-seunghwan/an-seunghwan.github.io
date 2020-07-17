@@ -218,6 +218,7 @@ where $M = W^\top W + \sigma^2I$
 
 * posterior collapse
 
+MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈으로써 얻을 수 있다. 극단적으로, $W_{MLE}$의 모든 columns들을 0으로 바꾼다면, posterior 분포는 $$
 
 * stability of stationary points
 
@@ -229,7 +230,7 @@ where $M = W^\top W + \sigma^2I$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDY3NzY0MiwtMTM0MzA0MjEzMSw4Nz
+eyJoaXN0b3J5IjpbMjA1MDE2NzA2OSwtMTM0MzA0MjEzMSw4Nz
 AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
 MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
 A5MzU3MzJdfQ==
