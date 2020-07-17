@@ -146,7 +146,7 @@ $$
 
 만약, decoder의 결과인 $(\mu_{\theta}(z)$가 $x$에 대해 충분한 표현력을 가지고 있어 복원을 잘 한다는 이상적인 상황을 가정하면, L2-regularization term은 거의 0에 가까울 것이다. 따라서 이러한 이상적인 경우에 log 확률값을 최소화하기 위해서는 뒤의 $\frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}$를 최소화해야하므로, decoder가 이상적인 복원력을 가지고 있을 때, $z$가 주어졌을 때 $x$의 분산은 빠르게 0으로 다가갈 것이다(Lebsegue measure를 이용해 수학적으로 증명 가능).
 
-이러한 관점에서, decoder의 표현력이 충분히 학습되었다면, 해당하는 분포의 분산이 0에 매우 가까울 것이므로 실제 sampling을 하는 것이 아니라, ㄷ
+이러한 관점에서, decoder의 표현력이 충분히 학습되었다면, 해당하는 분포의 분산이 0에 매우 가까울 것이므로 실제 sampling을 하는 것이 아니라, 대신 $(\mu_{\theta}(z)$를 이용해 모형을 training한다.
 
 ## 2. Posterior Collapse
 
@@ -201,7 +201,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjY0ODEwMDAsLTEzNDMwNDIxMzEsOD
+eyJoaXN0b3J5IjpbLTE4MjIyNDMzOTMsLTEzNDMwNDIxMzEsOD
 cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
 LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
 YwOTM1NzMyXX0=
