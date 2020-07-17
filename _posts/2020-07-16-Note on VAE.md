@@ -148,7 +148,7 @@ $$
 
 따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence가 감소한다.
 
-따라서, 이러한 측면에서 보면 마치 approximated posterior의 분포가 $N(0, I)$에 가까워지면서, 즉 $x$에 대한 정보를 점점 잃어가는 것처럼 생각할 수 있다(become less expressive and shrinks to $N(0, I)$). 이렇
+따라서, 이러한 측면에서 보면 마치 approximated posterior의 분포가 $N(0, I)$에 가까워지면서, 즉 $x$에 대한 정보를 점점 잃어가는 것처럼 생각할 수 있다(become less expressive and shrinks to $N(0, I)$). 이러한 현상을 posterior collapse라고 부르는데, 많은 연구들이 이러한 현상의 원인으로 KL-divergence를 생각했다.
 
 ### 2. 상충되는 objective
 
@@ -181,7 +181,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjQwOTUwMCw5MjA4MDg0MzIsMjA5MT
+eyJoaXN0b3J5IjpbLTcxMTE4NjcyNyw5MjA4MDg0MzIsMjA5MT
 MxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNjA5MzU3
 MzJdfQ==
 -->
