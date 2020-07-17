@@ -250,15 +250,17 @@ $$
 \log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]
 $$
 
-global optimum인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood
+global optimum인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood(of pPCA)가 tight bound를 가지게 된다. 즉, ELBO가 marginal likelihood와 정확히 일치하게 된다.
+
+
 
 * Deep VAE
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUzMzQ1MDE5LC0xMzQzMDQyMTMxLDg3MD
-IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
-MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
-kzNTczMl19
+eyJoaXN0b3J5IjpbLTE4Njg2MTYxMzcsLTEzNDMwNDIxMzEsOD
+cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
+LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
