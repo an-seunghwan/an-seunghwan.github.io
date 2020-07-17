@@ -146,7 +146,7 @@ $$
 = \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right) 
 $$
 
-
+따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence
 
 ### . 상충되는 objective
 
@@ -179,6 +179,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwODA4NDMyLDIwOTEzMTg4MjgsNjA0MT
-g2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbLTIxMDQxODM1MTksOTIwODA4NDMyLDIwOT
+EzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1
+NzMyXX0=
 -->
