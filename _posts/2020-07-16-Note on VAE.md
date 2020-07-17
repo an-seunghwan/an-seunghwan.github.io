@@ -197,7 +197,7 @@ p(z) = N(0, I)
 $$
 
 $$
-p(x|z) = N(Wz+\mu, \si
+p(x|z) = N(Wz+\mu, \sigma^2I)
 $$
 
 * posterior collapse
@@ -213,8 +213,8 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4MDgzNzAzLC0xMzQzMDQyMTMxLDg3MD
-IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
-MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
-kzNTczMl19
+eyJoaXN0b3J5IjpbLTIwMzgwMTI1NDAsLTEzNDMwNDIxMzEsOD
+cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
+LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
