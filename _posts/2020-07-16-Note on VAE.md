@@ -222,18 +222,32 @@ MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈
 
 * stability of stationary points
 
-((아직 어려워서 내용 추가를 못했))
+((아직 어려워서 내용 추가를 못했습니다...))
 
 ### 4. Linear VAE vs pPCA
-1. model 
-2. objective
-3. Deep VAE
+
+* model 
+
+다음의 모형을 linear VAE라고 하고, 이는 global optimum의 경우에 pPCA를 정확하게 복원할 수 있다.
+
+$$
+
+$$
+
+$$
+
+$$
+
+* objective
+
+
+* Deep VAE
 
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5MTIxMTU1LC0xMzQzMDQyMTMxLDg3MD
-IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
-MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
-kzNTczMl19
+eyJoaXN0b3J5IjpbLTk5MzcwMzM5MiwtMTM0MzA0MjEzMSw4Nz
+AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
+MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
+A5MzU3MzJdfQ==
 -->
