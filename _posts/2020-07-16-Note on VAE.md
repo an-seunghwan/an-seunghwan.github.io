@@ -189,9 +189,21 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 ((그림 첨부))
 
 ### 3. Probabilistic PCA
-1. distributions
-2. posterior collapse
-3. stability of stationary points
+
+* distributions
+
+$$
+p(z) = N(0, I)
+$$
+
+$$
+p(x|z) = N(Wz+\mu, \si
+$$
+
+* posterior collapse
+
+
+* stability of stationary points
 
 ### 4. Linear VAE vs pPCA
 1. model 
@@ -201,8 +213,8 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjIyNDMzOTMsLTEzNDMwNDIxMzEsOD
-cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
-LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbMzc4MDgzNzAzLC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
