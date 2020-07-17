@@ -135,7 +135,7 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 reconstruction error term을 살펴보자.
 
 $$
-\log{p_{\theta}(x|z)} = -\frac{1}{2\sigma^2_{\theta}(z)} \| x - \mu_{\theta}(z) \|_2^2 - \frac{1}{2} \log{2 \pi \sigma^2_{\theta}(z)}
+\log{p_{\theta}(x|z)} = -\frac{1}{2\sigma^2_{\theta}(z)} \| x - \mu_{\theta}(z) \|_2^2 - \frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}
 $$ 
 
 
@@ -192,7 +192,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcwMjE4Mzc5LDE1ODA3MTIxLC00NzY1Nj
-UwMDcsOTIwODA4NDMyLDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0x
-NDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbNjk5NDU3NzE4LDg3MDIxODM3OSwxNTgwNz
+EyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYw
+NDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MDkzNTczMl19
 -->
