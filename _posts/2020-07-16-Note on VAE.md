@@ -261,12 +261,14 @@ $$
 ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}
 $$
 
-여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 par
+여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 parameter로 생각할 수 있다.
+
+
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5Mjk3NTAyMywtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbNzAyNDY5OTQ3LC0xMzQzMDQyMTMxLDg3MD
+IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
+MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
+kzNTczMl19
 -->
