@@ -238,7 +238,7 @@ $$
 q(z|x) = N(V(x-\mu), D)
 $$
 
-이때, $D$는 diagonal covariance matrix로, 
+이때, $D$는 diagonal covariance matrix($\sigma^2I$)로, 모든 데이터 point에 대해 동일하게 사용된다.
 
 * objective
 
@@ -248,7 +248,7 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEzNDYzNDI0LC0xMzQzMDQyMTMxLDg3MD
+eyJoaXN0b3J5IjpbODUyMzMwMTM5LC0xMzQzMDQyMTMxLDg3MD
 IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
 MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
 kzNTczMl19
