@@ -250,18 +250,20 @@ $$
 \log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]
 $$
 
-global optimum인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood(of pPCA)가 tight bound를 가지게 된다. 즉, ELBO가 marginal likelihood와 정확히 일치하게 된다.
+global optimum($V = M^{-1}W_{MLE}$)인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood(of pPCA)가 tight bound를 가지게 된다. 즉, ELBO가 marginal likelihood와 정확히 일치하게 된다.
 
-(아지
+(아직 해석 중입니다...)
 __posterior collapse의 원인: ELBO can be increased by applying rotation when decoder doesn't have orthogonal columns.__
 
 * Deep VAE
 
 
+
+
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MjczODgzNywtMTM0MzA0MjEzMSw4Nz
-AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
-MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
-A5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbLTE2OTU4MTQ2NjEsLTEzNDMwNDIxMzEsOD
+cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
+LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
+YwOTM1NzMyXX0=
 -->
