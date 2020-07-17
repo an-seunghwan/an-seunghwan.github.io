@@ -135,7 +135,7 @@ MNIST
 VAE의 objective function, 그 중에서도 KL-divergence term은 closed-form으로 적을 수 있다.
 
 $$
-
+KL[q_{\phi}(z|x) \| p_{\theta}(z)]
 $$
 
 ### . 상충되는 objective
@@ -169,6 +169,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mj
-c2OTMxMzgsLTExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbOTEwMjU0MDE5LDIwOTEzMTg4MjgsNjA0MT
+g2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
 -->
