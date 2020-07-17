@@ -132,7 +132,7 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 * 또한, training을 하는 과정에서 $p_{\theta}(x \vert x)$로부터 실제로 sampling을 하지 않는다. 
 
-
+대신에 $\mu_{\phi}(x)$를 마치 sampling된 결과처럼 생각하여 사용한다. 
 
 
 ## 2. Posterior Collapse
@@ -188,7 +188,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3ODM4MTk0NCwxNTgwNzEyMSwtNDc2NT
-Y1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYwNDE4Njg0NSwt
-MTQyNzY5MzEzOCwtMTE2MDkzNTczMl19
+eyJoaXN0b3J5IjpbLTEwODM5NzE5MDMsMTU4MDcxMjEsLTQ3Nj
+U2NTAwNyw5MjA4MDg0MzIsMjA5MTMxODgyOCw2MDQxODY4NDUs
+LTE0Mjc2OTMxMzgsLTExNjA5MzU3MzJdfQ==
 -->
