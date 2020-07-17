@@ -139,7 +139,7 @@ KL[q_{\phi}(z|x) \| p_{\theta}(z)]
 $$
 
 $$
-= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2 \right)
+= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2 - dimension + tr(diag(\sigma^2_{\phi}(x))) - \log{det(di)} \right)
 $$
 
 ### . 상충되는 objective
@@ -173,6 +173,6 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE4OTE3MzgyLDIwOTEzMTg4MjgsNjA0MT
-g2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbLTExOTc0OTUxNjEsMjA5MTMxODgyOCw2MD
+QxODY4NDUsLTE0Mjc2OTMxMzgsLTExNjA5MzU3MzJdfQ==
 -->
