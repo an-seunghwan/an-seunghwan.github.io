@@ -263,11 +263,11 @@ $$
 
 여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 parameter로 생각할 수 있다.
 
-
+따라서 $\sigma^2$가 작으면, beta-VAE에서의 $\beta$가 작은 경우로 생각할 수 있고, 이러한 경우에 실험적으로 decoder latent variable을 잘 활용하는 강력한 decoder가 됨을 볼 수 있다. 하지만, 해당 beta-VAE의 ELBO
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAyNDY5OTQ3LC0xMzQzMDQyMTMxLDg3MD
+eyJoaXN0b3J5IjpbMjY1OTQ5OTk5LC0xMzQzMDQyMTMxLDg3MD
 IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
 MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
 kzNTczMl19
