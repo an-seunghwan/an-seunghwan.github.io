@@ -192,12 +192,20 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 * distributions
 
+다음과 같은 실제 분포가 주어져있을 때, 
+
 $$
 p(z) = N(0, I)
 $$
 
 $$
 p(x|z) = N(Wz+\mu, \sigma^2I)
+$$
+
+probabilistic PCA는 다음의 data 분포와 posterior 분포를 찾게된다.
+
+$$
+p(x)
 $$
 
 * posterior collapse
@@ -213,8 +221,8 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzgwMTI1NDAsLTEzNDMwNDIxMzEsOD
-cwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMy
-LDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMT
-YwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbMTM2OTg1MTU3OCwtMTM0MzA0MjEzMSw4Nz
+AyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIs
+MjA5MTMxODgyOCw2MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNj
+A5MzU3MzJdfQ==
 -->
