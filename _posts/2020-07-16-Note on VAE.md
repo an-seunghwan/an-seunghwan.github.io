@@ -94,9 +94,9 @@ $$
 
 * 
 
-$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated prior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 ELBO는 tight bound를 가진다.
+$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated posterior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 ELBO는 tight bound를 가진다.
 
-$q_{\phi}(z)$를 추정하기 위해 사용하는 방법이 variational approximation 인데, $q_{\phi}(z)$ 대신 $q_{\phi}(z \vert x)$를 사용한다. 즉, $z$에 대한 approximated prior 분포가 $x$에 의존하도록 만드는 것이다. 이를 수식으로 쓰면 다음과 같다.
+$q_{\phi}(z)$를 추정하기 위해 사용하는 방법이 variational approximation 인데, $q_{\phi}(z)$ 대신 $q_{\phi}(z \vert x)$를 사용한다. 즉, $z$에 대한 approximated posterior 분포가 $x$에 의존하도록 만드는 것이다. 이를 수식으로 쓰면 다음과 같다.
 
 $$
 q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))
@@ -130,7 +130,7 @@ MNIST
 
 ## 2. Posterior Collapse
 
-### . objective interpretation
+### 1. objective interpretation
 
 VAE의 objective function, 그 중에서도 KL-divergence term은 closed-form으로 적을 수 있다.
 
@@ -146,9 +146,11 @@ $$
 = \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right) 
 $$
 
-따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence
+따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence가 감소한다.
 
-### . 상충되는 objective
+따라서, 이러한 측면에서 보면 마치 approximated posterior의 분포가 
+
+### 2. 상충되는 objective
 
 앞에서 잠깐 언급한 것처럼, ELBO의 식은 reconstruction error와 KL-divergence의 합으로 구성되어 있는 것으로 볼 수 있다. 하지만 이 2개의 합을 최대화하는 과정에서, 각각의 term의 목적이 서로 상충되는 경우가 발생한다.
 
@@ -179,7 +181,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDQxODM1MTksOTIwODA4NDMyLDIwOT
-EzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1
-NzMyXX0=
+eyJoaXN0b3J5IjpbNzgwNTg4ODIwLDkyMDgwODQzMiwyMDkxMz
+E4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MDkzNTcz
+Ml19
 -->
