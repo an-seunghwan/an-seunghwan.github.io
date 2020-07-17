@@ -138,6 +138,10 @@ $$
 \log{p_{\theta}(x|z)} = -\frac{1}{2\sigma^2_{\theta}(z)} \| x - \mu_{\theta}(z) \|_2^2 - \frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}
 $$ 
 
+$$
+X|Z=z \sim N(\mu_{\theta}(z), diag(\sigma^2_{\theta}(z)))
+$$
+
 (단, $x$의 분산에 대해 모든 원소가 동일한 대각행렬을 가정)
 
 
@@ -194,7 +198,7 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODc5NDY4NSw4NzAyMTgzNzksMTU4MD
-cxMjEsLTQ3NjU2NTAwNyw5MjA4MDg0MzIsMjA5MTMxODgyOCw2
-MDQxODY4NDUsLTE0Mjc2OTMxMzgsLTExNjA5MzU3MzJdfQ==
+eyJoaXN0b3J5IjpbLTEzNDMwNDIxMzEsODcwMjE4Mzc5LDE1OD
+A3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMyLDIwOTEzMTg4Mjgs
+NjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
 -->
