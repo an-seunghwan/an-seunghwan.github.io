@@ -21,7 +21,19 @@ tags:
 >  본 포스팅은 위의 내용에 대한 2편(tensorflow 코드 작성) 입니다.
 >  정확한 내용과 수식들은 논문을 참조해주시기 바랍니다. 
 
-## 1. setting
+## 1. 환경
+
+모델명:  iMac Pro
+모델 식별자:  iMacPro1,1
+프로세서 이름:  8-Core Intel Xeon W
+프로세서 속도:  3.2 GHz
+프로세서 개수:  1
+총 코어 개수:  8
+
+메모리:  32 GB
+
+## 2. setting
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyOTY5NzM4XX0=
+eyJoaXN0b3J5IjpbNzU2MTMzNTk1LDYzMjk2OTczOF19
 -->
