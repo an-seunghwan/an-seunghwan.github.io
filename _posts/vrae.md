@@ -7,7 +7,7 @@ toc_sticky: true
 author_profile: false
 use_math: true
 
-date: 2020-07-16 20:00:00 -0000
+date: 2020-07-18 20:00:00 -0000
 categories: 
   - VAE
   - NLP
@@ -25,8 +25,8 @@ tags:
 
 ((그림 첨부))
 
-논문에서 제안하는 모형은 생각보다 매우 간단하다. 기존의 
+논문에서 제안하는 모형은 생각보다 매우 간단하다. 기존의 sequence to sequence의 모형에 latent space를 도입한 것이 전부이다. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzNzk1MzI5LC0xODY2ODg4MzZdfQ==
+eyJoaXN0b3J5IjpbMzYxMzI4NTE5LC0xODY2ODg4MzZdfQ==
 -->
