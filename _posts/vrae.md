@@ -21,8 +21,12 @@ tags:
 >  
 >  정확한 내용과 수식들은 논문을 참조해주시기 바랍니다. 
 
-## 1. 
+## 1. 구조
+
+((그림 첨부))
+
+논문에서 제안하는 모형은 생각보다 매우 간단하다. 기존의 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjY4ODgzNl19
+eyJoaXN0b3J5IjpbNzIzNzk1MzI5LC0xODY2ODg4MzZdfQ==
 -->
