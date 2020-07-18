@@ -25,9 +25,11 @@ tags:
 
 <center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/vrae.png?raw=true" width="800"  height="200"></center>
 
-논문에서 제안하는 모형은 생각보다 매우 간단하다. 기존의 sequence to sequence의 모형에 latent space를 도입한 것이 전부이다. 즉, LSTM layer로 구성된 encoder가 문장을 입력받으면, 
+논문에서 제안하는 모형은 생각보다 매우 간단하다. 기존의 sequence to sequence의 모형에 latent space를 도입한 것이 전부이다. 즉, LSTM layer로 구성된 encoder가 문장을 입력받으면, hidden state를 출력한다. 이를 이용해서 posterior 분포의 평균과 분산을 linear layer를 이용하여 계산하고, 이를 이용해 latent variable $z$를 생성한다.
+
+다음 $z$를 LSTM layer로 구성된 decoder에 입력
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzQ3NDI5MDUsMzYxMzI4NTE5LC0xOD
-Y2ODg4MzZdfQ==
+eyJoaXN0b3J5IjpbLTc4Nzk5NTMzOCwzNjEzMjg1MTksLTE4Nj
+Y4ODgzNl19
 -->
