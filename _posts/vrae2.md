@@ -23,17 +23,20 @@ tags:
 
 ## 1. 환경
 
+```
 모델명:  iMac Pro
-모델 식별자:  iMacPro1,1
 프로세서 이름:  8-Core Intel Xeon W
 프로세서 속도:  3.2 GHz
 프로세서 개수:  1
 총 코어 개수:  8
-
 메모리:  32 GB
+```
 
 ## 2. setting
 
+```python
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2MTMzNTk1LDYzMjk2OTczOF19
+eyJoaXN0b3J5IjpbNDk3OTM5NDc1LDYzMjk2OTczOF19
 -->
