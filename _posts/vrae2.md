@@ -35,8 +35,43 @@ tags:
 ## 2. setting
 
 ```python
+import tensorflow as tf
+import tensorflow.keras as K
+from tensorflow.keras import layers
+from tensorflow.keras import preprocessing
+print('TensorFlow version:', tf.__version__)
+print('즉시 실행 모드:', tf.executing_eagerly())
+print('available GPU:', tf.config.list_physical_devices('GPU'))
+from tensorflow.python.client import device_lib
+print('==========================================')
+print(device_lib.list_local_devices())
+tf.debugging.set_log_device_placement(False)
+```
+
+```
+TensorFlow version: 2.2.0
+즉시 실행 모드: True
+available GPU: []
+==========================================
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 7747759211262961658
+, name: "/device:XLA_CPU:0"
+device_type: "XLA_CPU"
+memory_limit: 17179869184
+locality {
+}
+incarnation: 10969879987829226263
+physical_device_desc: "device: XLA_CPU device"
+]
+```
+
+```python
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3OTM5NDc1LDYzMjk2OTczOF19
+eyJoaXN0b3J5IjpbLTc1ODM1NjA0OCw2MzI5Njk3MzhdfQ==
 -->
