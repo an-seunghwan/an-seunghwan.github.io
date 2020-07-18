@@ -1,6 +1,6 @@
 ---
-title: "Generating Sentences from a Continuous Space(작성중)"
-excerpt: "VAE + RNN"
+title: "Generating Sentences from a Continuous Space 1편(작성중)"
+excerpt: "VAE + RNN을 알아보자"
 toc: true
 toc_sticky: true
 
@@ -17,8 +17,8 @@ tags:
   - RNN
 ---
 
-> [Generating Sentences from a Continuous Space](https://arxiv.org/abs/1511.06349) 논문에 대한 간단한 리뷰와 tensorflow 코드입니다.
->  
+> [Generating Sentences from a Continuous Space](https://arxiv.org/abs/1511.06349) 논문에 대한 간단한 리뷰와 tensorflow 코드입니다. 
+>  본 포스팅은 위의 내용에 대한 1편 입니다.
 >  정확한 내용과 수식들은 논문을 참조해주시기 바랍니다. 
 
 ## 1. 구조
@@ -31,9 +31,14 @@ tags:
 
 ### 1. KL annealing
 
-### 2. word dropo
+### 2. word dropout and historyless decoding
+
+## 3. 활용
+
+### 1. imputing missing words
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc3ODE4MTc1LDM2MTMyODUxOSwtMTg2Nj
-g4ODM2XX0=
+eyJoaXN0b3J5IjpbLTE3MDE3NjQyNjgsMzYxMzI4NTE5LC0xOD
+Y2ODg4MzZdfQ==
 -->
