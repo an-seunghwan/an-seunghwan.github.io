@@ -21,7 +21,7 @@ tags:
 >  본 포스팅은 위의 내용에 대한 2편(tensorflow 코드 작성) 입니다.
 >  정확한 내용과 수식들은 논문을 참조해주시기 바랍니다. 
 
-## 1. 환경
+## . 환경
 
 ```
 모델명:  iMac Pro
@@ -32,7 +32,12 @@ tags:
 메모리:  32 GB
 ```
 
-## 2. setting
+## . 데이터
+
+* 네이버 영화 리뷰 데이터 'Naver sentiment movie corpus v1.0'
+* 출처: [https://github.com/e9t/nsmc](https://github.com/e9t/nsmc)
+
+## . setting
 
 ```python
 import tensorflow as tf
@@ -73,12 +78,10 @@ physical_device_desc: "device: XLA_CPU device"
 
 ```
 
-## 3. 데이터
+## .데이터 전처리
 
-* 네이버 영화 리뷰 데이터 'Naver sentiment movie corpus v1.0'
-* 출처: [https://github.com/e9t/nsmc](https://github.com/e9t/nsmc)
-* 본 글에서는 평가 데이터만을 예시로 사용한다.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NTM4ODkxMywtNzU4MzU2MDQ4LDYzMj
-k2OTczOF19
+eyJoaXN0b3J5IjpbLTUwNzgyOTk4MSwxMzk1Mzg4OTEzLC03NT
+gzNTYwNDgsNjMyOTY5NzM4XX0=
 -->
