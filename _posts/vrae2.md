@@ -72,6 +72,13 @@ physical_device_desc: "device: XLA_CPU device"
 ```python
 
 ```
+
+## 3. 데이터
+
+* 네이버 영화 리뷰 데이터 'Naver sentiment movie corpus v1.0'
+* 출처: [https://github.com/e9t/nsmc](https://github.com/e9t/nsmc)
+* 본 글에서는 평가 데이터만을 예시로 사용한다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1ODM1NjA0OCw2MzI5Njk3MzhdfQ==
+eyJoaXN0b3J5IjpbMTM5NTM4ODkxMywtNzU4MzU2MDQ4LDYzMj
+k2OTczOF19
 -->
