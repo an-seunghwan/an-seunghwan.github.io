@@ -66,23 +66,11 @@ RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생
 
 (양변에 supremum을 취한다.)
 
+$$\sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}$$
+$$= \log{p_{\theta}(x)} + \sup_{\phi}{KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}$$
+$$= \log{p_{\theta}(x)} $$
+$$= \sup_{\phi}{\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]}
 $$
-
-\sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
-$$
-
-$$
-= \log{p_{\theta}(x)} + \sup_{\phi}{KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
-$$
-
-$$
-= \log{p_{\theta}(x)} 
-$$
-
-$$
-= \sup_{\phi}{\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]}
-$$
-
 즉, $q_{\phi}(z \vert x)$ 의 모형 공간이 충분히 크다면, 
 
 $$
@@ -270,8 +258,8 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODA3NjU5Myw2OTIzNDgxMjcsLTEzND
-MwNDIxMzEsODcwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcs
-OTIwODA4NDMyLDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3Nj
-kzMTM4LC0xMTYwOTM1NzMyXX0=
+eyJoaXN0b3J5IjpbNDMyMzcwODEsMjA2ODA3NjU5Myw2OTIzND
+gxMjcsLTEzNDMwNDIxMzEsODcwMjE4Mzc5LDE1ODA3MTIxLC00
+NzY1NjUwMDcsOTIwODA4NDMyLDIwOTEzMTg4MjgsNjA0MTg2OD
+Q1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMyXX0=
 -->
