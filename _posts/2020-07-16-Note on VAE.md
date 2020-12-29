@@ -136,8 +136,7 @@ $$KL[q_{\phi}(z|x) \| p_{\theta}(z)]$$
 
 $$= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2 - dimension + tr(diag(\sigma^2_{\phi}(x))) - \log{det(diag(\sigma_{\phi}(x)))} \right)$$
 
-$$= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right) 
-$$
+$$= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right)$$
 따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence가 감소한다.
 
 따라서, 이러한 측면에서 보면 마치 approximated posterior의 분포가 $N(0, I)$에 가까워지면서, 즉 $x$에 대한 정보를 점점 잃어가는 것처럼 생각할 수 있다(become less expressive and shrinks to $N(0, I)$). 이러한 현상을 __posterior collapse__ (learned variational distribution is close to the prior)라고 부르는데, 많은 연구들이 이러한 현상의 원인으로 KL-divergence를 생각했다.
@@ -168,23 +167,15 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 다음과 같은 실제 분포가 주어져있을 때, 
 
-$$
-p(z) = N(0, I)
-$$
+$$p(z) = N(0, I)$$
 
-$$
-p(x|z) = N(Wz+\mu, \sigma^2I)
-$$
+$$p(x|z) = N(Wz+\mu, \sigma^2I)$$
 
 probabilistic PCA는 다음의 data 분포와 posterior 분포를 찾게된다.
 
-$$
-p(x) = N(\mu, MM^\top + \sigma^2I)
-$$
+$$p(x) = N(\mu, MM^\top + \sigma^2I)$$
 
-$$
-p(z|x) = N(M^{-1}W^\top(x-\mu), \sigma^2I)
-$$
+$$p(z|x) = N(M^{-1}W^\top(x-\mu), \sigma^2I)$$
 
 where $M = W^\top W + \sigma^2I$
 
@@ -202,25 +193,17 @@ MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈
 
 다음의 모형을 linear VAE라고 하고, approximated posterior는 global optimum의 경우에 pPCA의 true posterior를 정확하게 복원할 수 있다.
 
-$$
-p(x|z) = N(Wz+\mu. \sigma^2I)
-$$
+$$p(x|z) = N(Wz+\mu. \sigma^2I)$$
 
-$$
-q(z|x) = N(V(x-\mu), D)
-$$
+$$q(z|x) = N(V(x-\mu), D)$$
 
 이때, $D$는 diagonal covariance matrix($\sigma^2I$)로, 모든 데이터 point에 대해 동일하게 사용된다.
 
 * objective
 
-$$
-\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|x) \| p(z)] + KL[q(z|x) \| p(z|x)]
-$$
+$$\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|x) \| p(z)] + KL[q(z|x) \| p(z|x)]$$
 
-$$
-\log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]
-$$
+$$\log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]$$
 
 global optimum($V = M^{-1}W_{MLE}$)인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood(of pPCA)가 tight bound를 가지게 된다. 즉, ELBO가 marginal likelihood와 정확히 일치하게 된다.
 
@@ -229,9 +212,7 @@ __posterior collapse의 원인: ELBO can be increased by applying rotation when 
 
 * Deep VAE
 
-$$
-ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}
-$$
+$$ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}$$
 
 여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 parameter로 생각할 수 있다.
 
@@ -241,7 +222,7 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc0MTA1Njg3LDIwNjgwNzY1OTMsNjkyMz
+eyJoaXN0b3J5IjpbNjA2NzAyMTIxLDIwNjgwNzY1OTMsNjkyMz
 Q4MTI3LC0xMzQzMDQyMTMxLDg3MDIxODM3OSwxNTgwNzEyMSwt
 NDc2NTY1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYwNDE4Nj
 g0NSwtMTQyNzY5MzEzOCwtMTE2MDkzNTczMl19
