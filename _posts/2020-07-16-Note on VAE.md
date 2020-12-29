@@ -28,6 +28,16 @@ tags:
 
 ## 1.  VAE
 
+```{r}
+table(Cars93$Origin)
+data <- matrix(c(103, 341, 15, 105, 11, 405), ncol=3, byrow=FALSE)
+colnames(data) <- c("Demo","Ind","Repub")
+rownames(data) <- c("Black","White")
+data <- as.table(data)
+data 
+chisq.test(data)
+```
+
 ### 1. purpose
 1. sampling new data $x^*$
 2. measure likelihood of new $x^*$
@@ -222,8 +232,9 @@ $$ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2NzAyMTIxLDIwNjgwNzY1OTMsNjkyMz
-Q4MTI3LC0xMzQzMDQyMTMxLDg3MDIxODM3OSwxNTgwNzEyMSwt
-NDc2NTY1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYwNDE4Nj
-g0NSwtMTQyNzY5MzEzOCwtMTE2MDkzNTczMl19
+eyJoaXN0b3J5IjpbLTQzMzU5NjUxNyw2MDY3MDIxMjEsMjA2OD
+A3NjU5Myw2OTIzNDgxMjcsLTEzNDMwNDIxMzEsODcwMjE4Mzc5
+LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMyLDIwOTEzMT
+g4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMy
+XX0=
 -->
