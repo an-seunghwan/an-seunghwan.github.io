@@ -28,7 +28,7 @@ tags:
 
 ## 1.  VAE
 
-```{r}
+```r
 table(Cars93$Origin)
 data <- matrix(c(103, 341, 15, 105, 11, 405), ncol=3, byrow=FALSE)
 colnames(data) <- c("Demo","Ind","Repub")
@@ -232,9 +232,9 @@ $$ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzU5NjUxNyw2MDY3MDIxMjEsMjA2OD
-A3NjU5Myw2OTIzNDgxMjcsLTEzNDMwNDIxMzEsODcwMjE4Mzc5
-LDE1ODA3MTIxLC00NzY1NjUwMDcsOTIwODA4NDMyLDIwOTEzMT
-g4MjgsNjA0MTg2ODQ1LC0xNDI3NjkzMTM4LC0xMTYwOTM1NzMy
-XX0=
+eyJoaXN0b3J5IjpbMTgzNDU3MTM1LC00MzM1OTY1MTcsNjA2Nz
+AyMTIxLDIwNjgwNzY1OTMsNjkyMzQ4MTI3LC0xMzQzMDQyMTMx
+LDg3MDIxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwOD
+QzMiwyMDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwt
+MTE2MDkzNTczMl19
 -->
