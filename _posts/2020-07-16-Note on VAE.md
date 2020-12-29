@@ -67,6 +67,7 @@ RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생
 (양변에 supremum을 취한다.)
 
 $$
+
 \sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
 $$
 
@@ -269,8 +270,8 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkyMzQ4MTI3LC0xMzQzMDQyMTMxLDg3MD
-IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
-MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
-kzNTczMl19
+eyJoaXN0b3J5IjpbMjA2ODA3NjU5Myw2OTIzNDgxMjcsLTEzND
+MwNDIxMzEsODcwMjE4Mzc5LDE1ODA3MTIxLC00NzY1NjUwMDcs
+OTIwODA4NDMyLDIwOTEzMTg4MjgsNjA0MTg2ODQ1LC0xNDI3Nj
+kzMTM4LC0xMTYwOTM1NzMyXX0=
 -->
