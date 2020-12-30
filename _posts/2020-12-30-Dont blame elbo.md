@@ -32,7 +32,7 @@ tags:
 $$
 \begin{aligned}
 p({\bf z}) &= N_{\bf z}({\bf z} | 0, I) \\
-p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\phi), \beta^2I) 
+p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\theta), \beta^2I) 
 \end{aligned}
 $$
 
@@ -40,8 +40,11 @@ $$
 
 ### 3. ELBO
 
-
-$$\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]$$
+$$
+\begin{aligned}
+\log{p_{\theta}(x)} &=  \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)] + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]
+\end{aligned}
+$$
 
 RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생긴 형태 때문에 ELBO를 objective로 사용하는 경우에 학습 목표가 reconstruction error와 KL-divergence를 최소화하는 것이라고 오해하는 경우가 많다.
 
@@ -95,5 +98,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzE2NzUxMiw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbLTE4MDk3MjQyMjMsNzYwMDc2Mzg5XX0=
 -->
