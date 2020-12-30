@@ -20,6 +20,8 @@ tags:
 
 ## 1. _config.yml 확인하기
 
+
+
 _config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
 
 ```yml
@@ -42,7 +44,19 @@ smart_quotes: lsquo,rsquo,ldquo,rdquo
 enable_coderay: false
 ```
 
-## 2. 
+## 2. _layouts/defaut.html 파일 확인하기
+
+_layouts/defaut.html 파일을 확읺
+(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
+```html
+<head>
+	{% include head.html %}
+	{% include head/custom.html %}
+	{% if page.use_math %}
+		{% include mathjax_support.html %}
+	{% endif %}
+</head>
+```
 
 ## 2. _includes/scripts.html 파일 수정하기
 
@@ -67,5 +81,5 @@ _includes/scripts.html
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTQ2NDEzLC0zOTkzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbLTE0NzAwNTgwMjksLTM5OTM1OTY2M119
 -->
