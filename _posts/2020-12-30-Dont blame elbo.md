@@ -20,13 +20,11 @@ tags:
 * Auto-Encoding Variational Bayes: [https://arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114)
 * Don’t Blame the ELBO! A Linear VAE Perspective on Posterior Collapse: [https://arxiv.org/pdf/1911.02469.pdf](https://arxiv.org/pdf/1911.02469.pdf)
 
-## 1.  VAE
-
-### 1. purpose
+## 1. purpose
 
 일반적으로 data log-likelihood는 closed form으로 주어지지 않는다. 따라서 $\log{p_{\theta}(x)}$를 최대화하는 $\theta$를 Maximum Likelihood 방법으로 찾기는 매우 어렵다(intractable). 따라서, latent variable ${\bf z}$를 도입하여 대신 데이터의 조건부 분포를 approximate하고, marginal data log-likelihood의 lower bound (ELBO)를 계산하여 이를 최대화하는 방법으로 $\theta$를 찾는다.
 
-### 2. latent variable model
+## 2. latent variable model
 * distribution 가정
 
 $$
@@ -36,9 +34,9 @@ p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\theta), \beta \cdot I)
 \end{aligned}
 $$
 
-이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다.
+이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다. $p({\bf x}|{\bf z})$는 observation model이라고도 불린다.
 
-### 3. ELBO
+## 3. ELBO
 
 $$
 \begin{aligned}
@@ -58,7 +56,7 @@ $$
 \end{aligned} 
 $$
 
-### 4. reparametrization trick
+## 4. reparametrization trick
 
 $x$에 의존하는 $z$에 대한 approximated posterior 분포:
 
@@ -76,7 +74,9 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 3. sampling latent variable: $z = \mu_{\phi}(x) + \sigma_{\phi}(x) \cdot \epsilon$
 
- reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
+## 5. Simulation of ELBO
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxOTMxMzE2LDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbLTEwMzQzNDg1NzAsNzYwMDc2Mzg5XX0=
 -->
