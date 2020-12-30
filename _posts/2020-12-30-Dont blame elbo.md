@@ -42,15 +42,13 @@ $$
 
 $$
 \begin{aligned}
-\log{p_{\theta}(x)} &=  \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)] + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]
+\log{p_{\theta}(x)} &=  \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p(z)] + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] \\
+&\geq \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p(z)] \\
+&= ELBO
 \end{aligned}
 $$
 
-RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생긴 형태 때문에 ELBO를 objective로 사용하는 경우에 학습 목표가 reconstruction error와 KL-divergence를 최소화하는 것이라고 오해하는 경우가 많다.
-
-앞에서도 언급했지만, VAE의 학습 목표는 data log-likelihood를 최대화하는 것임을 다시 밝힌다.
-
-이때, true model에 대한 parameter $\theta$ 가 주어졌다고 생각해보자. 그리고 $q_{\phi}$의 모형 공간이 충분히 크다고 하면, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+$q_{\phi}$의 모형 공간이 충분히 크다고 하면, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
 (양변에 supremum을 취한다.)
 
@@ -98,5 +96,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDk3MjQyMjMsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbMjAxODA5NjY1OSw3NjAwNzYzODldfQ==
 -->
