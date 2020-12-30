@@ -34,9 +34,7 @@ p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\theta), \beta \cdot I)
 \end{aligned}
 $$
 
-이때, $D({\bf z};\phi)$ 는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다. 
-
-$p({\bf x}|{\bf z})$ 는 observation model이라고도 불린다.
+이때, $D({\bf z};\phi)$ 는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다. $p({\bf x} \vert {\bf z})$ 는 observation model이라고도 불린다.
 
 ## 3. ELBO
 
@@ -48,9 +46,7 @@ $$
 \end{aligned}
 $$
 
-$q_{\phi}(z|x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, 
-$q_{\phi}(z|x) = p_{\theta}(z|x)$ 가 되도록 하여 
-$KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+$q_{\phi}(z \vert x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $q_{\phi}(z \vert x) = p_{\theta}(z|x)$ 가 되도록 하여 $KL[q_{\phi}(z \vert x) \| p_{\theta}(z \vert x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
 $$
 \begin{aligned}
@@ -84,7 +80,12 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 ## 5. Simulation of ELBO
 
 
+$$
+\begin{aligned}
+ -\frac{1}{2\beta} \cdot \frac{1}{N} \sum_{i=1}^N \| \bx_i - D_{\theta}(\bz_i) \|_2^2 - \frac{1}{N} \sum_{i=1}^N KL(q(\bz|\bx_i;\phi)\|p(\bz)) -\frac{d}{2} \log 2\pi\beta
+\end{aligned}
+$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTQ3MzI3NSwtMTAzNDM0ODU3MCw3Nj
-AwNzYzODldfQ==
+eyJoaXN0b3J5IjpbMTc2NzMwMTQ2MCwtNDYxNDczMjc1LC0xMD
+M0MzQ4NTcwLDc2MDA3NjM4OV19
 -->
