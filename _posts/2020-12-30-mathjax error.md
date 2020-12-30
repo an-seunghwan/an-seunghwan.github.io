@@ -81,7 +81,7 @@ enable_coderay: false
 
 _layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
 
-```html
+```
 <head>
 	{% include head.html %}
 	{% include head/custom.html %}
@@ -120,5 +120,6 @@ _layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html))
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNzE5NzcxOCwtMzk5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbNDkwMzcxMjQzLDEzMzcxOTc3MTgsLTM5OT
+M1OTY2M119
 -->
