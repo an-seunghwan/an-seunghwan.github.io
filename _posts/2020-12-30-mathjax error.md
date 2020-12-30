@@ -20,7 +20,7 @@ tags:
 
 ## 1. _config.yml 확인하기
 
-_config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
+`_config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
 
 ```yml
 # Conversion
@@ -46,7 +46,7 @@ enable_coderay: false
 
 ## 2. _includes/mathjax_support.html 파일 추가하기
 
-_includes 폴더에 
+`_includes` 폴더에 아래와 같은 내용이 적힌 `mathjax_support.html` 파일을 추가해야한다.
 
 ```html
 <script type="text/x-mathjax-config">
@@ -93,7 +93,9 @@ _layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
 
-## 3. _includes/scripts.html 파일 수정하기
+## 4. _includes/scripts.html 파일 수정하기
+
+가장 중요한 부분인데, 최근까지 잘 되던 수식 입력이 안되는 이유는 이 `scripts.html`파일 때문이었다!!!
 
 _includes/scripts.html
 
@@ -116,5 +118,5 @@ _includes/scripts.html
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxOTkyODY4NywtMzk5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbLTE2MDY5NTUyMTAsLTM5OTM1OTY2M119
 -->
