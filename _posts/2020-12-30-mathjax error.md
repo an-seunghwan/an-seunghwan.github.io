@@ -118,7 +118,19 @@ _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에
 
 ### 2. outline 작성
 
-수식을 outline으로 작성할 때는 `$$a^2 + b^2 = c^2$$` 처럼 적으면 $$a^2 + b^2 = c^2$$ 이렇게 별도의 line에서 써진다.
+수식을 outline으로 작성할 때는 
+
+`$$
+a^2 + b^2 = c^2
+$$` 
+
+처럼 적으면 
+
+$$
+a^2 + b^2 = c^2
+$$ 
+
+이렇게 별도의 line에서 써진다.
 
 ### 3. outline 수식 정렬
 
@@ -144,6 +156,6 @@ $$
 
 이렇게 정렬되어 수식이 써진다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MDkzNjc5LDkwOTgxMzM5MSwxMzM3MT
-k3NzE4LC0zOTkzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbMTA1Njk4NTEzLC00NTA5MzY3OSw5MDk4MT
+MzOTEsMTMzNzE5NzcxOCwtMzk5MzU5NjYzXX0=
 -->
