@@ -79,7 +79,7 @@ enable_coderay: false
 
 ## 3. _layouts/defaut.html 파일 확인하기
 
-_layouts/defaut.html 파일을 확인했을 때, `<head>`와 '</head>`아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
+_layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
 
 ```
 {% include head.html %}
@@ -124,6 +124,6 @@ _layouts/defaut.html 파일을 확인했을 때, `<head>`와 '</head>`아래와 
 
 $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQzNDM5NTMsMTMzNzE5NzcxOCwtMz
-k5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbMzc3NzEyNjYyLDEzMzcxOTc3MTgsLTM5OT
+M1OTY2M119
 -->
