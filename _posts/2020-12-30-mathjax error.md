@@ -81,9 +81,9 @@ enable_coderay: false
 
 _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
 
-`{% if page.use_math %}`
-	`{% include mathjax_support.html %}`
-`{% endif %}`
+{% if page.use_math %}
+{% include mathjax_support.html %}
+{% endif %}
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
 
@@ -146,6 +146,6 @@ E &= M \cdot C^2 \\
 $$
 이렇게 정렬되어 수식이 써진다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUxMTQ5MjcxLDkwOTgxMzM5MSwxMzM3MT
-k3NzE4LC0zOTkzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbLTE2MzYxNTM2MzcsOTA5ODEzMzkxLDEzMz
+cxOTc3MTgsLTM5OTM1OTY2M119
 -->
