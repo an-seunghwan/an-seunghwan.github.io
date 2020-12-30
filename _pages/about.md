@@ -27,6 +27,7 @@ layout: single
 2. 주로 다루는 언어
   - python
     + tensorflow 2.0
+    
   - R
 
 3. Projects
