@@ -20,7 +20,7 @@ tags:
 
 ## 1. _config.yml 확인하기
 
-_config.t
+_config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
 
 ```yml
 # Conversion
@@ -42,7 +42,9 @@ smart_quotes: lsquo,rsquo,ldquo,rdquo
 enable_coderay: false
 ```
 
+## 2. _includes/scripts.html 파일 수정하기
 
+_includes/scripts.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTk5NTY0NSwtMzk5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbMTgzOTExNjc0OSwtMzk5MzU5NjYzXX0=
 -->
