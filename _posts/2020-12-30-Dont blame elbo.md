@@ -78,22 +78,24 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 ## 5. Simulation of ELBO
 
-$i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과 같다 (이 때 $d$는 latent variable의 차원의 크기):
+$i$번째 datapoint ${\bf x}_i$에 대한 negative ELBO의 simulation 수식은 다음과 같다 (이 때 $d$는 latent variable의 차원의 크기):
 
 $$
 \begin{aligned}
--\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) 
+\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 +\frac{d}{2} \log 2\pi\beta + KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) 
 \end{aligned}
 $$
 
-앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. 이제 양변을 variance parameter인 $\beta$로 scaling하면 아래와 같다:
+앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. ${\bf z}_$ 이제 양변을 variance parameter인 $\beta$로 scaling하면 아래와 같다:
 
 $$
 \begin{aligned}
--\frac{1}{2} \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 - \beta \cdot KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) - \beta \cdot \frac{d}{2} \log 2\pi\beta
+\frac{1}{2} \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 + \beta \cdot KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) + \beta \cdot \frac{d}{2} \log 2\pi\beta
 \end{aligned}
 $$
+
+따라서, 이를 해석하면 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMTMzMDE3NSwxOTczNDcwMjExLC00Nj
-E0NzMyNzUsLTEwMzQzNDg1NzAsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbLTEwMDk2MDUxMDQsMTk3MzQ3MDIxMSwtND
+YxNDczMjc1LC0xMDM0MzQ4NTcwLDc2MDA3NjM4OV19
 -->
