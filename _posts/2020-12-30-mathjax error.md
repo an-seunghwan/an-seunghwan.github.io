@@ -18,9 +18,31 @@ tags:
 
 하지만 최근부터 블로그에서 수식이 변환된 형태로 제대로 출력되지 않는 문제가 있어, 이를 해결하는 방법을 찾았고 이를 공유하고자 한다! 잘 이해가 안되시는 분들은 제 블로그의 [github link](https://github.com/an-seunghwan/an-seunghwan.github.io)에 들어가서 직접 확인해보시는 것도 좋을 것 같습니다 :)
 
+## 1. _config.yml 확인하기
 
+_config.t
+
+```yml
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+input: GFM
+hard_wrap: false
+auto_ids: true
+footnote_nr: 1
+entity_output: as_char
+toc_levels: 1..6
+smart_quotes: lsquo,rsquo,ldquo,rdquo
+enable_coderay: false
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODA0MjQwMjksLTM5OTM1OTY2M119
+eyJoaXN0b3J5IjpbLTIwOTk5NTY0NSwtMzk5MzU5NjYzXX0=
 -->
