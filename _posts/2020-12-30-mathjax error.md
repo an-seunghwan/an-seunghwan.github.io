@@ -82,8 +82,6 @@ enable_coderay: false
 _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
 
 ```
-{% include head.html %}
-{% include head/custom.html %}
 {% if page.use_math %}
 	{% include mathjax_support.html %}
 {% endif %}
@@ -126,10 +124,13 @@ _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에
 
 ### 2. outline 작성
 
-수식을 outline으로 작성
+수식을 outline으로 작성할 때는 `$$a^2 + b^2 = c^2$$` 처럼 적으면 $$a^2 + b^2 = c^2$$ 이렇게 별도의 line에서 써진다.
 
+### 3. outline 수식 정렬
+
+outline 수식을 정렬하고 싶을 때는 
 $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MzExMDU5NSwxMzM3MTk3NzE4LC0zOT
+eyJoaXN0b3J5IjpbLTQwMTY2NjM3NywxMzM3MTk3NzE4LC0zOT
 kzNTk2NjNdfQ==
 -->
