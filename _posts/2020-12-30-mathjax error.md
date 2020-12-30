@@ -20,7 +20,7 @@ tags:
 
 ## 1. _config.yml 확인하기
 
-`_config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
+`_config.yml` 파일을 확인했을 때, 아래와 같이 markdown engine이 `kramdown`으로 되어있어야 한다!
 
 ```yml
 # Conversion
@@ -97,7 +97,7 @@ _layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 
 
 가장 중요한 부분인데, 최근까지 잘 되던 수식 입력이 안되는 이유는 이 `scripts.html`파일 때문이었다!!!
 
-_includes/scripts.html
+`_includes` 폴더의 `scripts.html` 파일에 아래와 같은 코드를 맨 아래에 그대로 추가하면 이제 모든 문제가 해결된다.
 
 ```html
 <script type="text/javascript" async
@@ -117,6 +117,8 @@ _includes/scripts.html
 });
 </script>
 ```
+
+(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html))
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDY5NTUyMTAsLTM5OTM1OTY2M119
+eyJoaXN0b3J5IjpbMTMzNzE5NzcxOCwtMzk5MzU5NjYzXX0=
 -->
