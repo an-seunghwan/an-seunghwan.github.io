@@ -82,12 +82,20 @@ $i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과
 
 $$
 \begin{aligned}
- -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) \\
+& -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) \\
+&=  -\frac{1}{2} \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 - \beta \cdot KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) - \beta \cdot \frac{d}{2} \log 2\pi\beta
 \end{aligned}
 $$
 
 앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. 
+
+$$
+\begin{aligned}
+& -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) \\
+&=  -\frac{1}{2} \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 - \beta \cdot KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) - \beta \cdot \frac{d}{2} \log 2\pi\beta
+\end{aligned}
+$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5ODM3NDQwNCwxOTczNDcwMjExLC00Nj
-E0NzMyNzUsLTEwMzQzNDg1NzAsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbLTE5MDMxMDEwMTAsMTk3MzQ3MDIxMSwtND
+YxNDczMjc1LC0xMDM0MzQ4NTcwLDc2MDA3NjM4OV19
 -->
