@@ -42,9 +42,30 @@ smart_quotes: lsquo,rsquo,ldquo,rdquo
 enable_coderay: false
 ```
 
+## 2. 
+
 ## 2. _includes/scripts.html 파일 수정하기
 
 _includes/scripts.html
+
+```html
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	extensions: ["tex2jax.js"],
+	jax: ["input/TeX", "output/HTML-CSS"],
+	tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+		processEscapes: true
+	},
+	"HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTExNjc0OSwtMzk5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbLTI3NTQ2NDEzLC0zOTkzNTk2NjNdfQ==
 -->
