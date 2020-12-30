@@ -6,22 +6,28 @@ layout: single
 
 # About Blog?
 1. Topics
+  - Variational AutoEncoder
+    + apply to sentence generation
+
   - NLP
     + sentiment embedding
-    + seq-to-seq
+    + sequence-to-sequence 
     
-  - Constrained LASSO path algorithm
+  - optimization
+    + Constrained LASSO path algorithm
   
   - MPI for R
+    + for parallel computing
 
 # About ME?
 1. 학력
-  - 2015.03 ~: 서울시립대학교 통계학과 재학
+  - 2015.03 ~ 2020.08: 서울시립대학교 통계학부
+  - 2020.09 ~ 현재: 서울시립대학교 통계학 대학원 석사
 
-2. 주요 언어
-  - R
+2. 주로 다루는 언어
   - python
-  - julia(not studied yet)
+    + tensorflow 2.0
+  - R
 
 3. Projects
-  - 
+  - 신문 기사의 긍정, 부정의 감성 분석 (with 한국은행)
