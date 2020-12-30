@@ -31,12 +31,12 @@ tags:
 
 $$
 \begin{aligned}
-p(x) &= N_z(0, I) \\
-p(x|z) &= N_x(f(x;\phi), \sigma^2I) \\
+p({\bf z}) &= N_{\bf z}({\bf z} | 0, I) \\
+p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\phi), \beta^2I) 
 \end{aligned}
 $$
 
-이때, $f(x;\phi)$는 neural network로 구성되는 non-linear 함수이고, 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
+이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
 
 * latent space learning
 
@@ -98,5 +98,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3MjY5NzExLDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbLTExNjU2ODk4NTQsNzYwMDc2Mzg5XX0=
 -->
