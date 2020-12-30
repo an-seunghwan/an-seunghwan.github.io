@@ -79,16 +79,14 @@ enable_coderay: false
 
 ## 3. _layouts/defaut.html 파일 확인하기
 
-_layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
+_layouts/defaut.html 파일을 확인했을 때, `<head>`와 '</head>`아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
 
 ```
-<head>
-	{% include head.html %}
-	{% include head/custom.html %}
-	{% if page.use_math %}
-		{% include mathjax_support.html %}
-	{% endif %}
-</head>
+{% include head.html %}
+{% include head/custom.html %}
+{% if page.use_math %}
+	{% include mathjax_support.html %}
+{% endif %}
 ```
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
@@ -119,7 +117,13 @@ _layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 
 ```
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/scripts.html))
+
+## 5. 추가 - 수식 작성법
+
+### 1. inline 작성
+
+$$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwMzcxMjQzLDEzMzcxOTc3MTgsLTM5OT
-M1OTY2M119
+eyJoaXN0b3J5IjpbLTE5MTQzNDM5NTMsMTMzNzE5NzcxOCwtMz
+k5MzU5NjYzXX0=
 -->
