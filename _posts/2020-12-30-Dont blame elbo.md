@@ -23,8 +23,7 @@ tags:
 ## 1.  VAE
 
 ### 1. purpose
-1. sampling new data $x^*$
-2. measure likelihood of new $x^*$
+
 3. __maximize data log-likelihood__: $\log{p_{\theta}(x)}$
 
 여기서 제일 중요한 것은 3번의 data log-likelihood를 최대화하는 것이 결국 VAE의 가장 중요한 목적이라는 것이다.
@@ -101,5 +100,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbLTY0NjYyNzA5NCw3NjAwNzYzODldfQ==
 -->
