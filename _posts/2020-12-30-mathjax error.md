@@ -79,7 +79,7 @@ enable_coderay: false
 
 ## 3. _layouts/defaut.html 파일 확인하기
 
-_layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`와 `mathjax_support.html`에 관한 명령문이 적혀있어야 한다.
+_layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`와 `mathjax_support.html`에 관한 명령문이 적혀있어야 한다 (코드 첨부가 안되서 아래 제 github link를 참고해 주세요).
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
 
@@ -142,6 +142,6 @@ E &= M \cdot C^2 \\
 $$
 이렇게 정렬되어 수식이 써진다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU1ODUwMTU5LDkwOTgxMzM5MSwxMzM3MT
-k3NzE4LC0zOTkzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbLTQwMzQwMTI5OSw5MDk4MTMzOTEsMTMzNz
+E5NzcxOCwtMzk5MzU5NjYzXX0=
 -->
