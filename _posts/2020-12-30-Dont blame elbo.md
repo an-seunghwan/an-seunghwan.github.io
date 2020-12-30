@@ -11,7 +11,7 @@ date: 2020-12-30 20:00:00 -0000
 categories: 
   - VAE
 tags:
-  - 
+  - ELBO
 ---
 > Variational Inference, VAE 관련 여러 논문들과 블로그들을 보고 중요하다고 생각되는 수식과 아이디어 위주의 정리 포스팅입니다.
 
@@ -48,7 +48,7 @@ $$
 \end{aligned}
 $$
 
-$q_{\phi}(z|x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]$ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+$q_{\phi}(z|x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]$ 를 0으로 만드는 것이 가능하다. 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
 $$
 \begin{aligned}
@@ -103,5 +103,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjA5MjQ1OSw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbNTg0MTc5ODEsNzYwMDc2Mzg5XX0=
 -->
