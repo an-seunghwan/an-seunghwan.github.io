@@ -46,7 +46,7 @@ $$
 \end{aligned}
 $$
 
-$q_{\phi}(z \vert x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $q_{\phi}(z \vert x) = p_{\theta}(z|x)$ 가 되도록 하여 $KL[q_{\phi}(z \vert x) \| p_{\theta}(z \vert x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+$q_{\phi}(z \vert x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $q_{\phi}(z \vert x) = p_{\theta}(z \vert x)$ 가 되도록 하여 $KL[q_{\phi}(z \vert x) \| p_{\theta}(z \vert x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
 $$
 \begin{aligned}
@@ -76,13 +76,14 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 ## 5. Simulation of ELBO
 
+$i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과 같다:
 
 $$
 \begin{aligned}
- -\frac{1}{2\beta} \cdot \| \bx_i - D_{\theta}({\bf z}_i) \|_2^2 - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) -\frac{d}{2} \log 2\pi\beta
+ -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) -\frac{d}{2} \log 2\pi\beta
 \end{aligned}
 $$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzEwMTk2LC00NjE0NzMyNzUsLTEwMz
-QzNDg1NzAsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbMTk3MzQ3MDIxMSwtNDYxNDczMjc1LC0xMD
+M0MzQ4NTcwLDc2MDA3NjM4OV19
 -->
