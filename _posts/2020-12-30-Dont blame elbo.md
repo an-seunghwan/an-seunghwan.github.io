@@ -36,13 +36,23 @@ p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\phi), \beta^2I)
 \end{aligned}
 $$
 
-이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
-
-* latent space learning
-
-latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 __disentangled__ 되어 독립적인 factor(feature)를 학습하는 것이 목표이다.
+이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다.
 
 ### 3. ELBO
+
+$$
+\begin{aligned}
+&& \logp_{\theta}(\bx) \nonumber\\
+&=& \mbox{log}p_{\theta}(\bx) \int q_{\phi}(\bz|\bx) dz \nonumber\\
+&=& \int q_{\phi}(\bz|\bx) \mbox{log} \frac{p_{\theta}(\bx,\bz) p(\bx)}{p_{\theta}(\bx,\bz)} dz \nonumber\\
+&=& \int q_{\phi}(\bz|\bx) \mbox{log} \frac{p_{\theta}(\bx|\bz) p(\bz)}{p_{\theta}(\bz|\bx)} dz \\
+&=& \int \left(q_{\phi}(\bz|\bx) \mbox{log} p_{\theta}(\bx|\bz) + q_{\phi}(\bz|\bx) \mbox{log} p(\bz) - q_{\phi}(\bz|\bx) \mbox{log} p_{\theta}(\bz|\bx) \right) dz \pm \int q_{\phi}(\bz|\bx) \mbox{log} q_{\phi}(\bz|\bx) dz \nonumber\\
+&=& \int q_{\phi}(\bz|\bx) \mbox{log} p_{\theta}(\bx|\bz) dz + \int q_{\phi}(\bz|\bx) \mbox{log} \frac{q_{\phi}(\bz|\bx)}{p_{\theta}(\bz|\bx)} dz - \int q_{\phi}(\bz|\bx) \mbox{log} \frac{q_{\phi}(\bz|\bx)}{p(\bz)} dz \nonumber\\
+&=& \mathbb{E}_{q_{\phi}(\bz|\bx)} [\mbox{log} p_{\theta}(\bx|\bz)]- KL\left( q_{\phi}(\bz|\bx) \| p(\bz) \right) + KL\left( q_{\phi}(\bz|\bx) \| p_{\theta}(\bz|\bx) \right) \nonumber \\
+&=& -\mathcal{L}(\theta, \phi ; \bx) + KL\left(q_{\phi}(\bz|\bx) \| p_{\theta}(\bz|\bx)\right) \nonumber\\
+&\geq& -\mathcal{L}(\theta, \phi ; \bx), \nonumber
+\end{aligned}
+$$
 
 $$\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]$$
 
@@ -98,5 +108,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjU2ODk4NTQsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbMjExMTA5OTc4Miw3NjAwNzYzODldfQ==
 -->
