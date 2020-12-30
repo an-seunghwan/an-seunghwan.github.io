@@ -76,7 +76,7 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 3. sampling latent variable: $z = \mu_{\phi}(x) + \sigma_{\phi}(x) \cdot \epsilon$
 
-## 5. Simulation of ELBO
+## 5. Simulation of ELBO and Interpretation
 
 $i$번째 datapoint ${\bf x}_i$에 대한 negative ELBO의 simulation 수식은 다음과 같다 (이 때 $d$는 latent variable의 차원의 크기):
 
@@ -97,6 +97,6 @@ $$
 이를 해석하면 parameterized mean과 datapoint 사이의 MSE와 KL-divergence에 $\beta$를 곱한 것을 더한 식이된다. 따라서, $\beta$를 작은 값으로 설정하면, 기존의 KL-divergence의 영향력을 줄이기 위해 작은 weight를 곱해주는 heuristic한 접근들과 그 의미가 일치해진다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDMyNjA2NzcsMTk3MzQ3MDIxMSwtND
-YxNDczMjc1LC0xMDM0MzQ4NTcwLDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbNzQ5Mzk4NDM0LDE5NzM0NzAyMTEsLTQ2MT
+Q3MzI3NSwtMTAzNDM0ODU3MCw3NjAwNzYzODldfQ==
 -->
