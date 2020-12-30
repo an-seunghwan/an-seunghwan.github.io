@@ -44,7 +44,36 @@ enable_coderay: false
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_config.yml](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_config.yml))
 
-## 2. 
+## 2. _includes/mathjax_support.html 파일 추가하기
+
+_includes 폴더에 
+
+```html
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	TeX: {
+		equationNumbers: {
+		autoNumber: "AMS"
+		}
+	},
+	tex2jax: {
+		inlineMath: [ ['$', '$'] ],
+		displayMath: [ ['$$', '$$'] ],
+		processEscapes: true,
+		}
+	});
+	MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+		alert("Math Processing Error: "+message[1]);
+	});
+	MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+		alert("Math Processing Error: "+message[1]);
+	});
+</script>
+
+<script type="text/javascript" async
+	src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+```
 
 (참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/mathjax_support.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/mathjax_support.html))
 
@@ -87,5 +116,5 @@ _includes/scripts.html
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MTY2MzQ1LC0zOTkzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbLTMxOTkyODY4NywtMzk5MzU5NjYzXX0=
 -->
