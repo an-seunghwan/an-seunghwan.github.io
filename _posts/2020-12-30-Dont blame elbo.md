@@ -44,7 +44,7 @@ $$
 \begin{aligned}
 \log{p_{\theta}(x)} &=  \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p(z)] + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] \\
 &\geq \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p(z)] \\
-&= ELBO(\phi, \theta)
+&= ELBO(\phi, \theta, \beta)
 \end{aligned}
 $$
 
@@ -54,17 +54,13 @@ $$
 \begin{aligned}
 \sup_{\theta} {\log{p_{\theta}(x)}} &= \sup_{\phi} \sup_{\theta} {\log{p_{\theta}(x)} - KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]} \\
 &= \sup_{\phi} \sup_{\theta} {\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]} \\
-&= \sup_{\phi} \sup_{\theta} ELBO
+&= \sup_{\phi} \sup_{\theta} ELBO(\phi, \theta, \beta)
 \end{aligned} 
 $$
 
-### 4. variational approximation
+### 4. reparametrization trick
 
-* 
-
-$q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기 위해서 우리는 Gaussian과 같은 simple parametric form을 사용한다. 또한, 이 approximated posterior의 optimal choice는 true posterior $p_{\theta}(z \vert x)$ 가 되며, 이때 ELBO는 tight bound를 가진다.
-
-$q_{\phi}(z)$를 추정하기 위해 사용하는 방법이 variational approximation 인데, $q_{\phi}(z)$ 대신 $q_{\phi}(z \vert x)$를 사용한다. 즉, $z$에 대한 approximated posterior 분포가 $x$에 의존하도록 만드는 것이다. 이를 수식으로 쓰면 다음과 같다.
+$x$에 의존하는 $z$에 대한 approximated posterior 분포:
 
 $$q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$$
 
@@ -88,5 +84,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTMwMzQ1Nyw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbMTY5NzkxNjMzNCw3NjAwNzYzODldfQ==
 -->
