@@ -38,13 +38,9 @@ tags:
 ### 2. latent variable model
 * model
 
-$$
-p(x) = N_z(0, I)
-$$
+$$p(x) = N_z(0, I)$$
 
-$$
-p(x|z) = N_x(f(x;\phi), \sigma^2I)
-$$
+$$p(x|z) = N_x(f(x;\phi), \sigma^2I)$$
 
 이때, $f(x;\phi)$는 neural network로 구성되는 non-linear 함수이고, 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
 
@@ -54,9 +50,7 @@ latent space에서 정의되는 latent variable $z$ 각각의 차원이 서로 _
 
 ### 3. ELBO
 
-$$
-\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]
-$$
+$$\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)] = \mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]$$
 
 RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생긴 형태 때문에 ELBO를 objective로 사용하는 경우에 학습 목표가 reconstruction error와 KL-divergence를 최소화하는 것이라고 오해하는 경우가 많다.
 
@@ -66,27 +60,17 @@ RHS를 일반적으로 ELBO(Evidence Lower Bound)라고 부르는데, 이의 생
 
 (양변에 supremum을 취한다.)
 
-$$
-\sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
-$$
+$$\sup_{\phi}{\log{p_{\theta}(x)} + KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}$$
 
-$$
-= \log{p_{\theta}(x)} + \sup_{\phi}{KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}
-$$
+$$= \log{p_{\theta}(x)} + \sup_{\phi}{KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]}$$
 
-$$
-= \log{p_{\theta}(x)} 
-$$
+$$= \log{p_{\theta}(x)} $$
 
-$$
-= \sup_{\phi}{\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]}
-$$
+$$= \sup_{\phi}{\mathbb{E}_{q_{\phi}(z|x)}[\log{p_{\theta}(z|x)}] - KL[q_{\phi}(z|x) \| p_{\theta}(z)]}$$
 
 즉, $q_{\phi}(z \vert x)$ 의 모형 공간이 충분히 크다면, 
 
-$$
-q_{\phi}(z|x) = p_{\theta}(z|x)
-$$
+$$q_{\phi}(z|x) = p_{\theta}(z|x)$$
 
 일 때 KL-divergence가 0이 되고 supremum을 얻을 수 있다. 따라서, ELBO를 최대화하는 학습 목표는 결국 data log-likelihood를 __achieve__ 하는 parameter $\phi$를 찾는 것이다.
 
@@ -98,9 +82,7 @@ $q_{\phi}(z)$ 는 실제 prior를 근사하는 분포인데, 이를 추정하기
 
 $q_{\phi}(z)$를 추정하기 위해 사용하는 방법이 variational approximation 인데, $q_{\phi}(z)$ 대신 $q_{\phi}(z \vert x)$를 사용한다. 즉, $z$에 대한 approximated posterior 분포가 $x$에 의존하도록 만드는 것이다. 이를 수식으로 쓰면 다음과 같다.
 
-$$
-q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))
-$$
+$$q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$$
 
 $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linear 함수의 결과로 $x$에 의존하는 분포가 되도록 만들어준다($diag$는 대각행렬).
 
@@ -134,13 +116,9 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
 reconstruction error term을 살펴보자. reconstruction error의 최소화는 다음의 log 확률값을 최대화하는 것과 동일하다.
 
-$$
-\log{p_{\theta}(x|z)} = -\frac{1}{2\sigma^2_{\theta}(z)} \| x - \mu_{\theta}(z) \|_2^2 - \frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}
-$$ 
+$$\log{p_{\theta}(x|z)} = -\frac{1}{2\sigma^2_{\theta}(z)} \| x - \mu_{\theta}(z) \|_2^2 - \frac{dimension}{2} \log{2 \pi \sigma^2_{\theta}(z)}$$ 
 
-$$
-X|Z=z \sim N(\mu_{\theta}(z), diag(\sigma^2_{\theta}(z)))
-$$
+$$X|Z=z \sim N(\mu_{\theta}(z), diag(\sigma^2_{\theta}(z)))$$
 
 (단, $x$의 분산에 대해 모든 원소가 동일한 대각행렬을 가정)
 
@@ -154,18 +132,11 @@ $$
 
 VAE의 objective function, 그 중에서도 KL-divergence term은 closed-form으로 적을 수 있다.
 
-$$
-KL[q_{\phi}(z|x) \| p_{\theta}(z)]
-$$
+$$KL[q_{\phi}(z|x) \| p_{\theta}(z)]$$
 
-$$
-= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2 - dimension + tr(diag(\sigma^2_{\phi}(x))) - \log{det(diag(\sigma_{\phi}(x)))} \right)
-$$
+$$= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2 - dimension + tr(diag(\sigma^2_{\phi}(x))) - \log{det(diag(\sigma_{\phi}(x)))} \right)$$
 
-$$
-= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right) 
-$$
-
+$$= \frac{1}{2} \left( \| \mu_{\phi}(x) - 0 \|_2^2  + \sum_{i=1}^n (\sigma_{\phi}(x)_i - \log{\sigma_{\phi}(x)_i}) - dimenstion \right)$$
 따라서, latent variable의 차원인 $dimension$은 클수록 KL-divergence가 감소하고, embedding means인 $\mu_{\phi}(x)$는 0, 그리고 embedding variance인 $\sigma_{\phi}(x)$는 1에 가까울 수록 KL-divergence가 감소한다.
 
 따라서, 이러한 측면에서 보면 마치 approximated posterior의 분포가 $N(0, I)$에 가까워지면서, 즉 $x$에 대한 정보를 점점 잃어가는 것처럼 생각할 수 있다(become less expressive and shrinks to $N(0, I)$). 이러한 현상을 __posterior collapse__ (learned variational distribution is close to the prior)라고 부르는데, 많은 연구들이 이러한 현상의 원인으로 KL-divergence를 생각했다.
@@ -196,23 +167,15 @@ embedding means $\mu_{\phi}(x)$가 0에 가깝고, embedding variance $\sigma_{\
 
 다음과 같은 실제 분포가 주어져있을 때, 
 
-$$
-p(z) = N(0, I)
-$$
+$$p(z) = N(0, I)$$
 
-$$
-p(x|z) = N(Wz+\mu, \sigma^2I)
-$$
+$$p(x|z) = N(Wz+\mu, \sigma^2I)$$
 
 probabilistic PCA는 다음의 data 분포와 posterior 분포를 찾게된다.
 
-$$
-p(x) = N(\mu, MM^\top + \sigma^2I)
-$$
+$$p(x) = N(\mu, MM^\top + \sigma^2I)$$
 
-$$
-p(z|x) = N(M^{-1}W^\top(x-\mu), \sigma^2I)
-$$
+$$p(z|x) = N(M^{-1}W^\top(x-\mu), \sigma^2I)$$
 
 where $M = W^\top W + \sigma^2I$
 
@@ -230,25 +193,17 @@ MLE가 아닌 다른 stationary points는 $W_{MLE}$의 columns를 0으로 바꿈
 
 다음의 모형을 linear VAE라고 하고, approximated posterior는 global optimum의 경우에 pPCA의 true posterior를 정확하게 복원할 수 있다.
 
-$$
-p(x|z) = N(Wz+\mu. \sigma^2I)
-$$
+$$p(x|z) = N(Wz+\mu. \sigma^2I)$$
 
-$$
-q(z|x) = N(V(x-\mu), D)
-$$
+$$q(z|x) = N(V(x-\mu), D)$$
 
 이때, $D$는 diagonal covariance matrix($\sigma^2I$)로, 모든 데이터 point에 대해 동일하게 사용된다.
 
 * objective
 
-$$
-\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|x) \| p(z)] + KL[q(z|x) \| p(z|x)]
-$$
+$$\log{p(x)} = \mathbb{E}_{q(z|x)}[\log{p(x|z)}] - KL[q(z|x) \| p(z)] + KL[q(z|x) \| p(z|x)]$$
 
-$$
-\log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]
-$$
+$$\log{p(x)} = ELBO + KL[q(z|x) \| p(z|x)]$$
 
 global optimum($V = M^{-1}W_{MLE}$)인 경우에, $q(z \vert x)$가 $p(z \vert x)$를 정확하게 복원하여 KL-divergence가 0이 되어 ELBO와 marginal likelihood(of pPCA)가 tight bound를 가지게 된다. 즉, ELBO가 marginal likelihood와 정확히 일치하게 된다.
 
@@ -257,9 +212,7 @@ __posterior collapse의 원인: ELBO can be increased by applying rotation when 
 
 * Deep VAE
 
-$$
-ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}
-$$
+$$ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z|x)}[\| D_{\theta}(z) - x \|_2^2] - \frac{1}{2} \log{2\pi \sigma^2}$$
 
 여기서 $- \frac{1}{2\sigma^2}$를 reconstruction error term과 KL-divergence를 조정하는 parameter로 생각할 수 있다.
 
@@ -269,8 +222,9 @@ $$
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkyMzQ4MTI3LC0xMzQzMDQyMTMxLDg3MD
-IxODM3OSwxNTgwNzEyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwy
-MDkxMzE4ODI4LDYwNDE4Njg0NSwtMTQyNzY5MzEzOCwtMTE2MD
-kzNTczMl19
+eyJoaXN0b3J5IjpbNjA2NzAyMTIxLDE4MzQ1NzEzNSwtNDMzNT
+k2NTE3LDYwNjcwMjEyMSwyMDY4MDc2NTkzLDY5MjM0ODEyNywt
+MTM0MzA0MjEzMSw4NzAyMTgzNzksMTU4MDcxMjEsLTQ3NjU2NT
+AwNyw5MjA4MDg0MzIsMjA5MTMxODgyOCw2MDQxODY4NDUsLTE0
+Mjc2OTMxMzgsLTExNjA5MzU3MzJdfQ==
 -->
