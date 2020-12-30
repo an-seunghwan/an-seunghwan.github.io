@@ -122,8 +122,14 @@ _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에
 
 ### 1. inline 작성
 
+수식을 inline으로 작성할 때는 `$a^2 + b^2 = c^2$` 처럼 적으면 $a^2 + b^2 = c^2$ 이렇게 문장 내에서 써진다.
+
+### 2. outline 작성
+
+수식을 outline으로 작성
+
 $$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3NzEyNjYyLDEzMzcxOTc3MTgsLTM5OT
-M1OTY2M119
+eyJoaXN0b3J5IjpbLTM3MzExMDU5NSwxMzM3MTk3NzE4LC0zOT
+kzNTk2NjNdfQ==
 -->
