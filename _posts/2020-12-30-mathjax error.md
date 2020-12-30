@@ -133,6 +133,7 @@ E &= M \cdot C^2 \\
 $$
 ```
 처럼 적으면 
+
 $$
 \begin{aligned} 
 a^2 + b^2 &= c^2 \\ 
@@ -140,8 +141,9 @@ E &= M \cdot C^2 \\
 &= xy + \mathbb{E} 
 \end{aligned}
 $$
+
 이렇게 정렬되어 수식이 써진다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzQwMTI5OSw5MDk4MTMzOTEsMTMzNz
-E5NzcxOCwtMzk5MzU5NjYzXX0=
+eyJoaXN0b3J5IjpbLTQ1MDkzNjc5LDkwOTgxMzM5MSwxMzM3MT
+k3NzE4LC0zOTkzNTk2NjNdfQ==
 -->
