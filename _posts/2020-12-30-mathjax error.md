@@ -20,8 +20,6 @@ tags:
 
 ## 1. _config.yml 확인하기
 
-
-
 _config.yml 파일을 확인했을 때, 아래와 같이 markdown engine이 kramdown으로 되어있어야 한다!
 
 ```yml
@@ -44,10 +42,16 @@ smart_quotes: lsquo,rsquo,ldquo,rdquo
 enable_coderay: false
 ```
 
-## 2. _layouts/defaut.html 파일 확인하기
+(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_config.yml](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_config.yml))
 
-_layouts/defaut.html 파일을 확읺
-(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
+## 2. 
+
+(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/mathjax_support.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_includes/mathjax_support.html))
+
+## 3. _layouts/defaut.html 파일 확인하기
+
+_layouts/defaut.html 파일을 확인했을 때, 아래와 같은 `use_math`에 관한 명령문이 적혀있어야 한다.
+
 ```html
 <head>
 	{% include head.html %}
@@ -58,7 +62,9 @@ _layouts/defaut.html 파일을 확읺
 </head>
 ```
 
-## 2. _includes/scripts.html 파일 수정하기
+(참고: [https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html](https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/_layouts/default.html))
+
+## 3. _includes/scripts.html 파일 수정하기
 
 _includes/scripts.html
 
@@ -81,5 +87,5 @@ _includes/scripts.html
 </script>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzAwNTgwMjksLTM5OTM1OTY2M119
+eyJoaXN0b3J5IjpbMTk4MTY2MzQ1LC0zOTkzNTk2NjNdfQ==
 -->
