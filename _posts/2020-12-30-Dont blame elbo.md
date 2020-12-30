@@ -42,9 +42,11 @@ $$
 
 $$
 \begin{aligned}
-\log p_{\theta}({\bf x}) &= \log p_{\theta}({\bf x}) \int q_{\phi}({\bf z}|{\bf x}) d{\bf z} \\
+p_{\theta}({\bf x})
 \end{aligned}
 $$
+
+\log p_{\theta}({\bf x}) &= \log p_{\theta}({\bf x}) \int q_{\phi}({\bf z}|{\bf x}) d{\bf z} \\
 
 &=& \int q_{\phi}(\bz|\bx) \mbox{log} \frac{p_{\theta}(\bx,\bz) p(\bx)}{p_{\theta}(\bx,\bz)} dz \nonumber\\
 &=& \int q_{\phi}(\bz|\bx) \mbox{log} \frac{p_{\theta}(\bx|\bz) p(\bz)}{p_{\theta}(\bz|\bx)} dz \\
@@ -110,5 +112,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2ODQ3MDQ4OSw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbLTE2ODc1MDc1NTcsNzYwMDc2Mzg5XX0=
 -->
