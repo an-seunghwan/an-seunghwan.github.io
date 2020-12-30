@@ -56,6 +56,8 @@ $$
 \end{aligned} 
 $$
 
+따라서, ELBO를 최대화하는 parameter들을 찾게되면, 이는 원래의 목적인 marginal data log-likelihood를 최대화하는 parameter와 일치하게 된다.
+
 ## 4. reparametrization trick
 
 $x$ 에 의존하는 $z$ 에 대한 approximated posterior 분포:
@@ -80,10 +82,12 @@ $i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과
 
 $$
 \begin{aligned}
- -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) 
+ -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) \\
 \end{aligned}
 $$
+
+앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM3NTg4ODMwLDE5NzM0NzAyMTEsLTQ2MT
-Q3MzI3NSwtMTAzNDM0ODU3MCw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbMTY5ODM3NDQwNCwxOTczNDcwMjExLC00Nj
+E0NzMyNzUsLTEwMzQzNDg1NzAsNzYwMDc2Mzg5XX0=
 -->
