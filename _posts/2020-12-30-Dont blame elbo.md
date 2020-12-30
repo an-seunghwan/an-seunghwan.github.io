@@ -1,5 +1,5 @@
 ---
-title: "Don't Blame the ELBO Review"
+title: "Don't Blame the ELBO! Review"
 excerpt: "Note on VAE and paper review"
 toc: true
 toc_sticky: true
@@ -34,7 +34,7 @@ p({\bf x}|{\bf z}) &= N_{\bf x}({\bf x} | D({\bf z};\theta), \beta \cdot I)
 \end{aligned}
 $$
 
-이때, $D({\bf z};\phi)$는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다. $p({\bf x}|{\bf z})$는 observation model이라고도 불린다.
+이때, $D({\bf z};\phi)$ 는 neural network로 구성되는 non-linear 함수이고, 데이터의 조건부 분포에서 parameterized mean이다. 따라서, non-linear latent factor model을 학습하는 것과 동일해진다. $p({\bf x}|{\bf z})$ 는 observation model이라고도 불린다.
 
 ## 3. ELBO
 
@@ -78,5 +78,6 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzQzNDg1NzAsNzYwMDc2Mzg5XX0=
+eyJoaXN0b3J5IjpbLTEzMTM3MDY1NSwtMTAzNDM0ODU3MCw3Nj
+AwNzYzODldfQ==
 -->
