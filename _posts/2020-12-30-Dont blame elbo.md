@@ -86,7 +86,7 @@ $$
 \end{aligned}
 $$
 
-앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. ${\bf z}_$ 이제 양변을 variance parameter인 $\beta$로 scaling하면 아래와 같다:
+앞의 2개의 항은 observation model이 Gaussian임을 이용하여 수식으로 전개한 것이다. ${\bf z}_i$는 posterior 분포에서 sampling되었다. 이제 양변을 variance parameter인 $\beta$로 scaling하면 아래와 같다:
 
 $$
 \begin{aligned}
@@ -94,8 +94,8 @@ $$
 \end{aligned}
 $$
 
-따라서, 이를 해석하면 
+따라서, 이를 해석하면 parameterized mean과 datapoint 사이의 MSE와 KL-divergence에 $\beta$를 곱한 것을 더한 식이된다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk2MDUxMDQsMTk3MzQ3MDIxMSwtND
+eyJoaXN0b3J5IjpbLTE1NzA4MjcxMDEsMTk3MzQ3MDIxMSwtND
 YxNDczMjc1LC0xMDM0MzQ4NTcwLDc2MDA3NjM4OV19
 -->
