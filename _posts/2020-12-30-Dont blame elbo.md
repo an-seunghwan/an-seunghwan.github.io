@@ -79,10 +79,10 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 $$
 \begin{aligned}
- -\frac{1}{2\beta} \cdot \frac{1}{N} \sum_{i=1}^N \| \bx_i - D_{\theta}(\bz_i) \|_2^2 - \frac{1}{N} \sum_{i=1}^N KL(q(\bz|\bx_i;\phi)\|p(\bz)) -\frac{d}{2} \log 2\pi\beta
+ -\frac{1}{2\beta} \cdot \| \bx_i - D_{\theta}({\bf z}_i) \|_2^2 - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) -\frac{d}{2} \log 2\pi\beta
 \end{aligned}
 $$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTkxMjA2NiwtNDYxNDczMjc1LC0xMD
-M0MzQ4NTcwLDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbMTkwNzEwMTk2LC00NjE0NzMyNzUsLTEwMz
+QzNDg1NzAsNzYwMDc2Mzg5XX0=
 -->
