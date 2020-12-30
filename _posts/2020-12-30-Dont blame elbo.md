@@ -46,7 +46,7 @@ $$
 \end{aligned}
 $$
 
-$q_{\phi}(z|x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $q_{\phi}(z|x) = p_{\theta}(z|x)$가 되도록 하여 $KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
+$q_{\phi}(z|x)$ 가 표현하는 의 모형 공간이 충분히 크다고 하면, $q_{\phi}(z|x) = p_{\theta}(z|x)$ 가 되도록 하여 $KL[q_{\phi}(z|x) \| p_{\theta}(z|x)]$ 를 0으로 만드는 것이 가능하다(이 때 0은 negative KL-divergence의 supremum). 따라서, ELBO를 최대화하는 VAE의 학습 목표를 다음과 같이 해석할 수 있다. 
 
 $$
 \begin{aligned}
@@ -58,13 +58,13 @@ $$
 
 ## 4. reparametrization trick
 
-$x$에 의존하는 $z$에 대한 approximated posterior 분포:
+$x$ 에 의존하는 $z$ 에 대한 approximated posterior 분포:
 
 $$q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma_{\phi}(x)))$$
 
-$\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linear 함수의 결과이다( $diag$ 는 대각행렬를 의미).
+$\mu_{\phi}(x)$ 와 $\sigma^2_{\phi}(x)$ 는 neural network로 구성된 non-linear 함수의 결과이다( $diag$ 는 대각행렬를 의미).
 
-하지만, $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태는 uni-modal이므로 표현력이 제한적이라는 단점을 갖게 된다. 또한, 만약에 실제 prior가 multi-modal인 경우에는 분포 형태의 한계로 인해 KL-divergence를 통해서 posterior와 prior가 그 구조가 유사하도록 만들기가 어렵다.
+하지만, $\mu_{\phi}(x)$ 와 $\sigma^2_{\phi}(x)$ 는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태는 uni-modal이므로 표현력이 제한적이라는 단점을 갖게 된다. 또한, 만약에 실제 prior가 multi-modal인 경우에는 분포 형태의 한계로 인해 KL-divergence를 통해서 posterior와 prior가 그 구조가 유사하도록 만들기가 어렵다.
 
 reparametrization trick은 posterior로부터 latent variable을 backpropagation이 가능하도록 sampling해주는 방법이다.
 
@@ -78,6 +78,6 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTM3MDY1NSwtMTAzNDM0ODU3MCw3Nj
+eyJoaXN0b3J5IjpbMjA1MTIzOTYxMSwtMTAzNDM0ODU3MCw3Nj
 AwNzYzODldfQ==
 -->
