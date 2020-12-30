@@ -129,8 +129,25 @@ _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에
 ### 3. outline 수식 정렬
 
 outline 수식을 정렬하고 싶을 때는 
-$$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
+```
+$$
+\begin{aligned} 
+a^2 + b^2 &= c^2 \\ 
+E &= M \cdot C^2 \\ 
+&= xy + \mathbb{E} 
+\end{aligned}
+$$
+```
+처럼 적으면 
+$$
+\begin{aligned} 
+a^2 + b^2 &= c^2 \\ 
+E &= M \cdot C^2 \\ 
+&= xy + \mathbb{E} 
+\end{aligned}
+$$
+이렇게 정렬되어 수식이 써진다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTY2NjM3NywxMzM3MTk3NzE4LC0zOT
-kzNTk2NjNdfQ==
+eyJoaXN0b3J5IjpbOTA5ODEzMzkxLDEzMzcxOTc3MTgsLTM5OT
+M1OTY2M119
 -->
