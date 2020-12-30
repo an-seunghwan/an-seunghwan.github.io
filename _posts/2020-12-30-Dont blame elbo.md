@@ -76,14 +76,14 @@ reparametrization trick은 posterior로부터 latent variable을 backpropagation
 
 ## 5. Simulation of ELBO
 
-$i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과 같다:
+$i$번째 datapoint ${\bf x}_i$에 대한 ELBO의 simulation 수식은 다음과 같다 (이 때 $d$는 latent variable의 차원의 크기):
 
 $$
 \begin{aligned}
- -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) -\frac{d}{2} \log 2\pi\beta
+ -\frac{1}{2\beta} \cdot \| {\bf x}_i - D_{\theta}({\bf z}_i) \|_2^2 -\frac{d}{2} \log 2\pi\beta - KL(q({\bf z}|{\bf x}_i;\phi)\|p({\bf z})) 
 \end{aligned}
 $$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MzQ3MDIxMSwtNDYxNDczMjc1LC0xMD
-M0MzQ4NTcwLDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbNTM3NTg4ODMwLDE5NzM0NzAyMTEsLTQ2MT
+Q3MzI3NSwtMTAzNDM0ODU3MCw3NjAwNzYzODldfQ==
 -->
