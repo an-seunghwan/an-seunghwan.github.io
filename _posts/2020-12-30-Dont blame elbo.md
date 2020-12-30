@@ -24,9 +24,7 @@ tags:
 
 ### 1. purpose
 
-3. __maximize data log-likelihood__: $\log{p_{\theta}(x)}$
-
-여기서 제일 중요한 것은 3번의 data log-likelihood를 최대화하는 것이 결국 VAE의 가장 중요한 목적이라는 것이다.
+일반적으로 data log-likelihood는 closed form으로 주어지지 않는다. 따라서 $\log{p_{\theta}(x)}$를 최대화하는 $\theta$를 Maximum Likelihood 방법으로 찾기는 매우 어렵다(intractable). 따라서, latent variable ${\bf z}$를 도입하여 대신 데이터의 ㅈ
 
 ### 2. latent variable model
 * model
@@ -100,5 +98,5 @@ $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linea
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NjYyNzA5NCw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbMTQ2NzgyOTIyMyw3NjAwNzYzODldfQ==
 -->
