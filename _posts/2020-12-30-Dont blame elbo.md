@@ -62,20 +62,21 @@ $$
 
 $x$에 의존하는 $z$에 대한 approximated posterior 분포:
 
-$$q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$$
+$$q_{\phi}(z \vert x) = N_x(\mu_{\phi}(x), diag(\sigma_{\phi}(x)))$$
 
 $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 neural network로 구성된 non-linear 함수의 결과이다( $diag$ 는 대각행렬를 의미).
 
 하지만, $\mu_{\phi}(x)$와 $\sigma^2_{\phi}(x)$는 $x$가 주어졌을 때 매우 자유로운 표현력을 가지고 있지만, Gaussian이라는 분포의 형태는 uni-modal이므로 표현력이 제한적이라는 단점을 갖게 된다. 또한, 만약에 실제 prior가 multi-modal인 경우에는 분포 형태의 한계로 인해 KL-divergence를 통해서 posterior와 prior가 그 구조가 유사하도록 만들기가 어렵다.
 
-reparametrization trick은 posterior로부터 latent variable을 ㄴ
-	1.) $\epsilon \sim p(\epsilon) = N(0, I)$ 
+reparametrization trick은 posterior로부터 latent variable을 backpropagation이 가능하도록 sampling해주는 방법이다.
+
+1. sampling $\epsilon \sim p(\epsilon) = N(0, I)$ 
 	
-	2.) forward pass network:  $\mu_{\phi}(x)$, $\sigma^2_{\phi}(x)$
-	
-	3.) sampling $z = \mu_{\phi}(x) + \sigma^2_{\phi}(x) \epsilon$
+2. compute forward pass network for given $x$:  $\mu_{\phi}(x)$, $\sigma^2_{\phi}(x)$
+
+3. sampling latent variable: $z = \mu_{\phi}(x) + \sigma_{\phi}(x) \cdot \epsilon$
 
  reparametrization trick은 $N_x(\mu_{\phi}(x), diag(\sigma^2_{\phi}(x)))$ 분포에서 직접적으로 $z$를 sampling하는 것이 아니라 쉽게 $N(0, I)$로부터 난수를 생성하여 $z$를 sampling하는 방법이다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM3NzQzMTY3LDc2MDA3NjM4OV19
+eyJoaXN0b3J5IjpbMjQxOTMxMzE2LDc2MDA3NjM4OV19
 -->
