@@ -39,11 +39,10 @@ tags:
 * model
 
 $$
-\begin{align}
-p(x) &= N_z(0, I)
-p(x|z) = N_x(f(x;\phi), \sigma^2I)
-\end{align}
-
+\begin{aligned}
+p(x) &= N_z(0, I) \\
+p(x|z) &= N_x(f(x;\phi), \sigma^2I) \\
+\end{aligned}
 $$
 
 이때, $f(x;\phi)$는 neural network로 구성되는 non-linear 함수이고, 이는 결국 latent variable model이 non-linear latent factor model을 학습하는 것과 동일함을 의미한다.
@@ -226,7 +225,7 @@ $$ELBO = -KL[q_{\phi}(z|x) \| p(z)] - \frac{1}{2\sigma^2} \mathbb{E}_{q_{\phi}(z
 
 > 수정사항이나 질문은 댓글에 남겨주시면 감사하겠습니다 :)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDUzNzQ0Nyw2MDY3MDIxMjEsMTgzND
+eyJoaXN0b3J5IjpbLTM2Njg1MTE5Nyw2MDY3MDIxMjEsMTgzND
 U3MTM1LC00MzM1OTY1MTcsNjA2NzAyMTIxLDIwNjgwNzY1OTMs
 NjkyMzQ4MTI3LC0xMzQzMDQyMTMxLDg3MDIxODM3OSwxNTgwNz
 EyMSwtNDc2NTY1MDA3LDkyMDgwODQzMiwyMDkxMzE4ODI4LDYw
