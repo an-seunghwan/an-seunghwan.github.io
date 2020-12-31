@@ -1,5 +1,5 @@
 ---
-title: "Don't Blame the ELBO! Review"
+title: "VAE Notes and Don't Blame the ELBO! Review"
 excerpt: "Note on VAE and paper review"
 toc: true
 toc_sticky: true
@@ -97,6 +97,7 @@ $$
 이를 해석하면 parameterized mean과 datapoint 사이의 MSE와 KL-divergence에 $\beta$를 곱한 것을 더한 식이된다. 따라서, $\beta$를 작은 값으로 설정하면, 기존의 KL-divergence의 영향력을 줄이기 위해 작은 weight를 곱해주는 heuristic한 접근들과 그 의미가 일치해진다.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ5Mzk4NDM0LDE5NzM0NzAyMTEsLTQ2MT
-Q3MzI3NSwtMTAzNDM0ODU3MCw3NjAwNzYzODldfQ==
+eyJoaXN0b3J5IjpbODMyOTk0NTc2LDc0OTM5ODQzNCwxOTczND
+cwMjExLC00NjE0NzMyNzUsLTEwMzQzNDg1NzAsNzYwMDc2Mzg5
+XX0=
 -->
