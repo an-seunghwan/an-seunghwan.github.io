@@ -20,7 +20,9 @@ tags:
 - 만약, 결과값인 $h \in \mathbb{R}^d$ 벡터의 모든 원소들의 값을 동일하게 만들고 싶다면 $W$를 어떻게 설정해야할까?
 - $W=[w_1, w_2, \cdots, w_d], w_i \in \mathbb{R}^p, i=1,\cdots,d$에서 $W$의 모든 열을 동일하게, 즉 $$w_i = w_j$$ 로 가중치 행렬을 설정하면 될 것이다!
 
-## python package import
+## code
+
+### python package import
 
 ```python
 import tensorflow as tf
@@ -42,7 +44,7 @@ available GPU: []
 [name: "/device:CPU:0" device_type: "CPU" memory_limit: 268435456 locality { } incarnation: 1077612906216489537]
 ```
 
-## custom layer
+### custom layer
 
 ```python
 class CustomLayer(K.layers.Layer):
@@ -59,7 +61,7 @@ class CustomLayer(K.layers.Layer):
         self.b = tf.Variable(initial_value=b_init(shape=(),
                                             dtype='float32'),
                                             trainable=True)
-        self.w_repeated = tf.repeat(self.w, self.output_dim, axis=-1) # rkw
+        self.w_repeated = tf.repeat(self.w, self.output_dim, axis=-1) # 가중치 벡터 반복을 통해 가중치 행렬 정의
         self.b_repeated = tf.repeat(self.b, self.output_dim)
 
     def call(self, x):
@@ -69,6 +71,9 @@ class CustomLayer(K.layers.Layer):
 ```
 
 - `self.w`: 가중치 행렬에서 반복되어 사용될 하나의 열벡터
+- `self.w`를 변환 후의 차원인 $d$ 개수만큼 반복하여 (`tf.repeat`) 동일한 열이 반복된 가중치 행렬 `self.w_repeated`를 생성
+
+### ㅑㅜㄴ
 
 ```python
 input_dim = 10
@@ -83,5 +88,5 @@ outputs = custom_layer(inputs)
 outputs
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTEzMjc2MV19
+eyJoaXN0b3J5IjpbLTEzNzgwNzAxNThdfQ==
 -->
