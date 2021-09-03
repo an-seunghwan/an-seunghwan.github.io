@@ -72,6 +72,7 @@ class CustomLayer(K.layers.Layer):
 
 - `self.w`: 가중치 행렬에서 반복되어 사용될 하나의 열벡터
 - `self.w`를 변환 후의 차원인 $d$ 개수만큼 반복하여 (`tf.repeat`) 동일한 열이 반복된 가중치 행렬 `self.w_repeated`를 생성
+- tensorflow 2.0의 custom layer 생성 방법은 [custom modeling](https://an-seunghwan.github.io/tensorflow%202.0/Custom-modeling-with-Keras-(1)/)ㅇ,ㅡㄹ
 
 ### argument 정의
 
@@ -105,5 +106,6 @@ array([[0.10263357, 0.10263357, 0.10263357, 0.10263357, 0.10263357],
 
 - `outputs`의 5개의 모든 값이 동일한 것을 확인할 수 있다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1ODQxNjg3LC04NjA4ODM3NjNdfQ==
+eyJoaXN0b3J5IjpbLTYyNzY3MTgwMCw1NzU4NDE2ODcsLTg2MD
+g4Mzc2M119
 -->
