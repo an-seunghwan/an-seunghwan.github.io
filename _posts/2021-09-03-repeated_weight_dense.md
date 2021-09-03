@@ -23,7 +23,6 @@ tags:
 ## python package import
 
 ```python
-#%%
 import tensorflow as tf
 import tensorflow.keras as K
 from tensorflow.keras import layers
@@ -77,5 +76,5 @@ outputs = custom_layer(inputs)
 outputs
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDM4NzQ1OF19
+eyJoaXN0b3J5IjpbLTIxMjg2NzAwOTddfQ==
 -->
