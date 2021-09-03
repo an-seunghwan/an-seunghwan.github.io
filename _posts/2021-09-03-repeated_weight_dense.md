@@ -73,7 +73,7 @@ class CustomLayer(K.layers.Layer):
 - `self.w`: 가중치 행렬에서 반복되어 사용될 하나의 열벡터
 - `self.w`를 변환 후의 차원인 $d$ 개수만큼 반복하여 (`tf.repeat`) 동일한 열이 반복된 가중치 행렬 `self.w_repeated`를 생성
 
-### ㅑㅜㄴ
+### argument 정의
 
 ```python
 input_dim = 10
@@ -82,11 +82,28 @@ output_dim = 5
 custom_layer = CustomLayer(input_dim, output_dim)
 ```
 
+### 결과 확인
+
 ```python
-inputs = tf.random.normal((64, input_dim))
+inputs = tf.random.normal((8, input_dim))
 outputs = custom_layer(inputs)
 outputs
 ```
+
+```
+<tf.Tensor: shape=(8, 5), dtype=float32, numpy=
+array([[0.10263357, 0.10263357, 0.10263357, 0.10263357, 0.10263357],
+       [0.        , 0.        , 0.        , 0.        , 0.        ],
+       [0.11914004, 0.11914004, 0.11914004, 0.11914004, 0.11914004],
+       [0.06578927, 0.06578927, 0.06578927, 0.06578927, 0.06578927],
+       [0.24528006, 0.24528006, 0.24528006, 0.24528006, 0.24528006],
+       [0.        , 0.        , 0.        , 0.        , 0.        ],
+       [0.19364165, 0.19364165, 0.19364165, 0.19364165, 0.19364165],
+       [0.18903199, 0.18903199, 0.18903199, 0.18903199, 0.18903199]],
+      dtype=float32)>
+```
+
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzgwNzAxNThdfQ==
+eyJoaXN0b3J5IjpbLTE3ODU0NjUxOF19
 -->
