@@ -9,14 +9,14 @@ use_math: true
 
 date: 2021-09-03 20:00:00 -0000
 categories: 
-  - python
+  - tensorflow 2.0
 tags:
-  - tensorflow
+  - tensorflow 2.0
   - keras
 ---
 
 ## 목표
-- Tensorflow의 행렬 연산은 $\sigma(x W + b)$ 의 형태로 이루어진다.
+- Tensorflow의 행렬 연산은 $h = \sigma(x W + b)$ 의 형태로 이루어진다. $W \in \mathbb{R}^{p \times d}, b \in \mathbb{R}^d$
 - 
 
 ##
@@ -66,3 +66,6 @@ outputs = custom_layer(inputs)
 outputs
 #%%
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzOTUzMDQzMTFdfQ==
+-->
