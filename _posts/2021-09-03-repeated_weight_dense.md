@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "가중치가 반복되는 Fully Connected Layer 만들기"
 excerpt: ""
@@ -67,9 +66,3 @@ outputs = custom_layer(inputs)
 outputs
 #%%
 ```
-=======
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODg3NDY2MTJdfQ==
--->
->>>>>>> 13cb57a929b93c91a3915561360da45342cb27ec
