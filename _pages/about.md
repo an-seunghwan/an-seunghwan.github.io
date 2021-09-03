@@ -6,32 +6,34 @@ layout: single
     
 # Interested in:
 1. Variational AutoEncoder
+  - interpretable latent space
+  - style transfer
   - how to code with tensorflow 2.0
-  - apply to sentence generation
 
-2. NLP
-  - ultimiate goal: sentence generation
+2. optimization
+  - Constrained LASSO path algorithm
+  - ADMM
+
+# Studied or Projects
+1. NLP
   - sentimental word embedding
-  - sequence-to-sequence 
+  - sequence to sequence
 
-3. ranking algorithm
+2. ranking algorithm
   - surrogate loss and its consistency
 
-3. optimization
-  - Constrained LASSO path algorithm
-  
-4. MPI for R
+3. MPI for R
   - for parallel computing
 
 # About ME
-1. 학력
-  - 2015.03 ~ 2020.08: 서울시립대학교 통계학부
-  - 2020.09 ~ 현재: 서울시립대학교 통계학 대학원 석사
+1. Courses
+  - 2015.03 ~ 2020.08: B.S. in Statistics, University of Seoul
+  - 2020.09 ~ : M.S. in Statictics, University of Seoul
 
-2. 주로 다루는 언어
+2. Programming Languages
   - python
     + tensorflow 2.0
   - R
 
 3. Projects
-  - 신문 기사의 긍정, 부정의 감성 분석 (with 한국은행)
+  - 경제용어 감성사전 구축방안 연구: https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1
