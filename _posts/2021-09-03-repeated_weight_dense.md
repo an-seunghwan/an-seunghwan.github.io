@@ -16,9 +16,9 @@ tags:
 ---
 
 ## 목표
-- Tensorflow의 행렬 연산은 $h = \sigma(X W + b)$ 의 형태로 이루어진다. ($X \in \mathbb{R}^{n \times p}, W \in \mathbb{R}^{p \times d}, b \in \mathbb{R}^d$
-- 만약, $h \in \mathbb{R}^d$ 벡터의 모든 원소들의 값을 동일하게 만들고 싶다면 $W$를 어떻게 설정해야할까?
-- $W=[w_1, w_2, ]$
+- Tensorflow의 행렬 연산은 $h = \sigma(X W + b)$ 의 형태로 이루어진다. ($X \in \mathbb{R}^{n \times p}, W \in \mathbb{R}^{p \times d}, b \in \mathbb{R}^d$)
+- 만약, 결과값인 $h \in \mathbb{R}^d$ 벡터의 모든 원소들의 값을 동일하게 만들고 싶다면 $W$를 어떻게 설정해야할까?
+- $W=[w_1, w_2, \cdots, w_d], w_i \in \mathbb{R}^p, i=1,\cdots,d$에서 $W$의 모든 열을 동일하게, 즉 $$w_i $$
 
 ##
 
@@ -68,5 +68,5 @@ outputs
 #%%
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMzcxNTc2XX0=
+eyJoaXN0b3J5IjpbMTU0Njc5NjMzOF19
 -->
