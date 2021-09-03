@@ -31,9 +31,8 @@ layout: single
   - 2020.09 ~ : M.S. in Statictics, University of Seoul
 
 2. Programming Languages
-  - python
-    + tensorflow 2.0
+  - python (tensorflow 2.0)
   - R
 
 3. Projects
-  - 경제용어 감성사전 구축방안 연구: https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1
+  - 경제용어 감성사전 구축방안 연구: [link](https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1)
