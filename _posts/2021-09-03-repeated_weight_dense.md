@@ -103,7 +103,7 @@ array([[0.10263357, 0.10263357, 0.10263357, 0.10263357, 0.10263357],
       dtype=float32)>
 ```
 
-- 
+- `outputs`의 5개의 모든 값이 동일한 것을 확인할 수 있다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODU0NjUxOF19
+eyJoaXN0b3J5IjpbLTg2MDg4Mzc2M119
 -->
