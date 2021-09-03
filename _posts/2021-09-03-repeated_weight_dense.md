@@ -18,9 +18,9 @@ tags:
 ## 목표
 - Tensorflow의 행렬 연산은 $h = \sigma(X W + b)$ 의 형태로 이루어진다. ($X \in \mathbb{R}^{n \times p}, W \in \mathbb{R}^{p \times d}, b \in \mathbb{R}^d$)
 - 만약, 결과값인 $h \in \mathbb{R}^d$ 벡터의 모든 원소들의 값을 동일하게 만들고 싶다면 $W$를 어떻게 설정해야할까?
-- $W=[w_1, w_2, \cdots, w_d], w_i \in \mathbb{R}^p, i=1,\cdots,d$에서 $W$의 모든 열을 동일하게, 즉 $$w_i $$
+- $W=[w_1, w_2, \cdots, w_d], w_i \in \mathbb{R}^p, i=1,\cdots,d$에서 $W$의 모든 열을 동일하게, 즉 $$w_i = w_j$$ 로 가중치 행렬을 설정하면 될 것이다!
 
-##
+## python package import
 
 ```python
 #%%
@@ -34,7 +34,10 @@ from tensorflow.python.client import device_lib
 print('==========================================')
 print(device_lib.list_local_devices())
 tf.debugging.set_log_device_placement(False)
-#%%
+```
+
+## custom layer
+```python
 class CustomLayer(K.layers.Layer):
     def __init__(self, input_dim, output_dim, **kwargs):
         super(CustomLayer, self).__init__(**kwargs)
@@ -56,17 +59,20 @@ class CustomLayer(K.layers.Layer):
         h = tf.matmul(x, self.w_repeated) + self.b_repeated # h = xW + b
         h = tf.nn.relu(h) # nonlinear activation
         return h
-#%%
+```
+
+```python
 input_dim = 10
 output_dim = 5
 
 custom_layer = CustomLayer(input_dim, output_dim)
-#%%
+```
+
+```python
 inputs = tf.random.normal((64, input_dim))
 outputs = custom_layer(inputs)
 outputs
-#%%
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0Njc5NjMzOF19
+eyJoaXN0b3J5IjpbNjY1Nzk0NTk5XX0=
 -->
