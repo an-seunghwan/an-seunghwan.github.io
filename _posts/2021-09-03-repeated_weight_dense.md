@@ -37,6 +37,7 @@ tf.debugging.set_log_device_placement(False)
 ```
 
 ## custom layer
+
 ```python
 class CustomLayer(K.layers.Layer):
     def __init__(self, input_dim, output_dim, **kwargs):
@@ -61,6 +62,8 @@ class CustomLayer(K.layers.Layer):
         return h
 ```
 
+- 
+
 ```python
 input_dim = 10
 output_dim = 5
@@ -74,5 +77,5 @@ outputs = custom_layer(inputs)
 outputs
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1Nzk0NTk5XX0=
+eyJoaXN0b3J5IjpbLTE0NDM4NzQ1OF19
 -->
