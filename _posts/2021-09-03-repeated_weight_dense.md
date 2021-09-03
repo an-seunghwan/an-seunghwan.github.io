@@ -34,6 +34,13 @@ print('==========================================')
 print(device_lib.list_local_devices())
 tf.debugging.set_log_device_placement(False)
 ```
+```
+TensorFlow version: 2.4.0 
+Eager Execution Mode: True 
+available GPU: [] 
+========================================== 
+[name: "/device:CPU:0" device_type: "CPU" memory_limit: 268435456 locality { } incarnation: 1077612906216489537]
+```
 
 ## custom layer
 
@@ -52,7 +59,7 @@ class CustomLayer(K.layers.Layer):
         self.b = tf.Variable(initial_value=b_init(shape=(),
                                             dtype='float32'),
                                             trainable=True)
-        self.w_repeated = tf.repeat(self.w, self.output_dim, axis=-1)
+        self.w_repeated = tf.repeat(self.w, self.output_dim, axis=-1) # rkw
         self.b_repeated = tf.repeat(self.b, self.output_dim)
 
     def call(self, x):
@@ -61,7 +68,7 @@ class CustomLayer(K.layers.Layer):
         return h
 ```
 
-- 
+- `self.w`: 가중치 행렬에서 반복되어 사용될 하나의 열벡터
 
 ```python
 input_dim = 10
@@ -76,5 +83,5 @@ outputs = custom_layer(inputs)
 outputs
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjg2NzAwOTddfQ==
+eyJoaXN0b3J5IjpbMTA0NTEzMjc2MV19
 -->
