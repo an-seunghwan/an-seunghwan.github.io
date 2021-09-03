@@ -4,7 +4,7 @@ permalink: /about/
 layout: single
 ---
     
-# Interested in:
+# Interested in
 1. Variational AutoEncoder
   - interpretable latent space
   - style transfer
