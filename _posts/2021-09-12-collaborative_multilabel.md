@@ -14,7 +14,7 @@ tags:
   - 논문 읽기
 ---
 
-- [Collaborative Multilabel Classification](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.1961783) 논문에 대한 리뷰에 대한 간단한 제 생각을 적은 포스팅입니다.
+- [Collaborative Multilabel Classification](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.1961783) 논문에 대한 리뷰와 간단한 제 생각을 적은 포스팅입니다.
 - 자세하고 정확한 내용은 논문을 참고해 주세요!
 
 ## Collaborative Multilabel Classification
@@ -49,14 +49,14 @@ loss에 $I(y_l=+1) W_{-lk}$가 더해지는데, 먄약에 $y_l, y_k$가 semantic
 
 - If $y_l=-1$ and $f_k(x)>0$ 
 
-loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, $W_{+lk}=0$이므로 novel loss에 영향을 주지 않게 된다. 
+loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, $W_{+lk}=0$이므로 novel loss에 영향을 주지 않게 된다. 즉, 현재 예측하려는 label $y_k$와 semantically similar한 label $y_l$가 존재하지 않는다면, label $y_k$를 어떻게 예측하는지는 중요하지 않음을 의미한다.
 
 - If $y_k=+1$ and $f_k(x)<0$, If $y_k=-1$ and $f_k(x)>0$ 
 
-
+이는 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzkyOTgwMiwtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbMTg0MTQ2ODg1MCwtMTM5NDM0NDQzMl19
 -->
