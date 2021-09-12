@@ -158,17 +158,18 @@ where $y|x \sim Multi(\pi(x))$.
 
 $$
 \begin{aligned} 
-\min \ell (E_1(\pi(x)), E_2(\pi(x))) &= \| \pi(\alpha(x)) - \pi(\alpha_2(x)) \|^2
+\min \ell (E_1(\pi(x)), E_2(\pi(x))) &= \| \pi(\alpha_1(x)) - \pi(\alpha_2(x)) \|^2
 \end{aligned}
 $$
 
 
+where $\alpha_1, \alpha_2$는 서로다른 augmentation 함수이고 원래의 확률 예측함수 $f_k(x)$는 $\pi(x)$로 대체하여 이해될 수 있다. 여기서 중요한 가정은 바로 $\alpha(x
 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTEzNjM5MTM0LC00MjY5MjEzODcsLTEzOT
-QzNDQ0MzJdfQ==
+eyJoaXN0b3J5IjpbMTU1MjM4NjY5NSwtNDI2OTIxMzg3LC0xMz
+k0MzQ0NDMyXX0=
 -->
