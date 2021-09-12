@@ -163,13 +163,13 @@ $$
 $$
 
 
-where $\alpha_1, \alpha_2$는 서로다른 augmentation 함수이고 원래의 확률 예측함수 $f_k(x)$는 $\pi(x)$로 대체하여 이해될 수 있다. 여기서 중요한 가정은 바로 $\alpha(x
+where $\alpha_1, \alpha_2$는 서로다른 augmentation 함수이고 원래의 확률 예측함수 $f_k(x)$는 $\pi(x)$로 대체하여 이해될 수 있다. 여기서 중요한 가정은 바로 $\alpha(x)$가 여전히 원래의 $x$ 공간의 원소에 포함되어야 한다는 것이다.
 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MjM4NjY5NSwtNDI2OTIxMzg3LC0xMz
+eyJoaXN0b3J5IjpbMTQ3NTYyNTQ3MiwtNDI2OTIxMzg3LC0xMz
 k0MzQ0NDMyXX0=
 -->
