@@ -39,7 +39,7 @@ $W_{-lk} = e_l^\top e_k$  and $W_{-lk} > 0$ when $y_l, y_k$ are semantically sim
 
 - False positive weight
 
-$W_{-lk} = 0$ if $l \neq k$,  and $W_{-kk} = 1/p$ 
+$W_{+lk} = 0$ if $l \neq k$,  and $W_{+kk} = 1/p$ 
 
 ### novel loss
 
@@ -49,10 +49,14 @@ loss에 $I(y_l=+1) W_{-lk}$가 더해지는데, 먄약에 $y_l, y_k$가 semantic
 
 - If $y_l=-1$ and $f_k(x)>0$ 
 
+loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, 
+
+- If $y_k=+1$ and $f_k(x)<0$, If $y_k=-1$ and $f_k(x)>0$ 
+
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzY3NTEwMjEsLTEzOTQzNDQ0MzJdfQ
-==
+eyJoaXN0b3J5IjpbMTYwNTkwODk5NiwtMTM5NDM0NDQzMl19
 -->
