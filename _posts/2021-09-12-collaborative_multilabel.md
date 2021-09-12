@@ -121,11 +121,13 @@ $$
 $$
 
 
-where 
+where $\delta_k'(y) = 1$ if $\delta_k(y) > 0$ and otherwise, $\delta_k'(y) = 0$, and $f_k(x) \in [0, 1]$ which is parameterized with neural networks.
+
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDE5NTEwNzcsLTQyNjkyMTM4NywtMT
-M5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbLTkzNDA5NjQ1MiwtNDI2OTIxMzg3LC0xMz
+k0MzQ0NDMyXX0=
 -->
