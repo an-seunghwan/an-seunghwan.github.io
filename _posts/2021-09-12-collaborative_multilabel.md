@@ -142,15 +142,15 @@ where $E_1$은 가지고 있는 feature data에 대한 empirical expectation, $E
 
 $$
 \begin{aligned} 
-E_y[y] &= \sum_y y p(y) \\
-&= \sum_y \int y p(y|x) p(y) y dx \\
-&= E_x E_{y|x} [y] \\
+E_y[y] &= \sum_y y \cdot p(y) \\
+&= \sum_y \int y \cdot p(y \vert x) p(y) y dx \\
+&= E_x E_{y \vert x} [y] \\
 &= E_x [\pi(x)]
 \end{aligned}
 $$
 
 
-where $y|x \sim Multi(\pi(x))$.
+where $y \vert x \sim Multi(\pi(x))$.
 
 
 따라서, 논문에서 사용된 regularization term에서 $ell$을 L2 norm loss로 수정하고, $E_1, E_2$를 empirical expectation이 아니라 $x$의 augmentation을 이용한 sampling을 통해 simulation한다면, 다음과 같이 consistency regularization으로 이해될 수 있다.
@@ -163,13 +163,12 @@ $$
 $$
 
 
-where $\alpha_1, \alpha_2$는 서로다른 augmentation 함수이고 원래의 확률 예측함수 $f_k(x)$는 $\pi(x)$로 대체하여 이해될 수 있다. 여기서 중요한 가정은 바로 $\alpha(x)$가 여전히 원래의 $x$ 공간의 원소에 포함되어야 한다는 것이다.
-
+where $\alpha_1, \alpha_2$는 서로다른 augmentation 함수이고 원래의 확률 예측함수 $f_k(x)$는 $\pi(x)$로 대체하여 이해될 수 있다. 여기서 중요한 가정은 바로 $\alpha(x)$가 여전히 원래의 feature data $x$가 이루는 공간에 포함되어야 한다는 것이다.
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NTYyNTQ3MiwtNDI2OTIxMzg3LC0xMz
-k0MzQ0NDMyXX0=
+eyJoaXN0b3J5IjpbLTE3MTM3NTY2MzksLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
