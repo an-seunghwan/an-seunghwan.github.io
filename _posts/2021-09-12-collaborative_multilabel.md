@@ -74,12 +74,13 @@ where
 $$
 \begin{aligned} 
 \delta_k(y) &= \sum_{l:y_l = +1} W_{-lk} - \sum_{l:y_l = -1} W_{+lk} \\
-&= \sum_{l:y_l = +1} p(y_k|y_l) - (0 \text{or} 1/p)
+&= \sum_{l:y_l = +1} p(y_k|y_l) - (0 \text{	    or	 } 1/p)
 \end{aligned}
 $$
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTgxODk1MSwtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbNzA2Mjc4NjUxLC0xMzk0MzQ0NDMyXX0=
 -->
