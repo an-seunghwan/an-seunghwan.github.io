@@ -74,16 +74,27 @@ where
 $$
 \begin{aligned} 
 \delta_k(y) &= \sum_{l:y_l = +1} W_{-lk} - \sum_{l:y_l = -1} W_{+lk} \\
-&= \sum_{l:y_l = +1} p(y_k|y_l) - (0 \text{	    or	 } 1/p)
+&= \sum_{l:y_l = +1} p(y_k \vert y_l) - (0 \text{	    or	 } 1/p)
 \end{aligned}
 $$
 
 - $f_k(x) > 0$ and $\delta_k(y) < 0$
 
-- $f_k(x) > 0$ and $\delta_k(y) > 0$
+$$
+\begin{aligned} 
+\delta_k(y) = \sum_{l:y_l = +1} p(y_k \vert y_l) - 1 / p < 0
+\end{aligned}
+$$
+
+이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 작다는 것의 의미는 label $y_k$
+
+
+- $f_k(x) < 0$ and $\delta_k(y) > 0$
+
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NDQ0MDY2MCwtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbMjQ0MTg3NDgsLTEzOTQzNDQ0MzJdfQ==
 -->
