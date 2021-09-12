@@ -21,7 +21,7 @@ tags:
 
 - 핵심 요약: multilabel classification 문제에서, label들 간의 관계를 고려하여 문제를 해결할 수 있는 방법을 제시
 
-### Weights
+## Weights
 
 p개의 lable $y = (y_1, \cdots, y_p)$와 각 label의 embedding vector $e_1, \cdots, e_p$를 생각하자. 이때, embedding vector는 GLOVE를 통해 학습되며, 학습의 목표는 간단히
 
@@ -43,7 +43,7 @@ $W_{-lk} = e_l^\top e_k$  and $W_{-lk} > 0$ when $y_l, y_k$ are semantically sim
 
 $W_{+lk} = 0$ if $l \neq k$,  and $W_{+kk} = 1/p$ 
 
-### novel loss
+## novel loss
 
 - If $y_l=+1$ and $f_k(x)<0$ 
 
@@ -121,13 +121,13 @@ $$
 $$
 
 
-where $\delta_k'(y) = 1$ if $\delta_k(y) > 0$ and otherwise, $\delta_k'(y) = 0$, and $f_k(x) \in [0, 1]$ which is parameterized with neural networks.
+where $\delta_k'(y) = 1$ if $\delta_k(y) > 0$ and otherwise, $\delta_k'(y) = 0$, and $f_k(x) \in [0, 1]$ is parameterized with neural networks.
 
-
+## Consistency Re
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNDA5NjQ1MiwtNDI2OTIxMzg3LC0xMz
-k0MzQ0NDMyXX0=
+eyJoaXN0b3J5IjpbLTE0NDUzMjIzODIsLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
