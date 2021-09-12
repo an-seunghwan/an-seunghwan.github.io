@@ -139,6 +139,7 @@ where $E_1$은 가지고 있는 feature data에 대한 empirical expectation, $E
 
 또한, 다음과 같은 수식전개를 통해 semi-supervised single-label classification에서 활용되는 consistency regularization 기법으로 이해될 수 있다.
 
+
 $$
 \begin{aligned} 
 E_y[y] &= \sum_y y p(y) \\
@@ -152,10 +153,12 @@ $$
 where $y|x \sim Multi(\pi(x))$.
 
 
+따라서, 논문에서 사용된 regularization term에서 $ell$을 L2 norm loss로 수정하고, 
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MjU0MTA4LC00MjY5MjEzODcsLTEzOT
+eyJoaXN0b3J5IjpbNTc5MDcwODU2LC00MjY5MjEzODcsLTEzOT
 QzNDQ0MzJdfQ==
 -->
