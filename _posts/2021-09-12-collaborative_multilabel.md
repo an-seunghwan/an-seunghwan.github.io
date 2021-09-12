@@ -22,9 +22,9 @@ tags:
 
 - 핵심 요약: multilabel classification 문제에서, label들 간의 관계를 고려하여 문제를 해결할 수 있는 방법을 제시
 
-### Weighted objective  
+### Weighted objective 1
 
-
+p개의 lable $y = (y_1, \cdots, y_p)$와 각 label의 embedding vector $e_1, \cdots, e_p$를 생각하자. 이때, embedding vect
 
 $$
 \begin{aligned} 
@@ -36,5 +36,5 @@ $$
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MTE2MTM5MF19
+eyJoaXN0b3J5IjpbLTIwMTc3MzU0NTJdfQ==
 -->
