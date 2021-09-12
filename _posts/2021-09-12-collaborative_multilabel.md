@@ -130,14 +130,18 @@ feature data $x$가 존재하지 않는 additional label information들을 활�
 
 $$
 \begin{aligned} 
-\min \lambda \sum_{k=1}^p \vert \delta_k(y) \vert \Big( - \delta_k'(y) \log f_k(x) - (1 - \delta_k'(y)) \log (1 - f_k(x)) \Big)
+\min \lambda \sum_{k=1}^p \ell (E_1(f_k(x)), E_2(y_k))
 \end{aligned}
 $$
+
+
+where $E_1$은 가지고 있는 feature data에 대한 empirical expectation, $E_2$는 additional label들에 대한 empirical expectation, 그리고 $\ell$은 binary cross-entropy이다.
+
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAzNDAyNzMwLC00MjY5MjEzODcsLTEzOT
-QzNDQ0MzJdfQ==
+eyJoaXN0b3J5IjpbLTE1NzA2MTY0ODMsLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
