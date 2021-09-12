@@ -25,11 +25,13 @@ tags:
 
 p개의 lable $y = (y_1, \cdots, y_p)$와 각 label의 embedding vector $e_1, \cdots, e_p$를 생각하자. 이때, embedding vector는 GLOVE를 통해 학습되며, 학습의 목표는 간단히
 
+
 $$
 \begin{aligned} 
 p(y_j|y_i) = e_j^\top e_i
 \end{aligned}
 $$
+
 
 로 표현할 수 있다.
 
@@ -63,13 +65,16 @@ $W_{-lk} = p(y_k \vert y_l)$ and $\sum_{k=1}^p W_{-lk} = 1$ (row sum equals 1)
 
 ### objective
 
+
 $$
 \begin{aligned} 
 \min \sum_{k=1}^p \vert \delta_k(y) \vert I(\delta_k(y) \cdot f_k(x) < 0)
 \end{aligned}
 $$
 
+
 where 
+
 
 $$
 \begin{aligned} 
@@ -78,7 +83,9 @@ $$
 \end{aligned}
 $$
 
+
 - $f_k(x) > 0$ and $\delta_k(y) < 0$
+
 
 $$
 \begin{aligned} 
@@ -86,9 +93,12 @@ $$
 \end{aligned}
 $$
 
+
 이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 작다는 것의 의미는 label $y_k$가 label $y_l=+1$가 주어진 경우에 conditional probability가 작다는 것이다. 따라서, objective를 증가시켜 label $y_k$가 존재하지 않도록 $f_k(x) < 0$로 예측하도록 한다.
 
+
 - $f_k(x) < 0$ and $\delta_k(y) > 0$
+
 
 $$
 \begin{aligned} 
@@ -96,10 +106,12 @@ $$
 \end{aligned}
 $$
 
+
 이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 크다는 것의 의미는 label $y_k$가 label $y_l=+1$가 주어진 경우에 conditional probability가 크다는 것이다. 따라서, objective를 증가시켜 label $y_k$가 존재하도록 $f_k(x) > 0$로 예측하도록 한다.
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjkyMTM4NywtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbLTEzOTAyNDUyMDksLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
