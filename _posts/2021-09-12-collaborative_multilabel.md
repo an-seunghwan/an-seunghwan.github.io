@@ -153,12 +153,20 @@ $$
 where $y|x \sim Multi(\pi(x))$.
 
 
-따라서, 논문에서 사용된 regularization term에서 $ell$을 L2 norm loss로 수정하고, 
+따라서, 논문에서 사용된 regularization term에서 $ell$을 L2 norm loss로 수정하고, $E_1, E_2$를 empirical expectation이 아니라 $x$의 augmentation을 이용한 sampling을 통해 simulation한다면, 다음과 같이 consistency regularization으로 이해될 수 있다.
+
+
+$$
+\begin{aligned} 
+\min \ell (E_1(\pi(x)))
+\end{aligned}
+$$
+
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc5MDcwODU2LC00MjY5MjEzODcsLTEzOT
-QzNDQ0MzJdfQ==
+eyJoaXN0b3J5IjpbLTE5MjMwNzI1OTIsLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
