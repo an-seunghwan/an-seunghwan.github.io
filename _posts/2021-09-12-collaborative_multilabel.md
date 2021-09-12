@@ -123,11 +123,21 @@ $$
 
 where $\delta_k'(y) = 1$ if $\delta_k(y) > 0$ and otherwise, $\delta_k'(y) = 0$, and $f_k(x) \in [0, 1]$ is parameterized with neural networks.
 
-## Consistency Re
+## Additional label information
+
+feature data $x$가 존재하지 않는 additional label information들을 활용하기 위해, 논문에서는 다음과 같은 regularization term을 목적함수에 추가하였다.
+
+
+$$
+\begin{aligned} 
+\min \lambda \sum_{k=1}^p \vert \delta_k(y) \vert \Big( - \delta_k'(y) \log f_k(x) - (1 - \delta_k'(y)) \log (1 - f_k(x)) \Big)
+\end{aligned}
+$$
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDUzMjIzODIsLTQyNjkyMTM4NywtMT
-M5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbODAzNDAyNzMwLC00MjY5MjEzODcsLTEzOT
+QzNDQ0MzJdfQ==
 -->
