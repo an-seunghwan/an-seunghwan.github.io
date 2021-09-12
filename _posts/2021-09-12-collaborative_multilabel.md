@@ -49,7 +49,7 @@ loss에 $I(y_l=+1) W_{-lk}$가 더해지는데, 먄약에 $y_l, y_k$가 semantic
 
 - If $y_l=-1$ and $f_k(x)>0$ 
 
-loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, 
+loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, $W_{+lk}=0$이므로 novel loss에 영향을 주지 않게 된다. 
 
 - If $y_k=+1$ and $f_k(x)<0$, If $y_k=-1$ and $f_k(x)>0$ 
 
@@ -58,5 +58,5 @@ loss에 $I(y_l=-1) W_{+lk}$가 더해지는데,
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTkwODk5NiwtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbMTUyNzkyOTgwMiwtMTM5NDM0NDQzMl19
 -->
