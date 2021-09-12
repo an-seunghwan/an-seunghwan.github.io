@@ -158,15 +158,17 @@ where $y|x \sim Multi(\pi(x))$.
 
 $$
 \begin{aligned} 
-\min \ell (E_1(\pi(x)))
+\min \ell (E_1(\pi(x)), E_2(\pi(x))) &= \| \pi(\alpha(x)) - \pi(\alpha_2(x)) \|^2
 \end{aligned}
 $$
+
+
 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjMwNzI1OTIsLTQyNjkyMTM4NywtMT
-M5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbOTEzNjM5MTM0LC00MjY5MjEzODcsLTEzOT
+QzNDQ0MzJdfQ==
 -->
