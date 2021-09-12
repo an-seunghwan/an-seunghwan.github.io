@@ -57,10 +57,13 @@ loss에 $I(y_l=-1) W_{+lk}$가 더해지는데, $W_{+lk}=0$이므로 novel loss�
 
 ## objective and conditional probability
 
+false negative weight를 다음과 같이 conditional probability를 이용해 적을 수 있다.
 
+$W_{-lk} = p(y_k|y_l)$ and $\sum_{k=1}^p W_{-lk} = 1$ (e
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzcxNDYyNSwtMTM5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbLTIwMzg1MDQxMDUsLTEzOTQzNDQ0MzJdfQ
+==
 -->
