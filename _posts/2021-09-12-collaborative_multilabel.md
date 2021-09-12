@@ -113,15 +113,19 @@ $$
 
 목적함수의 $I(\delta_k(y) \cdot f_k(x) < 0)$는 미분이 불가능하므로, surrogate loss 중에 하나인 cross-entropy를 사용하여 모형을 적합한다.
 
+
 $$
 \begin{aligned} 
-\min \sum_{k=1}^p \vert \delta_k(y) \vert \Big( -  \Big)
+\min \sum_{k=1}^p \vert \delta_k(y) \vert \Big( - \delta_k'(y) \log f_k(x) - (1 - \delta_k'(y)) \log (1 - f_k(x)) \Big)
 \end{aligned}
 $$
+
+
+where 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODA5Mjc3MywtNDI2OTIxMzg3LC0xMz
-k0MzQ0NDMyXX0=
+eyJoaXN0b3J5IjpbLTE0MDE5NTEwNzcsLTQyNjkyMTM4NywtMT
+M5NDM0NDQzMl19
 -->
