@@ -149,11 +149,13 @@ E_y[y] &= \sum_y y p(y) \\
 $$
 
 
-where $
+where $y|x \sim Multi(\pi(x))$.
+
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYzNTYyMDgyLC00MjY5MjEzODcsLTEzOT
+eyJoaXN0b3J5IjpbOTU3MjU0MTA4LC00MjY5MjEzODcsLTEzOT
 QzNDQ0MzJdfQ==
 -->
