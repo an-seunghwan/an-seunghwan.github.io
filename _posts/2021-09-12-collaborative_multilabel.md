@@ -109,9 +109,19 @@ $$
 
 이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 크다는 것의 의미는 label $y_k$가 label $y_l=+1$가 주어진 경우에 conditional probability가 크다는 것이다. 따라서, objective를 증가시켜 label $y_k$가 존재하도록 $f_k(x) > 0$로 예측하도록 한다.
 
+### surrogate loss and neural networks
+
+목적함수의 $I(\delta_k(y) \cdot f_k(x) < 0)$는 미분이 불가능하므로, surrogate loss 중에 하나인 cross-entropy를 사용하여 모형을 적합한다.
+
+$$
+\begin{aligned} 
+\min \sum_{k=1}^p \vert \delta_k(y) \vert \Big( -  \Big)
+\end{aligned}
+$$
+
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTAyNDUyMDksLTQyNjkyMTM4NywtMT
-M5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbMTExODA5Mjc3MywtNDI2OTIxMzg3LC0xMz
+k0MzQ0NDMyXX0=
 -->
