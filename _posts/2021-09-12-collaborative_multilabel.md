@@ -86,7 +86,7 @@ $$
 \end{aligned}
 $$
 
-이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 작다는 것의 의미는 label $y_k$
+이므로 $\sum_{l:y_l = +1} p(y_k \vert y_l)$ 가 작다는 것의 의미는 label $y_k$가 label $y_l=+1$가 주어진 경우에 conditional probability가 작다는 것이다. 따라서, label $y_k$가 존재한다고 예측하지 
 
 
 - $f_k(x) < 0$ and $\delta_k(y) > 0$
@@ -96,5 +96,5 @@ $$
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0MTg3NDgsLTEzOTQzNDQ0MzJdfQ==
+eyJoaXN0b3J5IjpbMTI2MzQ1MzIyMSwtMTM5NDM0NDQzMl19
 -->
