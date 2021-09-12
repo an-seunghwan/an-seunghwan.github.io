@@ -1,24 +1,24 @@
 ---
 title: "Collaborative Multilabel Classification (논문 읽기)"
-excerpt: "With semi-supervised learning cons"
+excerpt: "With semi-supervised learning consistency regularization"
 toc: true
 toc_sticky: true
 
 author_profile: false
 use_math: true
 
-date: 2021-09-05 20:00:00 -0000
+date: 2021-09-12 20:00:00 -0000
 categories: 
-  - VAE
+  - multilabel
 tags:
   - 논문 읽기
 ---
 
 
-- [ALMOND: Adaptive Latent Modeling and Optimization via Neural Networks and Langevin Diffusion](https://www.tandfonline.com/doi/full/10.1080/01621459.2019.1691563) 논문에 대한 리뷰에 대한 간단한 제 생각을 적은 포스팅입니다.
+- [Collaborative Multilabel Classification](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.1961783) 논문에 대한 리뷰에 대한 간단한 제 생각을 적은 포스팅입니다.
 - 자세하고 정확한 내용은 논문을 참고해 주세요!
 
-## ALMOND
+## Collaborative Multilabel Classification
 
 ### generative model 
 
@@ -89,5 +89,5 @@ $$f_{\beta_t}(x|h_{\eta_t}(z)) \pi_0(z) \propto p_{\tilde{\beta}}(z|x)$$
 ## Reference 
 - Qiu, Y., & Wang, X. (2019). Almond: adaptive latent modeling and optimization via neural networks and Langevin diffusion. _Journal of the American Statistical Association_, 1-13.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTcwODVdfQ==
+eyJoaXN0b3J5IjpbMTMzMzk3ODUzNV19
 -->
