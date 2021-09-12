@@ -43,10 +43,14 @@ $W_{-lk} = 0$ if $l \neq k$,  and $W_{-kk} = 1/p$
 
 ### novel loss
 
+- If $y_l=+1$ and $f_k(x)<0$ 
+
+- If $y_l=-1$ and $f_k(x)>0$ 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQzNDQ0MzJdfQ==
+eyJoaXN0b3J5IjpbLTE2MjA2MjI0OTgsLTEzOTQzNDQ0MzJdfQ
+==
 -->
