@@ -35,18 +35,18 @@ $$
 
 - False negative weight
 
-$W_{-lk} = e_l^\top e_k$ 
+$W_{-lk} = e_l^\top e_k$  and $W_{-lk} >> 0$ when $y_l, y_k$ are semantically similar.
 
 - False positive weight
 
 $W_{-lk} = 0$ if $l \neq k$,  and $W_{-kk} = 1/p$ 
 
-
+### novel loss
 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTU0MzA1OV19
+eyJoaXN0b3J5IjpbLTEzOTQzNDQ0MzJdfQ==
 -->
