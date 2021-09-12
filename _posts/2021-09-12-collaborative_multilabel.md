@@ -135,13 +135,15 @@ $$
 $$
 
 
-where $E_1$은 가지고 있는 feature data에 대한 empirical expectation, $E_2$는 additional label들에 대한 empirical expectation, 그리고 $\ell$은 binary cross-entropy이다. 즉, $E_2(y_k)$은 semi-supervised single-label classification에서 활용되는 pseudo labeling 기법으로 이해될 수 있다.
+where $E_1$은 가지고 있는 feature data에 대한 empirical expectation, $E_2$는 additional label들에 대한 empirical expectation, 그리고 $\ell$은 binary cross-entropy이다. 즉, $E_2(y_k)$은 가지고 있는 feature data들에 대한 expectation의 새로운 정답 label로, semi-supervised single-label classification에서 활용되는 pseudo labeling 기법으로 이해될 수 있다.
 
-특히, 다음과 같은 수식
+또한, 다음과 같은 수식전개를 통해 semi-supervised single-label classification에서 활용되는 consistency regularization 기법으로 이해될 수 있다.
+
+
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzQ3OTMxOTksLTQyNjkyMTM4NywtMT
-M5NDM0NDQzMl19
+eyJoaXN0b3J5IjpbMjc3ODkyNTksLTQyNjkyMTM4NywtMTM5ND
+M0NDQzMl19
 -->
