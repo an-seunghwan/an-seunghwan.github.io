@@ -45,12 +45,14 @@ $W_{-lk} = 0$ if $l \neq k$,  and $W_{-kk} = 1/p$
 
 - If $y_l=+1$ and $f_k(x)<0$ 
 
+loss에 $I(y_l=+1) W_{-lk}$가 더해지는데, 먄약에 $y_l, y_k$가 semantically similar했다면, 더 큰 weight $W_{-lk}$가 novel loss에 더해지게된다. 즉, 
+
+
 - If $y_l=-1$ and $f_k(x)>0$ 
 
 
 ## Reference 
 - Zhu, Y., Shen, X., Jiang, H., & Wong, W. H. (2021). Collaborative multilabel classification. _Journal of the American Statistical Association_, (just-accepted), 1-31.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjA2MjI0OTgsLTEzOTQzNDQ0MzJdfQ
-==
+eyJoaXN0b3J5IjpbLTg1ODg5ODUzNSwtMTM5NDM0NDQzMl19
 -->
