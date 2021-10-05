@@ -1,13 +1,13 @@
 ---
 title: "Distance-Based Analysis of Ordinal Data and Ordinal Time Series (논문 읽기)"
-excerpt: "Ordinal data에 대해 정의되는 "
+excerpt: "Ordinal data에 대해 정의되는 거리 함수를 이해하기"
 toc: true
 toc_sticky: true
 
 author_profile: false
 use_math: true
 
-date: 2021-09-05 20:00:00 -0000
+date: 2021-10-05 20:00:00 -0000
 categories: 
   - VAE
 tags:
@@ -15,79 +15,17 @@ tags:
 ---
 
 
-- [ALMOND: Adaptive Latent Modeling and Optimization via Neural Networks and Langevin Diffusion](https://www.tandfonline.com/doi/full/10.1080/01621459.2019.1691563) 논문에 대한 리뷰와 간단한 제 생각을 적은 포스팅입니다.
+- [Distance-Based Analysis of Ordinal Data and Ordinal Time Series](https://www.tandfonline.com/doi/pdf/10.1080/01621459.2019.1604370?needAccess=true) 논문에 대한 리뷰와 간단한 제 생각을 적은 포스팅입니다.
 - 자세하고 정확한 내용은 논문을 참고해 주세요!
 
-## ALMOND
+## Distance-Based Analysis of Ordinal Data and Ordinal Time Series
 
-### generative model 
-
-$$
-\begin{aligned} 
-x|u &\sim f_{\theta}(x|u) \\
-p(x) &= \int_u f_{\theta}(x|u) \pi(u) du 
-\end{aligned}
-$$
-
-이때, $\pi(u)$은 implicit distribution으로 우리가 알 수 없는 분포이다.
-
-### assumption
-
-$u \in \mathbb{R}^r$이라고 하면, $u$는 저차원의 manifold에 존재하므로, $d < r$에 대해서 다음과 같이 가정할 수 있다.
-
-$$
-\begin{aligned} 
-z &\sim \pi_0(z) \\
-u &= h_{\eta}(z)
-\end{aligned}
-$$
-
-이때, $\pi_0(z)$는 고정된 쉬운 분포, 예를 들어 $N(0, I)$과  같은 분포를 생각한다. 따라서, 우리는 다음과 같은 $x$의 conditional distribution을 생각한다.
-
-$$x|z \sim f_{\theta}(x|h_{\eta}(z))$$
-
-### ELBO
-
-목적함수 ELBO는 다음과 같이 쓰여질 수 있다.
-
-$$
-\begin{aligned} 
-\log f_{\beta}(x) &= \log \int f_{\beta}(x|h_{\eta}(z)) \pi_0(z) dz \\
-&\geq \int  \log \Bigg( \frac{f_{\beta}(x|h_{\eta}(z)) \pi_0(z)}{p_{\tilde{\beta}}(z|x)} \Bigg) p_{\tilde{\beta}}(z|x) dz \cdots (*)
-\end{aligned}
-$$
-
-두번째 부등호는 Jensen's inequality에 의해 성립하며, 주의할 점은 $p_{\tilde{\beta}}(z \vert x)$가 $\beta$에 무관한 latent conditional distribution이라는 점이다. ($\beta = (\theta, \eta)$)
-
-$\beta$의 update를 위해 $(*)$식을 미분하면 다음과 같다.
-
-$$
-\begin{aligned} 
-\frac{\partial}{\partial \beta} (*) &= \int  \Bigg( \frac{\frac{\partial}{\partial \beta} f_{\beta}(x|h_{\eta}(z))}{f_{\beta}(x|h_{\eta}(z))} \Bigg) p_{\tilde{\beta}}(z|x) dz \\
-&= \int  \log \Big( \frac{\partial}{\partial \beta} f_{\beta}(x|h_{\eta}(z)) \Big) p_{\tilde{\beta}}(z|x) dz \\
-\end{aligned}
-$$
-
-$\beta$에 대한 미분을 위해서 적분이 필요하지만 위 식의 적분은 intractable하며, 대신 Monte Carlo approximation을 위해서는 $p_{\tilde{\beta}}(z \vert x)$으로부터의 sampling이 필요하다. 
-
-만약 우리가 $t$시점에서 $t+1$ 시점으로의 $\beta$에 대한 update를 생각한다면, 고정된 $\tilde{\beta}$를 $\beta_{t}$으로 놓을 수 있다. 따라서 베이즈 정리에 의해
-
-$$f_{\beta_t}(x|h_{\eta_t}(z)) \pi_0(z) \propto p_{\tilde{\beta}}(z|x)$$
-
-와 같은 관계를 생각할 수 있으므로, 이 논문에서는 Langevin dynamic algorithm을 이용하여 $f_{\beta_t}(x \vert h_{\eta_t}(z)) \pi_0(z)$으로부터 $z$를 sampling하고, $\beta$에 대한 gradient를 estimate하여 ELBO에 대한 최대화를 수행한다. 추가적으로, approximate된 gradient를 사용한 경우의 결과에 대한 수렴성과 수렴속도에 대한 증명을 한 논문이다.
 
 ## Comments
 
-- Conventional VAE에서 사용하는 posterior 가정대신, ALMOND 논문은 generative model로부터 posterior 분포를 정의하여 VAE 모형을 학습하는 방식을 사용하였다.
-- 물론, posterior 분포를 generative model로부터 정의하였으므로 posterior 분포가 실제 posterior 분포에 매우 가깝게 approximation될 수 있을 수 있다.
-- 하지만, 다음과 같은 단점과 한계가 있을 수 있다고 생각한다.
-
-1. Langevin dynamic algorithm을 통해 sampling하는 과정이 계산량이 많고 오래걸린다.
-2. Conventional VAE는 posterior 분포를 neural network parameter $\phi$를 이용해 $q_{\phi}(z \vert x) = N(z \vert \mu_{\phi}(x), \Sigma_{\phi}(x))$로 정의함으로써, ELBO의 simulation을 위한 간단한 sampling을 가능하게 하였다.
-3. 물론 conventional VAE의 Gaussian posterior assumption이 실제 posterior 분포와 거리가 있을 수 있지만, 충분히 많고 복잡한 neural network parameter $\phi$와 $\mu_{\phi}(x), \Sigma_{\phi}(x)$를 사용함으로써 model space를 확장해 분포 가정상의 한계를 해결할 수 있도록 하였다.
 
 ## Reference 
-- Qiu, Y., & Wang, X. (2019). Almond: adaptive latent modeling and optimization via neural networks and Langevin diffusion. _Journal of the American Statistical Association_, 1-13.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwOTY4NTQyXX0=
+eyJoaXN0b3J5IjpbMjczOTUzOTcyXX0=
 -->
