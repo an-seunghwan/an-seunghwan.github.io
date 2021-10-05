@@ -54,7 +54,7 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 
 ### symmetry
 
-
+- reflected copy $X^r = s_{m-I}$ where $P(X = s_i) = p_{i}$ and $P(X^r = s_i) = p_{m-i}$
 
 ## Comments
 
@@ -62,6 +62,6 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMDQ5NTYwOCw3OTY3MjQyMzcsMjczOT
+eyJoaXN0b3J5IjpbLTU2NjEwMDQ3Niw3OTY3MjQyMzcsMjczOT
 UzOTcyXX0=
 -->
