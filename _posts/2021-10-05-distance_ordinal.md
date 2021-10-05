@@ -36,7 +36,9 @@ tags:
 
 - possible properties of ordinal distances
 	1. Maximization $d(s_0, s_m) = \max_{x, y \in S} d(x, y)$
-	2. 
+	2. $d$ is said to be compatible with the ordering if 
+	3. $d$ is said to be additive if for given $d_1, \cdots, d_m > 0$, it holds that
+	4. Centrosummetry
 
 ## Comments
 
@@ -44,5 +46,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MTgxMzgwOSwyNzM5NTM5NzJdfQ==
+eyJoaXN0b3J5IjpbLTEzOTg4MjU1OTUsMjczOTUzOTcyXX0=
 -->
