@@ -74,6 +74,7 @@ skew &= E[d(X, s_m)] - E[d(X, s_0)] \\
 &= \sum_{i,j=0}^m d(s_i, s_m) p_i - \sum_{i,j=0}^m d(s_{m-i}, s_m) p_i (\text{ Centrosymmetry }) \\ 
 &= \sum_{i,j=0}^m d(s_i, s_m) p_i - \sum_{i,j=0}^m d(s_{i}, s_m) p_{m-i} \\ 
 &= \sum_{i,j=0}^m d(s_i, s_m) p_i - \sum_{i,j=0}^m d(s_{i}, s_m) p_{i} (\text{ symmetric distribution }) \\ 
+&= 0
 \end{align}
 $$
 
@@ -84,6 +85,6 @@ $$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTQwODU2NCw3OTY3MjQyMzcsMjczOT
+eyJoaXN0b3J5IjpbMTU5MDQyMTMxNyw3OTY3MjQyMzcsMjczOT
 UzOTcyXX0=
 -->
