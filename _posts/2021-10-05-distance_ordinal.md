@@ -47,12 +47,17 @@ tags:
 
 $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 
+### dispersion
+
+1. $$disp = E_X[d(X, loc)]$$
+2. $$disp = E[d(X_1, X_2)] = \sum_{i,j=0}^m d(s_i, s_j) $$
+
 ## Comments
 
 
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjk1MDk3NzIsNzk2NzI0MjM3LDI3Mz
-k1Mzk3Ml19
+eyJoaXN0b3J5IjpbLTY0MTk1NDgwMCw3OTY3MjQyMzcsMjczOT
+UzOTcyXX0=
 -->
