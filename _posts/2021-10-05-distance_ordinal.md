@@ -34,11 +34,15 @@ tags:
 		- $d_{o, 1}(s_k, s_l) = \vert k - l \vert$
 		- distance value do not depend on the actual labeling $s_0, \cdots, s_m$
 
+- possible properties of ordinal distances
+	1. Maximization $d(s_0, s_m) = \max_{x, y \in S} d(x, y)$
+	2. 
+
 ## Comments
 
 
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDY1MzUwNTAsMjczOTUzOTcyXX0=
+eyJoaXN0b3J5IjpbMTM1MTgxMzgwOSwyNzM5NTM5NzJdfQ==
 -->
