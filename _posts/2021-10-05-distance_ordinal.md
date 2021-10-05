@@ -29,7 +29,8 @@ tags:
 
 ### distance function
 
-- distance function $d: S \mapsto [0, \infty)$
+- distance function $d(s_k, s_l): S \times S \mapsto [0, \infty)$
+- 
 
 ## Comments
 
@@ -37,5 +38,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzkzOTk1NiwyNzM5NTM5NzJdfQ==
+eyJoaXN0b3J5IjpbMTY5ODU4NTEwOCwyNzM5NTM5NzJdfQ==
 -->
