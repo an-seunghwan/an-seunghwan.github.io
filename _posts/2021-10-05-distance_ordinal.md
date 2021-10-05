@@ -30,7 +30,8 @@ tags:
 ### distance function
 
 - distance function $d(s_k, s_l): S \times S \mapsto [0, \infty)$
-- 
+- example: block distance $d_{o, 1}(s_k, s_l) = \vert k - l \vert$
+	- 
 
 ## Comments
 
@@ -38,5 +39,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5ODU4NTEwOCwyNzM5NTM5NzJdfQ==
+eyJoaXN0b3J5IjpbOTYzMjA1NjI5LDI3Mzk1Mzk3Ml19
 -->
