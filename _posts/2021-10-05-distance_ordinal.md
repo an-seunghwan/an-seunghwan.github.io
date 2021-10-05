@@ -57,7 +57,13 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 - reflected copy $X^r = s_{m-I}$ where $P(X = s_i) = p_{i}$ and $P(X^r = s_i) = p_{m-i}$
 - If $p_i = p_{m-i}$, then $X =_d X^r$: symmetry distribution
 
-$$asym = $$
+$$
+\begin{align}
+asym &= E[d(X, X^r)] - disp \\
+&= \sum_{i,j=0}^m d(s_i, s_j) p_i (p_{m-j} - p_j) \\
+&= -
+\end{align}
+$$
 
 ## Comments
 
@@ -65,6 +71,6 @@ $$asym = $$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTMwNDQxOCw3OTY3MjQyMzcsMjczOT
+eyJoaXN0b3J5IjpbMTU1NDQ5MTkwMyw3OTY3MjQyMzcsMjczOT
 UzOTcyXX0=
 -->
