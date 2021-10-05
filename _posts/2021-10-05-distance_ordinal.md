@@ -52,9 +52,12 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 1. $$disp = E_X[d(X, loc)]$$
 2. $$disp = E[d(X_1, X_2)] = \sum_{i,j=0}^m d(s_i, s_j) p_i p_j \leq d(s_0, s_m)$$ by maximization property
 
-### symmetry
+### asymmetry
 
 - reflected copy $X^r = s_{m-I}$ where $P(X = s_i) = p_{i}$ and $P(X^r = s_i) = p_{m-i}$
+- If $p_i = p_{m-i}$, then $X =_d X^r$: symmetry distribution
+
+$$asym = $$
 
 ## Comments
 
@@ -62,6 +65,6 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NjEwMDQ3Niw3OTY3MjQyMzcsMjczOT
+eyJoaXN0b3J5IjpbLTEwNTMwNDQxOCw3OTY3MjQyMzcsMjczOT
 UzOTcyXX0=
 -->
