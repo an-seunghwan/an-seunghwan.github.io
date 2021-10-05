@@ -65,12 +65,23 @@ asym &= E[d(X, X^r)] - disp \\
 \end{align}
 $$
 
+### skewness
+
+$$
+\begin{align}
+skew &= E[d(X, s_m)] - E[d(X, s_0)] \\
+&= \sum_{i,j=0}^m d(s_i, s_m) p_i - \sum_{i,j=0}^m d(s_i, s_m) p_i \\
+&= 0 (\text{ if distribution of $X$ is symmetry})
+\end{align}
+$$
+
+
 ## Comments
 
 
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTc3ODM5NCw3OTY3MjQyMzcsMjczOT
-UzOTcyXX0=
+eyJoaXN0b3J5IjpbLTExMTg1NDc4MTQsNzk2NzI0MjM3LDI3Mz
+k1Mzk3Ml19
 -->
