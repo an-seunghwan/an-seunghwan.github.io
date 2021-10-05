@@ -22,7 +22,9 @@ tags:
 
 ### distance function
 
-- $S = \{s_0, \cdots, s_m \}$ where $$
+- $S = \{s_0, \cdots, s_m \}$ where $s_0 \leq s_1 \leq \cdots \leq s_m$
+- ordinal random variable $X_i \in \{s_0, \cdots, s_m \}$
+- rank count variable $I \in \{ 0, \cdots, m \}$
 
 ## Comments
 
@@ -30,5 +32,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODc5MzUwMywyNzM5NTM5NzJdfQ==
+eyJoaXN0b3J5IjpbLTE3ODAxNjU4NzYsMjczOTUzOTcyXX0=
 -->
