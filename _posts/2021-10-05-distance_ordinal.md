@@ -37,11 +37,11 @@ tags:
 - possible properties of ordinal distances
 	1. Maximization $d(s_0, s_m) = \max_{x, y \in S} d(x, y)$
 	2. $d$ is said to be compatible with the ordering if 
-	$$x < y < z \text{\quad implies that \quad} d(x, z) > d(x, y), d(y, z)$$
+	$$x < y < z \text{ implies that } d(x, z) > d(x, y), d(y, z)$$
 	3. $d$ is said to be additive if for given $d_1, \cdots, d_m > 0$, it holds that
-	$$d(s_i, s_{i+k}) = d_{i+1} + \cdots + d_{i+k} \text{\quad for all \quad} i = 0, \cdots, m-1, k = 1, \cdots, m-i$$
+	$$d(s_i, s_{i+k}) = d_{i+1} + \cdots + d_{i+k} \text{for all } i = 0, \cdots, m-1, k = 1, \cdots, m-i$$
 	4. Centrosummetry
-	$$d(s_i, s_j) = d(s_{m-i}, s_{m-j}) \text{\quad for all \quad} 0 \leq i < j \leq m$$
+	$$d(s_i, s_j) = d(s_{m-i}, s_{m-j}) \text{ for all } 0 \leq i < j \leq m$$
 
 ## Comments
 
@@ -49,5 +49,6 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk2NzI0MjM3LDI3Mzk1Mzk3Ml19
+eyJoaXN0b3J5IjpbMTQzNzc2MDc1LDc5NjcyNDIzNywyNzM5NT
+M5NzJdfQ==
 -->
