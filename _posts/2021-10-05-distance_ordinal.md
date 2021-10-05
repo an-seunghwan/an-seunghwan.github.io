@@ -9,7 +9,7 @@ use_math: true
 
 date: 2021-10-05 20:00:00 -0000
 categories: 
-  - VAE
+  - Ordinal Data
 tags:
   - 논문 읽기
 ---
@@ -20,6 +20,9 @@ tags:
 
 ## Distance-Based Analysis of Ordinal Data and Ordinal Time Series
 
+### distance function
+
+- $S = \{s_0, \cdots, s_m \}$ where $$
 
 ## Comments
 
@@ -27,5 +30,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTYyMDIyMzIsMjczOTUzOTcyXX0=
+eyJoaXN0b3J5IjpbMTY2ODc5MzUwMywyNzM5NTM5NzJdfQ==
 -->
