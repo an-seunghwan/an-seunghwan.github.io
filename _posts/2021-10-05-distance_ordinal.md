@@ -41,7 +41,7 @@ tags:
 	3. $d$ is said to be additive if for given $d_1, \cdots, d_m > 0$, it holds that
 	$$d(s_i, s_{i+k}) = d_{i+1} + \cdots + d_{i+k} \text{\quad for all \quad} i = 0, \cdots, m-1, k = 1, \cdots, m-i$$
 	4. Centrosummetry
-	$$d(s_i, s_j) = d(s_{m-i}, s_{m-j})$$
+	$$d(s_i, s_j) = d(s_{m-i}, s_{m-j}) \text{\quad for all \quad} 0 \leq i < j \leq m$$
 
 ## Comments
 
@@ -49,5 +49,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTgyOTI3NiwyNzM5NTM5NzJdfQ==
+eyJoaXN0b3J5IjpbNzk2NzI0MjM3LDI3Mzk1Mzk3Ml19
 -->
