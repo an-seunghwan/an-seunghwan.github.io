@@ -61,7 +61,7 @@ $$
 \begin{align}
 asym &= E[d(X, X^r)] - disp \\
 &= \sum_{i,j=0}^m d(s_i, s_j) p_i (p_{m-j} - p_j) \\
-&= -
+&= 0 (\text{ if distribution of $X$ is symmetry})
 \end{align}
 $$
 
@@ -71,6 +71,6 @@ $$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NDQ5MTkwMyw3OTY3MjQyMzcsMjczOT
+eyJoaXN0b3J5IjpbMTIxOTc3ODM5NCw3OTY3MjQyMzcsMjczOT
 UzOTcyXX0=
 -->
