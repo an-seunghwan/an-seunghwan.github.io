@@ -93,13 +93,13 @@ $$
 
 1. 거리의 일반적인 정의 방식 
 2. 추상적인 공간에 대해 조건을 만족하는 적당한 거리함수(distance function)을 생각한다면, 1에서 정의한 거리를 적용해 모델링을 할 수 있음 
-3. ordered categorical → Gumbel-Softmax로 샘플링 및 모형화 
-4. categorical data를 이용한 regression에서 이분산성을 1에서 정의한 dispersion의 역수로 해결할 수 있을까? 
-5. location → category S 중에 1개로 확실하게 구할 수 있음 (추정한 뒤 가장가까운 category를 고르는 방식이 아님)
+3. ordered categorical → Gumbel-Softmax로 샘플링 및 모형화 할 수 있지 않을까?
+4. categorical data를 이용한 regression에서 이분산성(Heteroskedasticity)을 dispersion의 역수를 가중치로 곱해줌으로써 해결할 수 있을까? 
+5. location 계산에서, category $S$ 중에 1개의 원소로 확실하게 구할 수 있음 (일반적인 방식인 추정한 뒤 가장가까운 category를 고르는 방식과 차이)
 
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUzMjg4NDQwLDc5NjcyNDIzNywyNzM5NT
-M5NzJdfQ==
+eyJoaXN0b3J5IjpbLTE0OTkyMjc0MjcsNzk2NzI0MjM3LDI3Mz
+k1Mzk3Ml19
 -->
