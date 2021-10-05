@@ -37,15 +37,22 @@ tags:
 - possible properties of ordinal distances
 	1. Maximization $d(s_0, s_m) = \max_{x, y \in S} d(x, y)$
 	2. $d$ is said to be compatible with the ordering if 
+
 	$$x < y < z \text{ implies that } d(x, z) > d(x, y), d(y, z)$$
-	3. $d$ is said to be additive if for given $d_1, \cdots, d_m > 0$, it holds that
+
+	4. $d$ is said to be additive if for given $d_1, \cdots, d_m > 0$, it holds that
+
 	$$d(s_i, s_{i+k}) = d_{i+1} + \cdots + d_{i+k} \text{ for all } i = 0, \cdots, m-1, k = 1, \cdots, m-i$$
+	
 	4. Centrosymmetry
+
 	$$d(s_i, s_j) = d(s_{m-i}, s_{m-j}) \text{ for all } 0 \leq i < j \leq m$$
 
 ### location
 
+
 $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
+
 
 ### dispersion
 
@@ -57,6 +64,7 @@ $$loc = \arg\min_{x \in S} E_X[d(X, x)]$$
 - reflected copy $X^r = s_{m-I}$ where $P(X = s_i) = p_{i}$ and $P(X^r = s_i) = p_{m-i}$
 - If $p_i = p_{m-i}$, then $X =_d X^r$: symmetry distribution
 
+
 $$
 \begin{align}
 asym &= E[d(X, X^r)] - disp \\
@@ -65,7 +73,9 @@ asym &= E[d(X, X^r)] - disp \\
 \end{align}
 $$
 
+
 ### skewness
+
 
 $$
 \begin{align}
@@ -85,6 +95,6 @@ $$
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MDQyMTMxNyw3OTY3MjQyMzcsMjczOT
-UzOTcyXX0=
+eyJoaXN0b3J5IjpbNTE5MjU4MjgsNzk2NzI0MjM3LDI3Mzk1Mz
+k3Ml19
 -->
