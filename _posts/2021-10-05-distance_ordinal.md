@@ -20,11 +20,16 @@ tags:
 
 ## Distance-Based Analysis of Ordinal Data and Ordinal Time Series
 
+### notations
+
+- ordered categorical range $S = \{s_0, \cdots, s_m \}$ where $s_0 \leq s_1 \leq \cdots \leq s_m$
+- ordinal random variable $X \in \{s_0, \cdots, s_m \}$
+- rank count variable $I \in \{ 0, \cdots, m \}$
+- $X = s_I$
+
 ### distance function
 
-- $S = \{s_0, \cdots, s_m \}$ where $s_0 \leq s_1 \leq \cdots \leq s_m$
-- ordinal random variable $X_i \in \{s_0, \cdots, s_m \}$
-- rank count variable $I \in \{ 0, \cdots, m \}$
+- distance function $d: S \mapsto [0, \infty)$
 
 ## Comments
 
@@ -32,5 +37,5 @@ tags:
 ## Reference 
 - Weiß, C. H. (2019). Distance-based analysis of ordinal data and ordinal time series. _Journal of the American Statistical Association_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODAxNjU4NzYsMjczOTUzOTcyXX0=
+eyJoaXN0b3J5IjpbMjAyMzkzOTk1NiwyNzM5NTM5NzJdfQ==
 -->
