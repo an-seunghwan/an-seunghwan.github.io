@@ -48,8 +48,7 @@ jupyter --runtime-dir
 이제 client 컴퓨터의 spyder를 구동한다.
 spyder kernel 우측 상단의 메뉴를 클릭하면 `connect to an existing kernel`이라는 항목이 있다. 이 항목을 클릭하면 다음과 같은 창이 뜬다.
 
-<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/existing_kernel_setting.png?raw=true
-" width="600"  height="450"></center>
+<center><img  src="https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/existing_kernel_setting.png?raw=true" width="600"  height="450"></center>
 
 - `connection file`: client 컴퓨터로 복사한 `kernel-27911.json`의 경로를 입력
 - `Hostname`: server 컴퓨터의 ip 주소
