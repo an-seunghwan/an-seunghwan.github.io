@@ -45,10 +45,16 @@ $$
 
 하지만, ordinal data와 같은 경우는 discrete이므로 위와 같은 방식(conditional on data $X$)으로 두 변수 사이의 association을 구하는 것이 어렵다. 따라서 ordinal variable $Y_1, Y_2$에 대해서 surrogate variable $S$를 고려한다. 이때 $S$는 continuous random variable이다!
 
-latent variable $Z$를 활용하여, $Z = X\beta + \epsilon, \epsilon \sim $
+latent variable $Z$를 활용하여, $Z = X\beta + \epsilon, \epsilon \sim G$, $\epsilon$은 $X$에 독립인 latent model을 구성하면, cutpoint $\alpha_1, \cdots, \alpha_{J-1}$를 이용해 다음과 같은 cumulative link model을 구축할 수 있다.
+
+
+$$
+G^{-1}(P(Y \leq j) = \alpha_j - X\beta, j
+$$
+
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MjkwODQxXX0=
+eyJoaXN0b3J5IjpbLTIxMzg3NzgxOTddfQ==
 -->
