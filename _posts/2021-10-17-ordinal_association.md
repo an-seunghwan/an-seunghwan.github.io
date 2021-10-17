@@ -20,10 +20,22 @@ tags:
 
 ## Assessing Partial Association Between Ordinal Variables: Quantification, Visualization, and Hypothesis Testing
 
+### Continuous data correlation
+
+Continuous random variable $Y
+
+$$
+\begin{align}
+\begin{pmatrix}  
+Y_1 \\  
+Y_2
+\end{pmatrix} \sim N(X\beta, \Sigma)
+\end{align}
+$$
 
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMjc3NTI0M119
+eyJoaXN0b3J5IjpbLTE2NzUyOTk0NTBdfQ==
 -->
