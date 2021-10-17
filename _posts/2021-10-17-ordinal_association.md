@@ -55,6 +55,8 @@ G^{-1}(P(Y \leq j) = \alpha_j - X\beta, j = 1,\cdots,J
 $$
 
 
+이때, 
+
 이제 surrogate of $Y$를 다음과 같이 정의한다.
 
 
@@ -69,11 +71,15 @@ Z \vert \alpha_{J-1} < Z \leq \infty. \\
 $$
 
 
-이제 $Y_1 \perp \!\!\! \perp Y_2 \vert X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous case와 같이
+이제 $Y_1 \perp \!\!\! \perp Y_2 \vert X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous case와 같이 continuous residual $R_1, R_2$를 다음과 같이 정의하고,
 
 
 $$
 \begin{align}
+\begin{pmatrix}  
+R_1 \\  
+R_2
+\end{pmatrix} = 
 \begin{pmatrix}  
 S_1 \\  
 S_2
@@ -86,10 +92,11 @@ E(S_2 \vert X)
 $$
 
 
-를 sampling 방식을 통해 추정한다.
+association function $\phi(R_1, R_2)$를 $Z$ 분포의 sampling 방식을 통해 추정한다.
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODg4Mjk5NTUsLTQyNjMyNTMxNV19
+eyJoaXN0b3J5IjpbMTI1MjUzMDk0NiwtMTY4ODgyOTk1NSwtND
+I2MzI1MzE1XX0=
 -->
