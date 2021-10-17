@@ -51,13 +51,11 @@ latent variable $Z$를 활용하여, $Z = X\beta + \epsilon, \epsilon \sim G$, $
 
 
 $$
-G^{-1}(P(Y \leq j) = \alpha_j - X\beta, j = 1,\cdots,J
+G^{-1}(P(Y \leq j) = \alpha_j - X\beta, j = 1,\cdots,J-1
 $$
 
 
-이때, 
-
-이제 surrogate of $Y$를 다음과 같이 정의한다.
+이때, $\beta, \alpha_1, \cdots, \alpha_{J-1}$는 ML 방식을 통해 추정한다. 이제 surrogate of $Y$를 다음과 같이 정의한다.
 
 
 $$
@@ -92,11 +90,11 @@ E(S_2 \vert X)
 $$
 
 
-association function $\phi(R_1, R_2)$를 $Z$ 분포의 sampling 방식을 통해 추정한다.
+association function $\phi(R_1, R_2)$를 $Z$ 분포를 이용해 $S$를 sampling 하여 empirical하게 추정한다.
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjUzMDk0NiwtMTY4ODgyOTk1NSwtND
-I2MzI1MzE1XX0=
+eyJoaXN0b3J5IjpbLTEwNTgyNDUyNjQsLTE2ODg4Mjk5NTUsLT
+QyNjMyNTMxNV19
 -->
