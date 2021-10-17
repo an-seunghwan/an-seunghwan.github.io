@@ -68,11 +68,12 @@ Z \vert \alpha_{J-1} < Z \leq \infty. \\
 \end{cases}
 $$
 
-이제 $Y_1 \perp \!\!\! \perp Y_2 | X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$
+
+이제 $Y_1 \perp \!\!\! \perp Y_2 \vert X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous c
 
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjMyNTMxNV19
+eyJoaXN0b3J5IjpbMjY3MzY1NDQ3LC00MjYzMjUzMTVdfQ==
 -->
