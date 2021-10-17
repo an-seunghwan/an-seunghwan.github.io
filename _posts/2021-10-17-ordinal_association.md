@@ -58,9 +58,21 @@ $$
 이제 surrogate of $Y$를 다음과 같이 정의한다.
 
 
+$$
+S=
+\begin{cases}
+Z \vert -\infty < Z \leq \alpha_1,\\
+Z \vert \alpha_1 < Z \leq \alpha_2, \\
+\cdots \\
+Z \vert \alpha_{J-1} < Z \leq \infty. \\
+\end{cases}
+$$
+
+이제 $
+
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyMDc3ODU1XX0=
+eyJoaXN0b3J5IjpbLTQ3NjAxMzI2XX0=
 -->
