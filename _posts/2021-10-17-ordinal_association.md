@@ -22,20 +22,28 @@ tags:
 
 ### Continuous data correlation
 
-continuous random variable $Y_1, Y_2$ 사이에 covariate $X$를 고려한 parametric model에서의 correlation은 다음과 같은 정규분포 가정하에서 추정될 수 있다.
+continuous random variable $Y_1, Y_2$ 사이의 covariate $X$를 고려한 parametric model에서의 correlation은 다음과 같은 정규분포 가정하에서 $\Sigma$를 통해 추정될 수 있다.
+
 
 $$
 \begin{align}
 \begin{pmatrix}  
 Y_1 \\  
 Y_2
-\end{pmatrix} - X\beta \sim N(0, \Sigma)
+\end{pmatrix} - 
+\begin{pmatrix}  
+X \beta_1 \\  
+X \beta_2
+\end{pmatrix} \sim N(0, \Sigma)
 \end{align}
 $$
+
+
+이때, $E(Y_1 \vert X) = X\beta_1, E(Y_2 \vert X) = X \beta_2$ 는 consistent estimator.
 
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjA3MzA4Nl19
+eyJoaXN0b3J5IjpbLTEwODk5ODg3NDddfQ==
 -->
