@@ -22,7 +22,7 @@ tags:
 
 ### Continuous data correlation
 
-Continuous random variable $Y
+continuous random variable $Y_1, Y_2$ 사이에 covariate $X$를 고려한 parametric model에서의 correlation은 다음과 같은 정규분포 가정하에서 추정될 수 있다.
 
 $$
 \begin{align}
@@ -37,5 +37,5 @@ $$
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzUyOTk0NTBdfQ==
+eyJoaXN0b3J5IjpbODY1MzYyNTI5XX0=
 -->
