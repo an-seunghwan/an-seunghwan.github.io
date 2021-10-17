@@ -29,7 +29,7 @@ $$
 \begin{pmatrix}  
 Y_1 \\  
 Y_2
-\end{pmatrix} \sim N(X\beta, \Sigma)
+\end{pmatrix} - X\beta \sim N(0, \Sigma)
 \end{align}
 $$
 
@@ -37,5 +37,5 @@ $$
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY1MzYyNTI5XX0=
+eyJoaXN0b3J5IjpbMTg4MjA3MzA4Nl19
 -->
