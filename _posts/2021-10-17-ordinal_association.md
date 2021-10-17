@@ -68,11 +68,11 @@ Z \vert \alpha_{J-1} < Z \leq \infty. \\
 \end{cases}
 $$
 
-이제 $Y_1 \perp \!\!\! \perp Y_2 | X $
+이제 $Y_1 \perp \!\!\! \perp Y_2 | X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$
 
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NDk1MzQwMF19
+eyJoaXN0b3J5IjpbLTQyNjMyNTMxNV19
 -->
