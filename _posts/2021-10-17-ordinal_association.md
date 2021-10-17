@@ -69,11 +69,27 @@ Z \vert \alpha_{J-1} < Z \leq \infty. \\
 $$
 
 
-이제 $Y_1 \perp \!\!\! \perp Y_2 \vert X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous c
+이제 $Y_1 \perp \!\!\! \perp Y_2 \vert X \Longleftrightarrow S_1 \perp \!\!\! \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous case와 같이
 
+
+$$
+\begin{align}
+\begin{pmatrix}  
+S_1 \\  
+S_2
+\end{pmatrix} - 
+\begin{pmatrix}  
+E(S_1 \vert X) \\  
+E(S_2 \vert X)
+\end{pmatrix} 
+\end{align}
+$$
+
+
+를 sampling 방식을 통해 추정한다.
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3MzY1NDQ3LC00MjYzMjUzMTVdfQ==
+eyJoaXN0b3J5IjpbLTE2ODg4Mjk5NTUsLTQyNjMyNTMxNV19
 -->
