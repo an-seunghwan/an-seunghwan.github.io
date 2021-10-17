@@ -74,7 +74,7 @@ $$
 
 
 
-이제 $Y_1 \perp Y_2 \vert X \Longleftrightarrow S_1 \perp S_2 \vert X$ (본문 Theorem 1)임을 이용하여 앞의 continuous case와 같이 continuous residual $R_1, R_2$를 다음과 같이 정의하고,
+이제 $Y_1 \perp Y_2 \vert X \Longleftrightarrow S_1 \perp S_2 \vert X$ (본문 Theorem 1, conditional independent)임을 이용하여 앞의 continuous case와 같이 continuous residual $R_1, R_2$를 다음과 같이 정의하고,
 
 
 $$
@@ -100,6 +100,6 @@ association function $\phi(R_1, R_2)$를 $Z$ 분포를 이용해 $S$를 sampling
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTkxNTcxNDAsLTE2ODg4Mjk5NTUsLT
-QyNjMyNTMxNV19
+eyJoaXN0b3J5IjpbMTA4Nzk0NjQ2OCwtMTU5OTE1NzE0MCwtMT
+Y4ODgyOTk1NSwtNDI2MzI1MzE1XX0=
 -->
