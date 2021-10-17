@@ -1,5 +1,5 @@
 ---
-title: "# Assessing Partial Association Between Ordinal Variables: Quantification, Visualization, and Hypothesis Testing (논문 읽기)"
+title: "Assessing Partial Association Between Ordinal Variables: Quantification, Visualization, and Hypothesis Testing (논문 읽기)"
 excerpt: "Ordinal variable 사이에 association 계산하기"
 toc: true
 toc_sticky: true
@@ -25,5 +25,5 @@ tags:
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY1NDMxNTBdfQ==
+eyJoaXN0b3J5IjpbLTMzMjc3NTI0M119
 -->
