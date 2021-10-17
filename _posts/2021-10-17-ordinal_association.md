@@ -22,7 +22,7 @@ tags:
 
 ### Continuous data correlation
 
-continuous random variable $Y_1, Y_2$ 사이의 covariate $X$를 고려한 parametric model에서의 correlation은 다음과 같은 정규분포 가정하에서 $\Sigma$를 통해 추정될 수 있다. 여기서 중요한 것은, 두 변수 사이의 correlation이 data $x
+continuous random variable $Y_1, Y_2$ 사이의 covariate $X$를 고려한 parametric model에서의 correlation은 다음과 같은 정규분포 가정하에서 $\Sigma$를 통해 추정될 수 있다. 여기서 중요한 것은, 두 변수 사이의 correlation이 data $X$에 conditional 하다는 점이다.
 
 
 $$
@@ -43,10 +43,10 @@ $$
 
 ### Ordinal data association
 
-하지만, ordinal data와 같은 경우는 discrete이므로 위와 같은 방식으로 두 변수 사이의 association을 구하는 것이 어렵다. 
+하지만, ordinal data와 같은 경우는 discrete이므로 위와 같은 방식(conditional on data $X$)으로 두 변수 사이의 association을 구하는 것이 어렵다. 따라서 ordinal variable $Y_1, Y_2$에 대해서 surrogate variable $S$ㄹ
 
 ## Reference 
 - Liu, D., Li, S., Yu, Y., & Moustaki, I. (2020). Assessing partial association between ordinal variables: quantification, visualization, and hypothesis testing. _Journal of the American Statistical Association_, 1-14.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODkwMDc4MF19
+eyJoaXN0b3J5IjpbMTczODU2MjM3Ml19
 -->
