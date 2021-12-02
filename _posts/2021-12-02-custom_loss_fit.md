@@ -106,10 +106,13 @@ model_history = model.fit(x=x_train, y=y_train_onehot,
                         validation_split=0.2)
 ```
 
-```
+정상적으로 모형이 적합되는 것을 확인할 수 있다!
 
 ```
+Epoch 1/20 
+1250/1250 [==============================] - 10s 8ms/step - loss: 3.0806 - accuracy: 0.1007 - val_loss: 2.3037 - val_accuracy: 0.0977
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4ODAyNjYwOCwtMTY0MjE4NDk4NSwyMD
-Q5NTQ3MzAzLDIwOTk5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
+eyJoaXN0b3J5IjpbLTE1MDg2ODYzMjAsLTE2NDIxODQ5ODUsMj
+A0OTU0NzMwMywyMDk5OTkzMDA0LC0yMDU3MzI0NDA1XX0=
 -->
