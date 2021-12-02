@@ -24,8 +24,37 @@ tags:
 
 따라서, 이번 포스팅에서는 `.add_loss()`를 이용하여 penalty가 포함된 custom loss를 이용해 `model.fit()`을 이용해 모형을 적합하는 방법을 소개해보도록 하겠다!
 
-#
+### 0. import 
+
+```python
+import tensorflow as tf
+import tensorflow.keras as K
+from tensorflow.keras import layers
+from tensorflow.keras.utils import to_categorical
+print('TensorFlow version:', tf.__version__)
+print('Eager Execution Mode:', tf.executing_eagerly())
+print('available GPU:', tf.config.list_physical_devices('GPU'))
+from tensorflow.python.client import device_lib
+print('==========================================')
+print(device_lib.list_local_devices())
+```
+
+```
+TensorFlow version: 2.4.0 Eager Execution Mode: True available GPU: [] ========================================== [name: "/device:CPU:0" device_type: "CPU" memory_limit: 268435456 locality { } incarnation: 10055035958512198800 ]
+```
+
+### 1. load MNIST dataset
+
+```python
+(x_train, y_train), (x_test, y_test) =  K.datasets.cifar10.load_data()
+x_train =  x_train.astype('float32')  /  255.
+x_test =  x_test.astype('float32')  /  255.
+y_train_onehot =  to_categorical(y_train, num_classes=10)
+y_test_onehot =  to_categorical(y_test, num_classes=10)
+```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4NTI1MzU4LC0xNjQyMTg0OTg1LDIwND
+eyJoaXN0b3J5IjpbNzczOTYyMjc4LC0xNjQyMTg0OTg1LDIwND
 k1NDczMDMsMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
 -->
