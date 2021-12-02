@@ -65,7 +65,6 @@ y_test_onehot =  to_categorical(y_test, num_classes=10)
 ### 2. model 정의
 
 ```python
-#%%
 input_layer = layers.Input(x_train.shape[1:])
 conv1 = layers.Conv2D(8, 4, 2, padding='same', activation='relu')
 conv2 = layers.Conv2D(16, 4, 2, padding='same', activation='relu')
@@ -86,7 +85,6 @@ model.summary()
 이제 신경망 모형의 중간 결과인 `h1`, `h2`, `h3`에 L2 norm 정규화 penalty를 추가하고 싶다고 해보자. 그러면 다음과 같이 `.add_loss()`를 이용해 원래의 loss에 penalty를 더해줄 수 있다!
 
 ```python
-#%%
 reg_loss = tf.reduce_mean(tf.reduce_sum(tf.square(h1), axis=[1, 2, 3]))
 reg_loss += tf.reduce_mean(tf.reduce_sum(tf.square(h2), axis=[1, 2, 3]))
 reg_loss += tf.reduce_mean(tf.reduce_sum(tf.square(h3), axis=[1, 2, 3]))
@@ -94,8 +92,18 @@ lambda_ = 0.1
 model.add_loss(lambda_ * reg_loss)
 ```
 
-### 
+### 4. model compile and fitting
+
+```python
+model.compile(optimizer='adam',
+            loss=K.losses.CategoricalCrossentropy(from_logits=False),
+            metrics=['accuracy'])
+```
+
+```python
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMzcwMjA0MiwtMTY0MjE4NDk4NSwyMD
-Q5NTQ3MzAzLDIwOTk5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
+eyJoaXN0b3J5IjpbNDAzOTkyMzcwLC0xNjQyMTg0OTg1LDIwND
+k1NDczMDMsMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
 -->
