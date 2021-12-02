@@ -66,9 +66,9 @@ y_test_onehot =  to_categorical(y_test, num_classes=10)
 
 ```python
 input_layer = layers.Input(x_train.shape[1:])
-conv1 = layers.Conv2D(8, 4, 2, padding='same', activation='relu')
-conv2 = layers.Conv2D(16, 4, 2, padding='same', activation='relu')
-conv3 = layers.Conv2D(32, 4, 2, padding='same', activation='relu')
+conv1 = layers.Conv2D(16, 4, 2, padding='same', activation='relu')
+conv2 = layers.Conv2D(32, 4, 2, padding='same', activation='relu')
+conv3 = layers.Conv2D(64, 4, 2, padding='same', activation='relu')
 output_layer = layers.Dense(10, activation='softmax')
 
 h1 = conv1(input_layer)
@@ -101,9 +101,15 @@ model.compile(optimizer='adam',
 ```
 
 ```python
+model_history = model.fit(x=x_train, y=y_train_onehot, 
+                        epochs=20,
+                        validation_split=0.2)
+```
+
+```
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAzOTkyMzcwLC0xNjQyMTg0OTg1LDIwND
-k1NDczMDMsMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
+eyJoaXN0b3J5IjpbMTc4ODAyNjYwOCwtMTY0MjE4NDk4NSwyMD
+Q5NTQ3MzAzLDIwOTk5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
 -->
