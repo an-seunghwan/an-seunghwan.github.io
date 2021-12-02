@@ -16,8 +16,6 @@ tags:
   - custom modeling
 ---
 
-> Tensorflow 공식 홈페이지의 [https://www.tensorflow.org/tutorials/images/segmentation?hl=ko](https://www.tensorflow.org/tutorials/images/segmentation?hl=ko) 코드를 기반으로 작성하였습니다.
-
 ## Custom loss and `model.fit()`
 
 신경망 모형의 중간 layer의 output에 penalty가 포함된 custom loss를 이용할 경우, 일반적인 `model.fit()`을 이용해서 모형을 적합하기는 쉽지 않다. 왜냐하면 `model.fit()`에 사용되는 손실 함수는 모형의 output 1개에 대한 loss 만을 계산하기 때문이다...
@@ -113,6 +111,6 @@ Epoch 1/20
 1250/1250 [==============================] - 10s 8ms/step - loss: 3.0806 - accuracy: 0.1007 - val_loss: 2.3037 - val_accuracy: 0.0977
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDg2ODYzMjAsLTE2NDIxODQ5ODUsMj
-A0OTU0NzMwMywyMDk5OTkzMDA0LC0yMDU3MzI0NDA1XX0=
+eyJoaXN0b3J5IjpbMTUyOTY5MzQ4MywtMTY0MjE4NDk4NSwyMD
+Q5NTQ3MzAzLDIwOTk5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
 -->
