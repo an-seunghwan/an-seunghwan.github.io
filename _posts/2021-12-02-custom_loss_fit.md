@@ -18,7 +18,7 @@ tags:
 
 ## Custom loss and `model.fit()`
 
-
+U-Net의 구조를 이용해, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTczMjQ0MDVdfQ==
+eyJoaXN0b3J5IjpbLTgwMTQ1MzYxOSwtMjA1NzMyNDQwNV19
 -->
