@@ -20,8 +20,10 @@ tags:
 
 ## Custom loss and `model.fit()`
 
-신경망 모형의 중간 layer의 output에 penalty가 포함된 custom loss를 이용할 경우, 일반적인 `model.fit()`을 이용해서 모형을 적합하기는 
+신경망 모형의 중간 layer의 output에 penalty가 포함된 custom loss를 이용할 경우, 일반적인 `model.fit()`을 이용해서 모형을 적합하기는 쉽지 않다. 왜냐하면 `model.fit()`에 사용되는 손실 함수는 모형의 output 1개에 대한 loss 만을 계산하기 때문이다...
+
+따라서, 이번 포스팅에서는 `.add_loss()`를 이용하여 penalty가 포함된 custom loss를 이용해 `model.fit()`을 이용해 모형을 적합하는 방법을 소개해보도록 하겠다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTU5NDQwOSwyMDQ5NTQ3MzAzLDIwOT
-k5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
+eyJoaXN0b3J5IjpbLTE2NDIxODQ5ODUsMjA0OTU0NzMwMywyMD
+k5OTkzMDA0LC0yMDU3MzI0NDA1XX0=
 -->
