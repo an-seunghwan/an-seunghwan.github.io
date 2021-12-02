@@ -81,8 +81,10 @@ model = tf.keras.Model(inputs=input_layer, outputs=output)
 model.summary()
 ```
 
-###
+### 3. penalty 추가
+
+이제 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwMTIxODQxLC0xNjQyMTg0OTg1LDIwND
-k1NDczMDMsMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
+eyJoaXN0b3J5IjpbLTIwNTYxNDYzNDUsLTE2NDIxODQ5ODUsMj
+A0OTU0NzMwMywyMDk5OTkzMDA0LC0yMDU3MzI0NDA1XX0=
 -->
