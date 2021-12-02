@@ -83,8 +83,19 @@ model.summary()
 
 ### 3. penalty 추가
 
-이제 
+이제 신경망 모형의 중간 결과인 `h1`, `h2`, `h3`에 L2 norm 정규화 penalty를 추가하고 싶다고 해보자. 그러면 다음과 같이 `.add_loss()`를 이용해 원래의 loss에 penalty를 더해줄 수 있다!
+
+```python
+#%%
+reg_loss = tf.reduce_mean(tf.reduce_sum(tf.square(h1), axis=[1, 2, 3]))
+reg_loss += tf.reduce_mean(tf.reduce_sum(tf.square(h2), axis=[1, 2, 3]))
+reg_loss += tf.reduce_mean(tf.reduce_sum(tf.square(h3), axis=[1, 2, 3]))
+lambda_ = 0.1
+model.add_loss(lambda_ * reg_loss)
+```
+
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTYxNDYzNDUsLTE2NDIxODQ5ODUsMj
-A0OTU0NzMwMywyMDk5OTkzMDA0LC0yMDU3MzI0NDA1XX0=
+eyJoaXN0b3J5IjpbLTgyMzcwMjA0MiwtMTY0MjE4NDk4NSwyMD
+Q5NTQ3MzAzLDIwOTk5OTMwMDQsLTIwNTczMjQ0MDVdfQ==
 -->
