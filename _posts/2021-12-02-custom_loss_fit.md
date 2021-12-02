@@ -18,7 +18,7 @@ tags:
 
 ## Custom loss and `model.fit()`
 
-U-Net의 구조를 이용해, 
+U-Net을 이용한 semantic segmentation 작업에서, U-Net의 각 skip connection마다 penalty가 추가된 loss를 사용하고 싶은 경우를 가정해 보겠다!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMTQ1MzYxOSwtMjA1NzMyNDQwNV19
+eyJoaXN0b3J5IjpbMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
 -->
