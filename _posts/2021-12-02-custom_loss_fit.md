@@ -40,7 +40,16 @@ print(device_lib.list_local_devices())
 ```
 
 ```
-TensorFlow version: 2.4.0 Eager Execution Mode: True available GPU: [] ========================================== [name: "/device:CPU:0" device_type: "CPU" memory_limit: 268435456 locality { } incarnation: 10055035958512198800 ]
+TensorFlow version: 2.4.0 
+Eager Execution Mode: True 
+available GPU: [] 
+========================================== 
+[name: "/device:CPU:0" 
+device_type: "CPU" 
+memory_limit: 268435456 
+locality { } 
+incarnation: 10055035958512198800 
+]
 ```
 
 ### 1. load MNIST dataset
@@ -53,8 +62,27 @@ y_train_onehot =  to_categorical(y_train, num_classes=10)
 y_test_onehot =  to_categorical(y_test, num_classes=10)
 ```
 
+### 2. model 정의
 
+```python
+#%%
+input_layer = layers.Input(x_train.shape[1:])
+conv1 = layers.Conv2D(8, 4, 2, padding='same', activation='relu')
+conv2 = layers.Conv2D(16, 4, 2, padding='same', activation='relu')
+conv3 = layers.Conv2D(32, 4, 2, padding='same', activation='relu')
+output_layer = layers.Dense(10, activation='softmax')
+
+h1 = conv1(input_layer)
+h2 = conv2(h1)
+h3 = conv3(h2)
+output = output_layer(layers.GlobalAveragePooling2D()(h3))
+
+model = tf.keras.Model(inputs=input_layer, outputs=output)
+model.summary()
+```
+
+###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczOTYyMjc4LC0xNjQyMTg0OTg1LDIwND
+eyJoaXN0b3J5IjpbNDQwMTIxODQxLC0xNjQyMTg0OTg1LDIwND
 k1NDczMDMsMjA5OTk5MzAwNCwtMjA1NzMyNDQwNV19
 -->
