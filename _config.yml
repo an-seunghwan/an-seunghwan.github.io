@@ -109,7 +109,7 @@ analytics:
 # Site Author
 author:
   name             : "안승환"
-  avatar           : "https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/avatar1.JPG?raw=true" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/avatar1.jpeg?raw=true" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "서울시립대학교 통계학과 석사과정 (서울시립대학교 2020학년도 전기 학부 차석 졸업)"
   location         : "대한민국, 서울시"
   email            : # "dpeltms79@gmail.com"
