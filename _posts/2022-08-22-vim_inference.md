@@ -65,9 +65,12 @@ tags:
 ### 2. 추정치의 EIF를 계산
 
 - 우리가 필요한 것: parameter mapping $V^*: P \mapsto V(f_P, P)$의 EIF
-- 하지만, 
+- 하지만, $V^*: P \mapsto V(f_P, P)$의 정의는 $P$-optimal prediction 함수 $f_P$를 포함하므로, EIF의 유도가 매우 복잡하다...
+
+
+Provided condition (A5) holds, if $P \mapsto V(f_0, P)$ is pathwise differentiable at $P_0$ relative to the nonparametric model $\mathcal{M}$, then so is $P \mapsto V(f_P, P)$, and the two parameters have the same EIF.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNjcxNTI5NiwxNTM3NDYwNjIzLC0xNT
-YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
-NTE0ODldfQ==
+eyJoaXN0b3J5IjpbNTkzNTIxODQsMTUzNzQ2MDYyMywtMTU2MD
+I5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4NzUx
+NDg5XX0=
 -->
