@@ -151,23 +151,26 @@ $$
 
 empirical process와 나머지 항들이 0으로 수렴할 수 있는 충분조건 하에서,
 If
-1. $\psi_{0,s} > 0$ (Non-zero Null Hypothesis, 변수의 ) 
+1. $\psi_{0,s} > 0$ (Non-zero Null Hypothesis, 변수의 중요도가 0이 아님) 
 2. $0 < \tau_{0,s}^2 : = \int (\phi_0(z) - \phi_{0,s}(z))^2 dP_0(z) < \infty$ (유한 점근 분산)
 
+$$
+\sqrt{n}\left(\psi_{n,s} - \psi_{0,s}\right) \overset{d}{\to} N \left(0, \tau_{0,s}^2 \right)
+$$
 
-    \bea
-    \sqrt{n}\left(\psi_{n,s} - \psi_{0,s}\right) \overset{d}{\to} N \left(0, \tau_{0,s}^2 \right)
-    \eea
-    \item The asymptotically valid 95\% confidence intervals for $\psi_{0,s}$ is given by the closed-form expression 
-    \bea
-    \psi_{n,s} \pm 1.96 \cdot \frac{1}{\sqrt{n}} \cdot \tau_{n,s}
-    \eea
-    \item The asymptotic variance can be estimated by
-    \bea
-    \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
-    \eea
+$\psi_{0,s}$의 점근적으로 유효한 95% 신뢰 구간은 
+
+$$
+\psi_{n,s} \pm 1.96 \cdot \frac{1}{\sqrt{n}} \cdot \tau_{n,s}
+$$
+
+이고, 점근 분산은 다음과 같이 추정될 수 있다:
+
+$$
+\tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
+$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMjAzMTA2MCwxNTM3NDYwNjIzLC0xNT
+eyJoaXN0b3J5IjpbMTMyNTE4MzM4MSwxNTM3NDYwNjIzLC0xNT
 YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
 NTE0ODldfQ==
 -->
