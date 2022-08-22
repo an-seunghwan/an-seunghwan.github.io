@@ -62,9 +62,12 @@ tags:
 	- 예를 들어, 조건부 평균이나 밀도 함수
 - 따라서, one-step estimator와 같은 비모수 'debiasing' 방법론이 필요하다!
 
-### 
+### 2. 추정치의 EIF를 계산
+
+- 우리가 필요한 것: parameter mapping $V^*: P \mapsto V(f_P, P)$의 EIF
+- 하지만, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxODYxMTE2NSwxNTM3NDYwNjIzLC0xNT
+eyJoaXN0b3J5IjpbLTkzNjcxNTI5NiwxNTM3NDYwNjIzLC0xNT
 YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
 NTE0ODldfQ==
 -->
