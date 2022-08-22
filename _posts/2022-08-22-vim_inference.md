@@ -52,11 +52,18 @@ tags:
 - $A \in \{0, 1\}$: 이진 treatment
 - treatment rule $f: \mathcal{X} \mapsto \{0, 1\}$
 	- $X$의 값에 의존하여 $A$의 값을 결정
-- observed data structure: $Z := (X, A, Y) \sim P_0$ where $P_0$ is the true distribution
-	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
+- 관측된 데이터의 구조: $Z := (X, A, Y) \sim P_0$ where $P_0$ is the true distribution
+	- 데이터 생성 분포 $P_0$는 오직 충분히 큰 분포들의 클래스 $\mathcal{M}$에 속한다는 것만 알려져 있음
 
+
+\item let parameter mapping $V^*: P \mapsto V(f_P, P)$
+    \item let $\hat{P}_n \in \mathcal{M}$: an estimator of $P_0$
+    \item the plug-in estimator $V^*(\hat{P}_n)$
+    \item[-] generally suffers from excessive bias whenever flexible learning techniques have been used, because $V^*(P_0)$ involves local features of $P_0$
+    \item[-] for example, the conditional mean or density function
+    \item Therefore, we employ nonparametric `debiasing' techniques! (ex. one-step estimator)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjQ2MDA5NywxNTM3NDYwNjIzLC0xNT
-YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
-NTE0ODldfQ==
+eyJoaXN0b3J5IjpbLTEyMzAzMjg4MzMsMTUzNzQ2MDYyMywtMT
+U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
+NzUxNDg5XX0=
 -->
