@@ -24,7 +24,10 @@ tags:
 
 ### Introduction
 
-- 전통적인 
+- 전통적인 통계적 방법론:
+	1. 모형 설정
+	2. 하나 이상의 계수에 대한 추정
+	3. 추정된 계수에 대한 불확실성 측정 (신뢰구간 등)
 
 ###
 
@@ -37,6 +40,6 @@ tags:
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLT
-QyODc1MTQ4OV19
+eyJoaXN0b3J5IjpbLTE1NjAyOTE3NzUsLTE0MDc0MzA2MTAsLT
+E5NTM3MjAwNDAsLTQyODc1MTQ4OV19
 -->
