@@ -16,9 +16,9 @@ tags:
 ---
 
 > 참조논문
-> [Demystifying statistical learning based on efficient influence functions](https://arxiv.org/abs/2107.00681)
-> [Semiparametric doubly robust targeted double machine learning: a review](https://arxiv.org/abs/2203.06469)
-> [A General Framework for Inference on Algorithm-Agnostic Variable Importance](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.2003200)
+> 1. [Demystifying statistical learning based on efficient influence functions](https://arxiv.org/abs/2107.00681)
+> 2. [Semiparametric doubly robust targeted double machine learning: a review](https://arxiv.org/abs/2203.06469)
+> 3. [A General Framework for Inference on Algorithm-Agnostic Variable Importance](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.2003200)
 
 ## 변수의 중요도에 대한 통계적 추론 (Inference on Variable Importance Measure (VIM))
 
@@ -170,7 +170,7 @@ $$
 \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
 $$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNTE4MzM4MSwxNTM3NDYwNjIzLC0xNT
-YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
-NTE0ODldfQ==
+eyJoaXN0b3J5IjpbMTM3MTI1MTA3MywxMzI1MTgzMzgxLDE1Mz
+c0NjA2MjMsLTE1NjAyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3
+MjAwNDAsLTQyODc1MTQ4OV19
 -->
