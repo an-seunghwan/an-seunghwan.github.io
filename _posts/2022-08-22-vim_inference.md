@@ -147,8 +147,14 @@ $$
 
 - $\psi_{n,s} = v_n - v_{n, s}$
 - $\psi_{0,s} = v_0 - v_{0, s}$
-- $\phi_0(z) - \phi_{0,s}(z)$ is nonparametric EIF of $\psi_{0,s}$
-    \item Under sufficient conditions that ensure the empirical process and remainder terms to converge to zero, if $\psi_{0,s} > 0$ (Non-zero Null Hypothesis) and $0 < \tau_{0,s}^2 : = \int (\phi_0(z) - \phi_{0,s}(z))^2 dP_0(z) < \infty$,
+- $\phi_0(z) - \phi_{0,s}(z)$ 는 $\psi_{0,s}$의 비모수 EIF
+
+empirical process와 나머지 항들이 0으로 수렴할 수 있는 충분조건 하에서,
+If
+1. $\psi_{0,s} > 0$ (Non-zero Null Hypothesis, 변수의 ) 
+2. $0 < \tau_{0,s}^2 : = \int (\phi_0(z) - \phi_{0,s}(z))^2 dP_0(z) < \infty$ (유한 점근 분산)
+
+
     \bea
     \sqrt{n}\left(\psi_{n,s} - \psi_{0,s}\right) \overset{d}{\to} N \left(0, \tau_{0,s}^2 \right)
     \eea
@@ -161,7 +167,7 @@ $$
     \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
     \eea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMTk5MjgwLDE1Mzc0NjA2MjMsLTE1Nj
-AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
-MTQ4OV19
+eyJoaXN0b3J5IjpbMjEzMjAzMTA2MCwxNTM3NDYwNjIzLC0xNT
+YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
+NTE0ODldfQ==
 -->
