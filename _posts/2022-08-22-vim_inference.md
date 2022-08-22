@@ -45,7 +45,7 @@ tags:
 
 ## 추론 절차
 
-### 1. 관심있는 추정치를 정의
+### Step 1. 관심있는 추정치를 정의
 
 기호
 - $Y$: 관심있는 결과 값 (값이 클수록 더 좋다는 것을 의미)
@@ -62,7 +62,7 @@ tags:
 	- 예를 들어, 조건부 평균이나 밀도 함수
 - 따라서, one-step estimator와 같은 비모수 'debiasing' 방법론이 필요하다!
 
-### 2. 추정치의 EIF를 계산
+### Step 2. 추정치의 EIF를 계산
 
 비모수 EIF를 구하려는 대상
 
@@ -88,6 +88,8 @@ $$
 
 - 여기서 propensity score는 $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$로 정의됨
 
+### Step 3. 추정치의 EIF를 이용하여 추정량을 계산
+
 - Regularity conditions 하에서, 비모수 debiasing 방법론 중의 하나로 $v_0 = V(f_0, P_0)$의 one-step debiased 추정치는 다음과 같이 계산되며, 비모수 효율적(nonparametric efficient)이다: 
 
 $$
@@ -104,8 +106,10 @@ $$
 
 - $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$
 - $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
+
+### Step 4. 통계적 추
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg4NDU4MDM1LDE1Mzc0NjA2MjMsLTE1Nj
-AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
-MTQ4OV19
+eyJoaXN0b3J5IjpbMTcyNTAyNDgwMiwxNTM3NDYwNjIzLC0xNT
+YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
+NTE0ODldfQ==
 -->
