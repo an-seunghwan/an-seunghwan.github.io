@@ -85,9 +85,10 @@ tags:
 $$
 \phi_0: z \mapsto \frac{I(a = f_0(x))}{\pi_0(f_0(x), x)} (y - Q_0(f_0(x), x)) + Q_0(f_0(x), x) - V(f_0, P_0) 
 $$
-	- 여기서 propensity score는 $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$로 정의됨
 
-- Regularity conditions 하에서, 비모수 debiasing 방법론 중의 하나인 one-step debiased 추정치는 다음과 같이 계산된다:
+- 여기서 propensity score는 $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$로 정의됨
+
+- Regularity conditions 하에서, 비모수 debiasing 방법론 중의 하나로 $v_0 = V(f_0, P_0)$의 one-step debiased 추정치는 다음과 같이 계산되며, 비모수 효율적(nonparametric efficient)이다: 
 
 $$
 v_n = V^*(\hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \phi_n(Z_i) 
@@ -101,10 +102,10 @@ $$
 = \frac{1}{n} \sum_{i=1}^n \left( \frac{I(A_i = f_n(X_i))}{\pi_n(f_n(X_i), X_i)} (Y_i - Q_n(f_n(X_i), X_i)) + Q_n(f_n(X_i), X_i) \right)
 $$
 
-$$
-of $v_0 = V(f_0, P_0)$ is nonparametric efficient, where $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$, and $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
+- $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$
+- $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTg4MDMzNCwxNTM3NDYwNjIzLC0xNT
-YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
-NTE0ODldfQ==
+eyJoaXN0b3J5IjpbNzg4NDU4MDM1LDE1Mzc0NjA2MjMsLTE1Nj
+AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
+MTQ4OV19
 -->
