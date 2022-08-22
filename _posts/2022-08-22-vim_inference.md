@@ -20,7 +20,9 @@ tags:
 > [Semiparametric doubly robust targeted double machine learning: a review](https://arxiv.org/abs/2203.06469)
 > [A General Framework for Inference on Algorithm-Agnostic Variable Importance](https://www.tandfonline.com/doi/full/10.1080/01621459.2021.2003200)
 
-## Inference on VIM
+## 변수의 중요도에 대한 통계적 추론 (Inference on Varia
+
+
 
 - $Y$: the outcome of interest (larger values corresponds to better)
 - $X$: a covariate vector
@@ -31,5 +33,6 @@ tags:
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM3MjAwNDAsLTQyODc1MTQ4OV19
+eyJoaXN0b3J5IjpbLTEwODY5NjEwMDgsLTE5NTM3MjAwNDAsLT
+QyODc1MTQ4OV19
 -->
