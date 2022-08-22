@@ -42,7 +42,7 @@ tags:
 - 현재: 관심있는 과학적 질문과 연결될 수 있는 추정치를 선택
 	- 데이터가 얻어지기 전에 분석이 가능하다!
 
-EIF의 유도가 이전에는 'dark art'로 여겨졌지만, Gateaux derivatived
+EIF의 유도가 이전에는 'dark art'로 여겨졌지만, Gateaux derivative 덕분에 간단하게 유도할 수 있게 되었다!
 
 ###
 
@@ -55,6 +55,6 @@ EIF의 유도가 이전에는 'dark art'로 여겨졌지만, Gateaux derivatived
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTA0MzgzOSwtMTU2MDI5MTc3NSwtMT
-QwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4NzUxNDg5XX0=
+eyJoaXN0b3J5IjpbNDU3MzI2Nzk5LC0xNTYwMjkxNzc1LC0xND
+A3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3NTE0ODldfQ==
 -->
