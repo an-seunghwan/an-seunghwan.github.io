@@ -70,9 +70,13 @@ tags:
 - Theorem (Williamson et al. (2021))
 	> Provided condition (A5) holds, if $P \mapsto V(f_0, P)$ is pathwise differentiable at $P_0$ relative to the nonparametric model $\mathcal{M}$, then so is $P \mapsto V(f_P, P)$, and the two parameters have the same EIF.
 
-- 즉, 
+- 즉, regularity condition (A5) 하에서, 비모수 EIF의 계산에서 $f_P$를 고정된 $f_0$로 바꿔서 유도하여도 동일한 비모수 EIF를 얻을 수 있다!
+- the parameter $P \mapsto V(f_0, P)$ is pathwise differentiable at a distribution $P_0$ if $Q_0(1, W) \neq Q_0(0, W)$ occurs $P_0$-almost surely
+    \item oracle prediction function $f_0: x \mapsto I(Q_0(1, x) > Q_0(0, x))$
+    \item oracle residual prediction function $f_{0,s}: x \mapsto I(Q_{0,s}(1, x) > Q_{0,s}(0, x))$
+    \item[-] define $Q_{0,s}$ as $Q_{0,s} := \mbE_0 [Q_0(a, x) | X_{-s} = x_{-s} ] = \mbE_0 [\mbE_0 [Y | A=a, X=x]| X_{-s} = x_{-s} ] = \mbE_0 [Y | A=a, X_{-s} = x_{-s}]$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NDQ4NzIwNSwxNTM3NDYwNjIzLC0xNT
+eyJoaXN0b3J5IjpbLTUxOTgzODQ3MSwxNTM3NDYwNjIzLC0xNT
 YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
 NTE0ODldfQ==
 -->
