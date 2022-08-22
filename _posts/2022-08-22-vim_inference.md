@@ -34,6 +34,9 @@ tags:
 	2. 선택된 모형에 의존하여 모형의 계수의 의미와 정의가 결정됨
 
 - 사전 정의된 비모수 추정치: 데이터로부터 추론하고 싶은 것을 표현할 수 있는 관측된 데이터 분포의 함수 형태 (모형이 필요하지 않음)
+- ```
+<span style="color:yellow">노란 글씨입니다.</span>
+```
 	- Efficient Influence Function (EIF)에 의존함
 
 ### 통계적 방법론의 변화
@@ -55,6 +58,6 @@ EIF의 유도가 이전에는 'dark art'로 여겨졌지만, Gateaux derivative 
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3MzI2Nzk5LC0xNTYwMjkxNzc1LC0xND
-A3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3NTE0ODldfQ==
+eyJoaXN0b3J5IjpbMTUzNzQ2MDYyMywtMTU2MDI5MTc3NSwtMT
+QwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4NzUxNDg5XX0=
 -->
