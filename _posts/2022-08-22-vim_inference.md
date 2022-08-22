@@ -55,15 +55,16 @@ tags:
 	- $X$의 값에 의존하여 $A$의 값을 결정
 - 관측된 데이터의 구조: $Z := (X, A, Y) \sim P_0$ where $P_0$ is the true distribution
 	- 데이터 생성 분포 $P_0$는 오직 충분히 큰 분포들의 클래스 $\mathcal{M}$에 속한다는 것만 알려져 있음
-	- parameter mapping $V^*: P \mapsto V(f_P, P)$
-	- $\hat{P}_n \in \mathcal{M}$: $P_0$의 추정치
-	- the plug-in estimator $V^*(\hat{P}_n)$
-		- 일반적으로, $V^*(P_0)$의 지역적유연한 학습 방법론 (머신 러닝 등)이 사용되기 때문에, 
-		- generally suffers from excessive bias whenever flexible learning techniques have been used, because $V^*(P_0)$ involves local features of $P_0$
-    \item[-] for example, the conditional mean or density function
-    \item Therefore, we employ nonparametric `debiasing' techniques! (ex. one-step estimator)
+- parameter mapping $V^*: P \mapsto V(f_P, P)$
+- $\hat{P}_n \in \mathcal{M}$: $P_0$의 추정치
+- the plug-in estimator $V^*(\hat{P}_n)$
+	- 일반적으로, $V^*(P_0)$이 $P_0$의 지역적 특성을 포함하므로, 유연한 학습 방법론 (머신 러닝 등)이 사용되기 때문에 bias가 매우 큼
+	- 예를 들어, 조건부 평균이나 밀도 함수
+- 따라서, one-step estimator와 같은 비모수 'debiasing' 방법론이 필요하다!
+
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1NTg5NTI5LDE1Mzc0NjA2MjMsLTE1Nj
-AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
-MTQ4OV19
+eyJoaXN0b3J5IjpbLTkxODYxMTE2NSwxNTM3NDYwNjIzLC0xNT
+YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
+NTE0ODldfQ==
 -->
