@@ -33,7 +33,12 @@ tags:
 	1. 쉽게 해석 가능한 모형을 얻기 위해 지나치게 간단한 모형을 사용하여, 모형의 misspecification 문제가 발생
 	2. 선택된 모형에 의존하여 모형의 계수의 의미와 정의가 결정됨
 
-- 사전 정의된 비모수 추정치: 데이터로부터 추론하고 싶은 것에 고
+- 사전 정의된 비모수 추정치: 데이터로부터 추론하고 싶은 것을 표현할 수 있는 관측된 데이터 분포의 함수 형태 (모형이 필요하지 않음)
+
+### 통계적 방법론의 변화
+
+- 과거: 모형을 수립하고 검증
+- 현재: 
 
 ###
 
@@ -46,6 +51,6 @@ tags:
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODY3NTE5ODUsLTE1NjAyOTE3NzUsLT
+eyJoaXN0b3J5IjpbLTE4MTY4NjkyODksLTE1NjAyOTE3NzUsLT
 E0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1MTQ4OV19
 -->
