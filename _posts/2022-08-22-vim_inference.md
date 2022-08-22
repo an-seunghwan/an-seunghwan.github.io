@@ -67,8 +67,8 @@ VIM의 정의
 - $f_0 = \arg\max_{f \in \mathcal{F}} V(f, P_0)$: the oracle prediction function within $\mathcal{F}$ under $P_0$ relative to $V$
 - $f_{0,s} = \arg\max_{f \in \mathcal{F}_s} V(f, P_0)$
 - 목표: VIM $\psi_{0,s} := V(f_0, P_0) - V(f_{0,s}, P_0) \geq 0$에 대해서 통계적 추론을 하자!
-- 변수의 population-level 중요도: 전체 설명변수 $X$에 대해서 
-	- the population-level importance of the variable (or subgroup of variables) $X_s$ relative to the full covariate vector $X$ as the amount of oracle predictiveness lost by excluding $X_s$ from $X$
+	- 변수 $X_s$의 population-level 중요도: 전체 설명변수 $X$에서 $X_s$를 제외하였을 때 잃게되는 oracle 예측도의 감소량
+	- 감소량이 클수록 해당 변수가 중요하다는 것을 의미함!
 
 - parameter mapping $V^*: P \mapsto V(f_P, P)$
 - $\hat{P}_n \in \mathcal{M}$: $P_0$의 추정치
@@ -161,7 +161,7 @@ $$
     \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
     \eea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQ1OTc0MDEsMTUzNzQ2MDYyMywtMT
-U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
-NzUxNDg5XX0=
+eyJoaXN0b3J5IjpbMzkxMTk5MjgwLDE1Mzc0NjA2MjMsLTE1Nj
+AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
+MTQ4OV19
 -->
