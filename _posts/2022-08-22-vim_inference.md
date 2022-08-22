@@ -129,8 +129,24 @@ $$
 - $\phi_{n, s}(z)$ is $\phi_{0, s}(z)$ evaluated at $\hat{P}_n$
 
 ### Step 4. 통계적 추론
+
+- $\psi_{n,s} = v_n - v_{n, s}$
+- $\psi_{0,s} = v_0 - v_{0, s}$
+- $\phi_0(z) - \phi_{0,s}(z)$ is nonparametric EIF of $\psi_{0,s}$
+    \item Under sufficient conditions that ensure the empirical process and remainder terms to converge to zero, if $\psi_{0,s} > 0$ (Non-zero Null Hypothesis) and $0 < \tau_{0,s}^2 : = \int (\phi_0(z) - \phi_{0,s}(z))^2 dP_0(z) < \infty$,
+    \bea
+    \sqrt{n}\left(\psi_{n,s} - \psi_{0,s}\right) \overset{d}{\to} N \left(0, \tau_{0,s}^2 \right)
+    \eea
+    \item The asymptotically valid 95\% confidence intervals for $\psi_{0,s}$ is given by the closed-form expression 
+    \bea
+    \psi_{n,s} \pm 1.96 \cdot \frac{1}{\sqrt{n}} \cdot \tau_{n,s}
+    \eea
+    \item The asymptotic variance can be estimated by
+    \bea
+    \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
+    \eea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDg2MTI3NTQsMTUzNzQ2MDYyMywtMT
-U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
-NzUxNDg5XX0=
+eyJoaXN0b3J5IjpbLTYwMDI0ODUzMiwxNTM3NDYwNjIzLC0xNT
+YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
+NTE0ODldfQ==
 -->
