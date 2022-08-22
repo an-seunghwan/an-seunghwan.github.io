@@ -62,11 +62,13 @@ VIM의 정의
 - a rich class $\mathcal{F}$ of functions from $\mathcal{X}$ to $\{0, 1\}$
 - $\mathcal{F}_s := \{f \in \mathcal{F}: f(u) = f(v) \text{\quad for all \quad} u, v \in \mathcal{X} \text{\quad satisfying \quad} u_{-s} = v_{-s}\}$: $s$에 의존하지 않는 함수들로 구성된 집합
 - $u_{-s}$ denote the elements of $u$ with index not in $s$
-- 예측력의 측도 (Potential Outcome Mean): $V(f, P) := \mathbb{E}_P[Y(f(X))] = \mathbb{E}_P[Q_P(f(X), X)]$ where $Q_P(a, x) := \mathbb{E}_P[Y|A=a, X=x]$ under the usual identifying assumptions
+- 예측력의 측도 (Potential Outcome Mean): $V(f, P) := \mathbb{E}_P[Y(f(X))] = \mathbb{E}_P[Q_P(f(X), X)]$ 
+	- where $Q_P(a, x) := \mathbb{E}_P[Y|A=a, X=x]$ under the usual identifying assumptions
 - $f_0 = \arg\max_{f \in \mathcal{F}} V(f, P_0)$: the oracle prediction function within $\mathcal{F}$ under $P_0$ relative to $V$
 - $f_{0,s} = \arg\max_{f \in \mathcal{F}_s} V(f, P_0)$
-- Goal: Make valid inference on VIM $\psi_{0,s} := V(f_0, P_0) - V(f_{0,s}, P_0) \geq 0$
-- the population-level importance of the variable (or subgroup of variables) $X_s$ relative to the full covariate vector $X$ as the amount of oracle predictiveness lost by excluding $X_s$ from $X$
+- 목표: VIM $\psi_{0,s} := V(f_0, P_0) - V(f_{0,s}, P_0) \geq 0$에 대해서 통계적 추론을 하자!
+- 변수의 population-level 중요도: 전체 설명변수 $X$에 대해서 
+	- the population-level importance of the variable (or subgroup of variables) $X_s$ relative to the full covariate vector $X$ as the amount of oracle predictiveness lost by excluding $X_s$ from $X$
 
 - parameter mapping $V^*: P \mapsto V(f_P, P)$
 - $\hat{P}_n \in \mathcal{M}$: $P_0$의 추정치
@@ -159,7 +161,7 @@ $$
     \tau_{n,s}^2 = \frac{1}{n} \sum_{i=1}^n (\phi_n(Z_i) - \phi_{n, s}(Z_i))^2
     \eea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTYwMzM1OCwxNTM3NDYwNjIzLC0xNT
-YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
-NTE0ODldfQ==
+eyJoaXN0b3J5IjpbLTIxNDQ1OTc0MDEsMTUzNzQ2MDYyMywtMT
+U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
+NzUxNDg5XX0=
 -->
