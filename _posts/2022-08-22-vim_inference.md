@@ -31,7 +31,9 @@ tags:
 
 - 전통적인 통계적 방법론의 한계:
 	1. 쉽게 해석 가능한 모형을 얻기 위해 지나치게 간단한 모형을 사용하여, 모형의 misspecification 문제가 발생
-	2. 선택
+	2. 선택된 모형에 의존하여 모형의 계수의 의미와 정의가 결정됨
+
+- 사전 정의된 비모수 추정치: 데이터로부터 추론하고 싶은 것에 고
 
 ###
 
@@ -44,6 +46,6 @@ tags:
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTA4MzUyOSwtMTU2MDI5MTc3NSwtMT
-QwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4NzUxNDg5XX0=
+eyJoaXN0b3J5IjpbLTEzODY3NTE5ODUsLTE1NjAyOTE3NzUsLT
+E0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1MTQ4OV19
 -->
