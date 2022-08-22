@@ -107,23 +107,30 @@ $$
 - $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$
 - $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
 
-- 유사한 방식으로, the nonparametric EIF of $P \mapsto V(f_{0, s}, P)$ at $P_0$:
+유사한 방식으로, 
+
+- the nonparametric EIF of $P \mapsto V(f_{0, s}, P)$ at $P_0$:
 
 $$
 \phi_{0,s}: z \mapsto \frac{I(a = f_{0, s}(x))}{\pi_0(f_{0, s}(x), x)} (y - Q_0(f_{0, s}(x), x)) + Q_0(f_{0, s}(x), x) - V(f_{0,s}, P_0) 
 $$
 
-- Regularity conditions 하에서, 비모수 debiasing 방법론 중의 하나로 $v_0 = V(f_{} P_0)$의 one-step debiased 추정치는 다음과 같이 계산되며, 비모수 효율적(nonparametric efficient)이다: 
-\bea
-&& v_{n,s} \nonumber \\
-&=& V(f_{n,s}, \hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \phi_{n, s}(Z_i) \nonumber \\
-&=& \frac{1}{n} \sum_{i=1}^n \left( \frac{I(A_i = f_{n, s}(X_i))}{\pi_n(f_{n, s}(X_i), X_i)} (Y_i - Q_n(f_{n, s}(X_i), X_i)) + Q_n(f_{n, s}(X_i), X_i) \right)
-\eea
-of $v_{0, s} = V(f_{0, s}, P_0)$ is nonparametric efficient, where $f_{n, s}$ is defined pointwise $f_{n, s}(x) = I(Q_{n, s}(1, x) > Q_{n, s}(0, x))$, and $\phi_{n, s}(z)$ is $\phi_{0, s}(z)$ evaluated at $\hat{P}_n$
+- Regularity conditions 하에서, 비모수 debiasing 방법론 중의 하나로 $v_{0, s} = V(f_{0, s}, P_0)$의 one-step debiased 추정치는 다음과 같이 계산되며, 비모수 효율적(nonparametric efficient)이다: 
+
+$$
+v_{n,s} = V(f_{n,s}, \hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \phi_{n, s}(Z_i) 
+$$
+
+$$
+= \frac{1}{n} \sum_{i=1}^n \left( \frac{I(A_i = f_{n, s}(X_i))}{\pi_n(f_{n, s}(X_i), X_i)} (Y_i - Q_n(f_{n, s}(X_i), X_i)) + Q_n(f_{n, s}(X_i), X_i) \right)
+$$
+
+- $f_{n, s}$ is defined pointwise $f_{n, s}(x) = I(Q_{n, s}(1, x) > Q_{n, s}(0, x))$
+- $\phi_{n, s}(z)$ is $\phi_{0, s}(z)$ evaluated at $\hat{P}_n$
 
 ### Step 4. 통계적 추론
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMxODQ4NDA5LDE1Mzc0NjA2MjMsLTE1Nj
-AyOTE3NzUsLTE0MDc0MzA2MTAsLTE5NTM3MjAwNDAsLTQyODc1
-MTQ4OV19
+eyJoaXN0b3J5IjpbLTE0NDg2MTI3NTQsMTUzNzQ2MDYyMywtMT
+U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
+NzUxNDg5XX0=
 -->
