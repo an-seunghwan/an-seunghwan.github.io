@@ -45,18 +45,18 @@ tags:
 
 ## 추론 절차
 
-### 1. 
+### 1. 관심있는 추정치를 정의
 
-- $Y$: the outcome of interest (larger values corresponds to better)
-- $X$: a covariate vector
-- $A \in \{0, 1\}$: binary treatment
+- $Y$: 관심있는 결과 값 (값이 클수록 더 좋다는 것을 의미)
+- $X$: 설명변수
+- $A \in \{0, 1\}$: 이진 treatment
 - treatment rule $f: \mathcal{X} \mapsto \{0, 1\}$
-	- assigning the value of $A$ based on $X$ can be adjudicated
+	- $X$의 값에 의존하여 $A$의 값을 결정
 - observed data structure: $Z := (X, A, Y) \sim P_0$ where $P_0$ is the true distribution
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTc5NzM4OTYsMTUzNzQ2MDYyMywtMT
-U2MDI5MTc3NSwtMTQwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4
-NzUxNDg5XX0=
+eyJoaXN0b3J5IjpbLTU0MjQ2MDA5NywxNTM3NDYwNjIzLC0xNT
+YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
+NTE0ODldfQ==
 -->
