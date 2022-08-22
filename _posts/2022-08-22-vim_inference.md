@@ -29,6 +29,10 @@ tags:
 	2. 하나 이상의 계수에 대한 추정
 	3. 추정된 계수에 대한 불확실성 측정 (신뢰구간 등)
 
+- 전통적인 통계적 방법론의 한계:
+	1. 쉽게 해석 가능한 모형을 얻기 위해 지나치게 간단한 모형을 사용하여, 모형의 misspecification 문제가 발생
+	2. 선택
+
 ###
 
 - $Y$: the outcome of interest (larger values corresponds to better)
@@ -40,6 +44,6 @@ tags:
 	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjAyOTE3NzUsLTE0MDc0MzA2MTAsLT
-E5NTM3MjAwNDAsLTQyODc1MTQ4OV19
+eyJoaXN0b3J5IjpbLTEwMTA4MzUyOSwtMTU2MDI5MTc3NSwtMT
+QwNzQzMDYxMCwtMTk1MzcyMDA0MCwtNDI4NzUxNDg5XX0=
 -->
