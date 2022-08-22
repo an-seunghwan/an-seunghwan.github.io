@@ -64,6 +64,8 @@ tags:
 
 ### 2. 추정치의 EIF를 계산
 
+비모수 EIF를 구하려는 대상
+
 - 우리가 필요한 것: parameter mapping $V^*: P \mapsto V(f_P, P)$의 EIF
 - 하지만, $V^*: P \mapsto V(f_P, P)$의 정의는 $P$-optimal prediction 함수 $f_P$를 포함하므로, EIF의 유도가 매우 복잡하다...
   
@@ -76,12 +78,13 @@ tags:
 - oracle residual prediction function $f_{0,s}: x \mapsto I(Q_{0,s}(1, x) > Q_{0,s}(0, x))$
 	- define $Q_{0,s}$ as $Q_{0,s} := \mathbb{E}_0 [Q_0(a, x) | X_{-s} = x_{-s} ] = \mathbb{E}_0 [\mathbb{E}_0 [Y | A=a, X=x]| X_{-s} = x_{-s} ] = \mathbb{E}_0 [Y | A=a, X_{-s} = x_{-s}]$
 
-아
+앞의 결과를 토대로 비모수 EIF를 계산
 
 - The nonparametric EIF of $P \mapsto V(f_0, P)$ at $P_0$:
-\bea
+$$
 \phi_0: z \mapsto \frac{I(a = f_0(x))}{\pi_0(f_0(x), x)} (y - Q_0(f_0(x), x)) + Q_0(f_0(x), x) - V(f_0, P_0) 
-\eea
+$$
+	- 여기서 pre
 where we define the propensity score $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$. And under regularity conditions, the one-step debiased estimator
 \bea
 && v_n = V^*(\hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \phi_n(Z_i) \nonumber \\
@@ -90,7 +93,7 @@ where we define the propensity score $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $
 \eea
 of $v_0 = V(f_0, P_0)$ is nonparametric efficient, where $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$, and $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTk1ODc0NCwxNTM3NDYwNjIzLC0xNT
+eyJoaXN0b3J5IjpbMTc0MzYxMzI4NiwxNTM3NDYwNjIzLC0xNT
 YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
 NTE0ODldfQ==
 -->
