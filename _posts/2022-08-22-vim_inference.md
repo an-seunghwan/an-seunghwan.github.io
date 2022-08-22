@@ -84,8 +84,9 @@ tags:
 $$
 \phi_0: z \mapsto \frac{I(a = f_0(x))}{\pi_0(f_0(x), x)} (y - Q_0(f_0(x), x)) + Q_0(f_0(x), x) - V(f_0, P_0) 
 $$
-	- 여기서 pre
-where we define the propensity score $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$. And under regularity conditions, the one-step debiased estimator
+	- 여기서 propensity score는 $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $a \in \{0, 1\}$로 정의됨
+
+- Regularity conditions 하에서, the one-step debiased estimator
 \bea
 && v_n = V^*(\hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \phi_n(Z_i) \nonumber \\
 &=& V^*(\hat{P}_n) + \frac{1}{n} \sum_{i=1}^n \left( \frac{I(A_i = f_n(X_i))}{\pi_n(f_n(X_i), X_i)} (Y_i - Q_n(f_n(X_i), X_i)) + Q_n(f_n(X_i), X_i) - V^*(\hat{P}_n)  \right) \nonumber \\
@@ -93,7 +94,7 @@ where we define the propensity score $\pi_0(a, x) := Pr_0(A=a | X=x)$ for each $
 \eea
 of $v_0 = V(f_0, P_0)$ is nonparametric efficient, where $Q_n, \pi_n$ are estimators of $Q_0$ and $\pi_0$, respectively, $f_n$ is defined pointwise $f_n(x) = I(Q_n(1, x) > Q_n(0, x))$, and $\phi_n(z)$ is $\phi_0(z)$ evaluated at $\hat{P}_n$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzYxMzI4NiwxNTM3NDYwNjIzLC0xNT
+eyJoaXN0b3J5IjpbMTc5OTQ3MzM1NSwxNTM3NDYwNjIzLC0xNT
 YwMjkxNzc1LC0xNDA3NDMwNjEwLC0xOTUzNzIwMDQwLC00Mjg3
 NTE0ODldfQ==
 -->
