@@ -22,8 +22,14 @@ tags:
 
 ## Inference on VIM
 
-
+- $Y$: the outcome of interest (larger values corresponds to better)
+- $X$: a covariate vector
+- $A \in \{0, 1\}$: binary treatment
+- treatment rule $f: \mathcal{X} \mapsto \{0, 1\}$
+	- assigning the value of $A$ based on $X$ can be adjudicated
+- observed data structure: $Z := (X, A, Y) \sim P_0$ where $P_0$ is the true distribution
+	- a data-generating distribution $P_0$ known only to belong to a rich (nonparametric) class $\mathcal{M}$ of distributions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyODc1MTQ4OV19
+eyJoaXN0b3J5IjpbLTE5NTM3MjAwNDAsLTQyODc1MTQ4OV19
 -->
