@@ -2,37 +2,37 @@
 title: ""
 permalink: /about/
 layout: single
+toc: true
+toc_sticky: true
+author_profile: true
 ---
-    
-# Interested in
+
+### Education
+
+| 2015.03 ~ 2020.08 | Bachelor of Science in Statistics, University of Seoul     |
+|-------------------|-------------------------------------------------------------|
+| 2020.09 ~ present | Integrated Ph.D. program in Statistics, University of Seoul |
+
+
+### Research Interest
 1. Variational AutoEncoder
-  - interpretable latent space
-  - style transfer
-  - how to code with tensorflow 2.0
+   - Image Generation
+   - Interpretable Neural Network
+   - Working paper: [EXoN: EXplainable encoder Network](https://arxiv.org/abs/2105.10867)
+2. Explainable AI
+   - Variable Importance Measure
+3. Causal Inference
+   - Causal Structure Learning
+   - Inference on Causal Estimand
 
-2. optimization
-  - Constrained LASSO path algorithm
-  - ADMM
+### Projects
+1. 경제용어 감성사전 구축방안 연구 (2020.06 ~ 2020.11)
+   - [국민계정리뷰 2020년 제3호](https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1)
+2. 서울시 시민생활 데이터 개발 및 분석 (2021.09 ~ 2022.08)
+   - [연합뉴스 기사1](https://m.yna.co.kr/view/AKR20211221171400004?section=news&site=popup_newsflash)
+   - [연합뉴스 기사2](https://www.yna.co.kr/view/AKR20220828018700004?input=1195m)
+   - [서울 열린데이터 광장: 서울 시민생활 데이터](https://data.seoul.go.kr/dataVisual/seoul/seoulLiving.do)
 
-# Studied or Projects
-1. NLP
-  - sentimental word embedding
-  - sequence to sequence
-
-2. ranking algorithm
-  - surrogate loss and its consistency
-
-3. MPI for R
-  - for parallel computing
-
-# About ME
-1. Courses
-  - 2015.03 ~ 2020.08: B.S. in Statistics, University of Seoul
-  - 2020.09 ~ : M.S. in Statictics, University of Seoul
-
-2. Programming Languages
-  - python (tensorflow 2.0)
-  - R
-
-3. Projects
-  - 경제용어 감성사전 구축방안 연구: [link](https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1)
+### Skills
+- python (pytorch, tensorflow 2.0)
+- R
