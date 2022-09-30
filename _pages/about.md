@@ -36,6 +36,7 @@ author_profile: true
    - [연합뉴스 기사1](https://m.yna.co.kr/view/AKR20211221171400004?section=news&site=popup_newsflash)
    - [연합뉴스 기사2](https://www.yna.co.kr/view/AKR20220828018700004?input=1195m)
    - [서울 열린데이터 광장: 서울 시민생활 데이터](https://data.seoul.go.kr/dataVisual/seoul/seoulLiving.do)
+   - 2022년 제2회 가명정보 활용 우수사례·아이디어 경진대회 활용 우수사례 부문 대상
 
 ## Skills
 - python (pytorch, tensorflow 2.0)
