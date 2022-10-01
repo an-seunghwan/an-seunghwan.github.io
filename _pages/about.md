@@ -33,10 +33,10 @@ author_profile: true
 1. 경제용어 감성사전 구축방안 연구 (2020.06 ~ 2020.11)
    - [국민계정리뷰 2020년 제3호](https://www.bok.or.kr/portal/bbs/P0000589/view.do?nttId=10060460&menuNo=200441&pageIndex=1)
 2. 서울시 시민생활 데이터 개발 및 분석 (2021.09 ~ 2022.08)
-   - [연합뉴스 기사1](https://m.yna.co.kr/view/AKR20211221171400004?section=news&site=popup_newsflash)
-   - [연합뉴스 기사2](https://www.yna.co.kr/view/AKR20220828018700004?input=1195m)
+   - [관련 기사1](https://m.yna.co.kr/view/AKR20211221171400004?section=news&site=popup_newsflash)
+   - [관련 기사2](https://www.yna.co.kr/view/AKR20220828018700004?input=1195m)
    - [서울 열린데이터 광장: 서울 시민생활 데이터](https://data.seoul.go.kr/dataVisual/seoul/seoulLiving.do)
-   - 2022년 제2회 가명정보 활용 우수사례·아이디어 경진대회 활용 우수사례 부문 대상
+   - 2022년 제2회 가명정보 활용 우수사례·아이디어 경진대회 활용 우수사례 부문 대상: [관련 기사](https://n.news.naver.com/article/001/0013474171)
 
 ## Skills
 - python (pytorch, tensorflow 2.0)
