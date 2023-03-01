@@ -28,8 +28,8 @@ author_profile: true
 ## Papers
 1. 2014년 통계청 논문공모전 우수상: 기상 데이터를 이용한 산불 피해규모의 예측방법 연구 [(link)](http://kostat.go.kr/sri/srikor/srikor_spn/2/2/index.board?bmode=read&bSeq=&aSeq=376197&pageNo=6&rowNum=10&navCount=10&currPg=&searchInfo=&sTarget=title&sTxt=)
 2. An, S., & Jeon, J. (2023). Customized Latent Space: Practical Usage of Variational Autoencoder. SSRN Electronic Journal. [(link)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4328171)
-3. An, S., Song, K., & Jeon, J. (2023). Causally Disentangled Generative Variational AutoEncoder. [(link)](https://arxiv.org/pdf/2302.11737.pdf)
-4. An, S., & Jeon, J. (2023). Distributional Variational AutoEncoder To Infinite Quantiles and Beyond Gaussianity. ArXiv, abs/2302.11294. [(link)](https://arxiv.org/pdf/2302.11294.pdf)
+3. An, S., Song, K., & Jeon, J. J. (2023). Causally Disentangled Generative Variational AutoEncoder. arXiv preprint arXiv:2302.11737. [(link)](https://arxiv.org/pdf/2302.11737.pdf)
+4. An, S., & Jeon, J. J. (2023). Distributional Variational AutoEncoder To Infinite Quantiles and Beyond Gaussianity. arXiv preprint arXiv:2302.11294. [(link)](https://arxiv.org/pdf/2302.11294.pdf)
 
 ## Projects
 1. 경제용어 감성사전 구축방안 연구 (2020.06 ~ 2020.11)
