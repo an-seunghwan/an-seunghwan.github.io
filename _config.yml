@@ -112,14 +112,14 @@ author:
   avatar           : "https://github.com/an-seunghwan/an-seunghwan.github.io/blob/master/assets/img/avatar1.jpeg?raw=true" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "서울시립대학교 통계학과 석박사통합과정"
   location         : "대한민국, 서울시"
-  email            : # "dpeltms79@gmail.com"
+  email            : "dpeltms79@gmail.com"
   links:
     - label: "CV"
       icon: 
       url: "https://sites.google.com/view/an-seunghwan"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:dpeltms79@gmail.com
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: mailto:dpeltms79@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/an-seunghwan"
